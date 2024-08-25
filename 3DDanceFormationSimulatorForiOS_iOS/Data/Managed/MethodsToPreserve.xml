@@ -1,0 +1,44 @@
+<linker>
+	<assembly fullname="Assembly-CSharp" ignoreIfMissing="1">
+		<type fullname="InputFieldHandler">
+			<method name="OnSubmit"/>
+		</type>
+		<type fullname="ObjectDataSaver">
+			<method name="SaveObjectData"/>
+		</type>
+		<type fullname="SceneSwitcher">
+			<method name="SwitchToScene"/>
+			<method name="SwitchToScene"/>
+			<method name="SwitchToScene"/>
+		</type>
+		<type fullname="TabController">
+			<method name="ShowTab"/>
+			<method name="ShowTab"/>
+		</type>
+		<type fullname="VideoGalleryManager">
+			<method name="OpenGalleryForVideo"/>
+		</type>
+		<type fullname="VideoPlayerScript">
+			<method name="PlayLatestVideo"/>
+		</type>
+	</assembly>
+	<assembly fullname="Unity.RenderPipelines.Core.Runtime" ignoreIfMissing="1">
+		<type fullname="UnityEngine.Rendering.UI.DebugUIHandlerIntField">
+			<method name="OnDecrement"/>
+			<method name="OnDecrement"/>
+			<method name="OnIncrement"/>
+			<method name="OnIncrement"/>
+		</type>
+		<type fullname="UnityEngine.Rendering.UI.DebugUIHandlerPanel">
+			<method name="OnScrollbarClicked"/>
+			<method name="OnScrollbarClicked"/>
+			<method name="ResetDebugManager"/>
+		</type>
+		<type fullname="UnityEngine.Rendering.UI.DebugUIHandlerUIntField">
+			<method name="OnDecrement"/>
+			<method name="OnDecrement"/>
+			<method name="OnIncrement"/>
+			<method name="OnIncrement"/>
+		</type>
+	</assembly>
+</linker>
