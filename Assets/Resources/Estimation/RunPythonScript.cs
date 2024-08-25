@@ -1,11 +1,8 @@
-using System;
-using System.Diagnostics;
-using System.IO;
-using System.Threading.Tasks;
-using UnityEngine;
 using System.Collections;
+using UnityEngine;
+using UnityEngine.Networking;
 using UnityEngine.UI;
-
+using System.IO;
 
 public class RunPythonScript : MonoBehaviour
 {
@@ -17,88 +14,79 @@ public class RunPythonScript : MonoBehaviour
         yield return null;
 
         string url = PlayerPrefs.GetString("url");
-        string start = PlayerPrefs.GetString("start");
-        string end = PlayerPrefs.GetString("end");
+        string startStr = PlayerPrefs.GetString("start");
+        string endStr = PlayerPrefs.GetString("end");
+
+        if (string.IsNullOrEmpty(url) || string.IsNullOrEmpty(startStr) || string.IsNullOrEmpty(endStr))
+        {
+            Debug.LogError("URL or start/end parameters are missing.");
+            yield break;
+        }
+
+        if (!int.TryParse(startStr, out int start) || !int.TryParse(endStr, out int end))
+        {
+            Debug.LogError("Start or end parameters are not valid integers.");
+            yield break;
+        }
 
         loadingSpinner.SetActive(true);
-
         progressBar.gameObject.SetActive(true);
         progressBar.value = 0f;
 
-        yield return StartCoroutine(SearchPrefabs(url, start, end));
+        yield return StartCoroutine(SendRequest(url, start, end));
 
         loadingSpinner.SetActive(false);
         progressBar.gameObject.SetActive(false);
     }
-    private IEnumerator SearchPrefabs(string url, string start, string end)
+
+    private IEnumerator SendRequest(string url, int start, int end)
     {
-        try
+        var requestData = new RequestData
         {
-            string scriptPath = Path.Combine(Application.streamingAssetsPath, "activate_and_run.sh");
-            string arguments = $"{scriptPath} \"{url}\" \"{start}\" \"{end}\"";
+            url = url,
+            start = start,
+            end = end
+        };
+        var jsonData = JsonUtility.ToJson(requestData);
 
-            ProcessStartInfo startInfo = new ProcessStartInfo
+        Debug.Log($"Sending JSON data: {jsonData}");
+
+        using (UnityWebRequest request = new UnityWebRequest("http://192.168.1.4:5000/run-script", "POST"))
+        {
+            byte[] bodyRaw = System.Text.Encoding.UTF8.GetBytes(jsonData);
+            request.uploadHandler = new UploadHandlerRaw(bodyRaw);
+            request.downloadHandler = new DownloadHandlerBuffer();
+            request.SetRequestHeader("Content-Type", "application/json");
+
+            yield return request.SendWebRequest();
+
+            if (request.result != UnityWebRequest.Result.Success)
             {
-                FileName = "bash",
-                Arguments = arguments,
-                UseShellExecute = false,
-                RedirectStandardOutput = true,
-                RedirectStandardError = true,
-                CreateNoWindow = true
-            };
-
-            using (Process process = Process.Start(startInfo))
-            {
-                if (process == null)
-                {
-                    UnityEngine.Debug.LogError("Failed to start the process.");
-                    yield break;
-                }
-
-                string errorFilePath = Path.Combine(Application.dataPath, "StridedTransformerForUnity", "errors.txt");
-                Task outputTask = Task.Run(() => ReadStream(process.StandardOutput, "Python Output:"));
-                Task errorTask = Task.Run(() => ReadStreamToFile(process.StandardError, errorFilePath, "Python Error:"));
-
-                process.WaitForExit();
-                Task.WhenAll(outputTask, errorTask).Wait();
-
-                if (process.ExitCode != 0)
-                {
-                    UnityEngine.Debug.LogError($"Process exited with code {process.ExitCode}");
-                }
+                Debug.LogError($"Request Error: {request.error}");
             }
-        }
-        catch (Exception ex)
-        {
-            UnityEngine.Debug.LogError($"An error occurred: {ex.Message}");
-        }
+            else
+            {
+                // string jsonFilePath = Path.Combine(Application.streamingAssetsPath, "output.json");
+                string jsonFilePath = Path.Combine(Application.persistentDataPath, "output.json");
+                File.WriteAllBytes(jsonFilePath, request.downloadHandler.data);
+                Debug.Log($"JSON file saved to: {jsonFilePath}");
 
-        for (int i = 0; i <= 100; i++)
-        {
-            progressBar.value = i / 100f;
-            yield return new WaitForSeconds(0.1f);
+                ProcessJsonFile(jsonFilePath);
+            }
         }
     }
 
-    private static async Task ReadStream(StreamReader reader, string prefix)
+    private void ProcessJsonFile(string filePath)
     {
-        string line;
-        while ((line = await reader.ReadLineAsync()) != null)
-        {
-            UnityEngine.Debug.Log($"{prefix}\n{line}");
-        }
+        string jsonContent = File.ReadAllText(filePath);
+        Debug.Log($"JSON Content: {jsonContent}");
     }
 
-    private static async Task ReadStreamToFile(StreamReader reader, string filePath, string prefix)
+    [System.Serializable]
+    public class RequestData
     {
-        using (StreamWriter fileWriter = new StreamWriter(filePath, append: false))
-        {
-            string line;
-            while ((line = await reader.ReadLineAsync()) != null)
-            {
-                UnityEngine.Debug.Log($"{prefix}\n{line}");
-                await fileWriter.WriteLineAsync($"{prefix}\n{line}");
-            }
-        }
+        public string url;
+        public int start;
+        public int end;
     }
 }
