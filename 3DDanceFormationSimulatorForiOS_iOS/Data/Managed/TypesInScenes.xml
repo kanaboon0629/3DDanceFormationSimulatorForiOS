@@ -16,7 +16,6 @@
 		<type fullname="ObjectDataSaver" preserve="nothing"/>
 		<type fullname="ObjectDragAndColorChange" preserve="nothing"/>
 		<type fullname="PlayerIKTarget" preserve="nothing"/>
-		<type fullname="Readme" preserve="nothing"/>
 		<type fullname="RealtimeInputValidation" preserve="nothing"/>
 		<type fullname="RunPythonScript" preserve="nothing"/>
 		<type fullname="SceneSwitcher" preserve="nothing"/>

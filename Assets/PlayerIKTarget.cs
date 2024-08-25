@@ -252,7 +252,8 @@ public class PlayerIKTarget : MonoBehaviour
         }
 
         // datapathを作成
-        string parentDatapath = Application.streamingAssetsPath + "/";
+        // string parentDatapath = Application.streamingAssetsPath + "/";
+        string parentDatapath = Application.persistentDataPath + "/";
         string datapath = "";
         //通常
         if (!isSymmetry) {
