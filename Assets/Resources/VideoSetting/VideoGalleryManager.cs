@@ -30,6 +30,7 @@ public class VideoGalleryManager : MonoBehaviour
         {
             if (path != null)
             {
+                PlayerPrefs.SetString("selectedVideoPath", path);
                 resultText.text = "Video is Selected";
                 PlayVideo(path);
             }
@@ -71,5 +72,11 @@ public class VideoGalleryManager : MonoBehaviour
         {
             renderTexture.Release();
         }
+    }
+
+    public bool IsVideoSelected()
+    {
+        string selectedVideoPath = PlayerPrefs.GetString("selectedVideoPath", null);
+        return !string.IsNullOrEmpty(selectedVideoPath);
     }
 }

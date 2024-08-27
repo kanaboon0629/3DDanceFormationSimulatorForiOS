@@ -9,32 +9,65 @@ public class InputFieldHandler : MonoBehaviour
     public InputField startInputField;
     public InputField endInputField;
     public Text errorMessage;
+    public VideoGalleryManager videoGalleryManager; // VideoGalleryManagerの参照
+    public TabController tabController; // TabControllerの参照
 
     public void OnSubmit(string nextSceneName)
     {
-        string url = urlInputField.text;
-        string start = startInputField.text;
-        string end = endInputField.text;
-
-        string validationError = ValidateInputs(url, start, end);
-
-        if (string.IsNullOrEmpty(validationError))
+        if (tabController == null || videoGalleryManager == null)
         {
-            // 値をシーン間で保持するために、PlayerPrefsを使用
+            DisplayErrorMessage("Required components are not assigned.");
+            return;
+        }
+
+        int currentTabIndex = tabController.GetCurrentTabIndex(); // 現在のタブインデックスを取得
+
+        if (currentTabIndex == 0)
+        {
+            // 0個目のタブ: ビデオファイルの選択チェック
+            if (!IsVideoSelected())
+            {
+                DisplayErrorMessage("Please select a video.");
+                return;
+            }
+            //VideoGalleryManagerで保存
+            //PlayerPrefs.SetString("selectedVideoPath", path);
+        }
+        else if (currentTabIndex == 1)
+        {
+            // 1個目のタブ: URLと秒数のチェック
+            string url = urlInputField.text;
+            string start = startInputField.text;
+            string end = endInputField.text;
+
+            string validationError = ValidateInputs(url, start, end);
+
+            if (!string.IsNullOrEmpty(validationError))
+            {
+                DisplayErrorMessage(validationError);
+                return;
+            }
+
             PlayerPrefs.SetString("url", url);
             PlayerPrefs.SetString("start", start);
             PlayerPrefs.SetString("end", end);
-
-            // 次のシーンに移動
-            SceneManager.LoadScene(nextSceneName);
         }
-        else
+
+        PlayerPrefs.SetInt("tabCount", currentTabIndex);
+        // 入力が正しい場合、次のシーンに移動
+        SceneManager.LoadScene(nextSceneName);
+    }
+
+    private bool IsVideoSelected()
+    {
+        return videoGalleryManager != null && videoGalleryManager.IsVideoSelected();
+    }
+
+    private void DisplayErrorMessage(string message)
+    {
+        if (errorMessage != null)
         {
-            // エラーメッセージを表示
-            if (errorMessage != null)
-            {
-                errorMessage.text = validationError;
-            }
+            errorMessage.text = message;
         }
     }
 
