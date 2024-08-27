@@ -13,31 +13,85 @@ public class RunPythonScript : MonoBehaviour
     {
         yield return null;
 
-        string url = PlayerPrefs.GetString("url");
-        string startStr = PlayerPrefs.GetString("start");
-        string endStr = PlayerPrefs.GetString("end");
-
-        if (string.IsNullOrEmpty(url) || string.IsNullOrEmpty(startStr) || string.IsNullOrEmpty(endStr))
-        {
-            Debug.LogError("URL or start/end parameters are missing.");
-            yield break;
-        }
-
-        if (!int.TryParse(startStr, out int start) || !int.TryParse(endStr, out int end))
-        {
-            Debug.LogError("Start or end parameters are not valid integers.");
-            yield break;
-        }
-
         loadingSpinner.SetActive(true);
         progressBar.gameObject.SetActive(true);
         progressBar.value = 0f;
 
-        yield return StartCoroutine(SendRequest(url, start, end));
+        int tabCount = PlayerPrefs.GetInt("tabCount");
+        if (tabCount == 0)
+        {
+            string selectedVideoPath = PlayerPrefs.GetString("selectedVideoPath");
+            if (string.IsNullOrEmpty(selectedVideoPath))
+            {
+                Debug.LogError("Video path is not set.");
+                yield break;
+            }
+            yield return StartCoroutine(SendVideo(selectedVideoPath));
+        }
+        else if (tabCount == 1)
+        {
+            string url = PlayerPrefs.GetString("url");
+            string startStr = PlayerPrefs.GetString("start");
+            string endStr = PlayerPrefs.GetString("end");
+            if (string.IsNullOrEmpty(url) || string.IsNullOrEmpty(startStr) || string.IsNullOrEmpty(endStr))
+            {
+                Debug.LogError("URL or start/end parameters are missing.");
+                yield break;
+            }
+
+            if (!int.TryParse(startStr, out int start) || !int.TryParse(endStr, out int end))
+            {
+                Debug.LogError("Start or end parameters are not valid integers.");
+                yield break;
+            }
+            yield return StartCoroutine(SendRequest(url, start, end));
+        }
 
         loadingSpinner.SetActive(false);
         progressBar.gameObject.SetActive(false);
     }
+
+    private IEnumerator SendVideo(string filePath)
+    {
+        // ファイルのバイナリデータを読み込み
+        byte[] videoData = System.IO.File.ReadAllBytes(filePath);
+
+        // デバッグメッセージを追加
+        Debug.Log($"Sending file: {filePath}");
+
+        // UnityWebRequestを使用してファイルをアップロード
+        using (UnityWebRequest request = new UnityWebRequest("http://192.168.1.4:5000/run-script-from-videofile", "POST"))
+        {
+            // WWWFormを使用してmultipart/form-dataを設定
+            WWWForm form = new WWWForm();
+            form.AddBinaryData("file", videoData, Path.GetFileName(filePath), "video/mp4"); // MIMEタイプを設定
+
+            request.uploadHandler = new UploadHandlerRaw(form.data);
+            request.downloadHandler = new DownloadHandlerBuffer();
+            request.SetRequestHeader("Content-Type", form.headers["Content-Type"]);
+
+            // 進行状況を監視するためのコールバック
+            request.SendWebRequest().completed += (asyncOperation) =>
+            {
+                if (request.result != UnityWebRequest.Result.Success)
+                {
+                    Debug.LogError($"Request Error: {request.error}");
+                }
+                else
+                {
+                    Debug.Log("Video uploaded successfully.");
+                }
+            };
+
+            // 進行状況バーの更新
+            while (!request.isDone)
+            {
+                progressBar.value = request.downloadProgress;
+                yield return null;
+            }
+        }
+    }
+
 
     private IEnumerator SendRequest(string url, int start, int end)
     {
@@ -51,7 +105,7 @@ public class RunPythonScript : MonoBehaviour
 
         Debug.Log($"Sending JSON data: {jsonData}");
 
-        using (UnityWebRequest request = new UnityWebRequest("http://192.168.1.4:5000/run-script", "POST"))
+        using (UnityWebRequest request = new UnityWebRequest("http://192.168.1.4:5000/run-script-from-youtube", "POST"))
         {
             byte[] bodyRaw = System.Text.Encoding.UTF8.GetBytes(jsonData);
             request.uploadHandler = new UploadHandlerRaw(bodyRaw);
@@ -66,16 +120,13 @@ public class RunPythonScript : MonoBehaviour
             }
             else
             {
-                // Save the downloaded JSON file
                 string jsonFilePath = Path.Combine(Application.persistentDataPath, "output.json");
                 File.WriteAllBytes(jsonFilePath, request.downloadHandler.data);
                 Debug.Log($"JSON file saved to: {jsonFilePath}");
 
-                // Process the original JSON file
                 ProcessJsonFile(jsonFilePath);
-
-                // Create the symmetry file
                 CreateSymmetryFile(jsonFilePath);
+                Debug.Log("JSON作成完了");
             }
         }
     }

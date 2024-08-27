@@ -10,6 +10,8 @@ public class TabController : MonoBehaviour
 
     public int initialTabIndex = 0; // 初期表示するタブのインデックス
 
+    private int currentTabIndex; // 現在のタブのインデックス
+
     private void Start()
     {
         // 初期タブの設定
@@ -18,6 +20,8 @@ public class TabController : MonoBehaviour
 
     public void ShowTab(int index)
     {
+        currentTabIndex = index; // 現在のタブのインデックスを更新
+
         // すべてのタブとコンテンツを非表示にする
         foreach (var content in contents)
         {
@@ -54,5 +58,10 @@ public class TabController : MonoBehaviour
         {
             selectedPanelImage.color = selectedColor;
         }
+    }
+
+    public int GetCurrentTabIndex()
+    {
+        return currentTabIndex;
     }
 }

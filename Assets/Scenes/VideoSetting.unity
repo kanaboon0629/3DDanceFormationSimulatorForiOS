@@ -3290,6 +3290,8 @@ MonoBehaviour:
   startInputField: {fileID: 168290425}
   endInputField: {fileID: 1678817550}
   errorMessage: {fileID: 129259936}
+  videoGalleryManager: {fileID: 1756864172}
+  tabController: {fileID: 1756864173}
 --- !u!114 &1756864175
 MonoBehaviour:
   m_ObjectHideFlags: 0
