@@ -266,16 +266,6 @@ public class PlayerIKTarget : MonoBehaviour
         
         Debug.Log("path: " + datapath);
 
-        //通常ファイルはあるが対称ファイルがなかったときの処理
-        if (File.Exists(parentDatapath + jsonFileName) && !File.Exists(parentDatapath + jsonFileName.Replace(".json", "Symmetry.json")))
-        {
-            //対称ファイルの作成
-            string inputFilePath = parentDatapath + jsonFileName;
-            string outputFilePath = parentDatapath + jsonFileName.Replace(".json", "Symmetry.json");
-
-            SymmetryJsonProcessor.ProcessJson(inputFilePath, outputFilePath);
-        }
-
         // JSONファイルを読み込む
         using (StreamReader reader = new StreamReader(datapath))
         {

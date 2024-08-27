@@ -948,6 +948,7 @@ IL2CPP_EXTERN_C String_t* _stringLiteral33327CC17F45A680456FA043DC42DCDEB44CC36E
 IL2CPP_EXTERN_C String_t* _stringLiteral350B75D5BBBEFAFBBB0B4CC781F721A37DB4B284;
 IL2CPP_EXTERN_C String_t* _stringLiteral36D9D460EC77A5E81372D3B99B8AA26D877D1E71;
 IL2CPP_EXTERN_C String_t* _stringLiteral3783D62DA544C4A10F6775DC60E5A763AA9BED1B;
+IL2CPP_EXTERN_C String_t* _stringLiteral39017B7525BDE905D9F27B1273C5890C7C1B95A1;
 IL2CPP_EXTERN_C String_t* _stringLiteral3B2C1C62D4D1C2A0C8A9AC42DB00D33C654F9AD0;
 IL2CPP_EXTERN_C String_t* _stringLiteral3D1164EF522C8F669A48BBCA208EF58AE2AC0033;
 IL2CPP_EXTERN_C String_t* _stringLiteral460BD3D1231F68F6913EF3CC2025B5819E12BBCD;
@@ -9382,8 +9383,6 @@ inline bool Enumerator_MoveNext_m83190B47FEC18F1D290A27C60EFE6608228D3914 (Enume
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* Application_get_persistentDataPath_mC58BD3E1A20732E0A536491DBCAE6505B1624399 (const RuntimeMethod* method) ;
 // System.String System.String::Replace(System.String,System.String)
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* String_Replace_mABDB7003A1D0AEDCAE9FF85E3DFFFBA752D2A166 (String_t* __this, String_t* ___0_oldValue, String_t* ___1_newValue, const RuntimeMethod* method) ;
-// System.Void SymmetryJsonProcessor::ProcessJson(System.String,System.String)
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void SymmetryJsonProcessor_ProcessJson_mD4C0D150224C4D818A2DD95A14D663EF41B15061 (String_t* ___0_inputFilePath, String_t* ___1_outputFilePath, const RuntimeMethod* method) ;
 // System.Void System.IO.StreamReader::.ctor(System.String)
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void StreamReader__ctor_m08BA7049EACE030ACE06AB8A8F2CDF2E2AFB55C6 (StreamReader_t81027449065C1B0C339DB46241D8001A6F61130B* __this, String_t* ___0_path, const RuntimeMethod* method) ;
 // System.Int32 System.Collections.Generic.Dictionary`2<System.String,System.Object>::get_Count()
@@ -9478,6 +9477,8 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void SymmetryJsonProcessor__ctor_mF3F3AC78788
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CStartU3Ed__2__ctor_mC0CE0471BCF26AAE1E3476CFE329ABF6D7C3147A (U3CStartU3Ed__2_tB46E46EB31A1507846A39606E490329C79223222* __this, int32_t ___0_U3CU3E1__state, const RuntimeMethod* method) ;
 // System.Void RunPythonScript/<SendRequest>d__3::.ctor(System.Int32)
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CSendRequestU3Ed__3__ctor_m4DC7C0DCF3B0A4AFC9916D517EEF2104CF4705F0 (U3CSendRequestU3Ed__3_t9E9016CC39684C9A24A525904B9E44A84268C829* __this, int32_t ___0_U3CU3E1__state, const RuntimeMethod* method) ;
+// System.Void SymmetryJsonProcessor::ProcessJson(System.String,System.String)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void SymmetryJsonProcessor_ProcessJson_mD4C0D150224C4D818A2DD95A14D663EF41B15061 (String_t* ___0_inputFilePath, String_t* ___1_outputFilePath, const RuntimeMethod* method) ;
 // System.String UnityEngine.PlayerPrefs::GetString(System.String)
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* PlayerPrefs_GetString_mA4C9F842BF77E5572AB20EA087C7048F870D02AE (String_t* ___0_key, const RuntimeMethod* method) ;
 // System.Boolean System.String::IsNullOrEmpty(System.String)
@@ -9528,6 +9529,8 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A8261
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void File_WriteAllBytes_mC491031DA14AA9B591F62D6AD0181D090E081077 (String_t* ___0_path, ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031* ___1_bytes, const RuntimeMethod* method) ;
 // System.Void RunPythonScript::ProcessJsonFile(System.String)
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void RunPythonScript_ProcessJsonFile_mF65D920E8234B2B57ECB1C52B14665A956FB8DE2 (RunPythonScript_tEF9B61700EFB205B044962EED410D0B6B65C9C6F* __this, String_t* ___0_filePath, const RuntimeMethod* method) ;
+// System.Void RunPythonScript::CreateSymmetryFile(System.String)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void RunPythonScript_CreateSymmetryFile_mC99733788967CA4A443BEF6E0CB82C5E5E331D3D (RunPythonScript_tEF9B61700EFB205B044962EED410D0B6B65C9C6F* __this, String_t* ___0_inputFilePath, const RuntimeMethod* method) ;
 // System.String UnityEngine.Application::get_streamingAssetsPath()
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* Application_get_streamingAssetsPath_mB904BCD9A7A4F18A52C175DE4A81F5DC3010CDB5 (const RuntimeMethod* method) ;
 // System.Boolean System.IO.Directory::Exists(System.String)
@@ -12252,10 +12255,9 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayerIKTarget_Start_m4F601BC58A4C8BF598
 	KeyValuePair_2_t730166D708411B4A6E7A81C0F07347F5880B8042 V_22;
 	memset((&V_22), 0, sizeof(V_22));
 	float V_23 = 0.0f;
-	String_t* V_24 = NULL;
-	StreamReader_t81027449065C1B0C339DB46241D8001A6F61130B* V_25 = NULL;
-	String_t* V_26 = NULL;
-	int32_t V_27 = 0;
+	StreamReader_t81027449065C1B0C339DB46241D8001A6F61130B* V_24 = NULL;
+	String_t* V_25 = NULL;
+	int32_t V_26 = 0;
 	{
 		// Renderer renderer = GetComponentInChildren<Renderer>();
 		Renderer_t320575F223BCB177A982E5DDB5DB19FAA89E7FBF* L_0;
@@ -13025,82 +13027,33 @@ IL_0672:
 		L_245 = String_Concat_m9E3155FB84015C823606188F53B47CB44C444991(_stringLiteralB56FD2D02571A001AEE35B4B7445C73192FFD483, L_244, NULL);
 		il2cpp_codegen_runtime_class_init_inline(Debug_t8394C7EEAECA3689C2C9B9DE9C7166D73596276F_il2cpp_TypeInfo_var);
 		Debug_Log_m87A9A3C761FF5C43ED8A53B16190A53D08F818BB(L_245, NULL);
-		// if (File.Exists(parentDatapath + jsonFileName) && !File.Exists(parentDatapath + jsonFileName.Replace(".json", "Symmetry.json")))
-		String_t* L_246 = V_19;
-		String_t* L_247 = __this->___jsonFileName_25;
-		String_t* L_248;
-		L_248 = String_Concat_m9E3155FB84015C823606188F53B47CB44C444991(L_246, L_247, NULL);
-		bool L_249;
-		L_249 = File_Exists_m95E329ABBE3EAD6750FE1989BBA6884457136D4A(L_248, NULL);
-		if (!L_249)
-		{
-			goto IL_06ec;
-		}
-	}
-	{
-		String_t* L_250 = V_19;
-		String_t* L_251 = __this->___jsonFileName_25;
-		NullCheck(L_251);
-		String_t* L_252;
-		L_252 = String_Replace_mABDB7003A1D0AEDCAE9FF85E3DFFFBA752D2A166(L_251, _stringLiteral0CF6E760F4429CA66FCDDB0BC125023158962742, _stringLiteral6B7B896F94BFAB8D70980542FFB2CA18C4B521D2, NULL);
-		String_t* L_253;
-		L_253 = String_Concat_m9E3155FB84015C823606188F53B47CB44C444991(L_250, L_252, NULL);
-		bool L_254;
-		L_254 = File_Exists_m95E329ABBE3EAD6750FE1989BBA6884457136D4A(L_253, NULL);
-		if (L_254)
-		{
-			goto IL_06ec;
-		}
-	}
-	{
-		// string inputFilePath = parentDatapath + jsonFileName;
-		String_t* L_255 = V_19;
-		String_t* L_256 = __this->___jsonFileName_25;
-		String_t* L_257;
-		L_257 = String_Concat_m9E3155FB84015C823606188F53B47CB44C444991(L_255, L_256, NULL);
-		// string outputFilePath = parentDatapath + jsonFileName.Replace(".json", "Symmetry.json");
-		String_t* L_258 = V_19;
-		String_t* L_259 = __this->___jsonFileName_25;
-		NullCheck(L_259);
-		String_t* L_260;
-		L_260 = String_Replace_mABDB7003A1D0AEDCAE9FF85E3DFFFBA752D2A166(L_259, _stringLiteral0CF6E760F4429CA66FCDDB0BC125023158962742, _stringLiteral6B7B896F94BFAB8D70980542FFB2CA18C4B521D2, NULL);
-		String_t* L_261;
-		L_261 = String_Concat_m9E3155FB84015C823606188F53B47CB44C444991(L_258, L_260, NULL);
-		V_24 = L_261;
-		// SymmetryJsonProcessor.ProcessJson(inputFilePath, outputFilePath);
-		String_t* L_262 = V_24;
-		SymmetryJsonProcessor_ProcessJson_mD4C0D150224C4D818A2DD95A14D663EF41B15061(L_257, L_262, NULL);
-	}
-
-IL_06ec:
-	{
 		// using (StreamReader reader = new StreamReader(datapath))
-		String_t* L_263 = V_20;
-		StreamReader_t81027449065C1B0C339DB46241D8001A6F61130B* L_264 = (StreamReader_t81027449065C1B0C339DB46241D8001A6F61130B*)il2cpp_codegen_object_new(StreamReader_t81027449065C1B0C339DB46241D8001A6F61130B_il2cpp_TypeInfo_var);
-		NullCheck(L_264);
-		StreamReader__ctor_m08BA7049EACE030ACE06AB8A8F2CDF2E2AFB55C6(L_264, L_263, NULL);
-		V_25 = L_264;
+		String_t* L_246 = V_20;
+		StreamReader_t81027449065C1B0C339DB46241D8001A6F61130B* L_247 = (StreamReader_t81027449065C1B0C339DB46241D8001A6F61130B*)il2cpp_codegen_object_new(StreamReader_t81027449065C1B0C339DB46241D8001A6F61130B_il2cpp_TypeInfo_var);
+		NullCheck(L_247);
+		StreamReader__ctor_m08BA7049EACE030ACE06AB8A8F2CDF2E2AFB55C6(L_247, L_246, NULL);
+		V_24 = L_247;
 	}
 	{
 		auto __finallyBlock = il2cpp::utils::Finally([&]
 		{
 
-FINALLY_0749:
+FINALLY_06e0:
 			{// begin finally (depth: 1)
 				{
-					StreamReader_t81027449065C1B0C339DB46241D8001A6F61130B* L_265 = V_25;
-					if (!L_265)
+					StreamReader_t81027449065C1B0C339DB46241D8001A6F61130B* L_248 = V_24;
+					if (!L_248)
 					{
-						goto IL_0754;
+						goto IL_06eb;
 					}
 				}
 				{
-					StreamReader_t81027449065C1B0C339DB46241D8001A6F61130B* L_266 = V_25;
-					NullCheck(L_266);
-					InterfaceActionInvoker0::Invoke(0 /* System.Void System.IDisposable::Dispose() */, IDisposable_t030E0496B4E0E4E4F086825007979AF51F7248C5_il2cpp_TypeInfo_var, L_266);
+					StreamReader_t81027449065C1B0C339DB46241D8001A6F61130B* L_249 = V_24;
+					NullCheck(L_249);
+					InterfaceActionInvoker0::Invoke(0 /* System.Void System.IDisposable::Dispose() */, IDisposable_t030E0496B4E0E4E4F086825007979AF51F7248C5_il2cpp_TypeInfo_var, L_249);
 				}
 
-IL_0754:
+IL_06eb:
 				{
 					return;
 				}
@@ -13110,47 +13063,47 @@ IL_0754:
 		{// begin try (depth: 1)
 			{
 				// string datastr = reader.ReadToEnd(); // ????????string???????????
-				StreamReader_t81027449065C1B0C339DB46241D8001A6F61130B* L_267 = V_25;
-				NullCheck(L_267);
-				String_t* L_268;
-				L_268 = VirtualFuncInvoker0< String_t* >::Invoke(12 /* System.String System.IO.TextReader::ReadToEnd() */, L_267);
-				V_26 = L_268;
+				StreamReader_t81027449065C1B0C339DB46241D8001A6F61130B* L_250 = V_24;
+				NullCheck(L_250);
+				String_t* L_251;
+				L_251 = VirtualFuncInvoker0< String_t* >::Invoke(12 /* System.String System.IO.TextReader::ReadToEnd() */, L_250);
+				V_25 = L_251;
 				// json_data = Json.Deserialize(datastr) as Dictionary<string, object>;
-				String_t* L_269 = V_26;
-				RuntimeObject* L_270;
-				L_270 = Json_Deserialize_m20B6C20404B17D91C466790EDD4DFD5B687C2BB3(L_269, NULL);
-				__this->___json_data_35 = ((Dictionary_2_tA348003A3C1CEFB3096E9D2A0BC7F1AC8EC4F710*)IsInstClass((RuntimeObject*)L_270, Dictionary_2_tA348003A3C1CEFB3096E9D2A0BC7F1AC8EC4F710_il2cpp_TypeInfo_var));
-				Il2CppCodeGenWriteBarrier((void**)(&__this->___json_data_35), (void*)((Dictionary_2_tA348003A3C1CEFB3096E9D2A0BC7F1AC8EC4F710*)IsInstClass((RuntimeObject*)L_270, Dictionary_2_tA348003A3C1CEFB3096E9D2A0BC7F1AC8EC4F710_il2cpp_TypeInfo_var)));
+				String_t* L_252 = V_25;
+				RuntimeObject* L_253;
+				L_253 = Json_Deserialize_m20B6C20404B17D91C466790EDD4DFD5B687C2BB3(L_252, NULL);
+				__this->___json_data_35 = ((Dictionary_2_tA348003A3C1CEFB3096E9D2A0BC7F1AC8EC4F710*)IsInstClass((RuntimeObject*)L_253, Dictionary_2_tA348003A3C1CEFB3096E9D2A0BC7F1AC8EC4F710_il2cpp_TypeInfo_var));
+				Il2CppCodeGenWriteBarrier((void**)(&__this->___json_data_35), (void*)((Dictionary_2_tA348003A3C1CEFB3096E9D2A0BC7F1AC8EC4F710*)IsInstClass((RuntimeObject*)L_253, Dictionary_2_tA348003A3C1CEFB3096E9D2A0BC7F1AC8EC4F710_il2cpp_TypeInfo_var)));
 				// if (json_data != null)
-				Dictionary_2_tA348003A3C1CEFB3096E9D2A0BC7F1AC8EC4F710* L_271 = __this->___json_data_35;
-				if (!L_271)
+				Dictionary_2_tA348003A3C1CEFB3096E9D2A0BC7F1AC8EC4F710* L_254 = __this->___json_data_35;
+				if (!L_254)
 				{
-					goto IL_073d_1;
+					goto IL_06d4_1;
 				}
 			}
 			{
 				// Debug.Log("json_data count:" + json_data.Count);
-				Dictionary_2_tA348003A3C1CEFB3096E9D2A0BC7F1AC8EC4F710* L_272 = __this->___json_data_35;
-				NullCheck(L_272);
-				int32_t L_273;
-				L_273 = Dictionary_2_get_Count_mA194D0E2787B81ED9FC54005AF0B23147EF51CBA(L_272, Dictionary_2_get_Count_mA194D0E2787B81ED9FC54005AF0B23147EF51CBA_RuntimeMethod_var);
-				V_27 = L_273;
-				String_t* L_274;
-				L_274 = Int32_ToString_m030E01C24E294D6762FB0B6F37CB541581F55CA5((&V_27), NULL);
-				String_t* L_275;
-				L_275 = String_Concat_m9E3155FB84015C823606188F53B47CB44C444991(_stringLiteralABE371960DBFF5D849D2ADA9A6BFFCD64D487D1B, L_274, NULL);
+				Dictionary_2_tA348003A3C1CEFB3096E9D2A0BC7F1AC8EC4F710* L_255 = __this->___json_data_35;
+				NullCheck(L_255);
+				int32_t L_256;
+				L_256 = Dictionary_2_get_Count_mA194D0E2787B81ED9FC54005AF0B23147EF51CBA(L_255, Dictionary_2_get_Count_mA194D0E2787B81ED9FC54005AF0B23147EF51CBA_RuntimeMethod_var);
+				V_26 = L_256;
+				String_t* L_257;
+				L_257 = Int32_ToString_m030E01C24E294D6762FB0B6F37CB541581F55CA5((&V_26), NULL);
+				String_t* L_258;
+				L_258 = String_Concat_m9E3155FB84015C823606188F53B47CB44C444991(_stringLiteralABE371960DBFF5D849D2ADA9A6BFFCD64D487D1B, L_257, NULL);
 				il2cpp_codegen_runtime_class_init_inline(Debug_t8394C7EEAECA3689C2C9B9DE9C7166D73596276F_il2cpp_TypeInfo_var);
-				Debug_Log_m87A9A3C761FF5C43ED8A53B16190A53D08F818BB(L_275, NULL);
-				goto IL_0755;
+				Debug_Log_m87A9A3C761FF5C43ED8A53B16190A53D08F818BB(L_258, NULL);
+				goto IL_06ec;
 			}
 
-IL_073d_1:
+IL_06d4_1:
 			{
 				// Debug.LogError("Failed to parse JSON data");
 				il2cpp_codegen_runtime_class_init_inline(Debug_t8394C7EEAECA3689C2C9B9DE9C7166D73596276F_il2cpp_TypeInfo_var);
 				Debug_LogError_mB00B2B4468EF3CAF041B038D840820FB84C924B2(_stringLiteral6A298290EC12D33F4FF3EFBDCCDC58B398A5CA49, NULL);
 				// }
-				goto IL_0755;
+				goto IL_06ec;
 			}
 		}// end try (depth: 1)
 		catch(Il2CppExceptionWrapper& e)
@@ -13159,16 +13112,16 @@ IL_073d_1:
 		}
 	}
 
-IL_0755:
+IL_06ec:
 	{
 		// current_frame_id = 0;
 		__this->___current_frame_id_30 = 0;
 		// FRAME_NUM = json_data.Count;
-		Dictionary_2_tA348003A3C1CEFB3096E9D2A0BC7F1AC8EC4F710* L_276 = __this->___json_data_35;
-		NullCheck(L_276);
-		int32_t L_277;
-		L_277 = Dictionary_2_get_Count_mA194D0E2787B81ED9FC54005AF0B23147EF51CBA(L_276, Dictionary_2_get_Count_mA194D0E2787B81ED9FC54005AF0B23147EF51CBA_RuntimeMethod_var);
-		__this->___FRAME_NUM_29 = L_277;
+		Dictionary_2_tA348003A3C1CEFB3096E9D2A0BC7F1AC8EC4F710* L_259 = __this->___json_data_35;
+		NullCheck(L_259);
+		int32_t L_260;
+		L_260 = Dictionary_2_get_Count_mA194D0E2787B81ED9FC54005AF0B23147EF51CBA(L_259, Dictionary_2_get_Count_mA194D0E2787B81ED9FC54005AF0B23147EF51CBA_RuntimeMethod_var);
+		__this->___FRAME_NUM_29 = L_260;
 		// }
 		return;
 	}
@@ -14329,18 +14282,52 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void RunPythonScript_ProcessJsonFile_mF65D920
 	}
 	String_t* V_0 = NULL;
 	{
-		// {
+		// string jsonContent = File.ReadAllText(filePath);
 		String_t* L_0 = ___0_filePath;
 		String_t* L_1;
 		L_1 = File_ReadAllText_mA4A939F853D573379F7129AFDC469B91E9747BAA(L_0, NULL);
 		V_0 = L_1;
-		// string jsonContent = File.ReadAllText(filePath);
+		// Debug.Log($"JSON Content: {jsonContent}");
 		String_t* L_2 = V_0;
 		String_t* L_3;
 		L_3 = String_Concat_m9E3155FB84015C823606188F53B47CB44C444991(_stringLiteralE6B0B470D6CB1C44A1C9A7B58809F3FDFC5A4F74, L_2, NULL);
 		il2cpp_codegen_runtime_class_init_inline(Debug_t8394C7EEAECA3689C2C9B9DE9C7166D73596276F_il2cpp_TypeInfo_var);
 		Debug_Log_m87A9A3C761FF5C43ED8A53B16190A53D08F818BB(L_3, NULL);
-		// Debug.Log($"JSON Content: {jsonContent}");
+		// }
+		return;
+	}
+}
+// System.Void RunPythonScript::CreateSymmetryFile(System.String)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void RunPythonScript_CreateSymmetryFile_mC99733788967CA4A443BEF6E0CB82C5E5E331D3D (RunPythonScript_tEF9B61700EFB205B044962EED410D0B6B65C9C6F* __this, String_t* ___0_inputFilePath, const RuntimeMethod* method) 
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Debug_t8394C7EEAECA3689C2C9B9DE9C7166D73596276F_il2cpp_TypeInfo_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&_stringLiteral0CF6E760F4429CA66FCDDB0BC125023158962742);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&_stringLiteral39017B7525BDE905D9F27B1273C5890C7C1B95A1);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&_stringLiteral6B7B896F94BFAB8D70980542FFB2CA18C4B521D2);
+		s_Il2CppMethodInitialized = true;
+	}
+	String_t* V_0 = NULL;
+	{
+		// string outputFilePath = inputFilePath.Replace(".json", "Symmetry.json");
+		String_t* L_0 = ___0_inputFilePath;
+		NullCheck(L_0);
+		String_t* L_1;
+		L_1 = String_Replace_mABDB7003A1D0AEDCAE9FF85E3DFFFBA752D2A166(L_0, _stringLiteral0CF6E760F4429CA66FCDDB0BC125023158962742, _stringLiteral6B7B896F94BFAB8D70980542FFB2CA18C4B521D2, NULL);
+		V_0 = L_1;
+		// SymmetryJsonProcessor.ProcessJson(inputFilePath, outputFilePath);
+		String_t* L_2 = ___0_inputFilePath;
+		String_t* L_3 = V_0;
+		SymmetryJsonProcessor_ProcessJson_mD4C0D150224C4D818A2DD95A14D663EF41B15061(L_2, L_3, NULL);
+		// Debug.Log($"Symmetry JSON file created at: {outputFilePath}");
+		String_t* L_4 = V_0;
+		String_t* L_5;
+		L_5 = String_Concat_m9E3155FB84015C823606188F53B47CB44C444991(_stringLiteral39017B7525BDE905D9F27B1273C5890C7C1B95A1, L_4, NULL);
+		il2cpp_codegen_runtime_class_init_inline(Debug_t8394C7EEAECA3689C2C9B9DE9C7166D73596276F_il2cpp_TypeInfo_var);
+		Debug_Log_m87A9A3C761FF5C43ED8A53B16190A53D08F818BB(L_5, NULL);
+		// }
 		return;
 	}
 }
@@ -14720,7 +14707,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool U3CSendRequestU3Ed__3_MoveNext_mC5E23477
 		auto __finallyBlock = il2cpp::utils::Fault([&]
 		{
 
-FAULT_0169:
+FAULT_0171:
 			{// begin fault (depth: 1)
 				U3CSendRequestU3Ed__3_System_IDisposable_Dispose_m2B1094D22DE44FEB36BCB5B93F9386392F1D86EF(__this, NULL);
 				return;
@@ -14748,7 +14735,7 @@ FAULT_0169:
 			}
 			{
 				V_0 = (bool)0;
-				goto IL_0170;
+				goto IL_0178;
 			}
 
 IL_001f_1:
@@ -14829,7 +14816,7 @@ IL_001f_1:
 				Il2CppCodeGenWriteBarrier((void**)(&__this->___U3CU3E2__current_1), (void*)L_25);
 				__this->___U3CU3E1__state_0 = 1;
 				V_0 = (bool)1;
-				goto IL_0170;
+				goto IL_0178;
 			}
 
 IL_00e5_1:
@@ -14855,19 +14842,19 @@ IL_00e5_1:
 				L_30 = String_Concat_m9E3155FB84015C823606188F53B47CB44C444991(_stringLiteral17471421ADABB6FA2E2BDAAFFD1E87AD00FE95A9, L_29, NULL);
 				il2cpp_codegen_runtime_class_init_inline(Debug_t8394C7EEAECA3689C2C9B9DE9C7166D73596276F_il2cpp_TypeInfo_var);
 				Debug_LogError_mB00B2B4468EF3CAF041B038D840820FB84C924B2(L_30, NULL);
-				goto IL_0158_1;
+				goto IL_0160_1;
 			}
 
 IL_0117_1:
 			{
-				// // string jsonFilePath = Path.Combine(Application.streamingAssetsPath, "output.json");
+				// string jsonFilePath = Path.Combine(Application.persistentDataPath, "output.json");
 				String_t* L_31;
 				L_31 = Application_get_persistentDataPath_mC58BD3E1A20732E0A536491DBCAE6505B1624399(NULL);
 				il2cpp_codegen_runtime_class_init_inline(Path_t8A38A801D0219E8209C1B1D90D82D4D755D998BC_il2cpp_TypeInfo_var);
 				String_t* L_32;
 				L_32 = Path_Combine_m1ADAC05CDA2D1D61B172DF65A81E86592696BEAE(L_31, _stringLiteralD2982A8A58043378B72E0D9FC2DD94BF8159211B, NULL);
 				V_5 = L_32;
-				// string jsonFilePath = Path.Combine(Application.persistentDataPath, "output.json");
+				// File.WriteAllBytes(jsonFilePath, request.downloadHandler.data);
 				String_t* L_33 = V_5;
 				UnityWebRequest_t6233B8E22992FC2364A831C1ACB033EF3260C39F* L_34 = __this->___U3CrequestU3E5__2_6;
 				NullCheck(L_34);
@@ -14877,20 +14864,25 @@ IL_0117_1:
 				ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031* L_36;
 				L_36 = DownloadHandler_get_data_m1DC9B4514B12939B090028BF28C6BEF21DE9B6F3(L_35, NULL);
 				File_WriteAllBytes_mC491031DA14AA9B591F62D6AD0181D090E081077(L_33, L_36, NULL);
-				// File.WriteAllBytes(jsonFilePath, request.downloadHandler.data);
+				// Debug.Log($"JSON file saved to: {jsonFilePath}");
 				String_t* L_37 = V_5;
 				String_t* L_38;
 				L_38 = String_Concat_m9E3155FB84015C823606188F53B47CB44C444991(_stringLiteral788EF71607774C31B3FD2B0F2719DE84AA8C5AFE, L_37, NULL);
 				il2cpp_codegen_runtime_class_init_inline(Debug_t8394C7EEAECA3689C2C9B9DE9C7166D73596276F_il2cpp_TypeInfo_var);
 				Debug_Log_m87A9A3C761FF5C43ED8A53B16190A53D08F818BB(L_38, NULL);
-				// 
+				// ProcessJsonFile(jsonFilePath);
 				RunPythonScript_tEF9B61700EFB205B044962EED410D0B6B65C9C6F* L_39 = V_2;
 				String_t* L_40 = V_5;
 				NullCheck(L_39);
 				RunPythonScript_ProcessJsonFile_mF65D920E8234B2B57ECB1C52B14665A956FB8DE2(L_39, L_40, NULL);
+				// CreateSymmetryFile(jsonFilePath);
+				RunPythonScript_tEF9B61700EFB205B044962EED410D0B6B65C9C6F* L_41 = V_2;
+				String_t* L_42 = V_5;
+				NullCheck(L_41);
+				RunPythonScript_CreateSymmetryFile_mC99733788967CA4A443BEF6E0CB82C5E5E331D3D(L_41, L_42, NULL);
 			}
 
-IL_0158_1:
+IL_0160_1:
 			{
 				// }
 				U3CSendRequestU3Ed__3_U3CU3Em__Finally1_m43ACC3BAA9046268DF9CBC92C2158423E7B7BDA2(__this, NULL);
@@ -14898,7 +14890,7 @@ IL_0158_1:
 				Il2CppCodeGenWriteBarrier((void**)(&__this->___U3CrequestU3E5__2_6), (void*)(UnityWebRequest_t6233B8E22992FC2364A831C1ACB033EF3260C39F*)NULL);
 				// }
 				V_0 = (bool)0;
-				goto IL_0170;
+				goto IL_0178;
 			}
 		}// end try (depth: 1)
 		catch(Il2CppExceptionWrapper& e)
@@ -14907,10 +14899,10 @@ IL_0158_1:
 		}
 	}
 
-IL_0170:
+IL_0178:
 	{
-		bool L_41 = V_0;
-		return L_41;
+		bool L_43 = V_0;
+		return L_43;
 	}
 }
 // System.Void RunPythonScript/<SendRequest>d__3::<>m__Finally1()

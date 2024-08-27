@@ -66,12 +66,16 @@ public class RunPythonScript : MonoBehaviour
             }
             else
             {
-                // string jsonFilePath = Path.Combine(Application.streamingAssetsPath, "output.json");
+                // Save the downloaded JSON file
                 string jsonFilePath = Path.Combine(Application.persistentDataPath, "output.json");
                 File.WriteAllBytes(jsonFilePath, request.downloadHandler.data);
                 Debug.Log($"JSON file saved to: {jsonFilePath}");
 
+                // Process the original JSON file
                 ProcessJsonFile(jsonFilePath);
+
+                // Create the symmetry file
+                CreateSymmetryFile(jsonFilePath);
             }
         }
     }
@@ -80,6 +84,17 @@ public class RunPythonScript : MonoBehaviour
     {
         string jsonContent = File.ReadAllText(filePath);
         Debug.Log($"JSON Content: {jsonContent}");
+    }
+
+    private void CreateSymmetryFile(string inputFilePath)
+    {
+        // Define the output file path
+        string outputFilePath = inputFilePath.Replace(".json", "Symmetry.json");
+
+        // Process the JSON file to create the symmetry file
+        SymmetryJsonProcessor.ProcessJson(inputFilePath, outputFilePath);
+
+        Debug.Log($"Symmetry JSON file created at: {outputFilePath}");
     }
 
     [System.Serializable]
