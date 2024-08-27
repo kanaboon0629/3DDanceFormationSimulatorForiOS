@@ -2710,10 +2710,6 @@ void RegisterAllStrippedInternalCalls()
 
 	//Start Registrations for type : UnityEngine.Networking.UnityWebRequest
 
-		//System.Boolean UnityEngine.Networking.UnityWebRequest::IsExecuting()
-		void Register_UnityEngine_Networking_UnityWebRequest_IsExecuting();
-		Register_UnityEngine_Networking_UnityWebRequest_IsExecuting();
-
 		//System.Boolean UnityEngine.Networking.UnityWebRequest::get_isModifiable()
 		void Register_UnityEngine_Networking_UnityWebRequest_get_isModifiable();
 		Register_UnityEngine_Networking_UnityWebRequest_get_isModifiable();
@@ -2725,10 +2721,6 @@ void RegisterAllStrippedInternalCalls()
 		//System.IntPtr UnityEngine.Networking.UnityWebRequest::Create()
 		void Register_UnityEngine_Networking_UnityWebRequest_Create();
 		Register_UnityEngine_Networking_UnityWebRequest_Create();
-
-		//System.Single UnityEngine.Networking.UnityWebRequest::GetDownloadProgress()
-		void Register_UnityEngine_Networking_UnityWebRequest_GetDownloadProgress();
-		Register_UnityEngine_Networking_UnityWebRequest_GetDownloadProgress();
 
 		//System.String UnityEngine.Networking.UnityWebRequest::GetHTTPStatusString(System.Int64)
 		void Register_UnityEngine_Networking_UnityWebRequest_GetHTTPStatusString();
