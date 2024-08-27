@@ -70,24 +70,21 @@ public class RunPythonScript : MonoBehaviour
             request.downloadHandler = new DownloadHandlerBuffer();
             request.SetRequestHeader("Content-Type", form.headers["Content-Type"]);
 
-            // 進行状況を監視するためのコールバック
-            request.SendWebRequest().completed += (asyncOperation) =>
-            {
-                if (request.result != UnityWebRequest.Result.Success)
-                {
-                    Debug.LogError($"Request Error: {request.error}");
-                }
-                else
-                {
-                    Debug.Log("Video uploaded successfully.");
-                }
-            };
+            yield return request.SendWebRequest();
 
-            // 進行状況バーの更新
-            while (!request.isDone)
+            if (request.result != UnityWebRequest.Result.Success)
             {
-                progressBar.value = request.downloadProgress;
-                yield return null;
+                Debug.LogError($"Request Error: {request.error}");
+            }
+            else
+            {
+                string jsonFilePath = Path.Combine(Application.persistentDataPath, "output.json");
+                File.WriteAllBytes(jsonFilePath, request.downloadHandler.data);
+                Debug.Log($"JSON file saved to: {jsonFilePath}");
+
+                ProcessJsonFile(jsonFilePath);
+                CreateSymmetryFile(jsonFilePath);
+                Debug.Log("JSON作成完了");
             }
         }
     }
