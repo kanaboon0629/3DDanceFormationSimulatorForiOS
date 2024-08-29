@@ -8,7 +8,8 @@ public class InputFieldHandler : MonoBehaviour
     public InputField urlInputField;
     public InputField startInputField;
     public InputField endInputField;
-    public Text errorMessage;
+    public Text errorMessageFromVideofile;
+    public Text errorMessageFromYoutube;
     public VideoGalleryManager videoGalleryManager; // VideoGalleryManagerの参照
     public TabController tabController; // TabControllerの参照
 
@@ -16,7 +17,6 @@ public class InputFieldHandler : MonoBehaviour
     {
         if (tabController == null || videoGalleryManager == null)
         {
-            DisplayErrorMessage("Required components are not assigned.");
             return;
         }
 
@@ -27,7 +27,7 @@ public class InputFieldHandler : MonoBehaviour
             // 0個目のタブ: ビデオファイルの選択チェック
             if (!IsVideoSelected())
             {
-                DisplayErrorMessage("Please select a video.");
+                DisplayErrorMessage("Please select a video.", errorMessageFromVideofile);
                 return;
             }
             //VideoGalleryManagerで保存
@@ -44,7 +44,7 @@ public class InputFieldHandler : MonoBehaviour
 
             if (!string.IsNullOrEmpty(validationError))
             {
-                DisplayErrorMessage(validationError);
+                DisplayErrorMessage(validationError, errorMessageFromYoutube);
                 return;
             }
 
@@ -63,7 +63,7 @@ public class InputFieldHandler : MonoBehaviour
         return videoGalleryManager != null && videoGalleryManager.IsVideoSelected();
     }
 
-    private void DisplayErrorMessage(string message)
+    private void DisplayErrorMessage(string message, Text errorMessage)
     {
         if (errorMessage != null)
         {

@@ -32,6 +32,7 @@ public class VideoGalleryManager : MonoBehaviour
             {
                 PlayerPrefs.SetString("selectedVideoPath", path);
                 resultText.text = "Video is Selected";
+                
                 // PlayVideo(path);
             }
             else

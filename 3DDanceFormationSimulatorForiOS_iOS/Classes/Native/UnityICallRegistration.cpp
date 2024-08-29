@@ -3018,6 +3018,10 @@ void RegisterAllStrippedInternalCalls()
 		void Register_UnityEngine_PlayerPrefs_GetString();
 		Register_UnityEngine_PlayerPrefs_GetString();
 
+		//System.Void UnityEngine.PlayerPrefs::DeleteAll()
+		void Register_UnityEngine_PlayerPrefs_DeleteAll();
+		Register_UnityEngine_PlayerPrefs_DeleteAll();
+
 		//System.Void UnityEngine.PlayerPrefs::Save()
 		void Register_UnityEngine_PlayerPrefs_Save();
 		Register_UnityEngine_PlayerPrefs_Save();

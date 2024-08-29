@@ -8,6 +8,10 @@ public class RunPythonScript : MonoBehaviour
 {
     public GameObject loadingSpinner; // ローディングスピナーのUIオブジェクト
     public Slider progressBar; // 進行状況バーのUIオブジェクト
+    public GameObject nextButton; // JSON作成完了後に表示するボタンのUIオブジェクト
+    private const string SuccessMessage = "Generating demo successful!";
+
+    public Text logText;
 
     private IEnumerator Start()
     {
@@ -16,6 +20,7 @@ public class RunPythonScript : MonoBehaviour
         loadingSpinner.SetActive(true);
         progressBar.gameObject.SetActive(true);
         progressBar.value = 0f;
+        nextButton.SetActive(false); // ボタンを非表示にしておく
 
         int tabCount = PlayerPrefs.GetInt("tabCount");
         if (tabCount == 0)
@@ -49,6 +54,8 @@ public class RunPythonScript : MonoBehaviour
 
         loadingSpinner.SetActive(false);
         progressBar.gameObject.SetActive(false);
+        nextButton.SetActive(true);
+        logText.text = SuccessMessage;
     }
 
     private IEnumerator SendVideo(string filePath)
@@ -59,9 +66,8 @@ public class RunPythonScript : MonoBehaviour
 
         using (UnityWebRequest request = new UnityWebRequest("http://192.168.1.4:5000/run-script-from-videofile", "POST"))
         {
-            // WWWFormを使用してmultipart/form-dataを設定
             WWWForm form = new WWWForm();
-            form.AddBinaryData("file", videoData, Path.GetFileName(filePath), "video/mp4"); // MIMEタイプを設定
+            form.AddBinaryData("file", videoData, Path.GetFileName(filePath), "video/mp4");
 
             request.uploadHandler = new UploadHandlerRaw(form.data);
             request.downloadHandler = new DownloadHandlerBuffer();
@@ -76,14 +82,11 @@ public class RunPythonScript : MonoBehaviour
             else
             {
                 string responseText = request.downloadHandler.text;
-                // Debug.Log($"Response Text: {responseText}");
 
-                // Process JSON file
                 if (responseText.StartsWith("{") && responseText.EndsWith("}"))
                 {
                     string jsonFilePath = Path.Combine(Application.persistentDataPath, "output.json");
                     File.WriteAllBytes(jsonFilePath, System.Text.Encoding.UTF8.GetBytes(responseText));
-                    // Debug.Log($"JSON file saved to: {jsonFilePath}");
 
                     ProcessJsonFile(jsonFilePath);
                     CreateSymmetryFile(jsonFilePath);
@@ -121,14 +124,11 @@ public class RunPythonScript : MonoBehaviour
             else
             {
                 string responseText = request.downloadHandler.text;
-                // Debug.Log($"Response Text: {responseText}");
 
-                // Process JSON file
                 if (responseText.StartsWith("{") && responseText.EndsWith("}"))
                 {
                     string jsonFilePath = Path.Combine(Application.persistentDataPath, "output.json");
                     File.WriteAllBytes(jsonFilePath, System.Text.Encoding.UTF8.GetBytes(responseText));
-                    // Debug.Log($"JSON file saved to: {jsonFilePath}");
 
                     ProcessJsonFile(jsonFilePath);
                     CreateSymmetryFile(jsonFilePath);
@@ -146,10 +146,8 @@ public class RunPythonScript : MonoBehaviour
 
     private void CreateSymmetryFile(string inputFilePath)
     {
-        // Define the output file path
         string outputFilePath = inputFilePath.Replace(".json", "Symmetry.json");
 
-        // Process the JSON file to create the symmetry file
         SymmetryJsonProcessor.ProcessJson(inputFilePath, outputFilePath);
 
         Debug.Log($"Symmetry JSON file created at: {outputFilePath}");
