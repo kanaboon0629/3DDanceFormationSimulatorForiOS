@@ -5,11 +5,14 @@ using UnityEngine.UI;
 
 public class LogReceiver : MonoBehaviour
 {
-    private const string LogUrl = "http://192.168.1.4:5000//log";
+    private const string LogUrl = "http://192.168.1.4:5000/log";
     public Text logText; // Text コンポーネントの参照
+    public Slider progressBar; // 進行状況バーのUIオブジェクト
+
     private string logBuffer = "";
     private const string SuccessMessage = "Generating demo successful!";
-    private const float MaxDuration = 600f; // 10分間
+    private const float MaxDuration = 600f; // 10分間    
+    private int tabCount = 0;
 
     void Start()
     {
@@ -18,7 +21,7 @@ public class LogReceiver : MonoBehaviour
             Debug.LogError("LogText is not assigned!");
             return;
         }
-
+        tabCount = PlayerPrefs.GetInt("tabCount");
         StartCoroutine(StartLogStreamAfterDelay());
     }
 
@@ -59,6 +62,8 @@ public class LogReceiver : MonoBehaviour
                         logBuffer = log; // 新しいログをバッファに追加
                         logText.text = logBuffer;
 
+                        UpdateProgressBar();
+
                         if (logBuffer.Contains(SuccessMessage))
                         {
                             Debug.Log("Success message detected. Stopping log polling.");
@@ -68,9 +73,71 @@ public class LogReceiver : MonoBehaviour
                 }
             }
 
-            yield return new WaitForSeconds(1.0f); // 1秒ごとにポーリング
+            yield return new WaitForSeconds(0.5f); // 1秒ごとにポーリング
         }
 
         Debug.Log("Polling stopped after 10 minutes.");
+    }
+
+    private void UpdateProgressBar()
+    {
+        if (progressBar == null) return;
+
+        if (tabCount == 0)
+        {
+            // タブカウントが0のときのログメッセージ
+            if (logBuffer.Contains("Generating 2D pose..."))
+            {
+                progressBar.value = 0.25f; // 25% 完了
+            }
+            else if (logBuffer.Contains("Generating 3D pose..."))
+            {
+                progressBar.value = 0.5f; // 50% 完了
+            }
+            else if (logBuffer.Contains("Generating demo..."))
+            {
+                progressBar.value = 0.75f; // 75% 完了
+            }
+            else if (logBuffer.Contains(SuccessMessage))
+            {
+                progressBar.value = 1.0f; // 100% 完了
+            }
+        }
+        else if (tabCount == 1)
+        {
+            // タブカウントが1のときのログメッセージ
+            if (logBuffer.Contains("Getting available formats for the video..."))
+            {
+                progressBar.value = 0.05f; // 5% 完了
+            }
+            else if (logBuffer.Contains("Downloading video from YouTube..."))
+            {
+                progressBar.value = 0.1f; // 10% 完了
+            }
+            else if (logBuffer.Contains("Extracting subclip..."))
+            {
+                progressBar.value = 0.15f; // 15% 完了
+            }
+            else if (logBuffer.Contains("Changing speed of the video..."))
+            {
+                progressBar.value = 0.2f; // 20% 完了
+            }
+            else if (logBuffer.Contains("Generating 2D pose..."))
+            {
+                progressBar.value = 0.4f; // 40% 完了
+            }
+            else if (logBuffer.Contains("Generating 3D pose..."))
+            {
+                progressBar.value = 0.6f; // 60% 完了
+            }
+            else if (logBuffer.Contains("Generating demo..."))
+            {
+                progressBar.value = 0.8f; // 80% 完了
+            }
+            else if (logBuffer.Contains(SuccessMessage))
+            {
+                progressBar.value = 1.0f; // 100% 完了
+            }
+        }
     }
 }
