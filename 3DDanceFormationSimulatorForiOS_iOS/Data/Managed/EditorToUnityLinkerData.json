@@ -1212,8 +1212,7 @@
             "fullManagedTypeName": "UnityEngine.Video.VideoPlayer",
             "moduleName": "Video",
             "usedInScenes": [
-                "Assets/Scenes/Estimation.unity",
-                "Assets/Scenes/VideoSetting.unity"
+                "Assets/Scenes/Estimation.unity"
             ]
         },
         {
