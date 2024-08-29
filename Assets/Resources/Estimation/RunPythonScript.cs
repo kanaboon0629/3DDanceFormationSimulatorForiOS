@@ -53,13 +53,10 @@ public class RunPythonScript : MonoBehaviour
 
     private IEnumerator SendVideo(string filePath)
     {
-        // ファイルのバイナリデータを読み込み
         byte[] videoData = System.IO.File.ReadAllBytes(filePath);
 
-        // デバッグメッセージを追加
         Debug.Log($"Sending file: {filePath}");
 
-        // UnityWebRequestを使用してファイルをアップロード
         using (UnityWebRequest request = new UnityWebRequest("http://192.168.1.4:5000/run-script-from-videofile", "POST"))
         {
             // WWWFormを使用してmultipart/form-dataを設定
@@ -78,16 +75,24 @@ public class RunPythonScript : MonoBehaviour
             }
             else
             {
-                string jsonFilePath = Path.Combine(Application.persistentDataPath, "output.json");
-                File.WriteAllBytes(jsonFilePath, request.downloadHandler.data);
-                Debug.Log($"JSON file saved to: {jsonFilePath}");
+                string responseText = request.downloadHandler.text;
+                Debug.Log($"Response Text: {responseText}");
 
-                ProcessJsonFile(jsonFilePath);
-                CreateSymmetryFile(jsonFilePath);
-                Debug.Log("JSON作成完了");
+                // Process JSON file
+                if (responseText.StartsWith("{") && responseText.EndsWith("}"))
+                {
+                    string jsonFilePath = Path.Combine(Application.persistentDataPath, "output.json");
+                    File.WriteAllBytes(jsonFilePath, System.Text.Encoding.UTF8.GetBytes(responseText));
+                    Debug.Log($"JSON file saved to: {jsonFilePath}");
+
+                    ProcessJsonFile(jsonFilePath);
+                    CreateSymmetryFile(jsonFilePath);
+                    Debug.Log("JSON作成完了");
+                }
             }
         }
     }
+
 
 
     private IEnumerator SendRequest(string url, int start, int end)

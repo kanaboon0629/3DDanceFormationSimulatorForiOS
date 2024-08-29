@@ -10,6 +10,7 @@
 		<type fullname="FormationManager" preserve="nothing"/>
 		<type fullname="InputFieldHandler" preserve="nothing"/>
 		<type fullname="Joystick" preserve="nothing"/>
+		<type fullname="LogReceiver" preserve="nothing"/>
 		<type fullname="MobileDisableAutoSwitchControls" preserve="nothing"/>
 		<type fullname="NumberPicker" preserve="nothing"/>
 		<type fullname="ObjectDataLoader" preserve="nothing"/>
