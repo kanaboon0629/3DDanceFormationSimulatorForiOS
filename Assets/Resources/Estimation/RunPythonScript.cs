@@ -76,14 +76,14 @@ public class RunPythonScript : MonoBehaviour
             else
             {
                 string responseText = request.downloadHandler.text;
-                Debug.Log($"Response Text: {responseText}");
+                // Debug.Log($"Response Text: {responseText}");
 
                 // Process JSON file
                 if (responseText.StartsWith("{") && responseText.EndsWith("}"))
                 {
                     string jsonFilePath = Path.Combine(Application.persistentDataPath, "output.json");
                     File.WriteAllBytes(jsonFilePath, System.Text.Encoding.UTF8.GetBytes(responseText));
-                    Debug.Log($"JSON file saved to: {jsonFilePath}");
+                    // Debug.Log($"JSON file saved to: {jsonFilePath}");
 
                     ProcessJsonFile(jsonFilePath);
                     CreateSymmetryFile(jsonFilePath);
@@ -92,8 +92,6 @@ public class RunPythonScript : MonoBehaviour
             }
         }
     }
-
-
 
     private IEnumerator SendRequest(string url, int start, int end)
     {
@@ -122,13 +120,20 @@ public class RunPythonScript : MonoBehaviour
             }
             else
             {
-                string jsonFilePath = Path.Combine(Application.persistentDataPath, "output.json");
-                File.WriteAllBytes(jsonFilePath, request.downloadHandler.data);
-                Debug.Log($"JSON file saved to: {jsonFilePath}");
+                string responseText = request.downloadHandler.text;
+                // Debug.Log($"Response Text: {responseText}");
 
-                ProcessJsonFile(jsonFilePath);
-                CreateSymmetryFile(jsonFilePath);
-                Debug.Log("JSON作成完了");
+                // Process JSON file
+                if (responseText.StartsWith("{") && responseText.EndsWith("}"))
+                {
+                    string jsonFilePath = Path.Combine(Application.persistentDataPath, "output.json");
+                    File.WriteAllBytes(jsonFilePath, System.Text.Encoding.UTF8.GetBytes(responseText));
+                    // Debug.Log($"JSON file saved to: {jsonFilePath}");
+
+                    ProcessJsonFile(jsonFilePath);
+                    CreateSymmetryFile(jsonFilePath);
+                    Debug.Log("JSON作成完了");
+                }
             }
         }
     }
@@ -136,7 +141,7 @@ public class RunPythonScript : MonoBehaviour
     private void ProcessJsonFile(string filePath)
     {
         string jsonContent = File.ReadAllText(filePath);
-        Debug.Log($"JSON Content: {jsonContent}");
+        Debug.Log($"JSON file created at: : {filePath}");
     }
 
     private void CreateSymmetryFile(string inputFilePath)

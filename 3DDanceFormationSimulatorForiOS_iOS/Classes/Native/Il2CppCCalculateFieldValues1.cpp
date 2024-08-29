@@ -19800,14 +19800,8 @@ struct VertexZoom_t51F05EB153497034D27896F07590D790A73981A6  : public MonoBehavi
 // VideoGalleryManager
 struct VideoGalleryManager_t973965DF4E1E72BF84339B93B79B3AAB50D2152F  : public MonoBehaviour_t532A11E69716D348D8AA7F854AFCBFCB8AD17F71
 {
-	// UnityEngine.UI.RawImage VideoGalleryManager::rawImage
-	RawImage_tFF12F7DB574FBDC1863CF607C7A12A5D9F8D6179* ___rawImage_4;
-	// UnityEngine.Video.VideoPlayer VideoGalleryManager::videoPlayer
-	VideoPlayer_t48EA4A8117B822BC59590150DED9AD46C62F65D3* ___videoPlayer_5;
 	// UnityEngine.UI.Text VideoGalleryManager::resultText
-	Text_tD60B2346DAA6666BF0D822FF607F0B220C2B9E62* ___resultText_6;
-	// UnityEngine.RenderTexture VideoGalleryManager::renderTexture
-	RenderTexture_tBA90C4C3AD9EECCFDDCC632D97C29FAB80D60D27* ___renderTexture_7;
+	Text_tD60B2346DAA6666BF0D822FF607F0B220C2B9E62* ___resultText_4;
 };
 
 // VideoPlayerScript
@@ -31254,9 +31248,9 @@ IL2CPP_EXTERN_C const int32_t g_FieldOffsetTable4357[4] =
 IL2CPP_EXTERN_C const int32_t g_FieldOffsetTable4358[6] = 
 {
 	static_cast<int32_t>(offsetof(TabController_t275AE4E7AB8A112DF84288521A5FA0750243BA47, ___tabs_4)),static_cast<int32_t>(offsetof(TabController_t275AE4E7AB8A112DF84288521A5FA0750243BA47, ___contents_5)),static_cast<int32_t>(offsetof(TabController_t275AE4E7AB8A112DF84288521A5FA0750243BA47, ___selectedColor_6)),static_cast<int32_t>(offsetof(TabController_t275AE4E7AB8A112DF84288521A5FA0750243BA47, ___unselectedColor_7)),static_cast<int32_t>(offsetof(TabController_t275AE4E7AB8A112DF84288521A5FA0750243BA47, ___initialTabIndex_8)),static_cast<int32_t>(offsetof(TabController_t275AE4E7AB8A112DF84288521A5FA0750243BA47, ___currentTabIndex_9)),};
-IL2CPP_EXTERN_C const int32_t g_FieldOffsetTable4359[4] = 
+IL2CPP_EXTERN_C const int32_t g_FieldOffsetTable4359[1] = 
 {
-	static_cast<int32_t>(offsetof(VideoGalleryManager_t973965DF4E1E72BF84339B93B79B3AAB50D2152F, ___rawImage_4)),static_cast<int32_t>(offsetof(VideoGalleryManager_t973965DF4E1E72BF84339B93B79B3AAB50D2152F, ___videoPlayer_5)),static_cast<int32_t>(offsetof(VideoGalleryManager_t973965DF4E1E72BF84339B93B79B3AAB50D2152F, ___resultText_6)),static_cast<int32_t>(offsetof(VideoGalleryManager_t973965DF4E1E72BF84339B93B79B3AAB50D2152F, ___renderTexture_7)),};
+	static_cast<int32_t>(offsetof(VideoGalleryManager_t973965DF4E1E72BF84339B93B79B3AAB50D2152F, ___resultText_4)),};
 IL2CPP_EXTERN_C const int32_t g_FieldOffsetTable4360[1] = 
 {
 	static_cast<int32_t>(offsetof(MobileDisableAutoSwitchControls_t0A648011382F1B8F00CD89B26AB30777CCBB9FDA, ___playerInput_4)),};
