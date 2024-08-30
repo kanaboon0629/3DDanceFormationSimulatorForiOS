@@ -19,7 +19,8 @@
 			<method name="OpenGalleryForVideo"/>
 		</type>
 		<type fullname="VideoPlayerScript">
-			<method name="PlayLatestVideo"/>
+			<method name="CallDownloadAndPlayVideo"/>
+			<method name="PlayVideo"/>
 		</type>
 	</assembly>
 	<assembly fullname="Unity.RenderPipelines.Core.Runtime" ignoreIfMissing="1">

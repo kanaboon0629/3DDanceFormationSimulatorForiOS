@@ -1,67 +1,62 @@
 using System;
+using System.Collections;
 using System.IO;
 using UnityEngine;
+using UnityEngine.Networking;
 using UnityEngine.UI;
 using UnityEngine.Video;
 
 public class VideoPlayerScript : MonoBehaviour
 {
     public VideoPlayer videoPlayer; // 動画再生用のVideoPlayer
-    public RawImage rawImage; // 動画を表示するためのRawImage
+    public GameObject loadingPanel; // 非表示にする
+    public GameObject playPanel; // 非表示にする
+    private string videoFilePath;
+    public GameObject checkButton;
 
     void Start()
     {
-        // 最初にRawImageを非表示にする
-        if (rawImage != null)
-        {
-            rawImage.gameObject.SetActive(false);
-        }
+        playPanel.SetActive(false);
     }
 
-    public void PlayLatestVideo()
+    public void CallDownloadAndPlayVideo()
     {
-        string videoDirectory = Application.streamingAssetsPath;
-        
-        if (Directory.Exists(videoDirectory))
+        loadingPanel.SetActive(false);
+        StartCoroutine(DownloadAndPlayVideo());
+    }
+    public void PlayVideo()
+    {
+        videoPlayer.Play();
+    }
+
+    private IEnumerator DownloadAndPlayVideo()
+    {
+        string url = "http://192.168.1.4:5000/download-video"; // サーバの動画ダウンロードエンドポイントURL
+
+        using (UnityWebRequest uwr = UnityWebRequest.Get(url))
         {
-            string[] videoFiles = Directory.GetFiles(videoDirectory, "*.mp4");
+            // サーバにリクエストを送信
+            yield return uwr.SendWebRequest();
 
-            if (videoFiles.Length > 0)
+            if (uwr.result == UnityWebRequest.Result.ConnectionError || uwr.result == UnityWebRequest.Result.ProtocolError)
             {
-                // 最も新しいファイルを取得
-                string latestVideo = videoFiles[0];
-                DateTime latestDate = File.GetCreationTime(latestVideo);
-
-                foreach (string videoFile in videoFiles)
-                {
-                    DateTime fileDate = File.GetCreationTime(videoFile);
-                    if (fileDate > latestDate)
-                    {
-                        latestDate = fileDate;
-                        latestVideo = videoFile;
-                    }
-                }
-
-                // VideoPlayerに動画をセットして再生
-                videoPlayer.url = latestVideo;
-
-                // RawImageを表示する
-                if (rawImage != null)
-                {
-                    rawImage.gameObject.SetActive(true);
-                }
-
-                videoPlayer.Play();
+                UnityEngine.Debug.LogError("Error downloading video: " + uwr.error);
             }
             else
             {
-                UnityEngine.Debug.LogError("No video files found in the directory.");
+                checkButton.SetActive(false);
+                // 成功したら動画を保存
+                videoFilePath = Path.Combine(Application.persistentDataPath, "downloadedVideo.mp4");
+                File.WriteAllBytes(videoFilePath, uwr.downloadHandler.data);
+                UnityEngine.Debug.Log("Video downloaded and saved to: " + videoFilePath);
+
+                // VideoPlayerに動画をセットして再生
+                videoPlayer.url = videoFilePath;
+
+                playPanel.SetActive(true);
+                
+                videoPlayer.Play();
             }
-        }
-        else
-        {
-            UnityEngine.Debug.LogError("Video directory does not exist.");
         }
     }
 }
-
