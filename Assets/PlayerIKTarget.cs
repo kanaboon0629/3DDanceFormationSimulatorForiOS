@@ -78,6 +78,7 @@ public class PlayerIKTarget : MonoBehaviour
         set { is_athlete_motion_play = value; }
     }
     private SymmetryJsonProcessor processor = new SymmetryJsonProcessor();
+    private int isSample = 1;
         
     /// <summary>
     /// 3D humanoidモデルの関節長を計算する
@@ -121,6 +122,9 @@ public class PlayerIKTarget : MonoBehaviour
 
     // Start is called before the first frame update
     void Start(){
+
+        isSample = PlayerPrefs.GetInt("IsSample", 1);
+
         Renderer renderer = GetComponentInChildren<Renderer>();
 
         // 赤色かどうかを判定 (RGBで赤色は (1, 0, 0) とする)
@@ -255,6 +259,11 @@ public class PlayerIKTarget : MonoBehaviour
         // string parentDatapath = Application.streamingAssetsPath + "/";
         string parentDatapath = Application.persistentDataPath + "/";
         string datapath = "";
+
+        if (isSample == 1) {
+            parentDatapath = Application.streamingAssetsPath + "/";
+            jsonFileName = "sample.json";
+        }
         //通常
         if (!isSymmetry) {
             datapath = parentDatapath + jsonFileName;
