@@ -27753,6 +27753,11 @@ struct NGPermissionCallbackiOS_t966C11FC5C548BAB341244C5EB5AC30D800DA565_StaticF
 // SceneRenderPipeline
 
 // SceneSwitcher
+struct SceneSwitcher_t4BE0478E16D178567D51E0CB184D38BDE3E02602_StaticFields
+{
+	// System.Boolean SceneSwitcher::IsReturningFromSpecificScene
+	bool ___IsReturningFromSpecificScene_5;
+};
 
 // SceneSwitcher
 
@@ -31146,9 +31151,9 @@ IL2CPP_EXTERN_C const int32_t g_FieldOffsetTable4321[5] =
 IL2CPP_EXTERN_C const int32_t g_FieldOffsetTable4322[3] = 
 {
 	static_cast<int32_t>(offsetof(NumberPicker_t08EDC171C5E436145D57757FF677C648CADFC8EF, ___numberDropdown_4)),static_cast<int32_t>(offsetof(NumberPicker_t08EDC171C5E436145D57757FF677C648CADFC8EF, ___selectedValueText_5)),static_cast<int32_t>(offsetof(NumberPicker_t08EDC171C5E436145D57757FF677C648CADFC8EF, ___confirmButton_6)),};
-IL2CPP_EXTERN_C const int32_t g_FieldOffsetTable4324[1] = 
+IL2CPP_EXTERN_C const int32_t g_FieldOffsetTable4324[2] = 
 {
-	static_cast<int32_t>(offsetof(SceneSwitcher_t4BE0478E16D178567D51E0CB184D38BDE3E02602, ___dataSaver_4)),};
+	static_cast<int32_t>(offsetof(SceneSwitcher_t4BE0478E16D178567D51E0CB184D38BDE3E02602, ___dataSaver_4)),static_cast<int32_t>(offsetof(SceneSwitcher_t4BE0478E16D178567D51E0CB184D38BDE3E02602_StaticFields, ___IsReturningFromSpecificScene_5)),};
 IL2CPP_EXTERN_C const int32_t g_FieldOffsetTable4325[1] = 
 {
 	static_cast<int32_t>(offsetof(ScreenOrientationManager_t36E6D3D820F934D1D6EA56B204E9AC1BF6FE69D2, ___isPortrait_4)),};

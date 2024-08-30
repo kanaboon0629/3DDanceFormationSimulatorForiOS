@@ -4,6 +4,7 @@ using UnityEngine.SceneManagement; // SceneManagerを使用するために必要
 public class SceneSwitcher : MonoBehaviour
 {
     public ObjectDataSaver dataSaver;  // データを保存するためのスクリプトを参照
+    public static bool IsReturningFromSpecificScene = false;
     
     // 指定されたシーンに遷移するメソッド
     public void SwitchToScene(string sceneName)
@@ -22,5 +23,15 @@ public class SceneSwitcher : MonoBehaviour
         int currentSceneIndex = SceneManager.GetActiveScene().buildIndex;
         int nextSceneIndex = (currentSceneIndex + 1) % SceneManager.sceneCountInBuildSettings;
         SceneManager.LoadScene(nextSceneIndex);
+    }
+    public void BackToSceneInNumberSetting()
+    {
+        int isSample = PlayerPrefs.GetInt("IsSample", 1);
+        if (isSample == 1) {
+            SwitchToScene("Title");
+        }else{
+            IsReturningFromSpecificScene = true;
+            SwitchToScene("Estimation");
+        }
     }
 }

@@ -16,13 +16,12 @@ public class LogReceiver : MonoBehaviour
 
     void Start()
     {
-        if (logText == null)
+        //戻るボタンからの時はやらない
+        if (!SceneSwitcher.IsReturningFromSpecificScene)
         {
-            Debug.LogError("LogText is not assigned!");
-            return;
+            tabCount = PlayerPrefs.GetInt("tabCount");
+            StartCoroutine(StartLogStreamAfterDelay());
         }
-        tabCount = PlayerPrefs.GetInt("tabCount");
-        StartCoroutine(StartLogStreamAfterDelay());
     }
 
     IEnumerator StartLogStreamAfterDelay()
