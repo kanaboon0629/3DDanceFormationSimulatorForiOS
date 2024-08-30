@@ -2070,7 +2070,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -65.0024, y: -10.049011}
+  m_AnchoredPosition: {x: -65.00241, y: -10.04895}
   m_SizeDelta: {x: 380.8173, y: -539.77}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &824361779
@@ -2600,7 +2600,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -57.031, y: -5.8139}
+  m_AnchoredPosition: {x: -57.031006, y: -5.813843}
   m_SizeDelta: {x: 396.76, y: -531.3}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &1414876836
@@ -3220,7 +3220,6 @@ GameObject:
   - component: {fileID: 1756864173}
   - component: {fileID: 1756864174}
   - component: {fileID: 1756864175}
-  - component: {fileID: 1756864176}
   - component: {fileID: 1756864177}
   m_Layer: 0
   m_Name: GameManager
@@ -3326,18 +3325,6 @@ MonoBehaviour:
   startField: {fileID: 168290425}
   endField: {fileID: 1678817550}
   errorMessage: {fileID: 129259936}
---- !u!114 &1756864176
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1756864167}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e877515604a7c4dc08bdc9c72bda4753, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &1756864177
 MonoBehaviour:
   m_ObjectHideFlags: 0

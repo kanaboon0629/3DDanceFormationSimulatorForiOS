@@ -6,7 +6,13 @@
 		<type fullname="ObjectDataSaver">
 			<method name="SaveObjectData"/>
 		</type>
+		<type fullname="SampleSaveBool">
+			<method name="isNotSample"/>
+			<method name="isSample"/>
+		</type>
 		<type fullname="SceneSwitcher">
+			<method name="SwitchToScene"/>
+			<method name="SwitchToScene"/>
 			<method name="SwitchToScene"/>
 			<method name="SwitchToScene"/>
 			<method name="SwitchToScene"/>
