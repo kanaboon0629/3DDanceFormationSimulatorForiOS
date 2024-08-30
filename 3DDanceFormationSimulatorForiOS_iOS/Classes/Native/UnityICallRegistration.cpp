@@ -610,10 +610,6 @@ void RegisterAllStrippedInternalCalls()
 		void Register_UnityEngine_Application_get_persistentDataPath();
 		Register_UnityEngine_Application_get_persistentDataPath();
 
-		//System.String UnityEngine.Application::get_streamingAssetsPath()
-		void Register_UnityEngine_Application_get_streamingAssetsPath();
-		Register_UnityEngine_Application_get_streamingAssetsPath();
-
 		//System.String UnityEngine.Application::get_temporaryCachePath()
 		void Register_UnityEngine_Application_get_temporaryCachePath();
 		Register_UnityEngine_Application_get_temporaryCachePath();

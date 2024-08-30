@@ -9,6 +9,7 @@ public class RunPythonScript : MonoBehaviour
     public GameObject loadingSpinner; // ローディングスピナーのUIオブジェクト
     public Slider progressBar; // 進行状況バーのUIオブジェクト
     public GameObject nextButton; // JSON作成完了後に表示するボタンのUIオブジェクト
+    public GameObject checkButton; // JSON作成完了後に表示するボタンのUIオブジェクト
     private const string SuccessMessage = "Generating demo successful!";
 
     public Text logText;
@@ -16,11 +17,11 @@ public class RunPythonScript : MonoBehaviour
     private IEnumerator Start()
     {
         yield return null;
-
+        nextButton.SetActive(false); // ボタンを非表示にしておく
+        checkButton.SetActive(false); // ボタンを非表示にしておく
         loadingSpinner.SetActive(true);
         progressBar.gameObject.SetActive(true);
         progressBar.value = 0f;
-        nextButton.SetActive(false); // ボタンを非表示にしておく
 
         int tabCount = PlayerPrefs.GetInt("tabCount");
         if (tabCount == 0)
@@ -55,6 +56,7 @@ public class RunPythonScript : MonoBehaviour
         loadingSpinner.SetActive(false);
         progressBar.gameObject.SetActive(false);
         nextButton.SetActive(true);
+        checkButton.SetActive(true);
         logText.text = SuccessMessage;
     }
 
