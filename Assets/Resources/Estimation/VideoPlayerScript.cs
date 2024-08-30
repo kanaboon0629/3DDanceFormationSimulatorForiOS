@@ -26,6 +26,8 @@ public class VideoPlayerScript : MonoBehaviour
     }
     public void PlayVideo()
     {
+        videoFilePath = Path.Combine(Application.persistentDataPath, "downloadedVideo.mp4");
+        videoPlayer.url = videoFilePath;
         videoPlayer.Play();
     }
 

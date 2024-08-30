@@ -17,40 +17,44 @@ public class RunPythonScript : MonoBehaviour
     private IEnumerator Start()
     {
         yield return null;
-        nextButton.SetActive(false); // ボタンを非表示にしておく
-        checkButton.SetActive(false); // ボタンを非表示にしておく
-        loadingSpinner.SetActive(true);
-        progressBar.gameObject.SetActive(true);
-        progressBar.value = 0f;
-
-        int tabCount = PlayerPrefs.GetInt("tabCount");
-        if (tabCount == 0)
-        {
-            string selectedVideoPath = PlayerPrefs.GetString("selectedVideoPath");
-            if (string.IsNullOrEmpty(selectedVideoPath))
+        //戻るボタンからの時はやらない
+        if (!SceneSwitcher.IsReturningFromSpecificScene)
             {
-                Debug.LogError("Video path is not set.");
-                yield break;
+            nextButton.SetActive(false); // ボタンを非表示にしておく
+            checkButton.SetActive(false); // ボタンを非表示にしておく
+            loadingSpinner.SetActive(true);
+            progressBar.gameObject.SetActive(true);
+            progressBar.value = 0f;
+
+            int tabCount = PlayerPrefs.GetInt("tabCount");
+            if (tabCount == 0)
+            {
+                string selectedVideoPath = PlayerPrefs.GetString("selectedVideoPath");
+                if (string.IsNullOrEmpty(selectedVideoPath))
+                {
+                    Debug.LogError("Video path is not set.");
+                    yield break;
+                }
+                yield return StartCoroutine(SendVideo(selectedVideoPath));
             }
-            yield return StartCoroutine(SendVideo(selectedVideoPath));
+            else if (tabCount == 1)
+            {
+                string url = PlayerPrefs.GetString("url");
+                string startStr = PlayerPrefs.GetString("start");
+                string endStr = PlayerPrefs.GetString("end");
+                if (string.IsNullOrEmpty(url) || string.IsNullOrEmpty(startStr) || string.IsNullOrEmpty(endStr))
+                {
+                    Debug.LogError("URL or start/end parameters are missing.");
+                    yield break;
+                }
+
+                if (!int.TryParse(startStr, out int start) || !int.TryParse(endStr, out int end))
+                {
+                    Debug.LogError("Start or end parameters are not valid integers.");
+                    yield break;
+                }
+                yield return StartCoroutine(SendRequest(url, start, end));
         }
-        else if (tabCount == 1)
-        {
-            string url = PlayerPrefs.GetString("url");
-            string startStr = PlayerPrefs.GetString("start");
-            string endStr = PlayerPrefs.GetString("end");
-            if (string.IsNullOrEmpty(url) || string.IsNullOrEmpty(startStr) || string.IsNullOrEmpty(endStr))
-            {
-                Debug.LogError("URL or start/end parameters are missing.");
-                yield break;
-            }
-
-            if (!int.TryParse(startStr, out int start) || !int.TryParse(endStr, out int end))
-            {
-                Debug.LogError("Start or end parameters are not valid integers.");
-                yield break;
-            }
-            yield return StartCoroutine(SendRequest(url, start, end));
         }
 
         loadingSpinner.SetActive(false);

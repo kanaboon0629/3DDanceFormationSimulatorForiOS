@@ -11,6 +11,12 @@
 			<method name="isSample"/>
 		</type>
 		<type fullname="SceneSwitcher">
+			<method name="BackToSceneInNumberSetting"/>
+			<method name="SwitchToScene"/>
+			<method name="SwitchToScene"/>
+			<method name="SwitchToScene"/>
+			<method name="SwitchToScene"/>
+			<method name="SwitchToScene"/>
 			<method name="SwitchToScene"/>
 			<method name="SwitchToScene"/>
 			<method name="SwitchToScene"/>
