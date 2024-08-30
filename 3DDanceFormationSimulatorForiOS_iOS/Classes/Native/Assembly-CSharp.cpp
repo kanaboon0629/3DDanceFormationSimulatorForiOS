@@ -583,6 +583,8 @@ struct RunPythonScript_tEF9B61700EFB205B044962EED410D0B6B65C9C6F;
 struct SafeSerializationManager_tCBB85B95DFD1634237140CD892E82D06ECB3F5E6;
 // SceneSwitcher
 struct SceneSwitcher_t4BE0478E16D178567D51E0CB184D38BDE3E02602;
+// ScreenOrientationManager
+struct ScreenOrientationManager_t36E6D3D820F934D1D6EA56B204E9AC1BF6FE69D2;
 // UnityEngine.ScriptableObject
 struct ScriptableObject_tB3BFDB921A1B1795B38A5417D3B97A89A140436A;
 // UnityEngine.UI.Scrollbar
@@ -5430,6 +5432,13 @@ struct SceneSwitcher_t4BE0478E16D178567D51E0CB184D38BDE3E02602  : public MonoBeh
 	ObjectDataSaver_t61DF61812C1EC092145FDEA168CEE894366B852E* ___dataSaver_4;
 };
 
+// ScreenOrientationManager
+struct ScreenOrientationManager_t36E6D3D820F934D1D6EA56B204E9AC1BF6FE69D2  : public MonoBehaviour_t532A11E69716D348D8AA7F854AFCBFCB8AD17F71
+{
+	// System.Boolean ScreenOrientationManager::isPortrait
+	bool ___isPortrait_4;
+};
+
 // TMPro.Examples.ShaderPropAnimator
 struct ShaderPropAnimator_t768B23A41FC3CFB5B3C2501C2411B4DEBA296906  : public MonoBehaviour_t532A11E69716D348D8AA7F854AFCBFCB8AD17F71
 {
@@ -8076,6 +8085,10 @@ struct PlayerInput_t5155B6508FE1937D9B2380CBA545FABE36A6F81F_StaticFields
 
 // SceneSwitcher
 
+// ScreenOrientationManager
+
+// ScreenOrientationManager
+
 // TMPro.Examples.ShaderPropAnimator
 
 // TMPro.Examples.ShaderPropAnimator
@@ -9744,6 +9757,8 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t Scene_get_buildIndex_m82B6E0C96C85C95
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t SceneManager_get_sceneCountInBuildSettings_m414CDE36617596AC75C8E1A03DA65752A09A8944 (const RuntimeMethod* method) ;
 // System.Void UnityEngine.SceneManagement.SceneManager::LoadScene(System.Int32)
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void SceneManager_LoadScene_m0957E62F2A0A0243C79394E5B74E8EFA86BE5ED1 (int32_t ___0_sceneBuildIndex, const RuntimeMethod* method) ;
+// System.Void UnityEngine.Screen::set_orientation(UnityEngine.ScreenOrientation)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Screen_set_orientation_mFCC880DDE7D3916DD8DA84E546F4743EEE773C4D (int32_t ___0_value, const RuntimeMethod* method) ;
 // UnityEngine.Vector2 Joystick::GetInput()
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 Joystick_GetInput_mFBBDDA3C3F1D3E1FCA4D416D3B32D42524115E0C_inline (Joystick_tE3193C48A43E3F5577CBD4E9A8204BBFF2FEEB7A* __this, const RuntimeMethod* method) ;
 // UnityEngine.Vector3 UnityEngine.Vector3::op_Multiply(UnityEngine.Vector3,System.Single)
@@ -17911,6 +17926,47 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void SceneSwitcher_SwitchToNextScene_m8527E55
 }
 // System.Void SceneSwitcher::.ctor()
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void SceneSwitcher__ctor_m286A74582BD4C6059DACBC69C75EE335165E73DA (SceneSwitcher_t4BE0478E16D178567D51E0CB184D38BDE3E02602* __this, const RuntimeMethod* method) 
+{
+	{
+		MonoBehaviour__ctor_m592DB0105CA0BC97AA1C5F4AD27B12D68A3B7C1E(__this, NULL);
+		return;
+	}
+}
+#ifdef __clang__
+#pragma clang diagnostic pop
+#endif
+#ifdef __clang__
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Winvalid-offsetof"
+#pragma clang diagnostic ignored "-Wunused-variable"
+#endif
+// System.Void ScreenOrientationManager::Start()
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ScreenOrientationManager_Start_m2E79A384AB7CA604C5F6B0888A608F0AFE42A4A4 (ScreenOrientationManager_t36E6D3D820F934D1D6EA56B204E9AC1BF6FE69D2* __this, const RuntimeMethod* method) 
+{
+	{
+		// if (isPortrait)
+		bool L_0 = __this->___isPortrait_4;
+		if (!L_0)
+		{
+			goto IL_000f;
+		}
+	}
+	{
+		// Screen.orientation = ScreenOrientation.Portrait;
+		Screen_set_orientation_mFCC880DDE7D3916DD8DA84E546F4743EEE773C4D(1, NULL);
+		return;
+	}
+
+IL_000f:
+	{
+		// Screen.orientation = ScreenOrientation.LandscapeLeft;
+		Screen_set_orientation_mFCC880DDE7D3916DD8DA84E546F4743EEE773C4D(3, NULL);
+		// }
+		return;
+	}
+}
+// System.Void ScreenOrientationManager::.ctor()
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ScreenOrientationManager__ctor_mAB0753323DFA47BE06C95A476FB94081587586EE (ScreenOrientationManager_t36E6D3D820F934D1D6EA56B204E9AC1BF6FE69D2* __this, const RuntimeMethod* method) 
 {
 	{
 		MonoBehaviour__ctor_m592DB0105CA0BC97AA1C5F4AD27B12D68A3B7C1E(__this, NULL);
