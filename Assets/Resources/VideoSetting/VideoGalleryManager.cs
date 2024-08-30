@@ -4,24 +4,24 @@ using UnityEngine.Video;
 
 public class VideoGalleryManager : MonoBehaviour
 {
-    public RawImage rawImage;  // Videoを表示するRawImage
-    public VideoPlayer videoPlayer;  // VideoPlayerコンポーネント
+    // public RawImage rawImage;  // Videoを表示するRawImage
+    // public VideoPlayer videoPlayer;  // VideoPlayerコンポーネント
     public Text resultText;  // 結果を表示するText（オプション）
-    private RenderTexture renderTexture;
+    // private RenderTexture renderTexture;
 
     private void Start()
     {
-        // RenderTextureを作成し、VideoPlayerに設定する
-        renderTexture = new RenderTexture(1920, 1080, 0); // 解像度は適宜設定してください
-        if (videoPlayer != null)
-        {
-            videoPlayer.targetTexture = renderTexture;
-            if (rawImage != null)
-            {
-                rawImage.texture = renderTexture;
-                rawImage.gameObject.SetActive(false); // 初期状態では非表示
-            }
-        }
+        // // RenderTextureを作成し、VideoPlayerに設定する
+        // renderTexture = new RenderTexture(1920, 1080, 0); // 解像度は適宜設定してください
+        // if (videoPlayer != null)
+        // {
+        //     videoPlayer.targetTexture = renderTexture;
+        //     if (rawImage != null)
+        //     {
+        //         rawImage.texture = renderTexture;
+        //         rawImage.gameObject.SetActive(false); // 初期状態では非表示
+        //     }
+        // }
     }
 
     public void OpenGalleryForVideo()
@@ -30,8 +30,10 @@ public class VideoGalleryManager : MonoBehaviour
         {
             if (path != null)
             {
+                PlayerPrefs.SetString("selectedVideoPath", path);
                 resultText.text = "Video is Selected";
-                PlayVideo(path);
+                
+                // PlayVideo(path);
             }
             else
             {
@@ -40,36 +42,42 @@ public class VideoGalleryManager : MonoBehaviour
         }, "Select a video", "video/*");
     }
 
-    private void PlayVideo(string path)
-    {
-        if (videoPlayer != null)
-        {
-            videoPlayer.url = path;
-            videoPlayer.Prepare();  // Prepareメソッドで動画の準備を開始
+    // private void PlayVideo(string path)
+    // {
+    //     if (videoPlayer != null)
+    //     {
+    //         videoPlayer.url = path;
+    //         videoPlayer.Prepare();  // Prepareメソッドで動画の準備を開始
 
-            videoPlayer.prepareCompleted += (source) =>
-            {
-                // 動画の準備が完了したら再生開始
-                videoPlayer.Play();
-                // RawImageを表示する
-                if (rawImage != null)
-                {
-                    rawImage.gameObject.SetActive(true);
-                }
-            };
-        }
-        else
-        {
-            Debug.LogError("VideoPlayer component not assigned.");
-        }
-    }
+    //         videoPlayer.prepareCompleted += (source) =>
+    //         {
+    //             // 動画の準備が完了したら再生開始
+    //             videoPlayer.Play();
+    //             // RawImageを表示する
+    //             if (rawImage != null)
+    //             {
+    //                 rawImage.gameObject.SetActive(true);
+    //             }
+    //         };
+    //     }
+    //     else
+    //     {
+    //         Debug.LogError("VideoPlayer component not assigned.");
+    //     }
+    // }
 
-    private void OnDestroy()
+    // private void OnDestroy()
+    // {
+    //     // Clean up
+    //     if (renderTexture != null)
+    //     {
+    //         renderTexture.Release();
+    //     }
+    // }
+
+    public bool IsVideoSelected()
     {
-        // Clean up
-        if (renderTexture != null)
-        {
-            renderTexture.Release();
-        }
+        string selectedVideoPath = PlayerPrefs.GetString("selectedVideoPath", null);
+        return !string.IsNullOrEmpty(selectedVideoPath);
     }
 }

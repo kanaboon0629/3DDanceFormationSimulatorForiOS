@@ -15,7 +15,7 @@ public class SymmetryJsonProcessor
         }
 
         string jsonData = File.ReadAllText(inputFilePath);
-        Debug.Log("Read JSON data: " + jsonData); // JSONデータの内容をログ出力
+        // Debug.Log("Read JSON data: " + jsonData); // JSONデータの内容をログ出力
 
         try
         {
@@ -27,7 +27,7 @@ public class SymmetryJsonProcessor
             }
 
             // デシリアライズ結果を確認
-            Debug.Log("Deserialized data: " + MiniJSON.Json.Serialize(data));
+            // Debug.Log("Deserialized data: " + MiniJSON.Json.Serialize(data));
 
             // 型変換を試みる
             var convertedData = new Dictionary<string, Dictionary<string, List<float>>>();
@@ -80,7 +80,7 @@ public class SymmetryJsonProcessor
             string newJsonData = MiniJSON.Json.Serialize(convertedData);
             File.WriteAllText(outputFilePath, newJsonData);
 
-            Debug.Log($"新しいJSONファイルが作成されました: {outputFilePath}");
+            // Debug.Log($"新しいJSONファイルが作成されました: {outputFilePath}");
         }
         catch (Exception ex)
         {

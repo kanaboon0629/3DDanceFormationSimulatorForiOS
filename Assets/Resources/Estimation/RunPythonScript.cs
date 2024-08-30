@@ -1,104 +1,169 @@
-using System;
-using System.Diagnostics;
-using System.IO;
-using System.Threading.Tasks;
-using UnityEngine;
 using System.Collections;
+using UnityEngine;
+using UnityEngine.Networking;
 using UnityEngine.UI;
-
+using System.IO;
 
 public class RunPythonScript : MonoBehaviour
 {
     public GameObject loadingSpinner; // ローディングスピナーのUIオブジェクト
     public Slider progressBar; // 進行状況バーのUIオブジェクト
+    public GameObject nextButton; // JSON作成完了後に表示するボタンのUIオブジェクト
+    public GameObject checkButton; // JSON作成完了後に表示するボタンのUIオブジェクト
+    private const string SuccessMessage = "Generating demo successful!";
+
+    public Text logText;
 
     private IEnumerator Start()
     {
         yield return null;
-
-        string url = PlayerPrefs.GetString("url");
-        string start = PlayerPrefs.GetString("start");
-        string end = PlayerPrefs.GetString("end");
-
-        loadingSpinner.SetActive(true);
-
-        progressBar.gameObject.SetActive(true);
-        progressBar.value = 0f;
-
-        yield return StartCoroutine(SearchPrefabs(url, start, end));
-
-        loadingSpinner.SetActive(false);
-        progressBar.gameObject.SetActive(false);
-    }
-    private IEnumerator SearchPrefabs(string url, string start, string end)
-    {
-        try
-        {
-            string scriptPath = Path.Combine(Application.streamingAssetsPath, "activate_and_run.sh");
-            string arguments = $"{scriptPath} \"{url}\" \"{start}\" \"{end}\"";
-
-            ProcessStartInfo startInfo = new ProcessStartInfo
+        //戻るボタンからの時はやらない
+        if (!SceneSwitcher.IsReturningFromSpecificScene)
             {
-                FileName = "bash",
-                Arguments = arguments,
-                UseShellExecute = false,
-                RedirectStandardOutput = true,
-                RedirectStandardError = true,
-                CreateNoWindow = true
-            };
+            nextButton.SetActive(false); // ボタンを非表示にしておく
+            checkButton.SetActive(false); // ボタンを非表示にしておく
+            loadingSpinner.SetActive(true);
+            progressBar.gameObject.SetActive(true);
+            progressBar.value = 0f;
 
-            using (Process process = Process.Start(startInfo))
+            int tabCount = PlayerPrefs.GetInt("tabCount");
+            if (tabCount == 0)
             {
-                if (process == null)
+                string selectedVideoPath = PlayerPrefs.GetString("selectedVideoPath");
+                if (string.IsNullOrEmpty(selectedVideoPath))
                 {
-                    UnityEngine.Debug.LogError("Failed to start the process.");
+                    Debug.LogError("Video path is not set.");
+                    yield break;
+                }
+                yield return StartCoroutine(SendVideo(selectedVideoPath));
+            }
+            else if (tabCount == 1)
+            {
+                string url = PlayerPrefs.GetString("url");
+                string startStr = PlayerPrefs.GetString("start");
+                string endStr = PlayerPrefs.GetString("end");
+                if (string.IsNullOrEmpty(url) || string.IsNullOrEmpty(startStr) || string.IsNullOrEmpty(endStr))
+                {
+                    Debug.LogError("URL or start/end parameters are missing.");
                     yield break;
                 }
 
-                string errorFilePath = Path.Combine(Application.dataPath, "StridedTransformerForUnity", "errors.txt");
-                Task outputTask = Task.Run(() => ReadStream(process.StandardOutput, "Python Output:"));
-                Task errorTask = Task.Run(() => ReadStreamToFile(process.StandardError, errorFilePath, "Python Error:"));
-
-                process.WaitForExit();
-                Task.WhenAll(outputTask, errorTask).Wait();
-
-                if (process.ExitCode != 0)
+                if (!int.TryParse(startStr, out int start) || !int.TryParse(endStr, out int end))
                 {
-                    UnityEngine.Debug.LogError($"Process exited with code {process.ExitCode}");
+                    Debug.LogError("Start or end parameters are not valid integers.");
+                    yield break;
+                }
+                yield return StartCoroutine(SendRequest(url, start, end));
+        }
+        }
+
+        loadingSpinner.SetActive(false);
+        progressBar.gameObject.SetActive(false);
+        nextButton.SetActive(true);
+        checkButton.SetActive(true);
+        logText.text = SuccessMessage;
+    }
+
+    private IEnumerator SendVideo(string filePath)
+    {
+        byte[] videoData = System.IO.File.ReadAllBytes(filePath);
+
+        Debug.Log($"Sending file: {filePath}");
+
+        using (UnityWebRequest request = new UnityWebRequest("http://192.168.1.4:5000/run-script-from-videofile", "POST"))
+        {
+            WWWForm form = new WWWForm();
+            form.AddBinaryData("file", videoData, Path.GetFileName(filePath), "video/mp4");
+
+            request.uploadHandler = new UploadHandlerRaw(form.data);
+            request.downloadHandler = new DownloadHandlerBuffer();
+            request.SetRequestHeader("Content-Type", form.headers["Content-Type"]);
+
+            yield return request.SendWebRequest();
+
+            if (request.result != UnityWebRequest.Result.Success)
+            {
+                Debug.LogError($"Request Error: {request.error}");
+            }
+            else
+            {
+                string responseText = request.downloadHandler.text;
+
+                if (responseText.StartsWith("{") && responseText.EndsWith("}"))
+                {
+                    string jsonFilePath = Path.Combine(Application.persistentDataPath, "output.json");
+                    File.WriteAllBytes(jsonFilePath, System.Text.Encoding.UTF8.GetBytes(responseText));
+
+                    ProcessJsonFile(jsonFilePath);
+                    CreateSymmetryFile(jsonFilePath);
+                    Debug.Log("JSON作成完了");
                 }
             }
         }
-        catch (Exception ex)
-        {
-            UnityEngine.Debug.LogError($"An error occurred: {ex.Message}");
-        }
-
-        for (int i = 0; i <= 100; i++)
-        {
-            progressBar.value = i / 100f;
-            yield return new WaitForSeconds(0.1f);
-        }
     }
 
-    private static async Task ReadStream(StreamReader reader, string prefix)
+    private IEnumerator SendRequest(string url, int start, int end)
     {
-        string line;
-        while ((line = await reader.ReadLineAsync()) != null)
+        var requestData = new RequestData
         {
-            UnityEngine.Debug.Log($"{prefix}\n{line}");
-        }
-    }
+            url = url,
+            start = start,
+            end = end
+        };
+        var jsonData = JsonUtility.ToJson(requestData);
 
-    private static async Task ReadStreamToFile(StreamReader reader, string filePath, string prefix)
-    {
-        using (StreamWriter fileWriter = new StreamWriter(filePath, append: false))
+        Debug.Log($"Sending JSON data: {jsonData}");
+
+        using (UnityWebRequest request = new UnityWebRequest("http://192.168.1.4:5000/run-script-from-youtube", "POST"))
         {
-            string line;
-            while ((line = await reader.ReadLineAsync()) != null)
+            byte[] bodyRaw = System.Text.Encoding.UTF8.GetBytes(jsonData);
+            request.uploadHandler = new UploadHandlerRaw(bodyRaw);
+            request.downloadHandler = new DownloadHandlerBuffer();
+            request.SetRequestHeader("Content-Type", "application/json");
+
+            yield return request.SendWebRequest();
+
+            if (request.result != UnityWebRequest.Result.Success)
             {
-                UnityEngine.Debug.Log($"{prefix}\n{line}");
-                await fileWriter.WriteLineAsync($"{prefix}\n{line}");
+                Debug.LogError($"Request Error: {request.error}");
+            }
+            else
+            {
+                string responseText = request.downloadHandler.text;
+
+                if (responseText.StartsWith("{") && responseText.EndsWith("}"))
+                {
+                    string jsonFilePath = Path.Combine(Application.persistentDataPath, "output.json");
+                    File.WriteAllBytes(jsonFilePath, System.Text.Encoding.UTF8.GetBytes(responseText));
+
+                    ProcessJsonFile(jsonFilePath);
+                    CreateSymmetryFile(jsonFilePath);
+                    Debug.Log("JSON作成完了");
+                }
             }
         }
+    }
+
+    private void ProcessJsonFile(string filePath)
+    {
+        string jsonContent = File.ReadAllText(filePath);
+        Debug.Log($"JSON file created at: : {filePath}");
+    }
+
+    private void CreateSymmetryFile(string inputFilePath)
+    {
+        string outputFilePath = inputFilePath.Replace(".json", "Symmetry.json");
+
+        SymmetryJsonProcessor.ProcessJson(inputFilePath, outputFilePath);
+
+        Debug.Log($"Symmetry JSON file created at: {outputFilePath}");
+    }
+
+    [System.Serializable]
+    public class RequestData
+    {
+        public string url;
+        public int start;
+        public int end;
     }
 }
