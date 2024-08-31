@@ -11,15 +11,19 @@ public class RunPythonScript : MonoBehaviour
     public GameObject nextButton; // JSON作成完了後に表示するボタンのUIオブジェクト
     public GameObject checkButton; // JSON作成完了後に表示するボタンのUIオブジェクト
     private const string SuccessMessage = "Generating demo successful!";
+    public static bool IsCommunicatingWithServer = false;
+    public LogReceiver logReceiver;
 
     public Text logText;
+    private UnityWebRequest currentRequest; // 現在のリクエストを保持する変数
+    private Coroutine currentCoroutine; // 現在のコルーチンを保持する変数
 
     private IEnumerator Start()
     {
         yield return null;
         //戻るボタンからの時はやらない
         if (!SceneSwitcher.IsReturningFromSpecificScene)
-            {
+        {
             nextButton.SetActive(false); // ボタンを非表示にしておく
             checkButton.SetActive(false); // ボタンを非表示にしておく
             loadingSpinner.SetActive(true);
@@ -33,9 +37,14 @@ public class RunPythonScript : MonoBehaviour
                 if (string.IsNullOrEmpty(selectedVideoPath))
                 {
                     Debug.LogError("Video path is not set.");
+                    logText.text = "Video path is not set.";
                     yield break;
                 }
-                yield return StartCoroutine(SendVideo(selectedVideoPath));
+                IsCommunicatingWithServer = true; // Start of request
+                logReceiver.LogReceiveStart(); // Start the log receiver
+                currentCoroutine = StartCoroutine(SendVideo(selectedVideoPath));
+                yield return currentCoroutine;
+                IsCommunicatingWithServer = false; // End of request
             }
             else if (tabCount == 1)
             {
@@ -45,23 +54,25 @@ public class RunPythonScript : MonoBehaviour
                 if (string.IsNullOrEmpty(url) || string.IsNullOrEmpty(startStr) || string.IsNullOrEmpty(endStr))
                 {
                     Debug.LogError("URL or start/end parameters are missing.");
+                    logText.text = "URL or start/end parameters are missing.";
                     yield break;
                 }
 
                 if (!int.TryParse(startStr, out int start) || !int.TryParse(endStr, out int end))
                 {
                     Debug.LogError("Start or end parameters are not valid integers.");
+                    logText.text = "Start or end parameters are not valid integers.";
                     yield break;
                 }
-                yield return StartCoroutine(SendRequest(url, start, end));
+                IsCommunicatingWithServer = true; // Start of request
+                logReceiver.LogReceiveStart(); // Start the log receiver
+                currentCoroutine = StartCoroutine(SendRequest(url, start, end));
+                yield return currentCoroutine;
+                IsCommunicatingWithServer = false; // End of request
+            }
+            loadingSpinner.SetActive(false);
+            progressBar.gameObject.SetActive(false);
         }
-        }
-
-        loadingSpinner.SetActive(false);
-        progressBar.gameObject.SetActive(false);
-        nextButton.SetActive(true);
-        checkButton.SetActive(true);
-        logText.text = SuccessMessage;
     }
 
     private IEnumerator SendVideo(string filePath)
@@ -70,24 +81,27 @@ public class RunPythonScript : MonoBehaviour
 
         Debug.Log($"Sending file: {filePath}");
 
-        using (UnityWebRequest request = new UnityWebRequest("http://192.168.1.4:5000/run-script-from-videofile", "POST"))
+        using (currentRequest = new UnityWebRequest("http://192.168.1.4:5000/run-script-from-videofile", "POST"))
         {
             WWWForm form = new WWWForm();
             form.AddBinaryData("file", videoData, Path.GetFileName(filePath), "video/mp4");
 
-            request.uploadHandler = new UploadHandlerRaw(form.data);
-            request.downloadHandler = new DownloadHandlerBuffer();
-            request.SetRequestHeader("Content-Type", form.headers["Content-Type"]);
+            currentRequest.uploadHandler = new UploadHandlerRaw(form.data);
+            currentRequest.downloadHandler = new DownloadHandlerBuffer();
+            currentRequest.SetRequestHeader("Content-Type", form.headers["Content-Type"]);
 
-            yield return request.SendWebRequest();
+            yield return currentRequest.SendWebRequest();
 
-            if (request.result != UnityWebRequest.Result.Success)
+            if (currentRequest.result != UnityWebRequest.Result.Success)
             {
-                Debug.LogError($"Request Error: {request.error}");
+                Debug.LogError($"Request Error: {currentRequest.error}");
+                logText.text = "Request Error";
+                loadingSpinner.SetActive(false);
+                progressBar.gameObject.SetActive(false);
             }
             else
             {
-                string responseText = request.downloadHandler.text;
+                string responseText = currentRequest.downloadHandler.text;
 
                 if (responseText.StartsWith("{") && responseText.EndsWith("}"))
                 {
@@ -97,6 +111,9 @@ public class RunPythonScript : MonoBehaviour
                     ProcessJsonFile(jsonFilePath);
                     CreateSymmetryFile(jsonFilePath);
                     Debug.Log("JSON作成完了");
+                    nextButton.SetActive(true);
+                    checkButton.SetActive(true);
+                    logText.text = SuccessMessage;
                 }
             }
         }
@@ -114,22 +131,25 @@ public class RunPythonScript : MonoBehaviour
 
         Debug.Log($"Sending JSON data: {jsonData}");
 
-        using (UnityWebRequest request = new UnityWebRequest("http://192.168.1.4:5000/run-script-from-youtube", "POST"))
+        using (currentRequest = new UnityWebRequest("http://192.168.1.4:5000/run-script-from-youtube", "POST"))
         {
             byte[] bodyRaw = System.Text.Encoding.UTF8.GetBytes(jsonData);
-            request.uploadHandler = new UploadHandlerRaw(bodyRaw);
-            request.downloadHandler = new DownloadHandlerBuffer();
-            request.SetRequestHeader("Content-Type", "application/json");
+            currentRequest.uploadHandler = new UploadHandlerRaw(bodyRaw);
+            currentRequest.downloadHandler = new DownloadHandlerBuffer();
+            currentRequest.SetRequestHeader("Content-Type", "application/json");
 
-            yield return request.SendWebRequest();
+            yield return currentRequest.SendWebRequest();
 
-            if (request.result != UnityWebRequest.Result.Success)
+            if (currentRequest.result != UnityWebRequest.Result.Success)
             {
-                Debug.LogError($"Request Error: {request.error}");
+                Debug.LogError($"Request Error: {currentRequest.error}");
+                logText.text = "Request Error";
+                loadingSpinner.SetActive(false);
+                progressBar.gameObject.SetActive(false);
             }
             else
             {
-                string responseText = request.downloadHandler.text;
+                string responseText = currentRequest.downloadHandler.text;
 
                 if (responseText.StartsWith("{") && responseText.EndsWith("}"))
                 {
@@ -139,7 +159,53 @@ public class RunPythonScript : MonoBehaviour
                     ProcessJsonFile(jsonFilePath);
                     CreateSymmetryFile(jsonFilePath);
                     Debug.Log("JSON作成完了");
+                    nextButton.SetActive(true);
+                    checkButton.SetActive(true);
+                    logText.text = SuccessMessage;
                 }
+            }
+        }
+    }
+
+    // サーバ通信を中断する関数
+    public void CancelRequest()
+{
+    if (currentCoroutine != null)
+    {
+        StopCoroutine(currentCoroutine);
+        currentCoroutine = null;
+    }
+
+    if (currentRequest != null)
+    {
+        // サーバーにキャンセルリクエストを送信
+        StartCoroutine(SendCancelRequest());
+    }
+
+    // UIのリセット
+    loadingSpinner.SetActive(false);
+    progressBar.gameObject.SetActive(false);
+    nextButton.SetActive(false);
+    checkButton.SetActive(false);
+    
+    IsCommunicatingWithServer = false; // End of request
+    Debug.Log("Request canceled.");
+    logText.text = "Request canceled";
+}
+
+    private IEnumerator SendCancelRequest()
+    {
+        using (var cancelRequest = UnityWebRequest.Post("http://192.168.1.4:5000/cancel", ""))
+        {
+            yield return cancelRequest.SendWebRequest();
+
+            if (cancelRequest.result != UnityWebRequest.Result.Success)
+            {
+                Debug.LogError($"Cancel Request Error: {cancelRequest.error}");
+            }
+            else
+            {
+                Debug.Log("Server cancel request sent.");
             }
         }
     }

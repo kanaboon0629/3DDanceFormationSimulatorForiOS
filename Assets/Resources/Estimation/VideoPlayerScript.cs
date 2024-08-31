@@ -13,10 +13,12 @@ public class VideoPlayerScript : MonoBehaviour
     public GameObject playPanel; // 非表示にする
     private string videoFilePath;
     public GameObject checkButton;
+    public Text logText;
 
     void Start()
     {
         playPanel.SetActive(false);
+        logText.gameObject.SetActive(false);
     }
 
     public void CallDownloadAndPlayVideo()
@@ -43,6 +45,8 @@ public class VideoPlayerScript : MonoBehaviour
             if (uwr.result == UnityWebRequest.Result.ConnectionError || uwr.result == UnityWebRequest.Result.ProtocolError)
             {
                 UnityEngine.Debug.LogError("Error downloading video: " + uwr.error);
+                logText.text = "Error downloading video";
+                logText.gameObject.SetActive(true);
             }
             else
             {
