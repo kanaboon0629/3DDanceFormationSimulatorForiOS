@@ -6,6 +6,9 @@
 		<type fullname="ObjectDataSaver">
 			<method name="SaveObjectData"/>
 		</type>
+		<type fullname="RunPythonScript">
+			<method name="CancelRequest"/>
+		</type>
 		<type fullname="SampleSaveBool">
 			<method name="isNotSample"/>
 			<method name="isSample"/>

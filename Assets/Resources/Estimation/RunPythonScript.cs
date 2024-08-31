@@ -10,6 +10,7 @@ public class RunPythonScript : MonoBehaviour
     public Slider progressBar; // 進行状況バーのUIオブジェクト
     public GameObject nextButton; // JSON作成完了後に表示するボタンのUIオブジェクト
     public GameObject checkButton; // JSON作成完了後に表示するボタンのUIオブジェクト
+    public GameObject retryButton;
     private const string SuccessMessage = "Generating demo successful!";
     public static bool IsCommunicatingWithServer = false;
     public LogReceiver logReceiver;
@@ -24,55 +25,97 @@ public class RunPythonScript : MonoBehaviour
         //戻るボタンからの時はやらない
         if (!SceneSwitcher.IsReturningFromSpecificScene)
         {
+            logText.text = "Communicating with the server...";
             nextButton.SetActive(false); // ボタンを非表示にしておく
             checkButton.SetActive(false); // ボタンを非表示にしておく
-            loadingSpinner.SetActive(true);
-            progressBar.gameObject.SetActive(true);
-            progressBar.value = 0f;
-
-            int tabCount = PlayerPrefs.GetInt("tabCount");
-            if (tabCount == 0)
-            {
-                string selectedVideoPath = PlayerPrefs.GetString("selectedVideoPath");
-                if (string.IsNullOrEmpty(selectedVideoPath))
-                {
-                    Debug.LogError("Video path is not set.");
-                    logText.text = "Video path is not set.";
-                    yield break;
-                }
-                IsCommunicatingWithServer = true; // Start of request
-                logReceiver.LogReceiveStart(); // Start the log receiver
-                currentCoroutine = StartCoroutine(SendVideo(selectedVideoPath));
-                yield return currentCoroutine;
-                IsCommunicatingWithServer = false; // End of request
-            }
-            else if (tabCount == 1)
-            {
-                string url = PlayerPrefs.GetString("url");
-                string startStr = PlayerPrefs.GetString("start");
-                string endStr = PlayerPrefs.GetString("end");
-                if (string.IsNullOrEmpty(url) || string.IsNullOrEmpty(startStr) || string.IsNullOrEmpty(endStr))
-                {
-                    Debug.LogError("URL or start/end parameters are missing.");
-                    logText.text = "URL or start/end parameters are missing.";
-                    yield break;
-                }
-
-                if (!int.TryParse(startStr, out int start) || !int.TryParse(endStr, out int end))
-                {
-                    Debug.LogError("Start or end parameters are not valid integers.");
-                    logText.text = "Start or end parameters are not valid integers.";
-                    yield break;
-                }
-                IsCommunicatingWithServer = true; // Start of request
-                logReceiver.LogReceiveStart(); // Start the log receiver
-                currentCoroutine = StartCoroutine(SendRequest(url, start, end));
-                yield return currentCoroutine;
-                IsCommunicatingWithServer = false; // End of request
-            }
-            loadingSpinner.SetActive(false);
-            progressBar.gameObject.SetActive(false);
+            // 最初にサーバーの状態をチェックする
+            yield return StartCoroutine(CheckServerStatusCoroutine());
         }
+    }
+    public void CheckServerStatus()
+    {
+        StartCoroutine(CheckServerStatusCoroutine());
+    }
+    private IEnumerator CheckServerStatusCoroutine()
+    {
+        using (UnityWebRequest request = UnityWebRequest.Get("http://192.168.1.4:5000/status"))
+        {
+            yield return request.SendWebRequest();
+
+            if (request.result != UnityWebRequest.Result.Success)
+            {
+                Debug.LogError($"Error checking server status: {request.error}");
+                logText.text = $"Error checking server status: {request.error}";
+                yield break; // 終了する場合はここで処理を終了
+            }
+
+            string responseText = request.downloadHandler.text;
+            Debug.Log($"Server status: {responseText}");
+
+            if (responseText.Contains("\"status\": \"running\""))
+            {
+                logText.text = "Server is Used";
+                retryButton.SetActive(true);
+            }else{
+                //推定実行
+                Running();
+            }
+        }
+    }
+    public void Running()
+    {
+        logText.text = "Communicating with the server...";
+        retryButton.SetActive(false);
+        loadingSpinner.SetActive(true);
+        progressBar.gameObject.SetActive(true);
+        progressBar.value = 0f;
+        StartCoroutine(RunningCoroutine());
+    }
+
+    private IEnumerator RunningCoroutine()
+    {
+        int tabCount = PlayerPrefs.GetInt("tabCount");
+        if (tabCount == 0)
+        {
+            string selectedVideoPath = PlayerPrefs.GetString("selectedVideoPath");
+            if (string.IsNullOrEmpty(selectedVideoPath))
+            {
+                Debug.LogError("Video path is not set.");
+                logText.text = "Video path is not set.";
+                yield break;
+            }
+            IsCommunicatingWithServer = true; // Start of request
+            logReceiver.LogReceiveStart(); // Start the log receiver
+            currentCoroutine = StartCoroutine(SendVideo(selectedVideoPath));
+            yield return currentCoroutine;
+            IsCommunicatingWithServer = false; // End of request
+        }
+        else if (tabCount == 1)
+        {
+            string url = PlayerPrefs.GetString("url");
+            string startStr = PlayerPrefs.GetString("start");
+            string endStr = PlayerPrefs.GetString("end");
+            if (string.IsNullOrEmpty(url) || string.IsNullOrEmpty(startStr) || string.IsNullOrEmpty(endStr))
+            {
+                Debug.LogError("URL or start/end parameters are missing.");
+                logText.text = "URL or start/end parameters are missing.";
+                yield break;
+            }
+
+            if (!int.TryParse(startStr, out int start) || !int.TryParse(endStr, out int end))
+            {
+                Debug.LogError("Start or end parameters are not valid integers.");
+                logText.text = "Start or end parameters are not valid integers.";
+                yield break;
+            }
+            IsCommunicatingWithServer = true; // Start of request
+            logReceiver.LogReceiveStart(); // Start the log receiver
+            currentCoroutine = StartCoroutine(SendRequest(url, start, end));
+            yield return currentCoroutine;
+            IsCommunicatingWithServer = false; // End of request
+        }
+        loadingSpinner.SetActive(false);
+        progressBar.gameObject.SetActive(false);
     }
 
     private IEnumerator SendVideo(string filePath)
@@ -168,47 +211,47 @@ public class RunPythonScript : MonoBehaviour
     }
 
     // サーバ通信を中断する関数
-    public void CancelRequest()
-{
-    if (currentCoroutine != null)
-    {
-        StopCoroutine(currentCoroutine);
-        currentCoroutine = null;
-    }
+    // public void CancelRequest()
+    // {
+    //     if (currentCoroutine != null)
+    //     {
+    //         StopCoroutine(currentCoroutine);
+    //         currentCoroutine = null;
+    //     }
 
-    if (currentRequest != null)
-    {
-        // サーバーにキャンセルリクエストを送信
-        StartCoroutine(SendCancelRequest());
-    }
+    //     if (currentRequest != null)
+    //     {
+    //         // サーバーにキャンセルリクエストを送信
+    //         StartCoroutine(SendCancelRequest());
+    //     }
 
-    // UIのリセット
-    loadingSpinner.SetActive(false);
-    progressBar.gameObject.SetActive(false);
-    nextButton.SetActive(false);
-    checkButton.SetActive(false);
-    
-    IsCommunicatingWithServer = false; // End of request
-    Debug.Log("Request canceled.");
-    logText.text = "Request canceled";
-}
+    //     // UIのリセット
+    //     loadingSpinner.SetActive(false);
+    //     progressBar.gameObject.SetActive(false);
+    //     nextButton.SetActive(false);
+    //     checkButton.SetActive(false);
+        
+    //     IsCommunicatingWithServer = false; // End of request
+    //     Debug.Log("Request canceled.");
+    //     logText.text = "Request canceled";
+    // }
 
-    private IEnumerator SendCancelRequest()
-    {
-        using (var cancelRequest = UnityWebRequest.Post("http://192.168.1.4:5000/cancel", ""))
-        {
-            yield return cancelRequest.SendWebRequest();
+    // private IEnumerator SendCancelRequest()
+    // {
+    //     using (var cancelRequest = UnityWebRequest.Post("http://192.168.1.4:5000/cancel", ""))
+    //     {
+    //         yield return cancelRequest.SendWebRequest();
 
-            if (cancelRequest.result != UnityWebRequest.Result.Success)
-            {
-                Debug.LogError($"Cancel Request Error: {cancelRequest.error}");
-            }
-            else
-            {
-                Debug.Log("Server cancel request sent.");
-            }
-        }
-    }
+    //         if (cancelRequest.result != UnityWebRequest.Result.Success)
+    //         {
+    //             Debug.LogError($"Cancel Request Error: {cancelRequest.error}");
+    //         }
+    //         else
+    //         {
+    //             Debug.Log("Server cancel request sent.");
+    //         }
+    //     }
+    // }
 
     private void ProcessJsonFile(string filePath)
     {

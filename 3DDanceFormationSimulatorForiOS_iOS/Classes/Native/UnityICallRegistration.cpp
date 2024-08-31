@@ -2782,6 +2782,10 @@ void RegisterAllStrippedInternalCalls()
 
 	//Start Registrations for type : UnityEngine.Networking.UploadHandler
 
+		//System.Void UnityEngine.Networking.UploadHandler::InternalSetContentType(System.String)
+		void Register_UnityEngine_Networking_UploadHandler_InternalSetContentType();
+		Register_UnityEngine_Networking_UploadHandler_InternalSetContentType();
+
 		//System.Void UnityEngine.Networking.UploadHandler::Release()
 		void Register_UnityEngine_Networking_UploadHandler_Release();
 		Register_UnityEngine_Networking_UploadHandler_Release();
