@@ -3,6 +3,7 @@ using UnityEngine;
 using UnityEngine.Networking;
 using UnityEngine.UI;
 using System.IO;
+using System;
 
 public class RunPythonScript : MonoBehaviour
 {
@@ -74,6 +75,9 @@ public class RunPythonScript : MonoBehaviour
 
     private IEnumerator RunningCoroutine()
     {
+        string requestId = Guid.NewGuid().ToString(); // 一意のリクエストIDを生成
+        PlayerPrefs.SetString("requestId", requestId); // プレファレンスに保存
+
         int tabCount = PlayerPrefs.GetInt("tabCount");
         if (tabCount == 0)
         {
@@ -86,7 +90,7 @@ public class RunPythonScript : MonoBehaviour
             }
             IsCommunicatingWithServer = true; // Start of request
             logReceiver.LogReceiveStart(); // Start the log receiver
-            currentCoroutine = StartCoroutine(SendVideo(selectedVideoPath));
+            currentCoroutine = StartCoroutine(SendVideo(selectedVideoPath, requestId));
             yield return currentCoroutine;
             IsCommunicatingWithServer = false; // End of request
         }
@@ -110,7 +114,7 @@ public class RunPythonScript : MonoBehaviour
             }
             IsCommunicatingWithServer = true; // Start of request
             logReceiver.LogReceiveStart(); // Start the log receiver
-            currentCoroutine = StartCoroutine(SendRequest(url, start, end));
+            currentCoroutine = StartCoroutine(SendRequest(url, start, end, requestId));
             yield return currentCoroutine;
             IsCommunicatingWithServer = false; // End of request
         }
@@ -118,140 +122,124 @@ public class RunPythonScript : MonoBehaviour
         progressBar.gameObject.SetActive(false);
     }
 
-    private IEnumerator SendVideo(string filePath)
+    private IEnumerator SendVideo(string filePath, string requestId)
     {
         byte[] videoData = System.IO.File.ReadAllBytes(filePath);
 
         Debug.Log($"Sending file: {filePath}");
 
-        using (currentRequest = new UnityWebRequest("http://192.168.1.4:5000/run-script-from-videofile", "POST"))
-        {
-            WWWForm form = new WWWForm();
-            form.AddBinaryData("file", videoData, Path.GetFileName(filePath), "video/mp4");
+        WWWForm form = new WWWForm();
+        form.AddBinaryData("file", videoData, Path.GetFileName(filePath), "video/mp4");
+        form.AddField("requestId", requestId); // リクエストIDを追加
 
-            currentRequest.uploadHandler = new UploadHandlerRaw(form.data);
-            currentRequest.downloadHandler = new DownloadHandlerBuffer();
-            currentRequest.SetRequestHeader("Content-Type", form.headers["Content-Type"]);
-
-            yield return currentRequest.SendWebRequest();
-
-            if (currentRequest.result != UnityWebRequest.Result.Success)
-            {
-                Debug.LogError($"Request Error: {currentRequest.error}");
-                logText.text = "Request Error";
-                loadingSpinner.SetActive(false);
-                progressBar.gameObject.SetActive(false);
-            }
-            else
-            {
-                string responseText = currentRequest.downloadHandler.text;
-
-                if (responseText.StartsWith("{") && responseText.EndsWith("}"))
-                {
-                    string jsonFilePath = Path.Combine(Application.persistentDataPath, "output.json");
-                    File.WriteAllBytes(jsonFilePath, System.Text.Encoding.UTF8.GetBytes(responseText));
-
-                    ProcessJsonFile(jsonFilePath);
-                    CreateSymmetryFile(jsonFilePath);
-                    Debug.Log("JSON作成完了");
-                    nextButton.SetActive(true);
-                    checkButton.SetActive(true);
-                    logText.text = SuccessMessage;
-                }
-            }
-        }
+        yield return SendRequest("http://192.168.1.4:5000/run-script-from-videofile", form);
     }
 
-    private IEnumerator SendRequest(string url, int start, int end)
+    private IEnumerator SendRequest(string url, int start, int end, string requestId)
     {
         var requestData = new RequestData
         {
             url = url,
             start = start,
-            end = end
+            end = end,
+            requestId = requestId // リクエストIDを追加
         };
         var jsonData = JsonUtility.ToJson(requestData);
 
         Debug.Log($"Sending JSON data: {jsonData}");
 
-        using (currentRequest = new UnityWebRequest("http://192.168.1.4:5000/run-script-from-youtube", "POST"))
+        yield return SendRequest("http://192.168.1.4:5000/run-script-from-youtube", jsonData, "application/json");
+    }
+
+    private IEnumerator SendRequest(string endpoint, WWWForm form)
+    {
+        using (currentRequest = UnityWebRequest.Post(endpoint, form))
+        {
+            currentRequest.uploadHandler = new UploadHandlerRaw(form.data);
+            currentRequest.downloadHandler = new DownloadHandlerBuffer();
+            currentRequest.SetRequestHeader("Content-Type", form.headers["Content-Type"]);
+
+            yield return HandleRequestResponse();
+        }
+    }
+
+    private IEnumerator SendRequest(string endpoint, string jsonData, string contentType)
+    {
+        using (currentRequest = new UnityWebRequest(endpoint, "POST"))
         {
             byte[] bodyRaw = System.Text.Encoding.UTF8.GetBytes(jsonData);
             currentRequest.uploadHandler = new UploadHandlerRaw(bodyRaw);
             currentRequest.downloadHandler = new DownloadHandlerBuffer();
-            currentRequest.SetRequestHeader("Content-Type", "application/json");
+            currentRequest.SetRequestHeader("Content-Type", contentType);
 
-            yield return currentRequest.SendWebRequest();
-
-            if (currentRequest.result != UnityWebRequest.Result.Success)
-            {
-                Debug.LogError($"Request Error: {currentRequest.error}");
-                logText.text = "Request Error";
-                loadingSpinner.SetActive(false);
-                progressBar.gameObject.SetActive(false);
-            }
-            else
-            {
-                string responseText = currentRequest.downloadHandler.text;
-
-                if (responseText.StartsWith("{") && responseText.EndsWith("}"))
-                {
-                    string jsonFilePath = Path.Combine(Application.persistentDataPath, "output.json");
-                    File.WriteAllBytes(jsonFilePath, System.Text.Encoding.UTF8.GetBytes(responseText));
-
-                    ProcessJsonFile(jsonFilePath);
-                    CreateSymmetryFile(jsonFilePath);
-                    Debug.Log("JSON作成完了");
-                    nextButton.SetActive(true);
-                    checkButton.SetActive(true);
-                    logText.text = SuccessMessage;
-                }
-            }
+            yield return HandleRequestResponse();
         }
     }
 
-    // サーバ通信を中断する関数
-    // public void CancelRequest()
-    // {
-    //     if (currentCoroutine != null)
-    //     {
-    //         StopCoroutine(currentCoroutine);
-    //         currentCoroutine = null;
-    //     }
+    private IEnumerator HandleRequestResponse()
+    {
+        yield return currentRequest.SendWebRequest();
 
-    //     if (currentRequest != null)
-    //     {
-    //         // サーバーにキャンセルリクエストを送信
-    //         StartCoroutine(SendCancelRequest());
-    //     }
+        if (currentRequest.result != UnityWebRequest.Result.Success)
+        {
+            Debug.LogError($"Request Error: {currentRequest.error}");
+            logText.text = "Request Error";
+            loadingSpinner.SetActive(false);
+            progressBar.gameObject.SetActive(false);
+        }
+        else
+        {
+            string responseText = currentRequest.downloadHandler.text;
 
-    //     // UIのリセット
-    //     loadingSpinner.SetActive(false);
-    //     progressBar.gameObject.SetActive(false);
-    //     nextButton.SetActive(false);
-    //     checkButton.SetActive(false);
-        
-    //     IsCommunicatingWithServer = false; // End of request
-    //     Debug.Log("Request canceled.");
-    //     logText.text = "Request canceled";
-    // }
+            if (responseText.StartsWith("{") && responseText.EndsWith("}"))
+            {
+                string jsonFilePath = Path.Combine(Application.persistentDataPath, "output.json");
+                File.WriteAllBytes(jsonFilePath, System.Text.Encoding.UTF8.GetBytes(responseText));
 
-    // private IEnumerator SendCancelRequest()
-    // {
-    //     using (var cancelRequest = UnityWebRequest.Post("http://192.168.1.4:5000/cancel", ""))
-    //     {
-    //         yield return cancelRequest.SendWebRequest();
+                ProcessJsonFile(jsonFilePath);
+                CreateSymmetryFile(jsonFilePath);
+                Debug.Log("JSON作成完了");
+                nextButton.SetActive(true);
+                checkButton.SetActive(true);
+                logText.text = SuccessMessage;
+            }
+        }
+    }
+        public void CancelRequest()
+    {
+        if (IsCommunicatingWithServer){
+            string requestId = PlayerPrefs.GetString("requestId","0");
+            StartCoroutine(SendCancelRequestCoroutine(requestId));
+            IsCommunicatingWithServer = false;
+        }
+    }
 
-    //         if (cancelRequest.result != UnityWebRequest.Result.Success)
-    //         {
-    //             Debug.LogError($"Cancel Request Error: {cancelRequest.error}");
-    //         }
-    //         else
-    //         {
-    //             Debug.Log("Server cancel request sent.");
-    //         }
-    //     }
-    // }
+    private IEnumerator SendCancelRequestCoroutine(string requestId)
+    {
+        // リクエストIDを含むJSONデータを作成
+        string jsonData = "{\"requestId\": \"" + requestId + "\"}";
+        byte[] jsonToSend = new System.Text.UTF8Encoding().GetBytes(jsonData);
+
+        // UnityWebRequestの作成
+        UnityWebRequest www = new UnityWebRequest("http://192.168.1.4:5000/cancel-request", "POST");
+        www.uploadHandler = new UploadHandlerRaw(jsonToSend);
+        www.downloadHandler = new DownloadHandlerBuffer();
+        www.SetRequestHeader("Content-Type", "application/json");
+
+        // リクエストの送信と結果の待機
+        yield return www.SendWebRequest();
+
+        // リクエストの結果を処理
+        if (www.result == UnityWebRequest.Result.Success)
+        {
+            Debug.Log("Request cancelled successfully: " + www.downloadHandler.text);
+        }
+        else
+        {
+            Debug.LogError("Error cancelling request: " + www.error);
+        }
+    }
+
 
     private void ProcessJsonFile(string filePath)
     {
@@ -274,5 +262,6 @@ public class RunPythonScript : MonoBehaviour
         public string url;
         public int start;
         public int end;
+        public string requestId;
     }
 }
