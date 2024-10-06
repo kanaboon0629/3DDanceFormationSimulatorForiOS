@@ -10,6 +10,7 @@
 		<type fullname="FormationManager" preserve="nothing"/>
 		<type fullname="InputFieldHandler" preserve="nothing"/>
 		<type fullname="Joystick" preserve="nothing"/>
+		<type fullname="LightShafts" preserve="nothing"/>
 		<type fullname="LogReceiver" preserve="nothing"/>
 		<type fullname="MobileDisableAutoSwitchControls" preserve="nothing"/>
 		<type fullname="NumberPicker" preserve="nothing"/>
@@ -17,7 +18,6 @@
 		<type fullname="ObjectDataSaver" preserve="nothing"/>
 		<type fullname="ObjectDragAndColorChange" preserve="nothing"/>
 		<type fullname="PlayerIKTarget" preserve="nothing"/>
-		<type fullname="Readme" preserve="nothing"/>
 		<type fullname="RealtimeInputValidation" preserve="nothing"/>
 		<type fullname="ResetPlayerPrefs" preserve="nothing"/>
 		<type fullname="RunPythonScript" preserve="nothing"/>
