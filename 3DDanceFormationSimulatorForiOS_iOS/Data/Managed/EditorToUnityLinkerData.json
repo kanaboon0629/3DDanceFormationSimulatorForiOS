@@ -58,6 +58,13 @@
             "usedInScenes": []
         },
         {
+            "managedAssemblyName": "Assembly-CSharp.dll",
+            "nativeClass": "",
+            "fullManagedTypeName": "ColorPicker",
+            "moduleName": "",
+            "usedInScenes": []
+        },
+        {
             "managedAssemblyName": "",
             "nativeClass": "DelayedCallManager",
             "fullManagedTypeName": "",
@@ -72,10 +79,12 @@
             "usedInScenes": [
                 "Assets/Scenes/Estimation.unity",
                 "Assets/Scenes/FormationSetting.unity",
+                "Assets/Scenes/LightSetting.unity",
+                "Assets/Scenes/LightSetting.unity",
+                "Assets/Scenes/LightSimulator.unity",
                 "Assets/Scenes/NumberSettings.unity",
                 "Assets/Scenes/Simulator.unity",
-                "Assets/Scenes/Title.unity",
-                "Assets/Scenes/VideoSetting.unity"
+                "Assets/Scenes/Title.unity"
             ]
         },
         {
@@ -93,10 +102,12 @@
             "usedInScenes": [
                 "Assets/Scenes/Estimation.unity",
                 "Assets/Scenes/FormationSetting.unity",
+                "Assets/Scenes/LightSetting.unity",
+                "Assets/Scenes/LightSetting.unity",
+                "Assets/Scenes/LightSimulator.unity",
                 "Assets/Scenes/NumberSettings.unity",
                 "Assets/Scenes/Simulator.unity",
-                "Assets/Scenes/Title.unity",
-                "Assets/Scenes/VideoSetting.unity"
+                "Assets/Scenes/Title.unity"
             ]
         },
         {
@@ -104,13 +115,6 @@
             "nativeClass": "GlobalGameManager",
             "fullManagedTypeName": "",
             "moduleName": "Core",
-            "usedInScenes": []
-        },
-        {
-            "managedAssemblyName": "Assembly-CSharp.dll",
-            "nativeClass": "",
-            "fullManagedTypeName": "InputFieldHandler",
-            "moduleName": "",
             "usedInScenes": []
         },
         {
@@ -128,16 +132,25 @@
             "usedInScenes": [
                 "Assets/Scenes/Estimation.unity",
                 "Assets/Scenes/FormationSetting.unity",
+                "Assets/Scenes/LightSetting.unity",
+                "Assets/Scenes/LightSetting.unity",
+                "Assets/Scenes/LightSimulator.unity",
                 "Assets/Scenes/NumberSettings.unity",
                 "Assets/Scenes/Simulator.unity",
-                "Assets/Scenes/Title.unity",
-                "Assets/Scenes/VideoSetting.unity"
+                "Assets/Scenes/Title.unity"
             ]
         },
         {
             "managedAssemblyName": "Assembly-CSharp.dll",
             "nativeClass": "",
             "fullManagedTypeName": "LightShafts",
+            "moduleName": "",
+            "usedInScenes": []
+        },
+        {
+            "managedAssemblyName": "Assembly-CSharp.dll",
+            "nativeClass": "",
+            "fullManagedTypeName": "LightTabController",
             "moduleName": "",
             "usedInScenes": []
         },
@@ -163,10 +176,12 @@
             "usedInScenes": [
                 "Assets/Scenes/Estimation.unity",
                 "Assets/Scenes/FormationSetting.unity",
+                "Assets/Scenes/LightSetting.unity",
+                "Assets/Scenes/LightSetting.unity",
+                "Assets/Scenes/LightSimulator.unity",
                 "Assets/Scenes/NumberSettings.unity",
                 "Assets/Scenes/Simulator.unity",
-                "Assets/Scenes/Title.unity",
-                "Assets/Scenes/VideoSetting.unity"
+                "Assets/Scenes/Title.unity"
             ]
         },
         {
@@ -184,10 +199,12 @@
             "usedInScenes": [
                 "Assets/Scenes/Estimation.unity",
                 "Assets/Scenes/FormationSetting.unity",
+                "Assets/Scenes/LightSetting.unity",
+                "Assets/Scenes/LightSetting.unity",
+                "Assets/Scenes/LightSimulator.unity",
                 "Assets/Scenes/NumberSettings.unity",
                 "Assets/Scenes/Simulator.unity",
-                "Assets/Scenes/Title.unity",
-                "Assets/Scenes/VideoSetting.unity"
+                "Assets/Scenes/Title.unity"
             ]
         },
         {
@@ -201,6 +218,13 @@
             "managedAssemblyName": "Assembly-CSharp.dll",
             "nativeClass": "",
             "fullManagedTypeName": "ObjectDataLoader",
+            "moduleName": "",
+            "usedInScenes": []
+        },
+        {
+            "managedAssemblyName": "Assembly-CSharp.dll",
+            "nativeClass": "",
+            "fullManagedTypeName": "ObjectDataLoaderForLight",
             "moduleName": "",
             "usedInScenes": []
         },
@@ -222,13 +246,6 @@
             "managedAssemblyName": "Assembly-CSharp.dll",
             "nativeClass": "",
             "fullManagedTypeName": "PlayerIKTarget",
-            "moduleName": "",
-            "usedInScenes": []
-        },
-        {
-            "managedAssemblyName": "Assembly-CSharp.dll",
-            "nativeClass": "",
-            "fullManagedTypeName": "RealtimeInputValidation",
             "moduleName": "",
             "usedInScenes": []
         },
@@ -303,13 +320,6 @@
             "usedInScenes": []
         },
         {
-            "managedAssemblyName": "Assembly-CSharp.dll",
-            "nativeClass": "",
-            "fullManagedTypeName": "TabController",
-            "moduleName": "",
-            "usedInScenes": []
-        },
-        {
             "managedAssemblyName": "Unity.TextMeshPro.dll",
             "nativeClass": "",
             "fullManagedTypeName": "TMPro.TextMeshProUGUI",
@@ -354,6 +364,13 @@
         {
             "managedAssemblyName": "Assembly-CSharp.dll",
             "nativeClass": "",
+            "fullManagedTypeName": "ToggleUIController",
+            "moduleName": "",
+            "usedInScenes": []
+        },
+        {
+            "managedAssemblyName": "Assembly-CSharp.dll",
+            "nativeClass": "",
             "fullManagedTypeName": "UIVirtualJoystick",
             "moduleName": "",
             "usedInScenes": []
@@ -387,10 +404,12 @@
             "usedInScenes": [
                 "Assets/Scenes/Estimation.unity",
                 "Assets/Scenes/FormationSetting.unity",
+                "Assets/Scenes/LightSetting.unity",
+                "Assets/Scenes/LightSetting.unity",
+                "Assets/Scenes/LightSimulator.unity",
                 "Assets/Scenes/NumberSettings.unity",
                 "Assets/Scenes/Simulator.unity",
-                "Assets/Scenes/Title.unity",
-                "Assets/Scenes/VideoSetting.unity"
+                "Assets/Scenes/Title.unity"
             ]
         },
         {
@@ -453,10 +472,12 @@
             "usedInScenes": [
                 "Assets/Scenes/Estimation.unity",
                 "Assets/Scenes/FormationSetting.unity",
+                "Assets/Scenes/LightSetting.unity",
+                "Assets/Scenes/LightSetting.unity",
+                "Assets/Scenes/LightSimulator.unity",
                 "Assets/Scenes/NumberSettings.unity",
                 "Assets/Scenes/Simulator.unity",
-                "Assets/Scenes/Title.unity",
-                "Assets/Scenes/VideoSetting.unity"
+                "Assets/Scenes/Title.unity"
             ]
         },
         {
@@ -467,10 +488,12 @@
             "usedInScenes": [
                 "Assets/Scenes/Estimation.unity",
                 "Assets/Scenes/FormationSetting.unity",
+                "Assets/Scenes/LightSetting.unity",
+                "Assets/Scenes/LightSetting.unity",
+                "Assets/Scenes/LightSimulator.unity",
                 "Assets/Scenes/NumberSettings.unity",
                 "Assets/Scenes/Simulator.unity",
-                "Assets/Scenes/Title.unity",
-                "Assets/Scenes/VideoSetting.unity"
+                "Assets/Scenes/Title.unity"
             ]
         },
         {
@@ -491,10 +514,12 @@
             "usedInScenes": [
                 "Assets/Scenes/Estimation.unity",
                 "Assets/Scenes/FormationSetting.unity",
+                "Assets/Scenes/LightSetting.unity",
+                "Assets/Scenes/LightSetting.unity",
+                "Assets/Scenes/LightSimulator.unity",
                 "Assets/Scenes/NumberSettings.unity",
                 "Assets/Scenes/Simulator.unity",
-                "Assets/Scenes/Title.unity",
-                "Assets/Scenes/VideoSetting.unity"
+                "Assets/Scenes/Title.unity"
             ]
         },
         {
@@ -515,10 +540,12 @@
             "usedInScenes": [
                 "Assets/Scenes/Estimation.unity",
                 "Assets/Scenes/FormationSetting.unity",
+                "Assets/Scenes/LightSetting.unity",
+                "Assets/Scenes/LightSetting.unity",
+                "Assets/Scenes/LightSimulator.unity",
                 "Assets/Scenes/NumberSettings.unity",
                 "Assets/Scenes/Simulator.unity",
-                "Assets/Scenes/Title.unity",
-                "Assets/Scenes/VideoSetting.unity"
+                "Assets/Scenes/Title.unity"
             ]
         },
         {
@@ -529,10 +556,12 @@
             "usedInScenes": [
                 "Assets/Scenes/Estimation.unity",
                 "Assets/Scenes/FormationSetting.unity",
+                "Assets/Scenes/LightSetting.unity",
+                "Assets/Scenes/LightSetting.unity",
+                "Assets/Scenes/LightSimulator.unity",
                 "Assets/Scenes/NumberSettings.unity",
                 "Assets/Scenes/Simulator.unity",
-                "Assets/Scenes/Title.unity",
-                "Assets/Scenes/VideoSetting.unity"
+                "Assets/Scenes/Title.unity"
             ]
         },
         {
@@ -543,10 +572,12 @@
             "usedInScenes": [
                 "Assets/Scenes/Estimation.unity",
                 "Assets/Scenes/FormationSetting.unity",
+                "Assets/Scenes/LightSetting.unity",
+                "Assets/Scenes/LightSetting.unity",
+                "Assets/Scenes/LightSimulator.unity",
                 "Assets/Scenes/NumberSettings.unity",
                 "Assets/Scenes/Simulator.unity",
-                "Assets/Scenes/Title.unity",
-                "Assets/Scenes/VideoSetting.unity"
+                "Assets/Scenes/Title.unity"
             ]
         },
         {
@@ -566,6 +597,7 @@
             "moduleName": "Physics",
             "usedInScenes": [
                 "Assets/Scenes/FormationSetting.unity",
+                "Assets/Scenes/LightSimulator.unity",
                 "Assets/Scenes/Simulator.unity",
                 "Assets/Scenes/Title.unity"
             ]
@@ -578,10 +610,12 @@
             "usedInScenes": [
                 "Assets/Scenes/Estimation.unity",
                 "Assets/Scenes/FormationSetting.unity",
+                "Assets/Scenes/LightSetting.unity",
+                "Assets/Scenes/LightSetting.unity",
+                "Assets/Scenes/LightSimulator.unity",
                 "Assets/Scenes/NumberSettings.unity",
                 "Assets/Scenes/Simulator.unity",
-                "Assets/Scenes/Title.unity",
-                "Assets/Scenes/VideoSetting.unity"
+                "Assets/Scenes/Title.unity"
             ]
         },
         {
@@ -592,10 +626,12 @@
             "usedInScenes": [
                 "Assets/Scenes/Estimation.unity",
                 "Assets/Scenes/FormationSetting.unity",
+                "Assets/Scenes/LightSetting.unity",
+                "Assets/Scenes/LightSetting.unity",
+                "Assets/Scenes/LightSimulator.unity",
                 "Assets/Scenes/NumberSettings.unity",
                 "Assets/Scenes/Simulator.unity",
-                "Assets/Scenes/Title.unity",
-                "Assets/Scenes/VideoSetting.unity"
+                "Assets/Scenes/Title.unity"
             ]
         },
         {
@@ -627,10 +663,12 @@
             "usedInScenes": [
                 "Assets/Scenes/Estimation.unity",
                 "Assets/Scenes/FormationSetting.unity",
+                "Assets/Scenes/LightSetting.unity",
+                "Assets/Scenes/LightSetting.unity",
+                "Assets/Scenes/LightSimulator.unity",
                 "Assets/Scenes/NumberSettings.unity",
                 "Assets/Scenes/Simulator.unity",
-                "Assets/Scenes/Title.unity",
-                "Assets/Scenes/VideoSetting.unity"
+                "Assets/Scenes/Title.unity"
             ]
         },
         {
@@ -641,10 +679,12 @@
             "usedInScenes": [
                 "Assets/Scenes/Estimation.unity",
                 "Assets/Scenes/FormationSetting.unity",
+                "Assets/Scenes/LightSetting.unity",
+                "Assets/Scenes/LightSetting.unity",
+                "Assets/Scenes/LightSimulator.unity",
                 "Assets/Scenes/NumberSettings.unity",
                 "Assets/Scenes/Simulator.unity",
-                "Assets/Scenes/Title.unity",
-                "Assets/Scenes/VideoSetting.unity"
+                "Assets/Scenes/Title.unity"
             ]
         },
         {
@@ -683,10 +723,12 @@
             "usedInScenes": [
                 "Assets/Scenes/Estimation.unity",
                 "Assets/Scenes/FormationSetting.unity",
+                "Assets/Scenes/LightSetting.unity",
+                "Assets/Scenes/LightSetting.unity",
+                "Assets/Scenes/LightSimulator.unity",
                 "Assets/Scenes/NumberSettings.unity",
                 "Assets/Scenes/Simulator.unity",
-                "Assets/Scenes/Title.unity",
-                "Assets/Scenes/VideoSetting.unity"
+                "Assets/Scenes/Title.unity"
             ]
         },
         {
@@ -697,10 +739,12 @@
             "usedInScenes": [
                 "Assets/Scenes/Estimation.unity",
                 "Assets/Scenes/FormationSetting.unity",
+                "Assets/Scenes/LightSetting.unity",
+                "Assets/Scenes/LightSetting.unity",
+                "Assets/Scenes/LightSimulator.unity",
                 "Assets/Scenes/NumberSettings.unity",
                 "Assets/Scenes/Simulator.unity",
-                "Assets/Scenes/Title.unity",
-                "Assets/Scenes/VideoSetting.unity"
+                "Assets/Scenes/Title.unity"
             ]
         },
         {
@@ -711,10 +755,12 @@
             "usedInScenes": [
                 "Assets/Scenes/Estimation.unity",
                 "Assets/Scenes/FormationSetting.unity",
+                "Assets/Scenes/LightSetting.unity",
+                "Assets/Scenes/LightSetting.unity",
+                "Assets/Scenes/LightSimulator.unity",
                 "Assets/Scenes/NumberSettings.unity",
                 "Assets/Scenes/Simulator.unity",
-                "Assets/Scenes/Title.unity",
-                "Assets/Scenes/VideoSetting.unity"
+                "Assets/Scenes/Title.unity"
             ]
         },
         {
@@ -724,6 +770,7 @@
             "moduleName": "Core",
             "usedInScenes": [
                 "Assets/Scenes/FormationSetting.unity",
+                "Assets/Scenes/LightSimulator.unity",
                 "Assets/Scenes/Simulator.unity",
                 "Assets/Scenes/Title.unity"
             ]
@@ -735,6 +782,7 @@
             "moduleName": "Physics",
             "usedInScenes": [
                 "Assets/Scenes/FormationSetting.unity",
+                "Assets/Scenes/LightSimulator.unity",
                 "Assets/Scenes/Simulator.unity",
                 "Assets/Scenes/Title.unity"
             ]
@@ -746,6 +794,7 @@
             "moduleName": "Core",
             "usedInScenes": [
                 "Assets/Scenes/FormationSetting.unity",
+                "Assets/Scenes/LightSimulator.unity",
                 "Assets/Scenes/Simulator.unity",
                 "Assets/Scenes/Title.unity"
             ]
@@ -757,6 +806,7 @@
             "moduleName": "Core",
             "usedInScenes": [
                 "Assets/Scenes/FormationSetting.unity",
+                "Assets/Scenes/LightSimulator.unity",
                 "Assets/Scenes/Simulator.unity",
                 "Assets/Scenes/Title.unity"
             ]
@@ -769,10 +819,12 @@
             "usedInScenes": [
                 "Assets/Scenes/Estimation.unity",
                 "Assets/Scenes/FormationSetting.unity",
+                "Assets/Scenes/LightSetting.unity",
+                "Assets/Scenes/LightSetting.unity",
+                "Assets/Scenes/LightSimulator.unity",
                 "Assets/Scenes/NumberSettings.unity",
                 "Assets/Scenes/Simulator.unity",
-                "Assets/Scenes/Title.unity",
-                "Assets/Scenes/VideoSetting.unity"
+                "Assets/Scenes/Title.unity"
             ]
         },
         {
@@ -783,10 +835,12 @@
             "usedInScenes": [
                 "Assets/Scenes/Estimation.unity",
                 "Assets/Scenes/FormationSetting.unity",
+                "Assets/Scenes/LightSetting.unity",
+                "Assets/Scenes/LightSetting.unity",
+                "Assets/Scenes/LightSimulator.unity",
                 "Assets/Scenes/NumberSettings.unity",
                 "Assets/Scenes/Simulator.unity",
-                "Assets/Scenes/Title.unity",
-                "Assets/Scenes/VideoSetting.unity"
+                "Assets/Scenes/Title.unity"
             ]
         },
         {
@@ -804,10 +858,12 @@
             "usedInScenes": [
                 "Assets/Scenes/Estimation.unity",
                 "Assets/Scenes/FormationSetting.unity",
+                "Assets/Scenes/LightSetting.unity",
+                "Assets/Scenes/LightSetting.unity",
+                "Assets/Scenes/LightSimulator.unity",
                 "Assets/Scenes/NumberSettings.unity",
                 "Assets/Scenes/Simulator.unity",
-                "Assets/Scenes/Title.unity",
-                "Assets/Scenes/VideoSetting.unity"
+                "Assets/Scenes/Title.unity"
             ]
         },
         {
@@ -817,6 +873,7 @@
             "moduleName": "Core",
             "usedInScenes": [
                 "Assets/Scenes/FormationSetting.unity",
+                "Assets/Scenes/LightSimulator.unity",
                 "Assets/Scenes/Simulator.unity",
                 "Assets/Scenes/Title.unity"
             ]
@@ -1025,10 +1082,12 @@
             "usedInScenes": [
                 "Assets/Scenes/Estimation.unity",
                 "Assets/Scenes/FormationSetting.unity",
+                "Assets/Scenes/LightSetting.unity",
+                "Assets/Scenes/LightSetting.unity",
+                "Assets/Scenes/LightSimulator.unity",
                 "Assets/Scenes/NumberSettings.unity",
                 "Assets/Scenes/Simulator.unity",
-                "Assets/Scenes/Title.unity",
-                "Assets/Scenes/VideoSetting.unity"
+                "Assets/Scenes/Title.unity"
             ]
         },
         {
@@ -1049,10 +1108,12 @@
             "usedInScenes": [
                 "Assets/Scenes/Estimation.unity",
                 "Assets/Scenes/FormationSetting.unity",
+                "Assets/Scenes/LightSetting.unity",
+                "Assets/Scenes/LightSetting.unity",
+                "Assets/Scenes/LightSimulator.unity",
                 "Assets/Scenes/NumberSettings.unity",
                 "Assets/Scenes/Simulator.unity",
-                "Assets/Scenes/Title.unity",
-                "Assets/Scenes/VideoSetting.unity"
+                "Assets/Scenes/Title.unity"
             ]
         },
         {
@@ -1072,6 +1133,7 @@
             "moduleName": "Physics",
             "usedInScenes": [
                 "Assets/Scenes/FormationSetting.unity",
+                "Assets/Scenes/LightSimulator.unity",
                 "Assets/Scenes/Title.unity"
             ]
         },
@@ -1083,10 +1145,12 @@
             "usedInScenes": [
                 "Assets/Scenes/Estimation.unity",
                 "Assets/Scenes/FormationSetting.unity",
+                "Assets/Scenes/LightSetting.unity",
+                "Assets/Scenes/LightSetting.unity",
+                "Assets/Scenes/LightSimulator.unity",
                 "Assets/Scenes/NumberSettings.unity",
                 "Assets/Scenes/Simulator.unity",
-                "Assets/Scenes/Title.unity",
-                "Assets/Scenes/VideoSetting.unity"
+                "Assets/Scenes/Title.unity"
             ]
         },
         {
@@ -1097,10 +1161,12 @@
             "usedInScenes": [
                 "Assets/Scenes/Estimation.unity",
                 "Assets/Scenes/FormationSetting.unity",
+                "Assets/Scenes/LightSetting.unity",
+                "Assets/Scenes/LightSetting.unity",
+                "Assets/Scenes/LightSimulator.unity",
                 "Assets/Scenes/NumberSettings.unity",
                 "Assets/Scenes/Simulator.unity",
-                "Assets/Scenes/Title.unity",
-                "Assets/Scenes/VideoSetting.unity"
+                "Assets/Scenes/Title.unity"
             ]
         },
         {
@@ -1111,10 +1177,12 @@
             "usedInScenes": [
                 "Assets/Scenes/Estimation.unity",
                 "Assets/Scenes/FormationSetting.unity",
+                "Assets/Scenes/LightSetting.unity",
+                "Assets/Scenes/LightSetting.unity",
+                "Assets/Scenes/LightSimulator.unity",
                 "Assets/Scenes/NumberSettings.unity",
                 "Assets/Scenes/Simulator.unity",
-                "Assets/Scenes/Title.unity",
-                "Assets/Scenes/VideoSetting.unity"
+                "Assets/Scenes/Title.unity"
             ]
         },
         {
@@ -1125,10 +1193,12 @@
             "usedInScenes": [
                 "Assets/Scenes/Estimation.unity",
                 "Assets/Scenes/FormationSetting.unity",
+                "Assets/Scenes/LightSetting.unity",
+                "Assets/Scenes/LightSetting.unity",
+                "Assets/Scenes/LightSimulator.unity",
                 "Assets/Scenes/NumberSettings.unity",
                 "Assets/Scenes/Simulator.unity",
-                "Assets/Scenes/Title.unity",
-                "Assets/Scenes/VideoSetting.unity"
+                "Assets/Scenes/Title.unity"
             ]
         },
         {
@@ -1139,10 +1209,12 @@
             "usedInScenes": [
                 "Assets/Scenes/Estimation.unity",
                 "Assets/Scenes/FormationSetting.unity",
+                "Assets/Scenes/LightSetting.unity",
+                "Assets/Scenes/LightSetting.unity",
+                "Assets/Scenes/LightSimulator.unity",
                 "Assets/Scenes/NumberSettings.unity",
                 "Assets/Scenes/Simulator.unity",
-                "Assets/Scenes/Title.unity",
-                "Assets/Scenes/VideoSetting.unity"
+                "Assets/Scenes/Title.unity"
             ]
         },
         {
@@ -1191,13 +1263,6 @@
             "managedAssemblyName": "UnityEngine.UI.dll",
             "nativeClass": "",
             "fullManagedTypeName": "UnityEngine.UI.Image",
-            "moduleName": "",
-            "usedInScenes": []
-        },
-        {
-            "managedAssemblyName": "UnityEngine.UI.dll",
-            "nativeClass": "",
-            "fullManagedTypeName": "UnityEngine.UI.InputField",
             "moduleName": "",
             "usedInScenes": []
         },
@@ -1272,13 +1337,6 @@
             "usedInScenes": [
                 "Assets/Scenes/Estimation.unity"
             ]
-        },
-        {
-            "managedAssemblyName": "Assembly-CSharp.dll",
-            "nativeClass": "",
-            "fullManagedTypeName": "VideoGalleryManager",
-            "moduleName": "",
-            "usedInScenes": []
         },
         {
             "managedAssemblyName": "Assembly-CSharp.dll",
