@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class LogReceiver : MonoBehaviour
 {
-    private const string LogUrl = "http://192.168.1.4:5000/log";
+    private const string LogUrl = "http://192.168.1.6:5000/log";
     public Text logText; // Text コンポーネントの参照
     public Slider progressBar; // 進行状況バーのUIオブジェクト
 
