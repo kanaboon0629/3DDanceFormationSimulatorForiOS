@@ -39,7 +39,7 @@ public class RunPythonScript : MonoBehaviour
     }
     private IEnumerator CheckServerStatusCoroutine()
     {
-        using (UnityWebRequest request = UnityWebRequest.Get("http://192.168.1.4:5000/status"))
+        using (UnityWebRequest request = UnityWebRequest.Get("http://192.168.1.6:5000/status"))
         {
             yield return request.SendWebRequest();
 
@@ -132,7 +132,7 @@ public class RunPythonScript : MonoBehaviour
         form.AddBinaryData("file", videoData, Path.GetFileName(filePath), "video/mp4");
         form.AddField("requestId", requestId); // リクエストIDを追加
 
-        yield return SendRequest("http://192.168.1.4:5000/run-script-from-videofile", form);
+        yield return SendRequest("http://192.168.1.6:5000/run-script-from-videofile", form);
     }
 
     private IEnumerator SendRequest(string url, int start, int end, string requestId)
@@ -148,7 +148,7 @@ public class RunPythonScript : MonoBehaviour
 
         Debug.Log($"Sending JSON data: {jsonData}");
 
-        yield return SendRequest("http://192.168.1.4:5000/run-script-from-youtube", jsonData, "application/json");
+        yield return SendRequest("http://192.168.1.6:5000/run-script-from-youtube", jsonData, "application/json");
     }
 
     private IEnumerator SendRequest(string endpoint, WWWForm form)
@@ -221,7 +221,7 @@ public class RunPythonScript : MonoBehaviour
         byte[] jsonToSend = new System.Text.UTF8Encoding().GetBytes(jsonData);
 
         // UnityWebRequestの作成
-        UnityWebRequest www = new UnityWebRequest("http://192.168.1.4:5000/cancel-request", "POST");
+        UnityWebRequest www = new UnityWebRequest("http://192.168.1.6:5000/cancel-request", "POST");
         www.uploadHandler = new UploadHandlerRaw(jsonToSend);
         www.downloadHandler = new DownloadHandlerBuffer();
         www.SetRequestHeader("Content-Type", "application/json");

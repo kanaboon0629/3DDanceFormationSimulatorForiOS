@@ -35,7 +35,7 @@ public class VideoPlayerScript : MonoBehaviour
 
     private IEnumerator DownloadAndPlayVideo()
     {
-        string url = "http://192.168.1.4:5000/download-video"; // サーバの動画ダウンロードエンドポイントURL
+        string url = "http://192.168.1.6:5000/download-video"; // サーバの動画ダウンロードエンドポイントURL
 
         using (UnityWebRequest uwr = UnityWebRequest.Get(url))
         {
