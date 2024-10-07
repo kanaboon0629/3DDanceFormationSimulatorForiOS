@@ -41,6 +41,7 @@ public class ObjectDataLoaderForLight : MonoBehaviour
             {
                 Debug.LogWarning("Renderer または Material が見つかりませんでした。");
             }
+            newObj.transform.rotation = Quaternion.Euler(0, 90, 0); // y軸を90度回転
         }
     }
 }
