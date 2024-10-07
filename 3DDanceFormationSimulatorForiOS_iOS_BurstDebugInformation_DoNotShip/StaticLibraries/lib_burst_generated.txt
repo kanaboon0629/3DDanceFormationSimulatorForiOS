@@ -137,6 +137,7 @@ Library: /Users/kanakokunii/3DDanceFormationSimulatorForiOS/Temp/StagingArea/Sta
 --compilation-defines=ENABLE_BURST_1_0_0_OR_NEWER
 --compilation-defines=USING_ANIMATION_MODULE
 --compilation-defines=USING_PHYSICS2D_MODULE
+--compilation-defines=UNIVERSAL_1_0_0_OR_NEWER
 --compilation-defines=CINEMACHINE_POST_PROCESSING_V2
 --compilation-defines=CINEMACHINE_TIMELINE
 --compilation-defines=CINEMACHINE_PHYSICS_2D
@@ -147,7 +148,6 @@ Library: /Users/kanakokunii/3DDanceFormationSimulatorForiOS/Temp/StagingArea/Sta
 --compilation-defines=CINEMACHINE_UNITY_ANIMATION
 --compilation-defines=CINEMACHINE_UNITY_IMGUI
 --compilation-defines=TIMELINE_FRAMEACCURATE
---compilation-defines=UNIVERSAL_1_0_0_OR_NEWER
 --linker-options=min-ios-version=12.0
 --generate-link-xml=Temp/burst.link.xml
 --temp-folder=/Users/kanakokunii/3DDanceFormationSimulatorForiOS/Temp/Burst

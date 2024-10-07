@@ -1,12 +1,10 @@
 <linker>
 	<assembly fullname="Assembly-CSharp" ignoreIfMissing="1">
+		<type fullname="LightSettingManager">
+			<method name="SaveLightData"/>
+			<method name="SaveLightData"/>
+		</type>
 		<type fullname="LightTabController">
-			<method name="ShowTab"/>
-			<method name="ShowTab"/>
-			<method name="ShowTab"/>
-			<method name="ShowTab"/>
-			<method name="ShowTab"/>
-			<method name="ShowTab"/>
 			<method name="ShowTab"/>
 			<method name="ShowTab"/>
 			<method name="ShowTab"/>
@@ -26,11 +24,9 @@
 			<method name="isSample"/>
 		</type>
 		<type fullname="SceneSwitcher">
-			<method name="BackToSceneInNumberSetting"/>
-			<method name="SwitchToScene"/>
-			<method name="SwitchToScene"/>
-			<method name="SwitchToScene"/>
-			<method name="SwitchToScene"/>
+			<method name="BackButtonInNumberSetting"/>
+			<method name="BackButtonInSimulator"/>
+			<method name="NextButtonInLightSetting"/>
 			<method name="SwitchToScene"/>
 			<method name="SwitchToScene"/>
 			<method name="SwitchToScene"/>

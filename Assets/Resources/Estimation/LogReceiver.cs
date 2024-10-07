@@ -21,7 +21,7 @@ public class LogReceiver : MonoBehaviour
     public void LogReceiveStart()
     {
         //戻るボタンからの時はやらない
-        if (!SceneSwitcher.IsReturningFromSpecificScene)
+        if (!SceneSwitcher.IsReturningFromNumberSetting)
         {
             tabCount = PlayerPrefs.GetInt("tabCount");
             StartCoroutine(StartLogStreamAfterDelay());

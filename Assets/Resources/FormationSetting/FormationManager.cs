@@ -30,8 +30,12 @@ public class FormationManager : MonoBehaviour
 
     void Start()
     {
-        int numberOfPeople = PlayerPrefs.GetInt("SelectedNumber", 1); // デフォルトは1
-        ArrangeAssets(numberOfPeople);
+        //最初にこの画面を遷移した場合のみ初期位置を設定
+        if (!PlayerPrefs.HasKey("ObjectPosX_" + 0))
+        {
+            int numberOfPeople = PlayerPrefs.GetInt("SelectedNumber", 1); // デフォルトは1
+            ArrangeAssets(numberOfPeople);
+        }
     }
 
     void ArrangeAssets(int count)

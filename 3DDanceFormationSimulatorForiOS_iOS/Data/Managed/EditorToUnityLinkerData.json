@@ -80,9 +80,8 @@
                 "Assets/Scenes/Estimation.unity",
                 "Assets/Scenes/FormationSetting.unity",
                 "Assets/Scenes/LightSetting.unity",
-                "Assets/Scenes/LightSetting.unity",
                 "Assets/Scenes/LightSimulator.unity",
-                "Assets/Scenes/NumberSettings.unity",
+                "Assets/Scenes/NumberSetting.unity",
                 "Assets/Scenes/Simulator.unity",
                 "Assets/Scenes/Title.unity"
             ]
@@ -103,9 +102,8 @@
                 "Assets/Scenes/Estimation.unity",
                 "Assets/Scenes/FormationSetting.unity",
                 "Assets/Scenes/LightSetting.unity",
-                "Assets/Scenes/LightSetting.unity",
                 "Assets/Scenes/LightSimulator.unity",
-                "Assets/Scenes/NumberSettings.unity",
+                "Assets/Scenes/NumberSetting.unity",
                 "Assets/Scenes/Simulator.unity",
                 "Assets/Scenes/Title.unity"
             ]
@@ -133,12 +131,18 @@
                 "Assets/Scenes/Estimation.unity",
                 "Assets/Scenes/FormationSetting.unity",
                 "Assets/Scenes/LightSetting.unity",
-                "Assets/Scenes/LightSetting.unity",
                 "Assets/Scenes/LightSimulator.unity",
-                "Assets/Scenes/NumberSettings.unity",
+                "Assets/Scenes/NumberSetting.unity",
                 "Assets/Scenes/Simulator.unity",
                 "Assets/Scenes/Title.unity"
             ]
+        },
+        {
+            "managedAssemblyName": "Assembly-CSharp.dll",
+            "nativeClass": "",
+            "fullManagedTypeName": "LightSettingManager",
+            "moduleName": "",
+            "usedInScenes": []
         },
         {
             "managedAssemblyName": "Assembly-CSharp.dll",
@@ -177,9 +181,8 @@
                 "Assets/Scenes/Estimation.unity",
                 "Assets/Scenes/FormationSetting.unity",
                 "Assets/Scenes/LightSetting.unity",
-                "Assets/Scenes/LightSetting.unity",
                 "Assets/Scenes/LightSimulator.unity",
-                "Assets/Scenes/NumberSettings.unity",
+                "Assets/Scenes/NumberSetting.unity",
                 "Assets/Scenes/Simulator.unity",
                 "Assets/Scenes/Title.unity"
             ]
@@ -200,9 +203,8 @@
                 "Assets/Scenes/Estimation.unity",
                 "Assets/Scenes/FormationSetting.unity",
                 "Assets/Scenes/LightSetting.unity",
-                "Assets/Scenes/LightSetting.unity",
                 "Assets/Scenes/LightSimulator.unity",
-                "Assets/Scenes/NumberSettings.unity",
+                "Assets/Scenes/NumberSetting.unity",
                 "Assets/Scenes/Simulator.unity",
                 "Assets/Scenes/Title.unity"
             ]
@@ -405,9 +407,8 @@
                 "Assets/Scenes/Estimation.unity",
                 "Assets/Scenes/FormationSetting.unity",
                 "Assets/Scenes/LightSetting.unity",
-                "Assets/Scenes/LightSetting.unity",
                 "Assets/Scenes/LightSimulator.unity",
-                "Assets/Scenes/NumberSettings.unity",
+                "Assets/Scenes/NumberSetting.unity",
                 "Assets/Scenes/Simulator.unity",
                 "Assets/Scenes/Title.unity"
             ]
@@ -473,9 +474,8 @@
                 "Assets/Scenes/Estimation.unity",
                 "Assets/Scenes/FormationSetting.unity",
                 "Assets/Scenes/LightSetting.unity",
-                "Assets/Scenes/LightSetting.unity",
                 "Assets/Scenes/LightSimulator.unity",
-                "Assets/Scenes/NumberSettings.unity",
+                "Assets/Scenes/NumberSetting.unity",
                 "Assets/Scenes/Simulator.unity",
                 "Assets/Scenes/Title.unity"
             ]
@@ -489,9 +489,8 @@
                 "Assets/Scenes/Estimation.unity",
                 "Assets/Scenes/FormationSetting.unity",
                 "Assets/Scenes/LightSetting.unity",
-                "Assets/Scenes/LightSetting.unity",
                 "Assets/Scenes/LightSimulator.unity",
-                "Assets/Scenes/NumberSettings.unity",
+                "Assets/Scenes/NumberSetting.unity",
                 "Assets/Scenes/Simulator.unity",
                 "Assets/Scenes/Title.unity"
             ]
@@ -515,9 +514,8 @@
                 "Assets/Scenes/Estimation.unity",
                 "Assets/Scenes/FormationSetting.unity",
                 "Assets/Scenes/LightSetting.unity",
-                "Assets/Scenes/LightSetting.unity",
                 "Assets/Scenes/LightSimulator.unity",
-                "Assets/Scenes/NumberSettings.unity",
+                "Assets/Scenes/NumberSetting.unity",
                 "Assets/Scenes/Simulator.unity",
                 "Assets/Scenes/Title.unity"
             ]
@@ -541,9 +539,8 @@
                 "Assets/Scenes/Estimation.unity",
                 "Assets/Scenes/FormationSetting.unity",
                 "Assets/Scenes/LightSetting.unity",
-                "Assets/Scenes/LightSetting.unity",
                 "Assets/Scenes/LightSimulator.unity",
-                "Assets/Scenes/NumberSettings.unity",
+                "Assets/Scenes/NumberSetting.unity",
                 "Assets/Scenes/Simulator.unity",
                 "Assets/Scenes/Title.unity"
             ]
@@ -557,9 +554,8 @@
                 "Assets/Scenes/Estimation.unity",
                 "Assets/Scenes/FormationSetting.unity",
                 "Assets/Scenes/LightSetting.unity",
-                "Assets/Scenes/LightSetting.unity",
                 "Assets/Scenes/LightSimulator.unity",
-                "Assets/Scenes/NumberSettings.unity",
+                "Assets/Scenes/NumberSetting.unity",
                 "Assets/Scenes/Simulator.unity",
                 "Assets/Scenes/Title.unity"
             ]
@@ -573,9 +569,8 @@
                 "Assets/Scenes/Estimation.unity",
                 "Assets/Scenes/FormationSetting.unity",
                 "Assets/Scenes/LightSetting.unity",
-                "Assets/Scenes/LightSetting.unity",
                 "Assets/Scenes/LightSimulator.unity",
-                "Assets/Scenes/NumberSettings.unity",
+                "Assets/Scenes/NumberSetting.unity",
                 "Assets/Scenes/Simulator.unity",
                 "Assets/Scenes/Title.unity"
             ]
@@ -611,9 +606,8 @@
                 "Assets/Scenes/Estimation.unity",
                 "Assets/Scenes/FormationSetting.unity",
                 "Assets/Scenes/LightSetting.unity",
-                "Assets/Scenes/LightSetting.unity",
                 "Assets/Scenes/LightSimulator.unity",
-                "Assets/Scenes/NumberSettings.unity",
+                "Assets/Scenes/NumberSetting.unity",
                 "Assets/Scenes/Simulator.unity",
                 "Assets/Scenes/Title.unity"
             ]
@@ -627,9 +621,8 @@
                 "Assets/Scenes/Estimation.unity",
                 "Assets/Scenes/FormationSetting.unity",
                 "Assets/Scenes/LightSetting.unity",
-                "Assets/Scenes/LightSetting.unity",
                 "Assets/Scenes/LightSimulator.unity",
-                "Assets/Scenes/NumberSettings.unity",
+                "Assets/Scenes/NumberSetting.unity",
                 "Assets/Scenes/Simulator.unity",
                 "Assets/Scenes/Title.unity"
             ]
@@ -664,9 +657,8 @@
                 "Assets/Scenes/Estimation.unity",
                 "Assets/Scenes/FormationSetting.unity",
                 "Assets/Scenes/LightSetting.unity",
-                "Assets/Scenes/LightSetting.unity",
                 "Assets/Scenes/LightSimulator.unity",
-                "Assets/Scenes/NumberSettings.unity",
+                "Assets/Scenes/NumberSetting.unity",
                 "Assets/Scenes/Simulator.unity",
                 "Assets/Scenes/Title.unity"
             ]
@@ -680,9 +672,8 @@
                 "Assets/Scenes/Estimation.unity",
                 "Assets/Scenes/FormationSetting.unity",
                 "Assets/Scenes/LightSetting.unity",
-                "Assets/Scenes/LightSetting.unity",
                 "Assets/Scenes/LightSimulator.unity",
-                "Assets/Scenes/NumberSettings.unity",
+                "Assets/Scenes/NumberSetting.unity",
                 "Assets/Scenes/Simulator.unity",
                 "Assets/Scenes/Title.unity"
             ]
@@ -724,9 +715,8 @@
                 "Assets/Scenes/Estimation.unity",
                 "Assets/Scenes/FormationSetting.unity",
                 "Assets/Scenes/LightSetting.unity",
-                "Assets/Scenes/LightSetting.unity",
                 "Assets/Scenes/LightSimulator.unity",
-                "Assets/Scenes/NumberSettings.unity",
+                "Assets/Scenes/NumberSetting.unity",
                 "Assets/Scenes/Simulator.unity",
                 "Assets/Scenes/Title.unity"
             ]
@@ -740,9 +730,8 @@
                 "Assets/Scenes/Estimation.unity",
                 "Assets/Scenes/FormationSetting.unity",
                 "Assets/Scenes/LightSetting.unity",
-                "Assets/Scenes/LightSetting.unity",
                 "Assets/Scenes/LightSimulator.unity",
-                "Assets/Scenes/NumberSettings.unity",
+                "Assets/Scenes/NumberSetting.unity",
                 "Assets/Scenes/Simulator.unity",
                 "Assets/Scenes/Title.unity"
             ]
@@ -756,9 +745,8 @@
                 "Assets/Scenes/Estimation.unity",
                 "Assets/Scenes/FormationSetting.unity",
                 "Assets/Scenes/LightSetting.unity",
-                "Assets/Scenes/LightSetting.unity",
                 "Assets/Scenes/LightSimulator.unity",
-                "Assets/Scenes/NumberSettings.unity",
+                "Assets/Scenes/NumberSetting.unity",
                 "Assets/Scenes/Simulator.unity",
                 "Assets/Scenes/Title.unity"
             ]
@@ -820,9 +808,8 @@
                 "Assets/Scenes/Estimation.unity",
                 "Assets/Scenes/FormationSetting.unity",
                 "Assets/Scenes/LightSetting.unity",
-                "Assets/Scenes/LightSetting.unity",
                 "Assets/Scenes/LightSimulator.unity",
-                "Assets/Scenes/NumberSettings.unity",
+                "Assets/Scenes/NumberSetting.unity",
                 "Assets/Scenes/Simulator.unity",
                 "Assets/Scenes/Title.unity"
             ]
@@ -836,9 +823,8 @@
                 "Assets/Scenes/Estimation.unity",
                 "Assets/Scenes/FormationSetting.unity",
                 "Assets/Scenes/LightSetting.unity",
-                "Assets/Scenes/LightSetting.unity",
                 "Assets/Scenes/LightSimulator.unity",
-                "Assets/Scenes/NumberSettings.unity",
+                "Assets/Scenes/NumberSetting.unity",
                 "Assets/Scenes/Simulator.unity",
                 "Assets/Scenes/Title.unity"
             ]
@@ -859,9 +845,8 @@
                 "Assets/Scenes/Estimation.unity",
                 "Assets/Scenes/FormationSetting.unity",
                 "Assets/Scenes/LightSetting.unity",
-                "Assets/Scenes/LightSetting.unity",
                 "Assets/Scenes/LightSimulator.unity",
-                "Assets/Scenes/NumberSettings.unity",
+                "Assets/Scenes/NumberSetting.unity",
                 "Assets/Scenes/Simulator.unity",
                 "Assets/Scenes/Title.unity"
             ]
@@ -1083,9 +1068,8 @@
                 "Assets/Scenes/Estimation.unity",
                 "Assets/Scenes/FormationSetting.unity",
                 "Assets/Scenes/LightSetting.unity",
-                "Assets/Scenes/LightSetting.unity",
                 "Assets/Scenes/LightSimulator.unity",
-                "Assets/Scenes/NumberSettings.unity",
+                "Assets/Scenes/NumberSetting.unity",
                 "Assets/Scenes/Simulator.unity",
                 "Assets/Scenes/Title.unity"
             ]
@@ -1109,9 +1093,8 @@
                 "Assets/Scenes/Estimation.unity",
                 "Assets/Scenes/FormationSetting.unity",
                 "Assets/Scenes/LightSetting.unity",
-                "Assets/Scenes/LightSetting.unity",
                 "Assets/Scenes/LightSimulator.unity",
-                "Assets/Scenes/NumberSettings.unity",
+                "Assets/Scenes/NumberSetting.unity",
                 "Assets/Scenes/Simulator.unity",
                 "Assets/Scenes/Title.unity"
             ]
@@ -1146,9 +1129,8 @@
                 "Assets/Scenes/Estimation.unity",
                 "Assets/Scenes/FormationSetting.unity",
                 "Assets/Scenes/LightSetting.unity",
-                "Assets/Scenes/LightSetting.unity",
                 "Assets/Scenes/LightSimulator.unity",
-                "Assets/Scenes/NumberSettings.unity",
+                "Assets/Scenes/NumberSetting.unity",
                 "Assets/Scenes/Simulator.unity",
                 "Assets/Scenes/Title.unity"
             ]
@@ -1162,9 +1144,8 @@
                 "Assets/Scenes/Estimation.unity",
                 "Assets/Scenes/FormationSetting.unity",
                 "Assets/Scenes/LightSetting.unity",
-                "Assets/Scenes/LightSetting.unity",
                 "Assets/Scenes/LightSimulator.unity",
-                "Assets/Scenes/NumberSettings.unity",
+                "Assets/Scenes/NumberSetting.unity",
                 "Assets/Scenes/Simulator.unity",
                 "Assets/Scenes/Title.unity"
             ]
@@ -1178,9 +1159,8 @@
                 "Assets/Scenes/Estimation.unity",
                 "Assets/Scenes/FormationSetting.unity",
                 "Assets/Scenes/LightSetting.unity",
-                "Assets/Scenes/LightSetting.unity",
                 "Assets/Scenes/LightSimulator.unity",
-                "Assets/Scenes/NumberSettings.unity",
+                "Assets/Scenes/NumberSetting.unity",
                 "Assets/Scenes/Simulator.unity",
                 "Assets/Scenes/Title.unity"
             ]
@@ -1194,9 +1174,8 @@
                 "Assets/Scenes/Estimation.unity",
                 "Assets/Scenes/FormationSetting.unity",
                 "Assets/Scenes/LightSetting.unity",
-                "Assets/Scenes/LightSetting.unity",
                 "Assets/Scenes/LightSimulator.unity",
-                "Assets/Scenes/NumberSettings.unity",
+                "Assets/Scenes/NumberSetting.unity",
                 "Assets/Scenes/Simulator.unity",
                 "Assets/Scenes/Title.unity"
             ]
@@ -1210,9 +1189,8 @@
                 "Assets/Scenes/Estimation.unity",
                 "Assets/Scenes/FormationSetting.unity",
                 "Assets/Scenes/LightSetting.unity",
-                "Assets/Scenes/LightSetting.unity",
                 "Assets/Scenes/LightSimulator.unity",
-                "Assets/Scenes/NumberSettings.unity",
+                "Assets/Scenes/NumberSetting.unity",
                 "Assets/Scenes/Simulator.unity",
                 "Assets/Scenes/Title.unity"
             ]
