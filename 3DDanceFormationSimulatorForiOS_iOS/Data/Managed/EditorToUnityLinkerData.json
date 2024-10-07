@@ -140,7 +140,7 @@
         {
             "managedAssemblyName": "Assembly-CSharp.dll",
             "nativeClass": "",
-            "fullManagedTypeName": "LightSettingManager",
+            "fullManagedTypeName": "LightSettingSaverAndLoader",
             "moduleName": "",
             "usedInScenes": []
         },
@@ -322,6 +322,27 @@
             "usedInScenes": []
         },
         {
+            "managedAssemblyName": "Assembly-CSharp.dll",
+            "nativeClass": "",
+            "fullManagedTypeName": "SuspensionLightController",
+            "moduleName": "",
+            "usedInScenes": []
+        },
+        {
+            "managedAssemblyName": "Assembly-CSharp.dll",
+            "nativeClass": "",
+            "fullManagedTypeName": "SuspensionLightControlWithJoystick",
+            "moduleName": "",
+            "usedInScenes": []
+        },
+        {
+            "managedAssemblyName": "Assembly-CSharp.dll",
+            "nativeClass": "",
+            "fullManagedTypeName": "SuspensionLightSaverAndLoader",
+            "moduleName": "",
+            "usedInScenes": []
+        },
+        {
             "managedAssemblyName": "Unity.TextMeshPro.dll",
             "nativeClass": "",
             "fullManagedTypeName": "TMPro.TextMeshProUGUI",
@@ -461,6 +482,7 @@
             "fullManagedTypeName": "UnityEngine.Animator",
             "moduleName": "Animation",
             "usedInScenes": [
+                "Assets/Scenes/LightSimulator.unity",
                 "Assets/Scenes/Simulator.unity",
                 "Assets/Scenes/Title.unity"
             ]
@@ -501,6 +523,7 @@
             "fullManagedTypeName": "UnityEngine.Avatar",
             "moduleName": "Animation",
             "usedInScenes": [
+                "Assets/Scenes/LightSimulator.unity",
                 "Assets/Scenes/Simulator.unity",
                 "Assets/Scenes/Title.unity"
             ]
@@ -526,6 +549,7 @@
             "fullManagedTypeName": "UnityEngine.BoxCollider",
             "moduleName": "Physics",
             "usedInScenes": [
+                "Assets/Scenes/LightSimulator.unity",
                 "Assets/Scenes/Simulator.unity",
                 "Assets/Scenes/Title.unity"
             ]
@@ -581,6 +605,7 @@
             "fullManagedTypeName": "UnityEngine.CharacterController",
             "moduleName": "Physics",
             "usedInScenes": [
+                "Assets/Scenes/LightSimulator.unity",
                 "Assets/Scenes/Simulator.unity",
                 "Assets/Scenes/Title.unity"
             ]
@@ -1105,6 +1130,7 @@
             "fullManagedTypeName": "UnityEngine.SkinnedMeshRenderer",
             "moduleName": "Core",
             "usedInScenes": [
+                "Assets/Scenes/LightSimulator.unity",
                 "Assets/Scenes/Simulator.unity",
                 "Assets/Scenes/Title.unity"
             ]
@@ -1116,7 +1142,6 @@
             "moduleName": "Physics",
             "usedInScenes": [
                 "Assets/Scenes/FormationSetting.unity",
-                "Assets/Scenes/LightSimulator.unity",
                 "Assets/Scenes/Title.unity"
             ]
         },

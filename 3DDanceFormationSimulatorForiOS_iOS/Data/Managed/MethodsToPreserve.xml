@@ -1,6 +1,6 @@
 <linker>
 	<assembly fullname="Assembly-CSharp" ignoreIfMissing="1">
-		<type fullname="LightSettingManager">
+		<type fullname="LightSettingSaverAndLoader">
 			<method name="SaveLightData"/>
 			<method name="SaveLightData"/>
 		</type>
@@ -38,6 +38,27 @@
 			<method name="SwitchToScene"/>
 			<method name="SwitchToScene"/>
 			<method name="SwitchToScene"/>
+		</type>
+		<type fullname="SuspensionLightController">
+			<method name="SwitchLightSource"/>
+			<method name="SwitchLightSource"/>
+			<method name="SwitchLightSource"/>
+			<method name="SwitchLightSource"/>
+			<method name="SwitchLightSource"/>
+			<method name="SwitchLightSource"/>
+		</type>
+		<type fullname="SuspensionLightControlWithJoystick">
+			<method name="OnSliderValueChanged"/>
+			<method name="SwitchLightSource"/>
+			<method name="SwitchLightSource"/>
+			<method name="SwitchLightSource"/>
+			<method name="SwitchLightSource"/>
+			<method name="SwitchLightSource"/>
+			<method name="SwitchLightSource"/>
+		</type>
+		<type fullname="SuspensionLightSaverAndLoader">
+			<method name="SaveSuspensionLightData"/>
+			<method name="SaveSuspensionLightData"/>
 		</type>
 		<type fullname="VideoPlayerScript">
 			<method name="CallDownloadAndPlayVideo"/>

@@ -10,7 +10,7 @@
 		<type fullname="ColorPicker" preserve="nothing"/>
 		<type fullname="FormationManager" preserve="nothing"/>
 		<type fullname="Joystick" preserve="nothing"/>
-		<type fullname="LightSettingManager" preserve="nothing"/>
+		<type fullname="LightSettingSaverAndLoader" preserve="nothing"/>
 		<type fullname="LightShafts" preserve="nothing"/>
 		<type fullname="LightTabController" preserve="nothing"/>
 		<type fullname="LogReceiver" preserve="nothing"/>
@@ -27,6 +27,9 @@
 		<type fullname="SceneSwitcher" preserve="nothing"/>
 		<type fullname="ScreenOrientationManager" preserve="nothing"/>
 		<type fullname="StarterAssets.ThirdPersonController" preserve="nothing"/>
+		<type fullname="SuspensionLightController" preserve="nothing"/>
+		<type fullname="SuspensionLightControlWithJoystick" preserve="nothing"/>
+		<type fullname="SuspensionLightSaverAndLoader" preserve="nothing"/>
 		<type fullname="ToggleUIController" preserve="nothing"/>
 		<type fullname="UIVirtualJoystick" preserve="nothing"/>
 		<type fullname="VideoPlayerScript" preserve="nothing"/>

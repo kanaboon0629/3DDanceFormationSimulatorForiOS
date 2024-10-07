@@ -458,6 +458,18 @@ PrefabInstance:
       propertyPath: m_Cameras.Array.data[0]
       value: 
       objectReference: {fileID: 813533787}
+    - target: {fileID: 4368706056830301484, guid: 69ccc437596344115adf937913d4384f, type: 3}
+      propertyPath: m_Range
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 4368706056830301484, guid: 69ccc437596344115adf937913d4384f, type: 3}
+      propertyPath: m_SpotAngle
+      value: 20.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 4368706056830301491, guid: 69ccc437596344115adf937913d4384f, type: 3}
+      propertyPath: m_Brightness
+      value: 0.4
+      objectReference: {fileID: 0}
     - target: {fileID: 4368706056830301491, guid: 69ccc437596344115adf937913d4384f, type: 3}
       propertyPath: m_CurrentCamera
       value: 
