@@ -24,7 +24,7 @@ public class RunPythonScript : MonoBehaviour
     {
         yield return null;
         //戻るボタンからの時はやらない
-        if (!SceneSwitcher.IsReturningFromSpecificScene)
+        if (!SceneSwitcher.IsReturningFromNumberSetting)
         {
             logText.text = "Communicating with the server...";
             nextButton.SetActive(false); // ボタンを非表示にしておく

@@ -790,6 +790,7 @@ GameObject:
   - component: {fileID: 982760053}
   - component: {fileID: 982760055}
   - component: {fileID: 982760056}
+  - component: {fileID: 982760057}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -864,6 +865,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isPortrait: 0
+--- !u!114 &982760057
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 982760051}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: df6e30cfb7987439ba1a14ce248e7953, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  assetPrefab: {fileID: 8847644588416790575, guid: 7ef528fd84bcd4a3396eff200edc6f36, type: 3}
 --- !u!1 &2092093266
 GameObject:
   m_ObjectHideFlags: 0
@@ -957,7 +971,7 @@ MonoBehaviour:
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: NumberSettings
+          m_StringArgument: NumberSetting
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &2092093269

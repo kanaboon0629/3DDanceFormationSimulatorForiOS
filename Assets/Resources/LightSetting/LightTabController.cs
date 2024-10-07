@@ -7,15 +7,19 @@ public class LightTabController : MonoBehaviour
     public GameObject[] contents; // タブコンテンツの配列
     public Color selectedColor = Color.white; // 選択中の色
     public Color unselectedColor = new Color(1f, 1f, 1f, 0.5f); // 非選択の色（白の半透明）
-
+    
     public int initialTabIndex = 0; // 初期表示するタブのインデックス
 
     private int currentTabIndex; // 現在のタブのインデックス
+    private const string TabKey = "CurrentTabIndex"; // PlayerPrefsで保存するキー
 
     private void Start()
     {
-        // 初期タブの設定
-        ShowTab(initialTabIndex);
+        // 保存されたタブインデックスを読み込む
+        currentTabIndex = PlayerPrefs.GetInt(TabKey, initialTabIndex);
+
+        // 保存されたタブを表示する
+        ShowTab(currentTabIndex);
     }
 
     public void ShowTab(int index)
@@ -58,6 +62,16 @@ public class LightTabController : MonoBehaviour
         {
             selectedPanelImage.color = selectedColor;
         }
+
+        // 現在のタブインデックスを保存
+        SaveCurrentTabIndex();
+    }
+
+    // 現在のタブインデックスを保存する
+    private void SaveCurrentTabIndex()
+    {
+        PlayerPrefs.SetInt(TabKey, currentTabIndex);
+        PlayerPrefs.Save(); // PlayerPrefsに即座に保存
     }
 
     public int GetCurrentTabIndex()

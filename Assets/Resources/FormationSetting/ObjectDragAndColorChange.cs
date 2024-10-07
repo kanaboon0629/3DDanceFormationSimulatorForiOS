@@ -11,7 +11,7 @@ public class ObjectDragAndColorChange : MonoBehaviour
     void Start()
     {
         objRenderer = GetComponent<Renderer>();
-        objRenderer.material.color = Color.white;  // 初期値を白に設定
+        //objRenderer.material.color = Color.white;  // 初期値を白に設定
     }
 
     void Update()
