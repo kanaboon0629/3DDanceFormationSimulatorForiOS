@@ -4,6 +4,13 @@
         {
             "managedAssemblyName": "Assembly-CSharp.dll",
             "nativeClass": "",
+            "fullManagedTypeName": "AllLightSaverAndLoader",
+            "moduleName": "",
+            "usedInScenes": []
+        },
+        {
+            "managedAssemblyName": "Assembly-CSharp.dll",
+            "nativeClass": "",
             "fullManagedTypeName": "Assets.SimpleSpinner.SimpleSpinner",
             "moduleName": "",
             "usedInScenes": []
@@ -332,13 +339,6 @@
             "managedAssemblyName": "Assembly-CSharp.dll",
             "nativeClass": "",
             "fullManagedTypeName": "SuspensionLightControlWithJoystick",
-            "moduleName": "",
-            "usedInScenes": []
-        },
-        {
-            "managedAssemblyName": "Assembly-CSharp.dll",
-            "nativeClass": "",
-            "fullManagedTypeName": "SuspensionLightSaverAndLoader",
             "moduleName": "",
             "usedInScenes": []
         },
