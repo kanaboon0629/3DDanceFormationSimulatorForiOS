@@ -1,5 +1,6 @@
 <linker>
 	<assembly fullname="Assembly-CSharp">
+		<type fullname="AllLightSaverAndLoader" preserve="nothing"/>
 		<type fullname="Assets.SimpleSpinner.SimpleSpinner" preserve="nothing"/>
 		<type fullname="BioIK.BioIK" preserve="nothing"/>
 		<type fullname="BioIK.BioJoint" preserve="nothing"/>
@@ -29,7 +30,6 @@
 		<type fullname="StarterAssets.ThirdPersonController" preserve="nothing"/>
 		<type fullname="SuspensionLightController" preserve="nothing"/>
 		<type fullname="SuspensionLightControlWithJoystick" preserve="nothing"/>
-		<type fullname="SuspensionLightSaverAndLoader" preserve="nothing"/>
 		<type fullname="ToggleUIController" preserve="nothing"/>
 		<type fullname="UIVirtualJoystick" preserve="nothing"/>
 		<type fullname="VideoPlayerScript" preserve="nothing"/>
