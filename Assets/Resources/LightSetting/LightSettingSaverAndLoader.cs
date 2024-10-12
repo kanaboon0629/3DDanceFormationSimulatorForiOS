@@ -9,6 +9,8 @@ public class LightSettingSaverAndLoader : MonoBehaviour
     public GameObject searchPanel;
     public GameObject backfootPanel;
     public GameObject suspensionPanel;
+    public GameObject pinspotPanel;
+
 
     private string[] NameOfLight = {
         "FrontLight",
@@ -16,7 +18,8 @@ public class LightSettingSaverAndLoader : MonoBehaviour
         "DyedLight",
         "SearchLight",
         "BackfootLight",
-        "SuspensionLight"
+        "SuspensionLight",
+        "PinspotLight"
     };
 
     // オブジェクトデータを保存するメソッド
@@ -28,7 +31,8 @@ public class LightSettingSaverAndLoader : MonoBehaviour
             dyedPanel,
             searchPanel,
             backfootPanel,
-            suspensionPanel
+            suspensionPanel,
+            pinspotPanel
         };
 
         // 有無と色について保存
@@ -102,6 +106,18 @@ public class LightSettingSaverAndLoader : MonoBehaviour
                     Debug.LogWarning($"Dropdown not found in {panel.name}");
                 }
             }
+            else if (panel == pinspotPanel)
+            {
+                Dropdown pinspotDropdown = panel.GetComponentInChildren<Dropdown>();
+                if (pinspotDropdown != null)
+                {
+                    PlayerPrefs.SetInt(NameOfLight[i] + "_Count", pinspotDropdown.value + 1);
+                }
+                else
+                {
+                    Debug.LogWarning($"Dropdown not found in {panel.name}");
+                }
+            }
         }
 
         PlayerPrefs.Save();  // PlayerPrefs にデータを保存
@@ -116,7 +132,8 @@ public class LightSettingSaverAndLoader : MonoBehaviour
             dyedPanel,
             searchPanel,
             backfootPanel,
-            suspensionPanel
+            suspensionPanel,
+            pinspotPanel
         };
 
         for (int i = 0; i < allPanel.Length; i++)
@@ -183,6 +200,19 @@ public class LightSettingSaverAndLoader : MonoBehaviour
                 if (suspensionDropdown != null)
                 {
                     suspensionDropdown.value = PlayerPrefs.GetInt(NameOfLight[i] + "_Count", 1) - 1;
+                }
+                else
+                {
+                    Debug.LogWarning($"Dropdown not found in {panel.name}");
+                }
+            }
+            // PinspotPanel に個数情報をロード
+            else if (panel == pinspotPanel)
+            {
+                Dropdown pinspotDropdown = panel.GetComponentInChildren<Dropdown>();
+                if (pinspotDropdown != null)
+                {
+                    pinspotDropdown.value = PlayerPrefs.GetInt(NameOfLight[i] + "_Count", 1) - 1;
                 }
                 else
                 {

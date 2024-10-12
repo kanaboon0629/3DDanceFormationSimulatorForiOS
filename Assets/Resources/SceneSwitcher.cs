@@ -37,7 +37,9 @@ public class SceneSwitcher : MonoBehaviour
     //Suspensionlightがある場合
     public void NextButtonInLightSetting(){
         int neededSuspensionLight = PlayerPrefs.GetInt("SuspensionLight_Toggle");
-        if (neededSuspensionLight == 1) {
+        int neededPinspotLight = PlayerPrefs.GetInt("PinspotLight_Toggle");
+
+        if (neededSuspensionLight == 1 || neededPinspotLight == 1) {
             SwitchToScene("LightSimulator");
         }else{
             SwitchToScene("Simulator");
@@ -46,7 +48,9 @@ public class SceneSwitcher : MonoBehaviour
     public void BackButtonInSimulator()
     {
         int neededSuspensionLight = PlayerPrefs.GetInt("SuspensionLight_Toggle");
-        if (neededSuspensionLight == 1) {
+        int neededPinspotLight = PlayerPrefs.GetInt("PinspotLight_Toggle");
+
+        if (neededSuspensionLight == 1 || neededPinspotLight == 1) {
             SwitchToScene("LightSimulator");
         }else{
             SwitchToScene("LightSetting");

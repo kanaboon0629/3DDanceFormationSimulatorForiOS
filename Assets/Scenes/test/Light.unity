@@ -220,7 +220,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7426778072557990950, guid: 4a4b7710bff5d45748cdb87af2ed0064, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -3.65
+      value: -0.1
       objectReference: {fileID: 0}
     - target: {fileID: 7426778072557990950, guid: 4a4b7710bff5d45748cdb87af2ed0064, type: 3}
       propertyPath: m_LocalPosition.y
@@ -228,7 +228,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7426778072557990950, guid: 4a4b7710bff5d45748cdb87af2ed0064, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 7.33
+      value: 0.02
       objectReference: {fileID: 0}
     - target: {fileID: 7426778072557990950, guid: 4a4b7710bff5d45748cdb87af2ed0064, type: 3}
       propertyPath: m_LocalRotation.w
@@ -327,6 +327,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: BackfootLight
       objectReference: {fileID: 0}
+    - target: {fileID: 3275749308469216287, guid: 53dc88fccca1a46b3ad724fe2f562a19, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 53dc88fccca1a46b3ad724fe2f562a19, type: 3}
 --- !u!1001 &4257175950792786421
@@ -396,6 +400,10 @@ PrefabInstance:
     - target: {fileID: 4344289897873650683, guid: cf4d78a7ccfb84676a17176febb282a7, type: 3}
       propertyPath: m_Name
       value: DyedLight
+      objectReference: {fileID: 0}
+    - target: {fileID: 4344289897873650683, guid: cf4d78a7ccfb84676a17176febb282a7, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4344289897873650684, guid: cf4d78a7ccfb84676a17176febb282a7, type: 3}
       propertyPath: m_RootOrder
@@ -475,6 +483,10 @@ PrefabInstance:
       value: 20.3
       objectReference: {fileID: 0}
     - target: {fileID: 4368706056830301491, guid: 69ccc437596344115adf937913d4384f, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4368706056830301491, guid: 69ccc437596344115adf937913d4384f, type: 3}
       propertyPath: m_Brightness
       value: 0.4
       objectReference: {fileID: 0}
@@ -513,6 +525,10 @@ PrefabInstance:
     - target: {fileID: 4368706057533190249, guid: 69ccc437596344115adf937913d4384f, type: 3}
       propertyPath: m_Name
       value: SuspensionLight
+      objectReference: {fileID: 0}
+    - target: {fileID: 4368706057533190249, guid: 69ccc437596344115adf937913d4384f, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4368706057533190250, guid: 69ccc437596344115adf937913d4384f, type: 3}
       propertyPath: m_RootOrder
@@ -591,6 +607,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SearchLight
       objectReference: {fileID: 0}
+    - target: {fileID: 4456312272236954034, guid: 560a9bb4056d946fa9e878606958b75d, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4456312272236954035, guid: 560a9bb4056d946fa9e878606958b75d, type: 3}
       propertyPath: m_RootOrder
       value: 3
@@ -657,6 +677,63 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 560a9bb4056d946fa9e878606958b75d, type: 3}
+--- !u!1001 &5339799931850973337
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 550458539260966229, guid: 7681a53b12f0347f1a9f76d7ff6177a8, type: 3}
+      propertyPath: m_RootOrder
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 550458539260966229, guid: 7681a53b12f0347f1a9f76d7ff6177a8, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -7.6100006
+      objectReference: {fileID: 0}
+    - target: {fileID: 550458539260966229, guid: 7681a53b12f0347f1a9f76d7ff6177a8, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.10000038
+      objectReference: {fileID: 0}
+    - target: {fileID: 550458539260966229, guid: 7681a53b12f0347f1a9f76d7ff6177a8, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 550458539260966229, guid: 7681a53b12f0347f1a9f76d7ff6177a8, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 550458539260966229, guid: 7681a53b12f0347f1a9f76d7ff6177a8, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 550458539260966229, guid: 7681a53b12f0347f1a9f76d7ff6177a8, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 550458539260966229, guid: 7681a53b12f0347f1a9f76d7ff6177a8, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 550458539260966229, guid: 7681a53b12f0347f1a9f76d7ff6177a8, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 550458539260966229, guid: 7681a53b12f0347f1a9f76d7ff6177a8, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 550458539260966229, guid: 7681a53b12f0347f1a9f76d7ff6177a8, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8299123744343717418, guid: 7681a53b12f0347f1a9f76d7ff6177a8, type: 3}
+      propertyPath: m_Name
+      value: PinspotLight
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 7681a53b12f0347f1a9f76d7ff6177a8, type: 3}
 --- !u!1001 &7285193061716466743
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -711,6 +788,10 @@ PrefabInstance:
     - target: {fileID: 7285193061426238553, guid: 127c5dd79886c4fe196045f8a131a4ac, type: 3}
       propertyPath: m_Name
       value: HorizonLight
+      objectReference: {fileID: 0}
+    - target: {fileID: 7285193061426238553, guid: 127c5dd79886c4fe196045f8a131a4ac, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 127c5dd79886c4fe196045f8a131a4ac, type: 3}
@@ -781,6 +862,10 @@ PrefabInstance:
     - target: {fileID: 8830820415056430805, guid: bb2d9ac5098de48ab8ddc05ae5fb0478, type: 3}
       propertyPath: m_Name
       value: FrontLight
+      objectReference: {fileID: 0}
+    - target: {fileID: 8830820415056430805, guid: bb2d9ac5098de48ab8ddc05ae5fb0478, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8830820415056430806, guid: bb2d9ac5098de48ab8ddc05ae5fb0478, type: 3}
       propertyPath: m_RootOrder

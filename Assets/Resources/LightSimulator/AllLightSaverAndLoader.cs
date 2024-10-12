@@ -5,14 +5,18 @@ public class AllLightSaverAndLoader : MonoBehaviour
 {
     public GameObject suspensionLightPrefab; // 複製するアセットのプレハブ
     public int numberOfSuspensionLight; // 個数
+    public GameObject pinspotLightPrefab; // 複製するアセットのプレハブ
+    public int numberOfPinspotLight; // 個数
+    
     public GameObject suspensionLightParent; // SuspensionLight の親オブジェクト
     public GameObject frontLightParent; // FrontLight の親オブジェクト
     public GameObject horizonLightParent; // HorizonLight の親オブジェクト
     public GameObject dyedLightParent; // DyedLight の親オブジェクト
     public GameObject searchLightParent; // SearchLight の親オブジェクト
     public GameObject backfootLightParent; // BackFootLight の親オブジェクト
+    public GameObject pinspotLightParent; // pinspotLight の親オブジェクト
 
-    private Vector3[] positions = {
+    private Vector3[] suspensionPositions = {
         new Vector3(2.98f, -1.39796f, -1.45f),
         new Vector3(2.98f, -1.39796f, 1.45f),
         new Vector3(2.98f, -1.39796f, -4.3f),
@@ -20,19 +24,34 @@ public class AllLightSaverAndLoader : MonoBehaviour
         new Vector3(2.98f, -1.39796f, -7.15f),
         new Vector3(2.98f, -1.39796f, 7.15f)
     };
+        private Vector3[] pinspotPositions = {
+        new Vector3(24.57f, 15.1f, -1.45f),
+        new Vector3(24.57f, 15.1f, 1.45f),
+        new Vector3(24.57f, 15.1f, -4.3f),
+        new Vector3(24.57f, 15.1f, 4.3f),
+        new Vector3(24.57f, 15.1f, -7.15f),
+        new Vector3(24.57f, 15.1f, 7.15f)
+    };
 
     void Start()
     {
+        // SuspensionLightを配置
         if (PlayerPrefs.GetInt("SuspensionLight_Toggle") == 1){
             numberOfSuspensionLight = PlayerPrefs.GetInt("SuspensionLight_Count", 1); // デフォルトは1
-            // SuspensionLightを配置
-            ArrangeAssets(numberOfSuspensionLight);
+            ArrangeAssets(numberOfSuspensionLight, suspensionLightPrefab, suspensionLightParent, suspensionPositions);  
+        }
 
-            // SuspensionLightの位置データをロード
-            if (PlayerPrefs.HasKey("SuspensionLightPosX_0"))
-            {
-                LoadSuspensionLightData();
-            }
+        // PinspotLightを配置
+        if (PlayerPrefs.GetInt("PinspotLight_Toggle") == 1){
+            numberOfPinspotLight = PlayerPrefs.GetInt("PinspotLight_Count", 1); // デフォルトは1
+            ArrangeAssets(numberOfPinspotLight, pinspotLightPrefab, pinspotLightParent, pinspotPositions);
+        }
+
+        // 2回目以降は位置データをロード
+        if (PlayerPrefs.HasKey("SuspensionLightPosX_0") || PlayerPrefs.HasKey("PinspotLightRotX_0"))
+        {
+            LoadLightPositionAndAngle("SuspensionLight", suspensionLightParent);
+            LoadLightRotationAndAngle("PinspotLight", pinspotLightParent);
         }
 
         // ライトの有無によって表示        
@@ -44,6 +63,7 @@ public class AllLightSaverAndLoader : MonoBehaviour
 
         // 各ライトの色を適用
         ArrangeColor(suspensionLightParent, "SuspensionLight");
+        ArrangeColor(pinspotLightParent, "PinspotLight");
         ArrangeColor(frontLightParent, "FrontLight");
         ArrangeColor(horizonLightParent, "HorizonLight");
         ArrangeColor(dyedLightParent, "DyedLight");
@@ -136,12 +156,12 @@ public class AllLightSaverAndLoader : MonoBehaviour
         }
     }
 
-    void ArrangeAssets(int count)
+    void ArrangeAssets(int count, GameObject obj, GameObject parentObj, Vector3[] positions)
     {
         for (int i = 0; i < count; i++)
         {
-            // 複製して位置を設定し、親を suspensionLightParent に設定
-            GameObject newAsset = Instantiate(suspensionLightPrefab, suspensionLightParent.transform);
+            // 複製して位置を設定し、親を設定
+            GameObject newAsset = Instantiate(obj, parentObj.transform);
 
             if (i < positions.Length)
             {
@@ -154,35 +174,77 @@ public class AllLightSaverAndLoader : MonoBehaviour
         }
     }
 
-    public void SaveSuspensionLightData()
+    public void SaveLightDataFromButton()
     {
-        Light[] lights = suspensionLightParent.GetComponentsInChildren<Light>();
+        SaveLightPositionAndAngle("SuspensionLight", suspensionLightParent);
+        SaveLightRotationAndAngle("PinspotLight", pinspotLightParent);
+    }
+
+    public void SaveLightPositionAndAngle(string lightName, GameObject parentObj)
+    {
+        Light[] lights = parentObj.GetComponentsInChildren<Light>();
         for (int i = 0; i < lights.Length; i++)
         {
             Light light = lights[i]; // Lightコンポーネントを取得
 
-            PlayerPrefs.SetFloat("SuspensionLightPosX_" + i, light.transform.position.x);
-            PlayerPrefs.SetFloat("SuspensionLightPosY_" + i, light.transform.position.y);
-            PlayerPrefs.SetFloat("SuspensionLightPosZ_" + i, light.transform.position.z);
-            PlayerPrefs.SetFloat("SuspensionLightSpotAngle_" + i, light.spotAngle); // 修正点
+            PlayerPrefs.SetFloat(lightName + "PosX_" + i, light.transform.position.x);
+            PlayerPrefs.SetFloat(lightName + "PosY_" + i, light.transform.position.y);
+            PlayerPrefs.SetFloat(lightName + "PosZ_" + i, light.transform.position.z);
+            PlayerPrefs.SetFloat(lightName + "Angle_" + i, light.spotAngle);
         }
         PlayerPrefs.Save();
     }
 
-    public void LoadSuspensionLightData()
+    public void SaveLightRotationAndAngle(string lightName, GameObject parentObj)
     {
-        Light[] lights = suspensionLightParent.GetComponentsInChildren<Light>();
+        Light[] lights = parentObj.GetComponentsInChildren<Light>();
         for (int i = 0; i < lights.Length; i++)
         {
             Light light = lights[i]; // Lightコンポーネントを取得
-            if (PlayerPrefs.HasKey("SuspensionLightPosX_" + i))
+
+            // 回転をオイラー角として保存
+            Vector3 rotationEuler = light.transform.rotation.eulerAngles;
+            PlayerPrefs.SetFloat(lightName + "RotX_" + i, rotationEuler.x);
+            PlayerPrefs.SetFloat(lightName + "RotY_" + i, rotationEuler.y);
+            PlayerPrefs.SetFloat(lightName + "RotZ_" + i, rotationEuler.z);
+            PlayerPrefs.SetFloat(lightName + "Angle_" + i, light.spotAngle);
+        }
+        PlayerPrefs.Save();
+    }
+
+    public void LoadLightPositionAndAngle(string lightName, GameObject parentObj)
+    {
+        Light[] lights = parentObj.GetComponentsInChildren<Light>();
+        for (int i = 0; i < lights.Length; i++)
+        {
+            Light light = lights[i]; // Lightコンポーネントを取得
+            if (PlayerPrefs.HasKey(lightName + "PosX_" + i))
             {
-                float x = PlayerPrefs.GetFloat("SuspensionLightPosX_" + i);
-                float y = PlayerPrefs.GetFloat("SuspensionLightPosY_" + i);
-                float z = PlayerPrefs.GetFloat("SuspensionLightPosZ_" + i);
-                
+                float x = PlayerPrefs.GetFloat(lightName + "PosX_" + i);
+                float y = PlayerPrefs.GetFloat(lightName + "PosY_" + i);
+                float z = PlayerPrefs.GetFloat(lightName + "PosZ_" + i);
+
                 light.transform.position = new Vector3(x, y, z); // ポジションを設定
-                light.spotAngle = PlayerPrefs.GetFloat("SuspensionLightSpotAngle_" + i); // 修正点
+                light.spotAngle = PlayerPrefs.GetFloat(lightName + "Angle_" + i); // スポット角度を設定
+            }
+        }
+    }
+
+    public void LoadLightRotationAndAngle(string lightName, GameObject parentObj)
+    {
+        Light[] lights = parentObj.GetComponentsInChildren<Light>();
+        for (int i = 0; i < lights.Length; i++)
+        {
+            Light light = lights[i]; // Lightコンポーネントを取得
+            if (PlayerPrefs.HasKey(lightName + "RotX_" + i))
+            {
+                float x = PlayerPrefs.GetFloat(lightName + "RotX_" + i);
+                float y = PlayerPrefs.GetFloat(lightName + "RotY_" + i);
+                float z = PlayerPrefs.GetFloat(lightName + "RotZ_" + i);
+
+                // オイラー角をQuaternionに変換して回転を設定
+                light.transform.rotation = Quaternion.Euler(x, y, z);
+                light.spotAngle = PlayerPrefs.GetFloat(lightName + "Angle_" + i); // スポット角度を設定
             }
         }
     }

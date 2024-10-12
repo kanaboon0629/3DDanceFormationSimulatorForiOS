@@ -1166,6 +1166,8 @@ struct LensFlareDataElementSRP_tE7E76E59BC723196507D4E63BFEAD65480EF6140;
 struct LensFlareDataSRP_t036EEE7A3B9CEEDABC68655C48D1A21F04252295;
 // UnityEngine.Light
 struct Light_t1E68479B7782AF2050FAA02A5DC612FD034F18F3;
+// LightButtonsController
+struct LightButtonsController_t1D5EF718856EA81E1517EBBF0FAAA91D2BE11062;
 // UnityEngine.SocialPlatforms.Impl.LocalUser
 struct LocalUser_t55C68E98993F86B6FBB7A25F28EB989CD7E6A3AD;
 // LogReceiver
@@ -1324,8 +1326,6 @@ struct String_t;
 struct StringBuilder_t;
 // System.IO.StringReader
 struct StringReader_t1A336148FF22A9584E759A9D720CC96C23E35DD8;
-// SuspensionLightController
-struct SuspensionLightController_tFEDDE278CE588EF78627D524E6884E05A2539825;
 // SymmetryJsonProcessor
 struct SymmetryJsonProcessor_t6E03A188907754DC7F2C59B40B590347521C1B3F;
 // TMPro.TMP_Asset
@@ -18339,20 +18339,35 @@ struct AllLightSaverAndLoader_t6B05BEB6BD5602E82B4F3BB1702182DA75749BA5  : publi
 	GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* ___suspensionLightPrefab_4;
 	// System.Int32 AllLightSaverAndLoader::numberOfSuspensionLight
 	int32_t ___numberOfSuspensionLight_5;
+	// UnityEngine.GameObject AllLightSaverAndLoader::pinspotLightPrefab
+	GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* ___pinspotLightPrefab_6;
+	// System.Int32 AllLightSaverAndLoader::numberOfPinspotLight
+	int32_t ___numberOfPinspotLight_7;
 	// UnityEngine.GameObject AllLightSaverAndLoader::suspensionLightParent
-	GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* ___suspensionLightParent_6;
+	GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* ___suspensionLightParent_8;
 	// UnityEngine.GameObject AllLightSaverAndLoader::frontLightParent
-	GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* ___frontLightParent_7;
+	GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* ___frontLightParent_9;
 	// UnityEngine.GameObject AllLightSaverAndLoader::horizonLightParent
-	GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* ___horizonLightParent_8;
+	GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* ___horizonLightParent_10;
 	// UnityEngine.GameObject AllLightSaverAndLoader::dyedLightParent
-	GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* ___dyedLightParent_9;
+	GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* ___dyedLightParent_11;
 	// UnityEngine.GameObject AllLightSaverAndLoader::searchLightParent
-	GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* ___searchLightParent_10;
+	GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* ___searchLightParent_12;
 	// UnityEngine.GameObject AllLightSaverAndLoader::backfootLightParent
-	GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* ___backfootLightParent_11;
-	// UnityEngine.Vector3[] AllLightSaverAndLoader::positions
-	Vector3U5BU5D_tFF1859CCE176131B909E2044F76443064254679C* ___positions_12;
+	GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* ___backfootLightParent_13;
+	// UnityEngine.GameObject AllLightSaverAndLoader::pinspotLightParent
+	GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* ___pinspotLightParent_14;
+	// UnityEngine.Vector3[] AllLightSaverAndLoader::suspensionPositions
+	Vector3U5BU5D_tFF1859CCE176131B909E2044F76443064254679C* ___suspensionPositions_15;
+	// UnityEngine.Vector3[] AllLightSaverAndLoader::pinspotPositions
+	Vector3U5BU5D_tFF1859CCE176131B909E2044F76443064254679C* ___pinspotPositions_16;
+};
+
+// ArmatureDataLoader
+struct ArmatureDataLoader_t62685609427C19C7938642DCC1094FDD9F4A7A42  : public MonoBehaviour_t532A11E69716D348D8AA7F854AFCBFCB8AD17F71
+{
+	// UnityEngine.GameObject ArmatureDataLoader::assetPrefab
+	GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* ___assetPrefab_4;
 };
 
 // BasicRigidBodyPush
@@ -19011,6 +19026,64 @@ struct LightAnchor_tE8B22E6927BBBD3530A56EB0EB4F4A523FABCFAD  : public MonoBehav
 	float ___m_Roll_13;
 };
 
+// LightButtonsController
+struct LightButtonsController_t1D5EF718856EA81E1517EBBF0FAAA91D2BE11062  : public MonoBehaviour_t532A11E69716D348D8AA7F854AFCBFCB8AD17F71
+{
+	// UnityEngine.GameObject LightButtonsController::changeButton
+	GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* ___changeButton_4;
+	// UnityEngine.UI.Slider LightButtonsController::slider
+	Slider_t87EA570E3D6556CABF57456C2F3873FFD86E652F* ___slider_5;
+	// UnityEngine.GameObject LightButtonsController::susPanel
+	GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* ___susPanel_6;
+	// UnityEngine.GameObject LightButtonsController::pinPanel
+	GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* ___pinPanel_7;
+	// UnityEngine.GameObject[] LightButtonsController::susButtons
+	GameObjectU5BU5D_tFF67550DFCE87096D7A3734EA15B75896B2722CF* ___susButtons_8;
+	// UnityEngine.GameObject[] LightButtonsController::pinButtons
+	GameObjectU5BU5D_tFF67550DFCE87096D7A3734EA15B75896B2722CF* ___pinButtons_9;
+	// UnityEngine.Color LightButtonsController::selectedColor
+	Color_tD001788D726C3A7F1379BEED0260B9591F440C1F ___selectedColor_10;
+	// UnityEngine.Color LightButtonsController::unselectedColor
+	Color_tD001788D726C3A7F1379BEED0260B9591F440C1F ___unselectedColor_11;
+	// System.Int32 LightButtonsController::initialTabIndex
+	int32_t ___initialTabIndex_12;
+	// System.Int32 LightButtonsController::currentSusTabIndex
+	int32_t ___currentSusTabIndex_13;
+	// System.Int32 LightButtonsController::currentPinTabIndex
+	int32_t ___currentPinTabIndex_14;
+	// System.Single LightButtonsController::minLightAngle
+	float ___minLightAngle_15;
+	// System.Single LightButtonsController::maxLightAngle
+	float ___maxLightAngle_16;
+};
+
+// LightControlWithJoystick
+struct LightControlWithJoystick_tF06BF4E0CCA3CDC8DF045154EE564399CAFA613E  : public MonoBehaviour_t532A11E69716D348D8AA7F854AFCBFCB8AD17F71
+{
+	// System.Single LightControlWithJoystick::moveSpeed
+	float ___moveSpeed_4;
+	// System.Single LightControlWithJoystick::rotationSpeed
+	float ___rotationSpeed_5;
+	// Joystick LightControlWithJoystick::joystick
+	Joystick_tE3193C48A43E3F5577CBD4E9A8204BBFF2FEEB7A* ___joystick_6;
+	// UnityEngine.UI.Slider LightControlWithJoystick::slider
+	Slider_t87EA570E3D6556CABF57456C2F3873FFD86E652F* ___slider_7;
+	// UnityEngine.GameObject LightControlWithJoystick::susPanel
+	GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* ___susPanel_8;
+	// UnityEngine.GameObject LightControlWithJoystick::pinPanel
+	GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* ___pinPanel_9;
+	// UnityEngine.GameObject LightControlWithJoystick::suspensionLightParent
+	GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* ___suspensionLightParent_10;
+	// UnityEngine.GameObject LightControlWithJoystick::pinspotLightParent
+	GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* ___pinspotLightParent_11;
+	// UnityEngine.Light LightControlWithJoystick::suspensionLightSource
+	Light_t1E68479B7782AF2050FAA02A5DC612FD034F18F3* ___suspensionLightSource_12;
+	// UnityEngine.Light LightControlWithJoystick::pinspotLightSource
+	Light_t1E68479B7782AF2050FAA02A5DC612FD034F18F3* ___pinspotLightSource_13;
+	// LightButtonsController LightControlWithJoystick::lightButtonsController
+	LightButtonsController_t1D5EF718856EA81E1517EBBF0FAAA91D2BE11062* ___lightButtonsController_14;
+};
+
 // LightSettingSaverAndLoader
 struct LightSettingSaverAndLoader_t6A3C7A0F6ADDD5E8ACE58CEA13D3003F9DC27737  : public MonoBehaviour_t532A11E69716D348D8AA7F854AFCBFCB8AD17F71
 {
@@ -19026,8 +19099,10 @@ struct LightSettingSaverAndLoader_t6A3C7A0F6ADDD5E8ACE58CEA13D3003F9DC27737  : p
 	GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* ___backfootPanel_8;
 	// UnityEngine.GameObject LightSettingSaverAndLoader::suspensionPanel
 	GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* ___suspensionPanel_9;
+	// UnityEngine.GameObject LightSettingSaverAndLoader::pinspotPanel
+	GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* ___pinspotPanel_10;
 	// System.String[] LightSettingSaverAndLoader::NameOfLight
-	StringU5BU5D_t7674CD946EC0CE7B3AE0BE70E6EE85F2ECD9F248* ___NameOfLight_10;
+	StringU5BU5D_t7674CD946EC0CE7B3AE0BE70E6EE85F2ECD9F248* ___NameOfLight_11;
 };
 
 // LightShafts
@@ -19245,13 +19320,6 @@ struct NumberPicker_t08EDC171C5E436145D57757FF677C648CADFC8EF  : public MonoBeha
 struct ObjectDataLoader_tD4C288BC183BCC123D590F042B5BDE5BA57F8E09  : public MonoBehaviour_t532A11E69716D348D8AA7F854AFCBFCB8AD17F71
 {
 	// UnityEngine.GameObject ObjectDataLoader::assetPrefab
-	GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* ___assetPrefab_4;
-};
-
-// ObjectDataLoaderForLight
-struct ObjectDataLoaderForLight_tF1252C7207CABD38BA9DA189AE4F397F18865DB9  : public MonoBehaviour_t532A11E69716D348D8AA7F854AFCBFCB8AD17F71
-{
-	// UnityEngine.GameObject ObjectDataLoaderForLight::assetPrefab
 	GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* ___assetPrefab_4;
 };
 
@@ -19585,38 +19653,6 @@ struct StarterAssetsInputs_t133BB053DB5E88FF96AD7A46722CFDD182A8B657  : public M
 	bool ___cursorLocked_9;
 	// System.Boolean StarterAssets.StarterAssetsInputs::cursorInputForLook
 	bool ___cursorInputForLook_10;
-};
-
-// SuspensionLightControlWithJoystick
-struct SuspensionLightControlWithJoystick_tB387B4BDA492EEAA8CC63867A0E01D6BFA1F5E07  : public MonoBehaviour_t532A11E69716D348D8AA7F854AFCBFCB8AD17F71
-{
-	// System.Single SuspensionLightControlWithJoystick::moveSpeed
-	float ___moveSpeed_4;
-	// Joystick SuspensionLightControlWithJoystick::joystick
-	Joystick_tE3193C48A43E3F5577CBD4E9A8204BBFF2FEEB7A* ___joystick_5;
-	// UnityEngine.UI.Slider SuspensionLightControlWithJoystick::slider
-	Slider_t87EA570E3D6556CABF57456C2F3873FFD86E652F* ___slider_6;
-	// UnityEngine.GameObject SuspensionLightControlWithJoystick::suspensionLightParent
-	GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* ___suspensionLightParent_7;
-	// UnityEngine.Light SuspensionLightControlWithJoystick::lightSource
-	Light_t1E68479B7782AF2050FAA02A5DC612FD034F18F3* ___lightSource_8;
-	// SuspensionLightController SuspensionLightControlWithJoystick::suspensionLightController
-	SuspensionLightController_tFEDDE278CE588EF78627D524E6884E05A2539825* ___suspensionLightController_9;
-};
-
-// SuspensionLightController
-struct SuspensionLightController_tFEDDE278CE588EF78627D524E6884E05A2539825  : public MonoBehaviour_t532A11E69716D348D8AA7F854AFCBFCB8AD17F71
-{
-	// UnityEngine.GameObject[] SuspensionLightController::tabs
-	GameObjectU5BU5D_tFF67550DFCE87096D7A3734EA15B75896B2722CF* ___tabs_4;
-	// UnityEngine.Color SuspensionLightController::selectedColor
-	Color_tD001788D726C3A7F1379BEED0260B9591F440C1F ___selectedColor_5;
-	// UnityEngine.Color SuspensionLightController::unselectedColor
-	Color_tD001788D726C3A7F1379BEED0260B9591F440C1F ___unselectedColor_6;
-	// System.Int32 SuspensionLightController::initialTabIndex
-	int32_t ___initialTabIndex_7;
-	// System.Int32 SuspensionLightController::currentTabIndex
-	int32_t ___currentTabIndex_8;
 };
 
 // TMPro.Examples.TMP_ExampleScript_01
@@ -27934,6 +27970,10 @@ struct TextGenerator_t6B84DC798596D3A9944DC346DD453C075EE62366_StaticFields
 
 // AllLightSaverAndLoader
 
+// ArmatureDataLoader
+
+// ArmatureDataLoader
+
 // BasicRigidBodyPush
 
 // BasicRigidBodyPush
@@ -28080,6 +28120,14 @@ struct LensFlareComponentSRP_tF068937A1EC9EB063AF855DB4994A1D2A5E3EFDC_StaticFie
 
 // UnityEngine.LightAnchor
 
+// LightButtonsController
+
+// LightButtonsController
+
+// LightControlWithJoystick
+
+// LightControlWithJoystick
+
 // LightSettingSaverAndLoader
 
 // LightSettingSaverAndLoader
@@ -28147,10 +28195,6 @@ struct NGPermissionCallbackiOS_t966C11FC5C548BAB341244C5EB5AC30D800DA565_StaticF
 // ObjectDataLoader
 
 // ObjectDataLoader
-
-// ObjectDataLoaderForLight
-
-// ObjectDataLoaderForLight
 
 // ObjectDataSaver
 
@@ -28233,14 +28277,6 @@ struct SceneSwitcher_t4BE0478E16D178567D51E0CB184D38BDE3E02602_StaticFields
 // StarterAssets.StarterAssetsInputs
 
 // StarterAssets.StarterAssetsInputs
-
-// SuspensionLightControlWithJoystick
-
-// SuspensionLightControlWithJoystick
-
-// SuspensionLightController
-
-// SuspensionLightController
 
 // TMPro.Examples.TMP_ExampleScript_01
 
@@ -31374,34 +31410,34 @@ IL2CPP_EXTERN_C const int32_t g_FieldOffsetTable4186[3] =
 	static_cast<int32_t>(offsetof(FormationManager_t39D132043D077E8D612DED0A407E4502A4F4B53D, ___assetPrefab_4)),static_cast<int32_t>(offsetof(FormationManager_t39D132043D077E8D612DED0A407E4502A4F4B53D, ___numberOfPeople_5)),static_cast<int32_t>(offsetof(FormationManager_t39D132043D077E8D612DED0A407E4502A4F4B53D, ___positions_6)),};
 IL2CPP_EXTERN_C const int32_t g_FieldOffsetTable4187[1] = 
 {
+	static_cast<int32_t>(offsetof(ObjectDataLoader_tD4C288BC183BCC123D590F042B5BDE5BA57F8E09, ___assetPrefab_4)),};
+IL2CPP_EXTERN_C const int32_t g_FieldOffsetTable4188[1] = 
+{
 	static_cast<int32_t>(offsetof(ObjectDataSaver_t61DF61812C1EC092145FDEA168CEE894366B852E, ___saveTag_4)),};
-IL2CPP_EXTERN_C const int32_t g_FieldOffsetTable4188[5] = 
+IL2CPP_EXTERN_C const int32_t g_FieldOffsetTable4189[5] = 
 {
 	static_cast<int32_t>(offsetof(ObjectDragAndColorChange_tD823118664729CAF915659BDB54C95AA99CD242E, ___offset_4)),static_cast<int32_t>(offsetof(ObjectDragAndColorChange_tD823118664729CAF915659BDB54C95AA99CD242E, ___isDragging_5)),static_cast<int32_t>(offsetof(ObjectDragAndColorChange_tD823118664729CAF915659BDB54C95AA99CD242E, ___objRenderer_6)),static_cast<int32_t>(offsetof(ObjectDragAndColorChange_tD823118664729CAF915659BDB54C95AA99CD242E, ___startTouchPosition_7)),static_cast<int32_t>(offsetof(ObjectDragAndColorChange_tD823118664729CAF915659BDB54C95AA99CD242E, ___tapThreshold_8)),};
-IL2CPP_EXTERN_C const int32_t g_FieldOffsetTable4189[4] = 
+IL2CPP_EXTERN_C const int32_t g_FieldOffsetTable4190[4] = 
 {
 	static_cast<int32_t>(offsetof(ColorPicker_tF90EC7E499035737475AA24917509639AB5DB8EF, ___colorDisplay_4)),static_cast<int32_t>(offsetof(ColorPicker_tF90EC7E499035737475AA24917509639AB5DB8EF, ___redSlider_5)),static_cast<int32_t>(offsetof(ColorPicker_tF90EC7E499035737475AA24917509639AB5DB8EF, ___greenSlider_6)),static_cast<int32_t>(offsetof(ColorPicker_tF90EC7E499035737475AA24917509639AB5DB8EF, ___blueSlider_7)),};
-IL2CPP_EXTERN_C const int32_t g_FieldOffsetTable4190[7] = 
+IL2CPP_EXTERN_C const int32_t g_FieldOffsetTable4191[8] = 
 {
-	static_cast<int32_t>(offsetof(LightSettingSaverAndLoader_t6A3C7A0F6ADDD5E8ACE58CEA13D3003F9DC27737, ___frontPanel_4)),static_cast<int32_t>(offsetof(LightSettingSaverAndLoader_t6A3C7A0F6ADDD5E8ACE58CEA13D3003F9DC27737, ___horizonPanel_5)),static_cast<int32_t>(offsetof(LightSettingSaverAndLoader_t6A3C7A0F6ADDD5E8ACE58CEA13D3003F9DC27737, ___dyedPanel_6)),static_cast<int32_t>(offsetof(LightSettingSaverAndLoader_t6A3C7A0F6ADDD5E8ACE58CEA13D3003F9DC27737, ___searchPanel_7)),static_cast<int32_t>(offsetof(LightSettingSaverAndLoader_t6A3C7A0F6ADDD5E8ACE58CEA13D3003F9DC27737, ___backfootPanel_8)),static_cast<int32_t>(offsetof(LightSettingSaverAndLoader_t6A3C7A0F6ADDD5E8ACE58CEA13D3003F9DC27737, ___suspensionPanel_9)),static_cast<int32_t>(offsetof(LightSettingSaverAndLoader_t6A3C7A0F6ADDD5E8ACE58CEA13D3003F9DC27737, ___NameOfLight_10)),};
-IL2CPP_EXTERN_C const int32_t g_FieldOffsetTable4191[7] = 
+	static_cast<int32_t>(offsetof(LightSettingSaverAndLoader_t6A3C7A0F6ADDD5E8ACE58CEA13D3003F9DC27737, ___frontPanel_4)),static_cast<int32_t>(offsetof(LightSettingSaverAndLoader_t6A3C7A0F6ADDD5E8ACE58CEA13D3003F9DC27737, ___horizonPanel_5)),static_cast<int32_t>(offsetof(LightSettingSaverAndLoader_t6A3C7A0F6ADDD5E8ACE58CEA13D3003F9DC27737, ___dyedPanel_6)),static_cast<int32_t>(offsetof(LightSettingSaverAndLoader_t6A3C7A0F6ADDD5E8ACE58CEA13D3003F9DC27737, ___searchPanel_7)),static_cast<int32_t>(offsetof(LightSettingSaverAndLoader_t6A3C7A0F6ADDD5E8ACE58CEA13D3003F9DC27737, ___backfootPanel_8)),static_cast<int32_t>(offsetof(LightSettingSaverAndLoader_t6A3C7A0F6ADDD5E8ACE58CEA13D3003F9DC27737, ___suspensionPanel_9)),static_cast<int32_t>(offsetof(LightSettingSaverAndLoader_t6A3C7A0F6ADDD5E8ACE58CEA13D3003F9DC27737, ___pinspotPanel_10)),static_cast<int32_t>(offsetof(LightSettingSaverAndLoader_t6A3C7A0F6ADDD5E8ACE58CEA13D3003F9DC27737, ___NameOfLight_11)),};
+IL2CPP_EXTERN_C const int32_t g_FieldOffsetTable4192[7] = 
 {
 	static_cast<int32_t>(offsetof(LightTabController_tB7E13DF9D7B00DD47DC75DC50944724940D0C7E9, ___tabs_4)),static_cast<int32_t>(offsetof(LightTabController_tB7E13DF9D7B00DD47DC75DC50944724940D0C7E9, ___contents_5)),static_cast<int32_t>(offsetof(LightTabController_tB7E13DF9D7B00DD47DC75DC50944724940D0C7E9, ___selectedColor_6)),static_cast<int32_t>(offsetof(LightTabController_tB7E13DF9D7B00DD47DC75DC50944724940D0C7E9, ___unselectedColor_7)),static_cast<int32_t>(offsetof(LightTabController_tB7E13DF9D7B00DD47DC75DC50944724940D0C7E9, ___initialTabIndex_8)),static_cast<int32_t>(offsetof(LightTabController_tB7E13DF9D7B00DD47DC75DC50944724940D0C7E9, ___currentTabIndex_9)),0,};
-IL2CPP_EXTERN_C const int32_t g_FieldOffsetTable4192[1] = 
+IL2CPP_EXTERN_C const int32_t g_FieldOffsetTable4193[1] = 
 {
 	static_cast<int32_t>(offsetof(ToggleUIController_tE10CF04CAEFC977710B08CCEE9DC76E3901E5D61, ___toggle_4)),};
-IL2CPP_EXTERN_C const int32_t g_FieldOffsetTable4193[9] = 
+IL2CPP_EXTERN_C const int32_t g_FieldOffsetTable4194[13] = 
 {
-	static_cast<int32_t>(offsetof(AllLightSaverAndLoader_t6B05BEB6BD5602E82B4F3BB1702182DA75749BA5, ___suspensionLightPrefab_4)),static_cast<int32_t>(offsetof(AllLightSaverAndLoader_t6B05BEB6BD5602E82B4F3BB1702182DA75749BA5, ___numberOfSuspensionLight_5)),static_cast<int32_t>(offsetof(AllLightSaverAndLoader_t6B05BEB6BD5602E82B4F3BB1702182DA75749BA5, ___suspensionLightParent_6)),static_cast<int32_t>(offsetof(AllLightSaverAndLoader_t6B05BEB6BD5602E82B4F3BB1702182DA75749BA5, ___frontLightParent_7)),static_cast<int32_t>(offsetof(AllLightSaverAndLoader_t6B05BEB6BD5602E82B4F3BB1702182DA75749BA5, ___horizonLightParent_8)),static_cast<int32_t>(offsetof(AllLightSaverAndLoader_t6B05BEB6BD5602E82B4F3BB1702182DA75749BA5, ___dyedLightParent_9)),static_cast<int32_t>(offsetof(AllLightSaverAndLoader_t6B05BEB6BD5602E82B4F3BB1702182DA75749BA5, ___searchLightParent_10)),static_cast<int32_t>(offsetof(AllLightSaverAndLoader_t6B05BEB6BD5602E82B4F3BB1702182DA75749BA5, ___backfootLightParent_11)),static_cast<int32_t>(offsetof(AllLightSaverAndLoader_t6B05BEB6BD5602E82B4F3BB1702182DA75749BA5, ___positions_12)),};
-IL2CPP_EXTERN_C const int32_t g_FieldOffsetTable4194[1] = 
+	static_cast<int32_t>(offsetof(AllLightSaverAndLoader_t6B05BEB6BD5602E82B4F3BB1702182DA75749BA5, ___suspensionLightPrefab_4)),static_cast<int32_t>(offsetof(AllLightSaverAndLoader_t6B05BEB6BD5602E82B4F3BB1702182DA75749BA5, ___numberOfSuspensionLight_5)),static_cast<int32_t>(offsetof(AllLightSaverAndLoader_t6B05BEB6BD5602E82B4F3BB1702182DA75749BA5, ___pinspotLightPrefab_6)),static_cast<int32_t>(offsetof(AllLightSaverAndLoader_t6B05BEB6BD5602E82B4F3BB1702182DA75749BA5, ___numberOfPinspotLight_7)),static_cast<int32_t>(offsetof(AllLightSaverAndLoader_t6B05BEB6BD5602E82B4F3BB1702182DA75749BA5, ___suspensionLightParent_8)),static_cast<int32_t>(offsetof(AllLightSaverAndLoader_t6B05BEB6BD5602E82B4F3BB1702182DA75749BA5, ___frontLightParent_9)),static_cast<int32_t>(offsetof(AllLightSaverAndLoader_t6B05BEB6BD5602E82B4F3BB1702182DA75749BA5, ___horizonLightParent_10)),static_cast<int32_t>(offsetof(AllLightSaverAndLoader_t6B05BEB6BD5602E82B4F3BB1702182DA75749BA5, ___dyedLightParent_11)),static_cast<int32_t>(offsetof(AllLightSaverAndLoader_t6B05BEB6BD5602E82B4F3BB1702182DA75749BA5, ___searchLightParent_12)),static_cast<int32_t>(offsetof(AllLightSaverAndLoader_t6B05BEB6BD5602E82B4F3BB1702182DA75749BA5, ___backfootLightParent_13)),static_cast<int32_t>(offsetof(AllLightSaverAndLoader_t6B05BEB6BD5602E82B4F3BB1702182DA75749BA5, ___pinspotLightParent_14)),static_cast<int32_t>(offsetof(AllLightSaverAndLoader_t6B05BEB6BD5602E82B4F3BB1702182DA75749BA5, ___suspensionPositions_15)),static_cast<int32_t>(offsetof(AllLightSaverAndLoader_t6B05BEB6BD5602E82B4F3BB1702182DA75749BA5, ___pinspotPositions_16)),};
+IL2CPP_EXTERN_C const int32_t g_FieldOffsetTable4195[13] = 
 {
-	static_cast<int32_t>(offsetof(ObjectDataLoaderForLight_tF1252C7207CABD38BA9DA189AE4F397F18865DB9, ___assetPrefab_4)),};
-IL2CPP_EXTERN_C const int32_t g_FieldOffsetTable4195[5] = 
+	static_cast<int32_t>(offsetof(LightButtonsController_t1D5EF718856EA81E1517EBBF0FAAA91D2BE11062, ___changeButton_4)),static_cast<int32_t>(offsetof(LightButtonsController_t1D5EF718856EA81E1517EBBF0FAAA91D2BE11062, ___slider_5)),static_cast<int32_t>(offsetof(LightButtonsController_t1D5EF718856EA81E1517EBBF0FAAA91D2BE11062, ___susPanel_6)),static_cast<int32_t>(offsetof(LightButtonsController_t1D5EF718856EA81E1517EBBF0FAAA91D2BE11062, ___pinPanel_7)),static_cast<int32_t>(offsetof(LightButtonsController_t1D5EF718856EA81E1517EBBF0FAAA91D2BE11062, ___susButtons_8)),static_cast<int32_t>(offsetof(LightButtonsController_t1D5EF718856EA81E1517EBBF0FAAA91D2BE11062, ___pinButtons_9)),static_cast<int32_t>(offsetof(LightButtonsController_t1D5EF718856EA81E1517EBBF0FAAA91D2BE11062, ___selectedColor_10)),static_cast<int32_t>(offsetof(LightButtonsController_t1D5EF718856EA81E1517EBBF0FAAA91D2BE11062, ___unselectedColor_11)),static_cast<int32_t>(offsetof(LightButtonsController_t1D5EF718856EA81E1517EBBF0FAAA91D2BE11062, ___initialTabIndex_12)),static_cast<int32_t>(offsetof(LightButtonsController_t1D5EF718856EA81E1517EBBF0FAAA91D2BE11062, ___currentSusTabIndex_13)),static_cast<int32_t>(offsetof(LightButtonsController_t1D5EF718856EA81E1517EBBF0FAAA91D2BE11062, ___currentPinTabIndex_14)),static_cast<int32_t>(offsetof(LightButtonsController_t1D5EF718856EA81E1517EBBF0FAAA91D2BE11062, ___minLightAngle_15)),static_cast<int32_t>(offsetof(LightButtonsController_t1D5EF718856EA81E1517EBBF0FAAA91D2BE11062, ___maxLightAngle_16)),};
+IL2CPP_EXTERN_C const int32_t g_FieldOffsetTable4196[11] = 
 {
-	static_cast<int32_t>(offsetof(SuspensionLightController_tFEDDE278CE588EF78627D524E6884E05A2539825, ___tabs_4)),static_cast<int32_t>(offsetof(SuspensionLightController_tFEDDE278CE588EF78627D524E6884E05A2539825, ___selectedColor_5)),static_cast<int32_t>(offsetof(SuspensionLightController_tFEDDE278CE588EF78627D524E6884E05A2539825, ___unselectedColor_6)),static_cast<int32_t>(offsetof(SuspensionLightController_tFEDDE278CE588EF78627D524E6884E05A2539825, ___initialTabIndex_7)),static_cast<int32_t>(offsetof(SuspensionLightController_tFEDDE278CE588EF78627D524E6884E05A2539825, ___currentTabIndex_8)),};
-IL2CPP_EXTERN_C const int32_t g_FieldOffsetTable4196[6] = 
-{
-	static_cast<int32_t>(offsetof(SuspensionLightControlWithJoystick_tB387B4BDA492EEAA8CC63867A0E01D6BFA1F5E07, ___moveSpeed_4)),static_cast<int32_t>(offsetof(SuspensionLightControlWithJoystick_tB387B4BDA492EEAA8CC63867A0E01D6BFA1F5E07, ___joystick_5)),static_cast<int32_t>(offsetof(SuspensionLightControlWithJoystick_tB387B4BDA492EEAA8CC63867A0E01D6BFA1F5E07, ___slider_6)),static_cast<int32_t>(offsetof(SuspensionLightControlWithJoystick_tB387B4BDA492EEAA8CC63867A0E01D6BFA1F5E07, ___suspensionLightParent_7)),static_cast<int32_t>(offsetof(SuspensionLightControlWithJoystick_tB387B4BDA492EEAA8CC63867A0E01D6BFA1F5E07, ___lightSource_8)),static_cast<int32_t>(offsetof(SuspensionLightControlWithJoystick_tB387B4BDA492EEAA8CC63867A0E01D6BFA1F5E07, ___suspensionLightController_9)),};
+	static_cast<int32_t>(offsetof(LightControlWithJoystick_tF06BF4E0CCA3CDC8DF045154EE564399CAFA613E, ___moveSpeed_4)),static_cast<int32_t>(offsetof(LightControlWithJoystick_tF06BF4E0CCA3CDC8DF045154EE564399CAFA613E, ___rotationSpeed_5)),static_cast<int32_t>(offsetof(LightControlWithJoystick_tF06BF4E0CCA3CDC8DF045154EE564399CAFA613E, ___joystick_6)),static_cast<int32_t>(offsetof(LightControlWithJoystick_tF06BF4E0CCA3CDC8DF045154EE564399CAFA613E, ___slider_7)),static_cast<int32_t>(offsetof(LightControlWithJoystick_tF06BF4E0CCA3CDC8DF045154EE564399CAFA613E, ___susPanel_8)),static_cast<int32_t>(offsetof(LightControlWithJoystick_tF06BF4E0CCA3CDC8DF045154EE564399CAFA613E, ___pinPanel_9)),static_cast<int32_t>(offsetof(LightControlWithJoystick_tF06BF4E0CCA3CDC8DF045154EE564399CAFA613E, ___suspensionLightParent_10)),static_cast<int32_t>(offsetof(LightControlWithJoystick_tF06BF4E0CCA3CDC8DF045154EE564399CAFA613E, ___pinspotLightParent_11)),static_cast<int32_t>(offsetof(LightControlWithJoystick_tF06BF4E0CCA3CDC8DF045154EE564399CAFA613E, ___suspensionLightSource_12)),static_cast<int32_t>(offsetof(LightControlWithJoystick_tF06BF4E0CCA3CDC8DF045154EE564399CAFA613E, ___pinspotLightSource_13)),static_cast<int32_t>(offsetof(LightControlWithJoystick_tF06BF4E0CCA3CDC8DF045154EE564399CAFA613E, ___lightButtonsController_14)),};
 IL2CPP_EXTERN_C const int32_t g_FieldOffsetTable4197[3] = 
 {
 	static_cast<int32_t>(offsetof(NumberPicker_t08EDC171C5E436145D57757FF677C648CADFC8EF, ___numberDropdown_4)),static_cast<int32_t>(offsetof(NumberPicker_t08EDC171C5E436145D57757FF677C648CADFC8EF, ___selectedValueText_5)),static_cast<int32_t>(offsetof(NumberPicker_t08EDC171C5E436145D57757FF677C648CADFC8EF, ___confirmButton_6)),};
@@ -31411,18 +31447,18 @@ IL2CPP_EXTERN_C const int32_t g_FieldOffsetTable4199[2] =
 IL2CPP_EXTERN_C const int32_t g_FieldOffsetTable4200[1] = 
 {
 	static_cast<int32_t>(offsetof(ScreenOrientationManager_t36E6D3D820F934D1D6EA56B204E9AC1BF6FE69D2, ___isPortrait_4)),};
-IL2CPP_EXTERN_C const int32_t g_FieldOffsetTable4201[2] = 
+IL2CPP_EXTERN_C const int32_t g_FieldOffsetTable4201[1] = 
 {
-	static_cast<int32_t>(offsetof(CameraControlWithJoystick_t99A48DD3B21FB5018C3A537865DCB3FCB77197E3, ___joystick_4)),static_cast<int32_t>(offsetof(CameraControlWithJoystick_t99A48DD3B21FB5018C3A537865DCB3FCB77197E3, ___rotationSpeed_5)),};
+	static_cast<int32_t>(offsetof(ArmatureDataLoader_t62685609427C19C7938642DCC1094FDD9F4A7A42, ___assetPrefab_4)),};
 IL2CPP_EXTERN_C const int32_t g_FieldOffsetTable4202[2] = 
 {
+	static_cast<int32_t>(offsetof(CameraControlWithJoystick_t99A48DD3B21FB5018C3A537865DCB3FCB77197E3, ___joystick_4)),static_cast<int32_t>(offsetof(CameraControlWithJoystick_t99A48DD3B21FB5018C3A537865DCB3FCB77197E3, ___rotationSpeed_5)),};
+IL2CPP_EXTERN_C const int32_t g_FieldOffsetTable4203[2] = 
+{
 	static_cast<int32_t>(offsetof(CameraStickControl_tB9DB591A66D2362126F7279A7E2D498F391818AC, ___moveSpeed_4)),static_cast<int32_t>(offsetof(CameraStickControl_tB9DB591A66D2362126F7279A7E2D498F391818AC, ___stickSensitivity_5)),};
-IL2CPP_EXTERN_C const int32_t g_FieldOffsetTable4203[4] = 
+IL2CPP_EXTERN_C const int32_t g_FieldOffsetTable4204[4] = 
 {
 	static_cast<int32_t>(offsetof(Joystick_tE3193C48A43E3F5577CBD4E9A8204BBFF2FEEB7A, ___joystick_4)),static_cast<int32_t>(offsetof(Joystick_tE3193C48A43E3F5577CBD4E9A8204BBFF2FEEB7A, ___joystickBackground_5)),static_cast<int32_t>(offsetof(Joystick_tE3193C48A43E3F5577CBD4E9A8204BBFF2FEEB7A, ___moveSpeed_6)),static_cast<int32_t>(offsetof(Joystick_tE3193C48A43E3F5577CBD4E9A8204BBFF2FEEB7A, ___inputVector_7)),};
-IL2CPP_EXTERN_C const int32_t g_FieldOffsetTable4204[1] = 
-{
-	static_cast<int32_t>(offsetof(ObjectDataLoader_tD4C288BC183BCC123D590F042B5BDE5BA57F8E09, ___assetPrefab_4)),};
 IL2CPP_EXTERN_C const int32_t g_FieldOffsetTable4205[8] = 
 {
 	static_cast<int32_t>(offsetof(CameraControlOnSwipe_t44316FA451729B5A49953ECE39FC083FA4F8D2A1, ___mainCamera_4)),static_cast<int32_t>(offsetof(CameraControlOnSwipe_t44316FA451729B5A49953ECE39FC083FA4F8D2A1, ___moveSpeed_5)),static_cast<int32_t>(offsetof(CameraControlOnSwipe_t44316FA451729B5A49953ECE39FC083FA4F8D2A1, ___scrollSensitivity_6)),static_cast<int32_t>(offsetof(CameraControlOnSwipe_t44316FA451729B5A49953ECE39FC083FA4F8D2A1, ___zoomSpeed_7)),static_cast<int32_t>(offsetof(CameraControlOnSwipe_t44316FA451729B5A49953ECE39FC083FA4F8D2A1, ___minFov_8)),static_cast<int32_t>(offsetof(CameraControlOnSwipe_t44316FA451729B5A49953ECE39FC083FA4F8D2A1, ___maxFov_9)),static_cast<int32_t>(offsetof(CameraControlOnSwipe_t44316FA451729B5A49953ECE39FC083FA4F8D2A1, ___lastTouchPosition_10)),static_cast<int32_t>(offsetof(CameraControlOnSwipe_t44316FA451729B5A49953ECE39FC083FA4F8D2A1, ___isDragging_11)),};
