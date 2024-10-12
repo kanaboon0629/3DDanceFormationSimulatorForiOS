@@ -1,14 +1,44 @@
 <linker>
 	<assembly fullname="Assembly-CSharp" ignoreIfMissing="1">
 		<type fullname="AllLightSaverAndLoader">
-			<method name="SaveSuspensionLightData"/>
-			<method name="SaveSuspensionLightData"/>
+			<method name="SaveLightDataFromButton"/>
+			<method name="SaveLightDataFromButton"/>
+		</type>
+		<type fullname="LightButtonsController">
+			<method name="ChangePanel"/>
+			<method name="SwitchLightSource"/>
+			<method name="SwitchLightSource"/>
+			<method name="SwitchLightSource"/>
+			<method name="SwitchLightSource"/>
+			<method name="SwitchLightSource"/>
+			<method name="SwitchLightSource"/>
+			<method name="SwitchLightSource"/>
+			<method name="SwitchLightSource"/>
+			<method name="SwitchLightSource"/>
+			<method name="SwitchLightSource"/>
+			<method name="SwitchLightSource"/>
+			<method name="SwitchLightSource"/>
+		</type>
+		<type fullname="LightControlWithJoystick">
+			<method name="SwitchLightSourceFromButton"/>
+			<method name="SwitchLightSourceFromButton"/>
+			<method name="SwitchLightSourceFromButton"/>
+			<method name="SwitchLightSourceFromButton"/>
+			<method name="SwitchLightSourceFromButton"/>
+			<method name="SwitchLightSourceFromButton"/>
+			<method name="SwitchLightSourceFromButton"/>
+			<method name="SwitchLightSourceFromButton"/>
+			<method name="SwitchLightSourceFromButton"/>
+			<method name="SwitchLightSourceFromButton"/>
+			<method name="SwitchLightSourceFromButton"/>
+			<method name="SwitchLightSourceFromButton"/>
 		</type>
 		<type fullname="LightSettingSaverAndLoader">
 			<method name="SaveLightData"/>
 			<method name="SaveLightData"/>
 		</type>
 		<type fullname="LightTabController">
+			<method name="ShowTab"/>
 			<method name="ShowTab"/>
 			<method name="ShowTab"/>
 			<method name="ShowTab"/>
@@ -42,23 +72,6 @@
 			<method name="SwitchToScene"/>
 			<method name="SwitchToScene"/>
 			<method name="SwitchToScene"/>
-		</type>
-		<type fullname="SuspensionLightController">
-			<method name="SwitchLightSource"/>
-			<method name="SwitchLightSource"/>
-			<method name="SwitchLightSource"/>
-			<method name="SwitchLightSource"/>
-			<method name="SwitchLightSource"/>
-			<method name="SwitchLightSource"/>
-		</type>
-		<type fullname="SuspensionLightControlWithJoystick">
-			<method name="OnSliderValueChanged"/>
-			<method name="SwitchLightSource"/>
-			<method name="SwitchLightSource"/>
-			<method name="SwitchLightSource"/>
-			<method name="SwitchLightSource"/>
-			<method name="SwitchLightSource"/>
-			<method name="SwitchLightSource"/>
 		</type>
 		<type fullname="VideoPlayerScript">
 			<method name="CallDownloadAndPlayVideo"/>

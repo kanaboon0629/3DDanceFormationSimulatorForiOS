@@ -292,12 +292,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   suspensionLightPrefab: {fileID: 2047913025098967465, guid: c516efb6fe19148c6bffce516ffa155e, type: 3}
   numberOfSuspensionLight: 0
+  pinspotLightPrefab: {fileID: 150678629098367311, guid: ae0ae0d1ae2cb4a419dfd6a27bb1513a, type: 3}
+  numberOfPinspotLight: 0
   suspensionLightParent: {fileID: 649548772}
   frontLightParent: {fileID: 1047331510}
   horizonLightParent: {fileID: 94086460}
   dyedLightParent: {fileID: 857241268}
   searchLightParent: {fileID: 1311791151}
   backfootLightParent: {fileID: 506781730}
+  pinspotLightParent: {fileID: 1591018604}
 --- !u!1 &345228112
 GameObject:
   m_ObjectHideFlags: 0
@@ -1065,7 +1068,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   joystick: {fileID: 1357611173}
-  rotationSpeed: 2
 --- !u!114 &963194231
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1405,6 +1407,63 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 4456312272236954034, guid: 560a9bb4056d946fa9e878606958b75d, type: 3}
   m_PrefabInstance: {fileID: 1311791150}
   m_PrefabAsset: {fileID: 0}
+--- !u!1001 &1327435725
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 4006956433512648252, guid: 5b4f248f8b054489dad2aa3d98892618, type: 3}
+      propertyPath: m_Name
+      value: PinspotLight
+      objectReference: {fileID: 0}
+    - target: {fileID: 4833602196859505987, guid: 5b4f248f8b054489dad2aa3d98892618, type: 3}
+      propertyPath: m_RootOrder
+      value: 13
+      objectReference: {fileID: 0}
+    - target: {fileID: 4833602196859505987, guid: 5b4f248f8b054489dad2aa3d98892618, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -7.6100006
+      objectReference: {fileID: 0}
+    - target: {fileID: 4833602196859505987, guid: 5b4f248f8b054489dad2aa3d98892618, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.10000038
+      objectReference: {fileID: 0}
+    - target: {fileID: 4833602196859505987, guid: 5b4f248f8b054489dad2aa3d98892618, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4833602196859505987, guid: 5b4f248f8b054489dad2aa3d98892618, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4833602196859505987, guid: 5b4f248f8b054489dad2aa3d98892618, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4833602196859505987, guid: 5b4f248f8b054489dad2aa3d98892618, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4833602196859505987, guid: 5b4f248f8b054489dad2aa3d98892618, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4833602196859505987, guid: 5b4f248f8b054489dad2aa3d98892618, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4833602196859505987, guid: 5b4f248f8b054489dad2aa3d98892618, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4833602196859505987, guid: 5b4f248f8b054489dad2aa3d98892618, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 5b4f248f8b054489dad2aa3d98892618, type: 3}
 --- !u!1 &1327801522
 GameObject:
   m_ObjectHideFlags: 0
@@ -1559,6 +1618,11 @@ MonoBehaviour:
   joystick: {fileID: 90068180}
   joystickBackground: {fileID: 1025612533}
   moveSpeed: 5
+--- !u!1 &1591018604 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4006956433512648252, guid: 5b4f248f8b054489dad2aa3d98892618, type: 3}
+  m_PrefabInstance: {fileID: 1327435725}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1594559287
 PrefabInstance:
   m_ObjectHideFlags: 0
