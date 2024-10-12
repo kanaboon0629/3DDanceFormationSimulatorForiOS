@@ -32,6 +32,14 @@ public class AllLightSaverAndLoader : MonoBehaviour
         new Vector3(24.57f, 15.1f, -7.15f),
         new Vector3(24.57f, 15.1f, 7.15f)
     };
+    private float[] radialSearchLightRotations = {
+        -140f,
+        -130f,
+        -120f,
+        -60f,
+        -50f,
+        -40f
+    };
 
     void Start()
     {
@@ -107,8 +115,15 @@ public class AllLightSaverAndLoader : MonoBehaviour
         Light[] lights = lightParent.GetComponentsInChildren<Light>();  // 子オブジェクトを含むすべてのLightを取得
 
         if (lights.Length > 0){
+            //ストレートの場合
+            if (angle == 0){
+                    for (int i = 0; i < lights.Length; i++)
+                    {
+                        Light light = lights[i];
+                        light.transform.rotation = Quaternion.Euler(-90f, light.transform.rotation.eulerAngles.y, light.transform.rotation.eulerAngles.z);
+                    }
             //クロスの場合
-            if (angle == 1){
+            }else if (angle == 1){
                 for (int i = 0; i < lights.Length; i++)
                 {
                     Light light = lights[i];
@@ -122,13 +137,13 @@ public class AllLightSaverAndLoader : MonoBehaviour
                         light.transform.rotation = Quaternion.Euler(-120f, light.transform.rotation.eulerAngles.y, light.transform.rotation.eulerAngles.z);
                     }
                 }
-            //ストレートの場合
-            }else{
-                    for (int i = 0; i < lights.Length; i++)
-                    {
-                        Light light = lights[i];
-                        light.transform.rotation = Quaternion.Euler(-90f, light.transform.rotation.eulerAngles.y, light.transform.rotation.eulerAngles.z);
-                    }
+            //放射の場合
+            }else if (angle == 2){
+                for (int i = 0; i < lights.Length; i++)
+                {
+                    Light light = lights[i];
+                    light.transform.rotation = Quaternion.Euler(radialSearchLightRotations[i], light.transform.rotation.eulerAngles.y, light.transform.rotation.eulerAngles.z);
+                }
             }
         }else
         {
