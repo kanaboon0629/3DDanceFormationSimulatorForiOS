@@ -12,7 +12,7 @@ public partial class LightShafts : MonoBehaviour
 		if (m_Cameras == null || m_Cameras.Length == 0)
 			m_Cameras = new Camera[]{Camera.main};
 			// シーン内の全カメラを取得
-			//m_Cameras = FindObjectsOfType<Camera>();
+			m_Cameras = FindObjectsOfType<Camera>();
 
 		UpdateCameraDepthMode();
 	}

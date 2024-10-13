@@ -163,7 +163,7 @@ public partial class LightShafts : MonoBehaviour
 		m_CoordEpi.filterMode = FilterMode.Point;
 		InitRenderTexture(ref m_DepthEpi, m_EpipolarSamples, m_EpipolarLines, 0, RenderTextureFormat.RFloat);
 		m_DepthEpi.filterMode = FilterMode.Point;
-		InitRenderTexture(ref m_InterpolationEpi, m_EpipolarSamples, m_EpipolarLines, 0, m_DX11Support ? RenderTextureFormat.RGInt : RenderTextureFormat.RGFloat);
+		InitRenderTexture(ref m_InterpolationEpi, m_EpipolarSamples, m_EpipolarLines, 0, RenderTextureFormat.RGFloat);
 		m_InterpolationEpi.filterMode = FilterMode.Point;
 		
 		InitRenderTexture(ref m_RaymarchedLightEpi, m_EpipolarSamples, m_EpipolarLines, 24, RenderTextureFormat.ARGBFloat);
