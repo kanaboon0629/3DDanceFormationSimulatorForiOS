@@ -2394,6 +2394,10 @@ void RegisterAllStrippedInternalCalls()
 		void Register_UnityEngine_Light_set_intensity();
 		Register_UnityEngine_Light_set_intensity();
 
+		//System.Void UnityEngine.Light::set_range(System.Single)
+		void Register_UnityEngine_Light_set_range();
+		Register_UnityEngine_Light_set_range();
+
 		//System.Void UnityEngine.Light::set_spotAngle(System.Single)
 		void Register_UnityEngine_Light_set_spotAngle();
 		Register_UnityEngine_Light_set_spotAngle();
