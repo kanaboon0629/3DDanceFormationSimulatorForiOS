@@ -802,6 +802,7 @@ IL2CPP_EXTERN_C const RuntimeMethod* List_1_get_Item_m33561245D64798C2AB07584C0E
 IL2CPP_EXTERN_C const RuntimeMethod* List_1_get_Item_mFE556F47C4CD09EAC6C898EF39D4A8EC112CFC50_RuntimeMethod_var;
 IL2CPP_EXTERN_C const RuntimeMethod* List_1_set_Item_mF4B7177286D26D36C97989C84CDDC6B3B242FC64_RuntimeMethod_var;
 IL2CPP_EXTERN_C const RuntimeMethod* Object_FindObjectOfType_TisLightControlWithJoystick_tF06BF4E0CCA3CDC8DF045154EE564399CAFA613E_m5B4A265048FFA745DE1E797AD4AEFE31EE36A4F0_RuntimeMethod_var;
+IL2CPP_EXTERN_C const RuntimeMethod* Object_FindObjectsOfType_TisCamera_tA92CC927D7439999BC82DBEDC0AA45B470F9E184_mE68A6301A29D5D7ABEF9F64FF816BFA33180F968_RuntimeMethod_var;
 IL2CPP_EXTERN_C const RuntimeMethod* Object_Instantiate_TisGameObject_t76FEDD663AB33C991A9C9A23129337651094216F_m10D87C6E0708CA912BBB02555BF7D0FBC5D7A2B3_RuntimeMethod_var;
 IL2CPP_EXTERN_C const RuntimeMethod* Object_Instantiate_TisGameObject_t76FEDD663AB33C991A9C9A23129337651094216F_m58C654F1134533E29502629CA67645682B404811_RuntimeMethod_var;
 IL2CPP_EXTERN_C const RuntimeMethod* ToggleUIController_OnToggleValueChanged_m4E861748FC6B9D78B9657D78B4EF343221E7830B_RuntimeMethod_var;
@@ -4620,6 +4621,8 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool Enumerator_MoveNext_mB5E00F11BCA3AC963F9
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR float List_1_get_Item_mFE556F47C4CD09EAC6C898EF39D4A8EC112CFC50_gshared (List_1_t0D1C46FD8DDDE974D93CA4F3474EEC05AF950918* __this, int32_t ___0_index, const RuntimeMethod* method) ;
 // System.Void System.Collections.Generic.List`1<System.Single>::set_Item(System.Int32,T)
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void List_1_set_Item_mF4B7177286D26D36C97989C84CDDC6B3B242FC64_gshared (List_1_t0D1C46FD8DDDE974D93CA4F3474EEC05AF950918* __this, int32_t ___0_index, float ___1_value, const RuntimeMethod* method) ;
+// T[] UnityEngine.Object::FindObjectsOfType<System.Object>()
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR ObjectU5BU5D_t8061030B0A12A55D5AD8652A20C922FE99450918* Object_FindObjectsOfType_TisRuntimeObject_m0B4DF4B8AB4C71E0F471BC9D0440B40844DA221D_gshared (const RuntimeMethod* method) ;
 // T UnityEngine.GameObject::GetComponent<System.Object>()
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* GameObject_GetComponent_TisRuntimeObject_m6EAED4AA356F0F48288F67899E5958792395563B_gshared (GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* __this, const RuntimeMethod* method) ;
 // T UnityEngine.Component::GetComponent<System.Object>()
@@ -4935,6 +4938,11 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CU3Ec__ctor_m9BC4C343F568DFADD37CB5849
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR float Convert_ToSingle_m6B47C78A7DFD7825B4361BCA8AB6748FC82165E9 (RuntimeObject* ___0_value, const RuntimeMethod* method) ;
 // System.Boolean LightShafts::CheckMinRequirements()
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool LightShafts_CheckMinRequirements_m6EEA7F47851434183BA9A0A224B40C7714B42C95 (LightShafts_tF1AB0706F46086A109B2707EC53CFA0E70510F76* __this, const RuntimeMethod* method) ;
+// T[] UnityEngine.Object::FindObjectsOfType<UnityEngine.Camera>()
+inline CameraU5BU5D_t1506EBA524A07AD1066D6DD4D7DFC6721F1AC26B* Object_FindObjectsOfType_TisCamera_tA92CC927D7439999BC82DBEDC0AA45B470F9E184_mE68A6301A29D5D7ABEF9F64FF816BFA33180F968 (const RuntimeMethod* method)
+{
+	return ((  CameraU5BU5D_t1506EBA524A07AD1066D6DD4D7DFC6721F1AC26B* (*) (const RuntimeMethod*))Object_FindObjectsOfType_TisRuntimeObject_m0B4DF4B8AB4C71E0F471BC9D0440B40844DA221D_gshared)(method);
+}
 // System.Void LightShafts::UpdateCameraDepthMode()
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void LightShafts_UpdateCameraDepthMode_m3F7F2E0D477BADD40F8C9A71A4FEC35A00D271D3 (LightShafts_tF1AB0706F46086A109B2707EC53CFA0E70510F76* __this, const RuntimeMethod* method) ;
 // System.Void LightShafts::InitShadowmap()
@@ -7521,6 +7529,8 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void LightShafts_Start_mE9EF9DB98787B0E89F666
 	if (!s_Il2CppMethodInitialized)
 	{
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&CameraU5BU5D_t1506EBA524A07AD1066D6DD4D7DFC6721F1AC26B_il2cpp_TypeInfo_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Object_FindObjectsOfType_TisCamera_tA92CC927D7439999BC82DBEDC0AA45B470F9E184_mE68A6301A29D5D7ABEF9F64FF816BFA33180F968_RuntimeMethod_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
 		s_Il2CppMethodInitialized = true;
 	}
 	{
@@ -7559,6 +7569,12 @@ IL_0018:
 
 IL_002c:
 	{
+		// m_Cameras = FindObjectsOfType<Camera>();
+		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
+		CameraU5BU5D_t1506EBA524A07AD1066D6DD4D7DFC6721F1AC26B* L_6;
+		L_6 = Object_FindObjectsOfType_TisCamera_tA92CC927D7439999BC82DBEDC0AA45B470F9E184_mE68A6301A29D5D7ABEF9F64FF816BFA33180F968(Object_FindObjectsOfType_TisCamera_tA92CC927D7439999BC82DBEDC0AA45B470F9E184_mE68A6301A29D5D7ABEF9F64FF816BFA33180F968_RuntimeMethod_var);
+		__this->___m_Cameras_6 = L_6;
+		Il2CppCodeGenWriteBarrier((void**)(&__this->___m_Cameras_6), (void*)L_6);
 		// UpdateCameraDepthMode();
 		LightShafts_UpdateCameraDepthMode_m3F7F2E0D477BADD40F8C9A71A4FEC35A00D271D3(__this, NULL);
 		// }
@@ -9379,22 +9395,6 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void LightShafts_InitEpipolarTextures_mF5EC2D
 	LightShafts_tF1AB0706F46086A109B2707EC53CFA0E70510F76* G_B4_0 = NULL;
 	int32_t G_B6_0 = 0;
 	LightShafts_tF1AB0706F46086A109B2707EC53CFA0E70510F76* G_B6_1 = NULL;
-	int32_t G_B8_0 = 0;
-	int32_t G_B8_1 = 0;
-	int32_t G_B8_2 = 0;
-	RenderTexture_tBA90C4C3AD9EECCFDDCC632D97C29FAB80D60D27** G_B8_3 = NULL;
-	LightShafts_tF1AB0706F46086A109B2707EC53CFA0E70510F76* G_B8_4 = NULL;
-	int32_t G_B7_0 = 0;
-	int32_t G_B7_1 = 0;
-	int32_t G_B7_2 = 0;
-	RenderTexture_tBA90C4C3AD9EECCFDDCC632D97C29FAB80D60D27** G_B7_3 = NULL;
-	LightShafts_tF1AB0706F46086A109B2707EC53CFA0E70510F76* G_B7_4 = NULL;
-	int32_t G_B9_0 = 0;
-	int32_t G_B9_1 = 0;
-	int32_t G_B9_2 = 0;
-	int32_t G_B9_3 = 0;
-	RenderTexture_tBA90C4C3AD9EECCFDDCC632D97C29FAB80D60D27** G_B9_4 = NULL;
-	LightShafts_tF1AB0706F46086A109B2707EC53CFA0E70510F76* G_B9_5 = NULL;
 	{
 		// m_EpipolarLines = m_EpipolarLines < 8 ? 8 : m_EpipolarLines;
 		int32_t L_0 = __this->___m_EpipolarLines_26;
@@ -9466,72 +9466,33 @@ IL_002b:
 		RenderTexture_tBA90C4C3AD9EECCFDDCC632D97C29FAB80D60D27* L_11 = __this->___m_DepthEpi_29;
 		NullCheck(L_11);
 		Texture_set_filterMode_mE423E58C0C16D059EA62BA87AD70F44AEA50CCC9(L_11, 0, NULL);
-		// InitRenderTexture(ref m_InterpolationEpi, m_EpipolarSamples, m_EpipolarLines, 0, m_DX11Support ? RenderTextureFormat.RGInt : RenderTextureFormat.RGFloat);
+		// InitRenderTexture(ref m_InterpolationEpi, m_EpipolarSamples, m_EpipolarLines, 0, RenderTextureFormat.RGFloat);
 		RenderTexture_tBA90C4C3AD9EECCFDDCC632D97C29FAB80D60D27** L_12 = (RenderTexture_tBA90C4C3AD9EECCFDDCC632D97C29FAB80D60D27**)(&__this->___m_InterpolationEpi_33);
 		int32_t L_13 = __this->___m_EpipolarSamples_27;
 		int32_t L_14 = __this->___m_EpipolarLines_26;
-		bool L_15 = __this->___m_DX11Support_58;
-		G_B7_0 = 0;
-		G_B7_1 = L_14;
-		G_B7_2 = L_13;
-		G_B7_3 = L_12;
-		G_B7_4 = __this;
-		if (L_15)
-		{
-			G_B8_0 = 0;
-			G_B8_1 = L_14;
-			G_B8_2 = L_13;
-			G_B8_3 = L_12;
-			G_B8_4 = __this;
-			goto IL_00a0;
-		}
-	}
-	{
-		G_B9_0 = ((int32_t)12);
-		G_B9_1 = G_B7_0;
-		G_B9_2 = G_B7_1;
-		G_B9_3 = G_B7_2;
-		G_B9_4 = G_B7_3;
-		G_B9_5 = G_B7_4;
-		goto IL_00a2;
-	}
-
-IL_00a0:
-	{
-		G_B9_0 = ((int32_t)18);
-		G_B9_1 = G_B8_0;
-		G_B9_2 = G_B8_1;
-		G_B9_3 = G_B8_2;
-		G_B9_4 = G_B8_3;
-		G_B9_5 = G_B8_4;
-	}
-
-IL_00a2:
-	{
-		NullCheck(G_B9_5);
-		LightShafts_InitRenderTexture_mAD3673D0640E7C41CF2F83C6D177DFFB78792520(G_B9_5, G_B9_4, G_B9_3, G_B9_2, G_B9_1, G_B9_0, (bool)1, NULL);
+		LightShafts_InitRenderTexture_mAD3673D0640E7C41CF2F83C6D177DFFB78792520(__this, L_12, L_13, L_14, 0, ((int32_t)12), (bool)1, NULL);
 		// m_InterpolationEpi.filterMode = FilterMode.Point;
-		RenderTexture_tBA90C4C3AD9EECCFDDCC632D97C29FAB80D60D27* L_16 = __this->___m_InterpolationEpi_33;
-		NullCheck(L_16);
-		Texture_set_filterMode_mE423E58C0C16D059EA62BA87AD70F44AEA50CCC9(L_16, 0, NULL);
+		RenderTexture_tBA90C4C3AD9EECCFDDCC632D97C29FAB80D60D27* L_15 = __this->___m_InterpolationEpi_33;
+		NullCheck(L_15);
+		Texture_set_filterMode_mE423E58C0C16D059EA62BA87AD70F44AEA50CCC9(L_15, 0, NULL);
 		// InitRenderTexture(ref m_RaymarchedLightEpi, m_EpipolarSamples, m_EpipolarLines, 24, RenderTextureFormat.ARGBFloat);
-		RenderTexture_tBA90C4C3AD9EECCFDDCC632D97C29FAB80D60D27** L_17 = (RenderTexture_tBA90C4C3AD9EECCFDDCC632D97C29FAB80D60D27**)(&__this->___m_RaymarchedLightEpi_36);
-		int32_t L_18 = __this->___m_EpipolarSamples_27;
-		int32_t L_19 = __this->___m_EpipolarLines_26;
-		LightShafts_InitRenderTexture_mAD3673D0640E7C41CF2F83C6D177DFFB78792520(__this, L_17, L_18, L_19, ((int32_t)24), ((int32_t)11), (bool)1, NULL);
+		RenderTexture_tBA90C4C3AD9EECCFDDCC632D97C29FAB80D60D27** L_16 = (RenderTexture_tBA90C4C3AD9EECCFDDCC632D97C29FAB80D60D27**)(&__this->___m_RaymarchedLightEpi_36);
+		int32_t L_17 = __this->___m_EpipolarSamples_27;
+		int32_t L_18 = __this->___m_EpipolarLines_26;
+		LightShafts_InitRenderTexture_mAD3673D0640E7C41CF2F83C6D177DFFB78792520(__this, L_16, L_17, L_18, ((int32_t)24), ((int32_t)11), (bool)1, NULL);
 		// m_RaymarchedLightEpi.filterMode = FilterMode.Point;
-		RenderTexture_tBA90C4C3AD9EECCFDDCC632D97C29FAB80D60D27* L_20 = __this->___m_RaymarchedLightEpi_36;
-		NullCheck(L_20);
-		Texture_set_filterMode_mE423E58C0C16D059EA62BA87AD70F44AEA50CCC9(L_20, 0, NULL);
+		RenderTexture_tBA90C4C3AD9EECCFDDCC632D97C29FAB80D60D27* L_19 = __this->___m_RaymarchedLightEpi_36;
+		NullCheck(L_19);
+		Texture_set_filterMode_mE423E58C0C16D059EA62BA87AD70F44AEA50CCC9(L_19, 0, NULL);
 		// InitRenderTexture(ref m_InterpolateAlongRaysEpi, m_EpipolarSamples, m_EpipolarLines, 0, RenderTextureFormat.ARGBFloat);
-		RenderTexture_tBA90C4C3AD9EECCFDDCC632D97C29FAB80D60D27** L_21 = (RenderTexture_tBA90C4C3AD9EECCFDDCC632D97C29FAB80D60D27**)(&__this->___m_InterpolateAlongRaysEpi_39);
-		int32_t L_22 = __this->___m_EpipolarSamples_27;
-		int32_t L_23 = __this->___m_EpipolarLines_26;
-		LightShafts_InitRenderTexture_mAD3673D0640E7C41CF2F83C6D177DFFB78792520(__this, L_21, L_22, L_23, 0, ((int32_t)11), (bool)1, NULL);
+		RenderTexture_tBA90C4C3AD9EECCFDDCC632D97C29FAB80D60D27** L_20 = (RenderTexture_tBA90C4C3AD9EECCFDDCC632D97C29FAB80D60D27**)(&__this->___m_InterpolateAlongRaysEpi_39);
+		int32_t L_21 = __this->___m_EpipolarSamples_27;
+		int32_t L_22 = __this->___m_EpipolarLines_26;
+		LightShafts_InitRenderTexture_mAD3673D0640E7C41CF2F83C6D177DFFB78792520(__this, L_20, L_21, L_22, 0, ((int32_t)11), (bool)1, NULL);
 		// m_InterpolateAlongRaysEpi.filterMode = FilterMode.Point;
-		RenderTexture_tBA90C4C3AD9EECCFDDCC632D97C29FAB80D60D27* L_24 = __this->___m_InterpolateAlongRaysEpi_39;
-		NullCheck(L_24);
-		Texture_set_filterMode_mE423E58C0C16D059EA62BA87AD70F44AEA50CCC9(L_24, 0, NULL);
+		RenderTexture_tBA90C4C3AD9EECCFDDCC632D97C29FAB80D60D27* L_23 = __this->___m_InterpolateAlongRaysEpi_39;
+		NullCheck(L_23);
+		Texture_set_filterMode_mE423E58C0C16D059EA62BA87AD70F44AEA50CCC9(L_23, 0, NULL);
 		// }
 		return;
 	}
