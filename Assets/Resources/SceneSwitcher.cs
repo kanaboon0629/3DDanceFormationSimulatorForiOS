@@ -4,7 +4,7 @@ using UnityEngine.SceneManagement; // SceneManagerを使用するために必要
 public class SceneSwitcher : MonoBehaviour
 {
     public ObjectDataSaver dataSaver;  // データを保存するためのスクリプトを参照
-    public static bool IsReturningFromSpecificScene = false;
+    public static bool IsReturningFromNumberSetting = false;
     
     // 指定されたシーンに遷移するメソッド
     public void SwitchToScene(string sceneName)
@@ -24,14 +24,37 @@ public class SceneSwitcher : MonoBehaviour
         int nextSceneIndex = (currentSceneIndex + 1) % SceneManager.sceneCountInBuildSettings;
         SceneManager.LoadScene(nextSceneIndex);
     }
-    public void BackToSceneInNumberSetting()
+    public void BackButtonInNumberSetting()
     {
         int isSample = PlayerPrefs.GetInt("IsSample", 1);
         if (isSample == 1) {
             SwitchToScene("Title");
         }else{
-            IsReturningFromSpecificScene = true;
+            IsReturningFromNumberSetting = true;
             SwitchToScene("Estimation");
         }
     }
+    //Suspensionlightがある場合
+    public void NextButtonInLightSetting(){
+        int neededSuspensionLight = PlayerPrefs.GetInt("SuspensionLight_Toggle");
+        int neededPinspotLight = PlayerPrefs.GetInt("PinspotLight_Toggle");
+
+        if (neededSuspensionLight == 1 || neededPinspotLight == 1) {
+            SwitchToScene("LightSimulator");
+        }else{
+            SwitchToScene("Simulator");
+        }
+    }
+    public void BackButtonInSimulator()
+    {
+        int neededSuspensionLight = PlayerPrefs.GetInt("SuspensionLight_Toggle");
+        int neededPinspotLight = PlayerPrefs.GetInt("PinspotLight_Toggle");
+
+        if (neededSuspensionLight == 1 || neededPinspotLight == 1) {
+            SwitchToScene("LightSimulator");
+        }else{
+            SwitchToScene("LightSetting");
+        }
+    }
+    
 }

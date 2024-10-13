@@ -361,7 +361,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1756864168}
         m_TargetAssemblyTypeName: SceneSwitcher, Assembly-CSharp
-        m_MethodName: BackToSceneInNumberSetting
+        m_MethodName: BackButtonInNumberSetting
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

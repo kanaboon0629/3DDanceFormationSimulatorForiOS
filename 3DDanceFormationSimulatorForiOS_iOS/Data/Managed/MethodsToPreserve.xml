@@ -1,17 +1,66 @@
 <linker>
 	<assembly fullname="Assembly-CSharp" ignoreIfMissing="1">
-		<type fullname="InputFieldHandler">
-			<method name="OnSubmit"/>
+		<type fullname="AllLightSaverAndLoader">
+			<method name="SaveLightDataFromButton"/>
+			<method name="SaveLightDataFromButton"/>
+		</type>
+		<type fullname="LightButtonsController">
+			<method name="ChangePanel"/>
+			<method name="SwitchLightSource"/>
+			<method name="SwitchLightSource"/>
+			<method name="SwitchLightSource"/>
+			<method name="SwitchLightSource"/>
+			<method name="SwitchLightSource"/>
+			<method name="SwitchLightSource"/>
+			<method name="SwitchLightSource"/>
+			<method name="SwitchLightSource"/>
+			<method name="SwitchLightSource"/>
+			<method name="SwitchLightSource"/>
+			<method name="SwitchLightSource"/>
+			<method name="SwitchLightSource"/>
+		</type>
+		<type fullname="LightControlWithJoystick">
+			<method name="SwitchLightSourceFromButton"/>
+			<method name="SwitchLightSourceFromButton"/>
+			<method name="SwitchLightSourceFromButton"/>
+			<method name="SwitchLightSourceFromButton"/>
+			<method name="SwitchLightSourceFromButton"/>
+			<method name="SwitchLightSourceFromButton"/>
+			<method name="SwitchLightSourceFromButton"/>
+			<method name="SwitchLightSourceFromButton"/>
+			<method name="SwitchLightSourceFromButton"/>
+			<method name="SwitchLightSourceFromButton"/>
+			<method name="SwitchLightSourceFromButton"/>
+			<method name="SwitchLightSourceFromButton"/>
+		</type>
+		<type fullname="LightSettingSaverAndLoader">
+			<method name="SaveLightData"/>
+			<method name="SaveLightData"/>
+		</type>
+		<type fullname="LightTabController">
+			<method name="ShowTab"/>
+			<method name="ShowTab"/>
+			<method name="ShowTab"/>
+			<method name="ShowTab"/>
+			<method name="ShowTab"/>
+			<method name="ShowTab"/>
+			<method name="ShowTab"/>
 		</type>
 		<type fullname="ObjectDataSaver">
 			<method name="SaveObjectData"/>
+		</type>
+		<type fullname="RunPythonScript">
+			<method name="CancelRequest"/>
+			<method name="CheckServerStatus"/>
 		</type>
 		<type fullname="SampleSaveBool">
 			<method name="isNotSample"/>
 			<method name="isSample"/>
 		</type>
 		<type fullname="SceneSwitcher">
-			<method name="BackToSceneInNumberSetting"/>
+			<method name="BackButtonInNumberSetting"/>
+			<method name="BackButtonInSimulator"/>
+			<method name="NextButtonInLightSetting"/>
 			<method name="SwitchToScene"/>
 			<method name="SwitchToScene"/>
 			<method name="SwitchToScene"/>
@@ -22,13 +71,7 @@
 			<method name="SwitchToScene"/>
 			<method name="SwitchToScene"/>
 			<method name="SwitchToScene"/>
-		</type>
-		<type fullname="TabController">
-			<method name="ShowTab"/>
-			<method name="ShowTab"/>
-		</type>
-		<type fullname="VideoGalleryManager">
-			<method name="OpenGalleryForVideo"/>
+			<method name="SwitchToScene"/>
 		</type>
 		<type fullname="VideoPlayerScript">
 			<method name="CallDownloadAndPlayVideo"/>

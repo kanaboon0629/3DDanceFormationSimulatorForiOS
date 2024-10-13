@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class ObjectDataLoader : MonoBehaviour
+public class ArmatureDataLoader : MonoBehaviour
 {
     public GameObject assetPrefab;  // ロードする際に使用するプレハブ
 

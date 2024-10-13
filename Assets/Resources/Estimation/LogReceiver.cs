@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class LogReceiver : MonoBehaviour
 {
-    private const string LogUrl = "http://192.168.1.4:5000/log";
+    private const string LogUrl = "http://192.168.1.6:5000/log";
     public Text logText; // Text コンポーネントの参照
     public Slider progressBar; // 進行状況バーのUIオブジェクト
 
@@ -16,8 +16,12 @@ public class LogReceiver : MonoBehaviour
 
     void Start()
     {
+
+    }
+    public void LogReceiveStart()
+    {
         //戻るボタンからの時はやらない
-        if (!SceneSwitcher.IsReturningFromSpecificScene)
+        if (!SceneSwitcher.IsReturningFromNumberSetting)
         {
             tabCount = PlayerPrefs.GetInt("tabCount");
             StartCoroutine(StartLogStreamAfterDelay());
@@ -37,8 +41,7 @@ public class LogReceiver : MonoBehaviour
     {
         float startTime = Time.time; // コルーチンの開始時刻を記録
 
-        // 10分以内かつ成功メッセージが出るまでループ
-        while (Time.time - startTime < MaxDuration)
+        while (RunPythonScript.IsCommunicatingWithServer)
         {
             using (UnityWebRequest webRequest = UnityWebRequest.Get(LogUrl))
             {
@@ -74,8 +77,6 @@ public class LogReceiver : MonoBehaviour
 
             yield return new WaitForSeconds(0.5f); // 1秒ごとにポーリング
         }
-
-        Debug.Log("Polling stopped after 10 minutes.");
     }
 
     private void UpdateProgressBar()

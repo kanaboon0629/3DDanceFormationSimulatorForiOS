@@ -1,5 +1,7 @@
 <linker>
 	<assembly fullname="Assembly-CSharp">
+		<type fullname="AllLightSaverAndLoader" preserve="nothing"/>
+		<type fullname="ArmatureDataLoader" preserve="nothing"/>
 		<type fullname="Assets.SimpleSpinner.SimpleSpinner" preserve="nothing"/>
 		<type fullname="BioIK.BioIK" preserve="nothing"/>
 		<type fullname="BioIK.BioJoint" preserve="nothing"/>
@@ -7,9 +9,14 @@
 		<type fullname="BioIK.Position" preserve="nothing"/>
 		<type fullname="CameraControlOnSwipe" preserve="nothing"/>
 		<type fullname="CameraControlWithJoystick" preserve="nothing"/>
+		<type fullname="ColorPicker" preserve="nothing"/>
 		<type fullname="FormationManager" preserve="nothing"/>
-		<type fullname="InputFieldHandler" preserve="nothing"/>
 		<type fullname="Joystick" preserve="nothing"/>
+		<type fullname="LightButtonsController" preserve="nothing"/>
+		<type fullname="LightControlWithJoystick" preserve="nothing"/>
+		<type fullname="LightSettingSaverAndLoader" preserve="nothing"/>
+		<type fullname="LightShafts" preserve="nothing"/>
+		<type fullname="LightTabController" preserve="nothing"/>
 		<type fullname="LogReceiver" preserve="nothing"/>
 		<type fullname="MobileDisableAutoSwitchControls" preserve="nothing"/>
 		<type fullname="NumberPicker" preserve="nothing"/>
@@ -17,16 +24,14 @@
 		<type fullname="ObjectDataSaver" preserve="nothing"/>
 		<type fullname="ObjectDragAndColorChange" preserve="nothing"/>
 		<type fullname="PlayerIKTarget" preserve="nothing"/>
-		<type fullname="RealtimeInputValidation" preserve="nothing"/>
 		<type fullname="ResetPlayerPrefs" preserve="nothing"/>
 		<type fullname="RunPythonScript" preserve="nothing"/>
 		<type fullname="SampleSaveBool" preserve="nothing"/>
 		<type fullname="SceneSwitcher" preserve="nothing"/>
 		<type fullname="ScreenOrientationManager" preserve="nothing"/>
 		<type fullname="StarterAssets.ThirdPersonController" preserve="nothing"/>
-		<type fullname="TabController" preserve="nothing"/>
+		<type fullname="ToggleUIController" preserve="nothing"/>
 		<type fullname="UIVirtualJoystick" preserve="nothing"/>
-		<type fullname="VideoGalleryManager" preserve="nothing"/>
 		<type fullname="VideoPlayerScript" preserve="nothing"/>
 	</assembly>
 	<assembly fullname="Unity.InputSystem">
@@ -134,7 +139,6 @@
 		<type fullname="UnityEngine.UI.GraphicRaycaster" preserve="nothing"/>
 		<type fullname="UnityEngine.UI.HorizontalLayoutGroup" preserve="nothing"/>
 		<type fullname="UnityEngine.UI.Image" preserve="nothing"/>
-		<type fullname="UnityEngine.UI.InputField" preserve="nothing"/>
 		<type fullname="UnityEngine.UI.LayoutElement" preserve="nothing"/>
 		<type fullname="UnityEngine.UI.Mask" preserve="nothing"/>
 		<type fullname="UnityEngine.UI.RawImage" preserve="nothing"/>
