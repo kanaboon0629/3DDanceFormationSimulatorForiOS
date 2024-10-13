@@ -7,7 +7,7 @@ public class LightSettingSaverAndLoader : MonoBehaviour
     public GameObject horizonPanel;
     public GameObject dyedPanel;
     public GameObject searchPanel;
-    public GameObject backfootPanel;
+    public GameObject floorPanel;
     public GameObject suspensionPanel;
     public GameObject pinspotPanel;
 
@@ -17,7 +17,7 @@ public class LightSettingSaverAndLoader : MonoBehaviour
         "HorizonLight",
         "DyedLight",
         "SearchLight",
-        "BackfootLight",
+        "FloorLight",
         "SuspensionLight",
         "PinspotLight"
     };
@@ -30,7 +30,7 @@ public class LightSettingSaverAndLoader : MonoBehaviour
             horizonPanel,
             dyedPanel,
             searchPanel,
-            backfootPanel,
+            floorPanel,
             suspensionPanel,
             pinspotPanel
         };
@@ -81,16 +81,39 @@ public class LightSettingSaverAndLoader : MonoBehaviour
                 }
             }
             // BackfootPanel に強弱情報の保存
-            else if (panel == backfootPanel)
+            else if (panel == floorPanel)
             {
-                Dropdown backfootDropdown = panel.GetComponentInChildren<Dropdown>();
-                if (backfootDropdown != null)
+                // "SettingPanel/isBackfootToggle" のトグルを取得
+                Toggle isBackfoot = panel.transform.Find("SettingPanel/isBackfootToggle").GetComponent<Toggle>();
+                if (isBackfoot != null)
                 {
-                    PlayerPrefs.SetInt(NameOfLight[i] + "_Intensity", backfootDropdown.value);
+                    PlayerPrefs.SetInt(NameOfLight[i] + "_Backfoot", isBackfoot.isOn ? 1 : 0);
                 }
                 else
                 {
-                    Debug.LogWarning($"Dropdown not found in {panel.name}");
+                    Debug.LogWarning($"Toggle not found in {panel.name}");
+                }
+
+                // "SettingPanel/BackfootToggles" の子トグルを取得し、保存
+                Transform backfootToggles = panel.transform.Find("SettingPanel/BackfootToggles");
+                if (backfootToggles != null)
+                {
+                    for (int j = 0; j < backfootToggles.childCount; j++)
+                    {
+                        Toggle backfootNumToggle = backfootToggles.GetChild(j).GetComponent<Toggle>();
+                        if (backfootNumToggle != null)
+                        {
+                            PlayerPrefs.SetInt(NameOfLight[i] + "_BackfootNum" + j, backfootNumToggle.isOn ? 1 : 0);
+                        }
+                        else
+                        {
+                            Debug.LogWarning($"Toggle {j} not found in BackfootToggles of {panel.name}");
+                        }
+                    }
+                }
+                else
+                {
+                    Debug.LogWarning($"BackfootToggles not found in {panel.name}");
                 }
             }
             // SuspensionPanel に個数情報の保存
@@ -131,7 +154,7 @@ public class LightSettingSaverAndLoader : MonoBehaviour
             horizonPanel,
             dyedPanel,
             searchPanel,
-            backfootPanel,
+            floorPanel,
             suspensionPanel,
             pinspotPanel
         };
@@ -180,17 +203,41 @@ public class LightSettingSaverAndLoader : MonoBehaviour
                     Debug.LogWarning($"Dropdown not found in {panel.name}");
                 }
             }
-            // BackfootPanel に強弱情報をロード
-            else if (panel == backfootPanel)
+            else if (panel == floorPanel)
             {
-                Dropdown backfootDropdown = panel.GetComponentInChildren<Dropdown>();
-                if (backfootDropdown != null)
+                // "SettingPanel/isBackfootToggle" のトグルを取得
+                Toggle isBackfoot = panel.transform.Find("SettingPanel/isBackfootToggle").GetComponent<Toggle>();
+                if (isBackfoot != null)
                 {
-                    backfootDropdown.value = PlayerPrefs.GetInt(NameOfLight[i] + "_Intensity", 0);
+                    // PlayerPrefsから状態をロード
+                    isBackfoot.isOn = PlayerPrefs.GetInt(NameOfLight[i] + "_Backfoot", 0) == 1;
                 }
                 else
                 {
-                    Debug.LogWarning($"Dropdown not found in {panel.name}");
+                    Debug.LogWarning($"Toggle not found in {panel.name}");
+                }
+
+                // "SettingPanel/BackfootToggles" の子トグルを取得し、ロード
+                Transform backfootToggles = panel.transform.Find("SettingPanel/BackfootToggles");
+                if (backfootToggles != null)
+                {
+                    for (int j = 0; j < backfootToggles.childCount; j++)
+                    {
+                        Toggle backfootNumToggle = backfootToggles.GetChild(j).GetComponent<Toggle>();
+                        if (backfootNumToggle != null)
+                        {
+                            // PlayerPrefsから状態をロード
+                            backfootNumToggle.isOn = PlayerPrefs.GetInt(NameOfLight[i] + "_BackfootNum" + j, 0) == 1;
+                        }
+                        else
+                        {
+                            Debug.LogWarning($"Toggle {j} not found in BackfootToggles of {panel.name}");
+                        }
+                    }
+                }
+                else
+                {
+                    Debug.LogWarning($"BackfootToggles not found in {panel.name}");
                 }
             }
             // SuspensionPanel に個数情報をロード

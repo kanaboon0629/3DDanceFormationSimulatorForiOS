@@ -13,7 +13,7 @@ public class AllLightSaverAndLoader : MonoBehaviour
     public GameObject horizonLightParent; // HorizonLight の親オブジェクト
     public GameObject dyedLightParent; // DyedLight の親オブジェクト
     public GameObject searchLightParent; // SearchLight の親オブジェクト
-    public GameObject backfootLightParent; // BackFootLight の親オブジェクト
+    public GameObject floorLightParent; // BackFootLight の親オブジェクト
     public GameObject pinspotLightParent; // pinspotLight の親オブジェクト
 
     private Vector3[] suspensionPositions = {
@@ -67,7 +67,7 @@ public class AllLightSaverAndLoader : MonoBehaviour
         horizonLightParent.SetActive(PlayerPrefs.GetInt("HorizonLight_Toggle") == 1);
         dyedLightParent.SetActive(PlayerPrefs.GetInt("DyedLight_Toggle") == 1);
         searchLightParent.SetActive(PlayerPrefs.GetInt("SearchLight_Toggle") == 1);
-        backfootLightParent.SetActive(PlayerPrefs.GetInt("BackfootLight_Toggle") == 1);
+        floorLightParent.SetActive(PlayerPrefs.GetInt("FloorLight_Toggle") == 1);
 
         // 各ライトの色を適用
         ArrangeColor(suspensionLightParent, "SuspensionLight");
@@ -76,13 +76,13 @@ public class AllLightSaverAndLoader : MonoBehaviour
         ArrangeColor(horizonLightParent, "HorizonLight");
         ArrangeColor(dyedLightParent, "DyedLight");
         ArrangeColor(searchLightParent, "SearchLight");
-        ArrangeColor(backfootLightParent, "BackfootLight");
+        ArrangeColor(floorLightParent, "FloorLight");
 
         if (searchLightParent.activeSelf){
             ArrangeAngle(searchLightParent, "SearchLight");
         }
-        if (backfootLightParent.activeSelf){
-            ArrangeIntensity(backfootLightParent, "BackfootLight");
+        if (floorLightParent.activeSelf){
+            ArrangeFloorlight(floorLightParent, "FloorLight");
         }
     }
     // 各ライトの色をロードして適用する
@@ -150,27 +150,51 @@ public class AllLightSaverAndLoader : MonoBehaviour
             Debug.LogWarning($"No Light found on {lightParent.name} or its children.");
         }
     }
-    void ArrangeIntensity(GameObject lightParent, string lightName){
-        int intensity = PlayerPrefs.GetInt(lightName + "_Intensity");
-        Light[] lights = lightParent.GetComponentsInChildren<Light>();  // 子オブジェクトを含むすべてのLightを取得
-        if (lights.Length > 0){
-            if (intensity == 1){
-                for (int i = 0; i < lights.Length; i++)
-                {   
-                    lights[i].intensity = 2;
+    void ArrangeFloorlight(GameObject lightParent, string lightName) {
+        // "lightName_Backfoot"に基づいてPlayerPrefsから値を取得
+        int isBackfoot = PlayerPrefs.GetInt(lightName + "_Backfoot", 0); // Default to 0 if not found
+
+        // 親オブジェクトおよびその子オブジェクトからすべてのLightコンポーネントを取得
+        Light[] lights = lightParent.GetComponentsInChildren<Light>();
+
+        int[] backfootNum = new int[6]; // Adjust size as needed
+
+        if (lights.Length > 0) {
+            if (isBackfoot == 1) {
+                // どのライトを照らすが取得
+                for (int j = 0; j < 6; j++) {
+                    backfootNum[j] = PlayerPrefs.GetInt(lightName + "_BackfootNum" + j, 0); // Ensure you're indexing NameOfLight correctly
                 }
-            }else{
-                for (int i = 0; i < lights.Length; i++)
-                {
-                    lights[i].intensity = 1;
+
+                // isBackfootが1の場合、3の倍数+1のインデックスのライトであるかつ選択されたライトのみを表示する
+                for (int i = 0; i < lights.Length; i++) {
+                    if (i % 3 == 1) {
+                        if (backfootNum[i / 3] == 1) {
+                            lights[i].enabled = true;  // 表示
+                            lights[i].range = 3f;
+                            lights[i].intensity = 3f;
+                        } else {
+                            lights[i].enabled = false;
+                        }
+                    } else {
+                        lights[i].enabled = false;  // 非表示
+                    }
+                }
+            } else {
+                // isBackfootが1でない場合、すべてのライトを表示する
+                for (int i = 0; i < lights.Length; i++) {
+                    lights[i].enabled = true;
+                    if (i % 3 == 1) { 
+                        lights[i].range = 2f;                       
+                        lights[i].intensity = 2.5f;
+                    } 
                 }
             }
-        }else
-        {
+        } else {
             Debug.LogWarning($"No Light found on {lightParent.name} or its children.");
         }
     }
-
+    
     void ArrangeAssets(int count, GameObject obj, GameObject parentObj, Vector3[] positions)
     {
         for (int i = 0; i < count; i++)
