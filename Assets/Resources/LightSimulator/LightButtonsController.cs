@@ -16,30 +16,44 @@ public class LightButtonsController : MonoBehaviour
 
     private int currentSusTabIndex; // 現在のサスタブのインデックス
     private int currentPinTabIndex; // 現在のピンタブのインデックス
-    private float minLightAngle = 5f; // スライダーの最小値
-    private float maxLightAngle = 70f; // スライダーの最大値
+    private float minSuspensionLightAngle = 5f; // スライダーの最小値
+    private float maxSuspensionLightAngle = 70f; // スライダーの最大値
+    private float minPinspotLightAngle = 5f; // スライダーの最小値
+    private float maxPinspotLightAngle = 20f; // スライダーの最大値
+    private LightControlWithJoystick lightControlWithJoystick; // LightButtonsControllerのインスタンス
 
     private void Start()
     {
+        // LightControlWithJoystickのインスタンスを取得
+        lightControlWithJoystick = FindObjectOfType<LightControlWithJoystick>();
+        if (lightControlWithJoystick == null)
+        {
+            Debug.LogError("lightControlWithJoystickが見つかりません。");
+            return;
+        }
+
         int neededSuspensionLight = PlayerPrefs.GetInt("SuspensionLight_Toggle");
         int neededPinspotLight = PlayerPrefs.GetInt("PinspotLight_Toggle");
 
         // サス調整とピンスポ調整が両方必要な場合のみ切り替えボタンを表示
         changeButton.SetActive(neededSuspensionLight == 1 && neededPinspotLight == 1);
-        // スライダーの最小値と最大値を設定
-        slider.minValue = minLightAngle;
-        slider.maxValue = maxLightAngle;
 
         // サス調整がある場合
         if (neededSuspensionLight == 1)
         {
             susPanel.SetActive(true); // サスパネルを表示
             pinPanel.SetActive(false);
+            // スライダーの最小値と最大値を設定
+            slider.minValue = minSuspensionLightAngle;
+            slider.maxValue = maxSuspensionLightAngle;
         }
         else
         {
             susPanel.SetActive(false);
             pinPanel.SetActive(true); // サス調整がない場合ピンパネルを表示
+            // スライダーの最小値と最大値を設定
+            slider.minValue = minPinspotLightAngle;
+            slider.maxValue = maxPinspotLightAngle;
         }
 
         int numberOfSuspensionLight = PlayerPrefs.GetInt("SuspensionLight_Count", 0);
@@ -61,11 +75,26 @@ public class LightButtonsController : MonoBehaviour
     }
     public void ChangePanel()
     {
-        // susPanelの表示状態をpinPanelに入れ替える
         bool isSusPanelActive = susPanel.activeSelf;
+        
         // パネルの表示を入れ替える
-        susPanel.SetActive(!isSusPanelActive);  // susPanelの表示を反転
-        pinPanel.SetActive(isSusPanelActive);   // pinPanelの表示を反転
+        susPanel.SetActive(!isSusPanelActive);
+        pinPanel.SetActive(isSusPanelActive);
+
+        float angele = lightControlWithJoystick.NowLightAngle(); // サスライトの角度に更新
+        // スライダーの最小値と最大値を設定
+        if (susPanel.activeSelf)
+        {
+            slider.minValue = minSuspensionLightAngle;
+            slider.maxValue = maxSuspensionLightAngle;
+        }
+        else
+        {
+            slider.minValue = minPinspotLightAngle;
+            slider.maxValue = maxPinspotLightAngle;
+        }
+        // 切り替えた後にスライダーの値を更新
+        slider.value = angele; // サスライトの角度に更新
     }
     
     public void SwitchLightSource(int index)
@@ -85,6 +114,9 @@ public class LightButtonsController : MonoBehaviour
             ColorBlock selectedColors = selectedTabButton.colors;
             selectedColors.normalColor = selectedColor;
             selectedTabButton.colors = selectedColors;
+            // スライダーの最小値と最大値を設定
+            slider.minValue = minSuspensionLightAngle;
+            slider.maxValue = maxSuspensionLightAngle;
         }
         else
         {
@@ -101,6 +133,9 @@ public class LightButtonsController : MonoBehaviour
             ColorBlock selectedColors = selectedTabButton.colors;
             selectedColors.normalColor = selectedColor;
             selectedTabButton.colors = selectedColors;
+            // スライダーの最小値と最大値を設定
+            slider.minValue = minPinspotLightAngle;
+            slider.maxValue = maxPinspotLightAngle;
         }
     }
 
