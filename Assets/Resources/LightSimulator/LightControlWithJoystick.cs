@@ -41,6 +41,13 @@ public class LightControlWithJoystick : MonoBehaviour
         {
             InisiateLightSource(pinspotLightParent, ref pinspotLightSource);
         }
+        // スライダーの値を現在のlightSourceのスポット角度に設定
+        if (neededSuspensionLight == 1)
+        {
+            slider.value = suspensionLightSource.spotAngle; // スライダーに現在のスポット角度を設定
+        }else{
+            slider.value = pinspotLightSource.spotAngle;
+        }
     }
 
     void Update()
@@ -122,9 +129,6 @@ public class LightControlWithJoystick : MonoBehaviour
             if (0 < lights.Length) // 照明が見つかった場合
             {
                 lightSource = lights[0]; // 0番目のライトを設定
-
-                // スライダーの値を現在のlightSourceのスポット角度に設定
-                slider.value = lightSource.spotAngle; // スライダーに現在のスポット角度を設定
             }
             else
             {
@@ -160,5 +164,26 @@ public class LightControlWithJoystick : MonoBehaviour
         {
             Debug.LogWarning("指定されたインデックスのライトが見つかりません。");
         }
+    }
+
+    public float NowLightAngle()
+    {
+        if (susPanel.activeSelf)
+        {
+            if (suspensionLightSource != null)
+            {
+                return suspensionLightSource.spotAngle;
+            }
+        }
+        else
+        {
+            if (pinspotLightSource != null)
+            {
+                return pinspotLightSource.spotAngle;
+            }
+        }
+
+        // デフォルトで0を返す（ライトがnullの場合など）
+        return 0f;
     }
 }
