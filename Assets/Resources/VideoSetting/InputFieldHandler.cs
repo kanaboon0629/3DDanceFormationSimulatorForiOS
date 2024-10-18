@@ -2,14 +2,17 @@ using System;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
+using System.Net;
 
 public class InputFieldHandler : MonoBehaviour
 {
+    public InputField ipInputField; // IPアドレスを入力するフィールド
     public InputField urlInputField;
     public InputField startInputField;
     public InputField endInputField;
     public Text errorMessageFromVideofile;
     public Text errorMessageFromYoutube;
+    public Text errorMessageFromIPAddress; // IPアドレスのエラーメッセージ用
     public VideoGalleryManager videoGalleryManager; // VideoGalleryManagerの参照
     public TabController tabController; // TabControllerの参照
 
@@ -30,8 +33,6 @@ public class InputFieldHandler : MonoBehaviour
                 DisplayErrorMessage("Please select a video.", errorMessageFromVideofile);
                 return;
             }
-            //VideoGalleryManagerで保存
-            //PlayerPrefs.SetString("selectedVideoPath", path);
         }
         else if (currentTabIndex == 1)
         {
@@ -53,7 +54,18 @@ public class InputFieldHandler : MonoBehaviour
             PlayerPrefs.SetString("end", end);
         }
 
+        // IPアドレスフィールドのエラーハンドリング
+        string ipAddress = ipInputField.text;
+        string ipValidationError = ValidateIPAddress(ipAddress);
+        if (!string.IsNullOrEmpty(ipValidationError))
+        {
+            DisplayErrorMessage(ipValidationError, errorMessageFromIPAddress);
+            return;
+        }
+
+        PlayerPrefs.SetString("IPAddress", ipAddress); // 正しいIPアドレスを保存
         PlayerPrefs.SetInt("tabCount", currentTabIndex);
+
         // 入力が正しい場合、次のシーンに移動
         SceneManager.LoadScene(nextSceneName);
     }
@@ -99,6 +111,22 @@ public class InputFieldHandler : MonoBehaviour
         }
 
         return string.Empty; // No errors
+    }
+
+    private string ValidateIPAddress(string ipAddress)
+    {
+        if (string.IsNullOrEmpty(ipAddress))
+        {
+            return "IP Address cannot be empty.";
+        }
+
+        // IPアドレスが正しい形式かどうかを確認
+        if (!IPAddress.TryParse(ipAddress, out _))
+        {
+            return "Invalid IP Address format.";
+        }
+
+        return string.Empty; // 正しい場合はエラーメッセージなし
     }
 
     private bool IsValidUrl(string url)
