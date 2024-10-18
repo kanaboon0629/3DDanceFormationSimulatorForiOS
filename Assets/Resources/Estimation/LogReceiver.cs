@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class LogReceiver : MonoBehaviour
 {
-    private const string LogUrl = "http://192.168.1.6:5000/log";
+    private string url = "";
     public Text logText; // Text コンポーネントの参照
     public Slider progressBar; // 進行状況バーのUIオブジェクト
 
@@ -13,10 +13,25 @@ public class LogReceiver : MonoBehaviour
     private const string SuccessMessage = "Generating demo successful!";
     private const float MaxDuration = 600f; // 10分間    
     private int tabCount = 0;
+    // フィルタリング対象のメッセージリスト
+    private readonly string[] validMessages = new string[]
+    {
+        "Getting available formats for the video...",
+        "Downloading video from YouTube...",
+        "Extracting subclip...",
+        "Changing speed of the video...",
+        "Generating 2D pose...",
+        "Generating 3D pose...",
+        "Generating demo...",
+        "Generating demo successful!"
+    };
 
     void Start()
     {
-
+        if (PlayerPrefs.HasKey("IPAddress"))
+        {
+            url = "http://" + PlayerPrefs.GetString("IPAddress") + ":5000";
+        }
     }
     public void LogReceiveStart()
     {
@@ -43,7 +58,7 @@ public class LogReceiver : MonoBehaviour
 
         while (RunPythonScript.IsCommunicatingWithServer)
         {
-            using (UnityWebRequest webRequest = UnityWebRequest.Get(LogUrl))
+            using (UnityWebRequest webRequest = UnityWebRequest.Get(url + "/log"))
             {
                 webRequest.SendWebRequest();
                 while (!webRequest.isDone)
@@ -61,21 +76,28 @@ public class LogReceiver : MonoBehaviour
                     string log = webRequest.downloadHandler.text;
                     if (!string.IsNullOrEmpty(log))
                     {
-                        logBuffer = log; // 新しいログをバッファに追加
-                        logText.text = logBuffer;
-
-                        UpdateProgressBar();
-
-                        if (logBuffer.Contains(SuccessMessage))
+                        // ログがフィルタ対象メッセージのいずれかを含んでいるか確認
+                        foreach (string validMessage in validMessages)
                         {
-                            Debug.Log("Success message detected. Stopping log polling.");
-                            yield break; // コルーチンを終了
+                            if (log.Contains(validMessage))
+                            {
+                                logBuffer = log; // 新しいログをバッファに追加
+                                logText.text = logBuffer;
+                                UpdateProgressBar();
+
+                                // 成功メッセージが含まれているか確認
+                                if (logBuffer.Contains(SuccessMessage))
+                                {
+                                    Debug.Log("Success message detected. Stopping log polling.");
+                                    yield break; // コルーチンを終了
+                                }
+                                break; // 1つメッセージを処理したらループを抜ける
+                            }
                         }
                     }
                 }
             }
-
-            yield return new WaitForSeconds(0.5f); // 1秒ごとにポーリング
+            yield return new WaitForSeconds(0.5f); // 0.5秒ごとにポーリング
         }
     }
 

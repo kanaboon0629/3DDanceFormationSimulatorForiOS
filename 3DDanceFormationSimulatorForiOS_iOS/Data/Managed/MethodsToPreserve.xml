@@ -4,6 +4,9 @@
 			<method name="SaveLightDataFromButton"/>
 			<method name="SaveLightDataFromButton"/>
 		</type>
+		<type fullname="InputFieldHandler">
+			<method name="OnSubmit"/>
+		</type>
 		<type fullname="LightButtonsController">
 			<method name="ChangePanel"/>
 			<method name="SwitchLightSource"/>
@@ -72,6 +75,14 @@
 			<method name="SwitchToScene"/>
 			<method name="SwitchToScene"/>
 			<method name="SwitchToScene"/>
+			<method name="SwitchToScene"/>
+		</type>
+		<type fullname="TabController">
+			<method name="ShowTab"/>
+			<method name="ShowTab"/>
+		</type>
+		<type fullname="VideoGalleryManager">
+			<method name="OpenGalleryForVideo"/>
 		</type>
 		<type fullname="VideoPlayerScript">
 			<method name="CallDownloadAndPlayVideo"/>

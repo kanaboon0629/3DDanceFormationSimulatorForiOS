@@ -8,6 +8,7 @@ using UnityEngine.Video;
 
 public class VideoPlayerScript : MonoBehaviour
 {
+    private string url = "";
     public VideoPlayer videoPlayer; // 動画再生用のVideoPlayer
     public GameObject loadingPanel; // 非表示にする
     public GameObject playPanel; // 非表示にする
@@ -19,6 +20,10 @@ public class VideoPlayerScript : MonoBehaviour
     {
         playPanel.SetActive(false);
         logText.gameObject.SetActive(false);
+        if (PlayerPrefs.HasKey("IPAddress"))
+        {
+            url = "http://" + PlayerPrefs.GetString("IPAddress") + ":5000";
+        }
     }
 
     public void CallDownloadAndPlayVideo()
@@ -35,9 +40,7 @@ public class VideoPlayerScript : MonoBehaviour
 
     private IEnumerator DownloadAndPlayVideo()
     {
-        string url = "http://192.168.1.6:5000/download-video"; // サーバの動画ダウンロードエンドポイントURL
-
-        using (UnityWebRequest uwr = UnityWebRequest.Get(url))
+        using (UnityWebRequest uwr = UnityWebRequest.Get(url + "/download-video"))
         {
             // サーバにリクエストを送信
             yield return uwr.SendWebRequest();
