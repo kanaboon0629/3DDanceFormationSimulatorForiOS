@@ -7,6 +7,7 @@
 		<type fullname="BioIK.BioJoint" preserve="nothing"/>
 		<type fullname="BioIK.BioSegment" preserve="nothing"/>
 		<type fullname="BioIK.Position" preserve="nothing"/>
+		<type fullname="ButtonUIController" preserve="nothing"/>
 		<type fullname="CameraControlOnSwipe" preserve="nothing"/>
 		<type fullname="CameraControlWithJoystick" preserve="nothing"/>
 		<type fullname="ColorPicker" preserve="nothing"/>
