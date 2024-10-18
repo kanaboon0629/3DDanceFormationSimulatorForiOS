@@ -287,7 +287,14 @@
         {
             "managedAssemblyName": "Assembly-CSharp.dll",
             "nativeClass": "",
-            "fullManagedTypeName": "RealtimeInputValidation",
+            "fullManagedTypeName": "RealtimeIPAddressInputValidation",
+            "moduleName": "",
+            "usedInScenes": []
+        },
+        {
+            "managedAssemblyName": "Assembly-CSharp.dll",
+            "nativeClass": "",
+            "fullManagedTypeName": "RealtimeYotubeInputValidation",
             "moduleName": "",
             "usedInScenes": []
         },
