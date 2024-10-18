@@ -7,7 +7,7 @@ using System;
 
 public class RunPythonScript : MonoBehaviour
 {
-    private string url = "";
+    private string serverUrl = "";
     public GameObject loadingSpinner; // ローディングスピナーのUIオブジェクト
     public Slider progressBar; // 進行状況バーのUIオブジェクト
     public GameObject nextButton; // JSON作成完了後に表示するボタンのUIオブジェクト
@@ -27,7 +27,7 @@ public class RunPythonScript : MonoBehaviour
 
         if (PlayerPrefs.HasKey("IPAddress"))
         {
-            url = "http://" + PlayerPrefs.GetString("IPAddress") + ":5000";
+            serverUrl = "http://" + PlayerPrefs.GetString("IPAddress") + ":5000";
         }
 
         //戻るボタンからの時はやらない
@@ -46,7 +46,7 @@ public class RunPythonScript : MonoBehaviour
     }
     private IEnumerator CheckServerStatusCoroutine()
     {
-        using (UnityWebRequest request = UnityWebRequest.Get(url + "/status"))
+        using (UnityWebRequest request = UnityWebRequest.Get(serverUrl + "/status"))
         {
             yield return request.SendWebRequest();
 
@@ -139,7 +139,7 @@ public class RunPythonScript : MonoBehaviour
         form.AddBinaryData("file", videoData, Path.GetFileName(filePath), "video/mp4");
         form.AddField("requestId", requestId); // リクエストIDを追加
 
-        yield return SendRequest(url + "/run-script-from-videofile", form);
+        yield return SendRequest(serverUrl + "/run-script-from-videofile", form);
     }
 
     private IEnumerator SendRequest(string url, int start, int end, string requestId)
@@ -155,7 +155,7 @@ public class RunPythonScript : MonoBehaviour
 
         Debug.Log($"Sending JSON data: {jsonData}");
 
-        yield return SendRequest(url + "/run-script-from-youtube", jsonData, "application/json");
+        yield return SendRequest(serverUrl + "/run-script-from-youtube", jsonData, "application/json");
     }
 
     private IEnumerator SendRequest(string endpoint, WWWForm form)
@@ -228,7 +228,7 @@ public class RunPythonScript : MonoBehaviour
         byte[] jsonToSend = new System.Text.UTF8Encoding().GetBytes(jsonData);
 
         // UnityWebRequestの作成
-        UnityWebRequest www = new UnityWebRequest(url + "/cancel-request", "POST");
+        UnityWebRequest www = new UnityWebRequest(serverUrl + "/cancel-request", "POST");
         www.uploadHandler = new UploadHandlerRaw(jsonToSend);
         www.downloadHandler = new DownloadHandlerBuffer();
         www.SetRequestHeader("Content-Type", "application/json");
