@@ -218,6 +218,8 @@ struct BioIK_t2E58FCB46183273ED0C6DBD99E44799F05364151;
 struct BioSegment_t16128E8B5BD52E9756CC88FABB7D2AC5DCD533A9;
 // UnityEngine.UI.Button
 struct Button_t6786514A57F7AFDEE5431112FEA0CAB24F5AE098;
+// ButtonUIController
+struct ButtonUIController_t043613FF26D5B3D253E32AC2209857E0BECC50D5;
 // UnityEngine.Camera
 struct Camera_tA92CC927D7439999BC82DBEDC0AA45B470F9E184;
 // CameraController
@@ -2549,6 +2551,11 @@ struct BioIK_t2E58FCB46183273ED0C6DBD99E44799F05364151  : public MonoBehaviour_t
 	Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 ___Scroll_20;
 };
 
+// ButtonUIController
+struct ButtonUIController_t043613FF26D5B3D253E32AC2209857E0BECC50D5  : public MonoBehaviour_t532A11E69716D348D8AA7F854AFCBFCB8AD17F71
+{
+};
+
 // CameraController
 struct CameraController_tDC4FF0FA10418272A26E5E7539156F4F4A98E8C5  : public MonoBehaviour_t532A11E69716D348D8AA7F854AFCBFCB8AD17F71
 {
@@ -3944,6 +3951,10 @@ struct Camera_tA92CC927D7439999BC82DBEDC0AA45B470F9E184_StaticFields
 // BioIK.BioIK
 
 // BioIK.BioIK
+
+// ButtonUIController
+
+// ButtonUIController
 
 // CameraController
 
@@ -5449,6 +5460,8 @@ inline void Dictionary_2__ctor_m3B9D7D2783B71FBCFA8E7A4FCD0DC1D832AF15ED (Dictio
 }
 // System.Void SymmetryJsonProcessor::.ctor()
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void SymmetryJsonProcessor__ctor_mF3F3AC78788EA4E714FA4247DF38E7BAF4DFD1F6 (SymmetryJsonProcessor_t6E03A188907754DC7F2C59B40B590347521C1B3F* __this, const RuntimeMethod* method) ;
+// System.String System.IO.Path::Combine(System.String,System.String)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* Path_Combine_m1ADAC05CDA2D1D61B172DF65A81E86592696BEAE (String_t* ___0_path1, String_t* ___1_path2, const RuntimeMethod* method) ;
 // System.Boolean UnityEngine.PlayerPrefs::HasKey(System.String)
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool PlayerPrefs_HasKey_mCA5C64BBA6BF8B230BC3BC92B4761DD3B11D4668 (String_t* ___0_key, const RuntimeMethod* method) ;
 // System.String UnityEngine.PlayerPrefs::GetString(System.String)
@@ -5600,8 +5613,6 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR Encoding_t65CDEF28CF20A7B8C92E85A4E808920C246
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool String_StartsWith_mF75DBA1EB709811E711B44E26FF919C88A8E65C0 (String_t* __this, String_t* ___0_value, const RuntimeMethod* method) ;
 // System.Boolean System.String::EndsWith(System.String)
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool String_EndsWith_mCD3754F5401E19CE7821CD398986E4EAA6AD87DC (String_t* __this, String_t* ___0_value, const RuntimeMethod* method) ;
-// System.String System.IO.Path::Combine(System.String,System.String)
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* Path_Combine_m1ADAC05CDA2D1D61B172DF65A81E86592696BEAE (String_t* ___0_path1, String_t* ___1_path2, const RuntimeMethod* method) ;
 // System.Void System.IO.File::WriteAllBytes(System.String,System.Byte[])
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void File_WriteAllBytes_mC491031DA14AA9B591F62D6AD0181D090E081077 (String_t* ___0_path, ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031* ___1_bytes, const RuntimeMethod* method) ;
 // System.Void RunPythonScript::ProcessJsonFile(System.String)
@@ -13428,6 +13439,54 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayerIKTarget__ctor_m48A1EFB3E8F4188C22
 		Il2CppCodeGenWriteBarrier((void**)(&__this->___processor_41), (void*)L_14);
 		// private int isSample = 1;
 		__this->___isSample_42 = 1;
+		MonoBehaviour__ctor_m592DB0105CA0BC97AA1C5F4AD27B12D68A3B7C1E(__this, NULL);
+		return;
+	}
+}
+#ifdef __clang__
+#pragma clang diagnostic pop
+#endif
+#ifdef __clang__
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Winvalid-offsetof"
+#pragma clang diagnostic ignored "-Wunused-variable"
+#endif
+// System.Void ButtonUIController::Start()
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ButtonUIController_Start_mEF68C4E2961BBAB0C45C7DDDD36F5E601C05F347 (ButtonUIController_t043613FF26D5B3D253E32AC2209857E0BECC50D5* __this, const RuntimeMethod* method) 
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Path_t8A38A801D0219E8209C1B1D90D82D4D755D998BC_il2cpp_TypeInfo_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&_stringLiteralD2982A8A58043378B72E0D9FC2DD94BF8159211B);
+		s_Il2CppMethodInitialized = true;
+	}
+	bool V_0 = false;
+	{
+		// string filePath = Path.Combine(Application.persistentDataPath, "output.json");
+		String_t* L_0;
+		L_0 = Application_get_persistentDataPath_mC58BD3E1A20732E0A536491DBCAE6505B1624399(NULL);
+		il2cpp_codegen_runtime_class_init_inline(Path_t8A38A801D0219E8209C1B1D90D82D4D755D998BC_il2cpp_TypeInfo_var);
+		String_t* L_1;
+		L_1 = Path_Combine_m1ADAC05CDA2D1D61B172DF65A81E86592696BEAE(L_0, _stringLiteralD2982A8A58043378B72E0D9FC2DD94BF8159211B, NULL);
+		// bool fileExists = File.Exists(filePath);
+		bool L_2;
+		L_2 = File_Exists_m95E329ABBE3EAD6750FE1989BBA6884457136D4A(L_1, NULL);
+		V_0 = L_2;
+		// gameObject.SetActive(fileExists);
+		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_3;
+		L_3 = Component_get_gameObject_m57AEFBB14DB39EC476F740BA000E170355DE691B(__this, NULL);
+		bool L_4 = V_0;
+		NullCheck(L_3);
+		GameObject_SetActive_m638E92E1E75E519E5B24CF150B08CA8E0CDFAB92(L_3, L_4, NULL);
+		// }
+		return;
+	}
+}
+// System.Void ButtonUIController::.ctor()
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ButtonUIController__ctor_mD0FC1F8F6EEA73B827F4081E8BF27B1C57807E52 (ButtonUIController_t043613FF26D5B3D253E32AC2209857E0BECC50D5* __this, const RuntimeMethod* method) 
+{
+	{
 		MonoBehaviour__ctor_m592DB0105CA0BC97AA1C5F4AD27B12D68A3B7C1E(__this, NULL);
 		return;
 	}

@@ -76,6 +76,7 @@
 			<method name="SwitchToScene"/>
 			<method name="SwitchToScene"/>
 			<method name="SwitchToScene"/>
+			<method name="SwitchToScene"/>
 		</type>
 		<type fullname="TabController">
 			<method name="ShowTab"/>
