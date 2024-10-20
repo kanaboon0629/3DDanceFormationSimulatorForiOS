@@ -4476,12 +4476,14 @@ struct PlayerIKTarget_tA2386F08CFB96DA6DB822A91154A17AEE3277DB5  : public MonoBe
 	Dictionary_2_t1B115DB96F2674765975721520F73253084A610E* ___calibrated_skeleton_coord_38;
 	// System.Boolean PlayerIKTarget::is_athlete_motion_play
 	bool ___is_athlete_motion_play_39;
-	// UnityEngine.Vector3 PlayerIKTarget::offset
-	Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 ___offset_40;
+	// System.Boolean PlayerIKTarget::is_waiting
+	bool ___is_waiting_40;
+	// System.Single PlayerIKTarget::wait_time_elapsed
+	float ___wait_time_elapsed_41;
 	// SymmetryJsonProcessor PlayerIKTarget::processor
-	SymmetryJsonProcessor_t6E03A188907754DC7F2C59B40B590347521C1B3F* ___processor_41;
+	SymmetryJsonProcessor_t6E03A188907754DC7F2C59B40B590347521C1B3F* ___processor_42;
 	// System.Int32 PlayerIKTarget::isSample
-	int32_t ___isSample_42;
+	int32_t ___isSample_43;
 };
 
 // UnityEngine.InputSystem.PlayerInput
