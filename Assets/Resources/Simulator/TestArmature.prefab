@@ -121,7 +121,7 @@ GameObject:
   - component: {fileID: 682938309305313385}
   - component: {fileID: 682938309305313382}
   m_Layer: 0
-  m_Name: Armature
+  m_Name: TestArmature
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -222,8 +222,8 @@ MonoBehaviour:
   isSymmetry: 0
   FRAME_NUM: 0
   current_frame_id: 0
-  init_time_update_interval: 0.5
-  time_update_interval: 0.025
+  init_time_update_interval: 0.03
+  time_update_interval: 0.01
 --- !u!114 &682938309305313384
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -338,8 +338,8 @@ MonoBehaviour:
   - {fileID: 682938310226484257}
   Root: {fileID: 682938309305313386}
   Solution: []
-  SelectedSegment: {fileID: 682938310098294789}
-  Scroll: {x: 0, y: 3417.9995}
+  SelectedSegment: {fileID: 682938309886677398}
+  Scroll: {x: 0, y: 3059}
 --- !u!114 &682938309305313385
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3571,6 +3571,7 @@ GameObject:
   - component: {fileID: 9019564532628007389}
   - component: {fileID: 682938309886677398}
   - component: {fileID: 682938309886677399}
+  - component: {fileID: 3199284599308470038}
   m_Layer: 0
   m_Name: Spine
   m_TagString: Untagged
@@ -3585,7 +3586,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2527579792999966867}
-  m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -0, y: 0.058229383, z: 0.0012229546}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -3612,7 +3613,8 @@ MonoBehaviour:
   Childs:
   - {fileID: 682938309248599377}
   Joint: {fileID: 682938309886677399}
-  Objectives: []
+  Objectives:
+  - {fileID: 3199284599308470038}
 --- !u!114 &682938309886677399
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3672,6 +3674,25 @@ MonoBehaviour:
   DRY: 0
   DRZ: 0
   DRW: 1
+--- !u!114 &3199284599308470038
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2527579792999966867}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9463c0da940cf43e5aa26edf005dbf39, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Segment: {fileID: 682938309886677398}
+  Weight: 1
+  Target: {fileID: 682938310734895529}
+  TPX: 0.02535763382911682
+  TPY: 1.0066924095153809
+  TPZ: -1.0511832237243652
+  MaximumError: 0.001
 --- !u!1 &2705692422294775550
 GameObject:
   m_ObjectHideFlags: 0
@@ -3877,7 +3898,7 @@ MonoBehaviour:
   Target: {fileID: 682938308756568262}
   TPX: -0.14964236319065094
   TPY: 0.6826923489570618
-  TPZ: 0.08181670308113098
+  TPZ: -0.9181833267211914
   MaximumError: 0.001
 --- !u!114 &682938309872103263
 MonoBehaviour:
@@ -5397,7 +5418,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5557387802456966020}
-  m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
