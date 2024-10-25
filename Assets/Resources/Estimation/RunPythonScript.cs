@@ -202,10 +202,8 @@ public class RunPythonScript : MonoBehaviour
             {
                 string jsonFilePath = Path.Combine(Application.persistentDataPath, "output.json");
                 File.WriteAllBytes(jsonFilePath, System.Text.Encoding.UTF8.GetBytes(responseText));
-
-                ProcessJsonFile(jsonFilePath);
-                CreateSymmetryFile(jsonFilePath);
-                Debug.Log("JSON作成完了");
+                //jsonを編集する、対象を作成
+                AdjustedJSONFile(jsonFilePath);
                 nextButton.SetActive(true);
                 checkButton.SetActive(true);
                 logText.text = SuccessMessage;
@@ -258,9 +256,22 @@ public class RunPythonScript : MonoBehaviour
     {
         string outputFilePath = inputFilePath.Replace(".json", "Symmetry.json");
 
-        SymmetryJsonProcessor.ProcessJson(inputFilePath, outputFilePath);
+        CreateSymmetryJSON.ProcessJson(inputFilePath, outputFilePath);
 
         Debug.Log($"Symmetry JSON file created at: {outputFilePath}");
+    }
+
+    private void CreateHipAdjustedFile(string inputFilePath)
+    {
+        CreateHipAdjustedJSON.Adjust(inputFilePath);
+
+        Debug.Log($"ALL from Hip Adjusted JSON file at: {inputFilePath}");
+    }
+    private void CreateLegAdjustedFile(string inputFilePath)
+    {
+        CreateRegAdjustedJSON.Adjust(inputFilePath);
+
+        Debug.Log($"Reg Adjusted JSON file at: {inputFilePath}");
     }
 
     [System.Serializable]
@@ -270,5 +281,13 @@ public class RunPythonScript : MonoBehaviour
         public int start;
         public int end;
         public string requestId;
+    }
+
+    public void AdjustedJSONFile(string jsonFilePath){
+        CreateHipAdjustedFile(jsonFilePath);
+        CreateLegAdjustedFile(jsonFilePath);
+        ProcessJsonFile(jsonFilePath);
+        CreateSymmetryFile(jsonFilePath);
+        Debug.Log("JSON作成完了");
     }
 }

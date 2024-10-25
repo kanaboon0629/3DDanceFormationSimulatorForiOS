@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.IO;
 using UnityEngine;
 
-public class SymmetryJsonProcessor
+public class CreateSymmetryJSON
 {
     public static void ProcessJson(string inputFilePath, string outputFilePath)
     {
