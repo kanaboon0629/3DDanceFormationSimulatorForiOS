@@ -40,18 +40,15 @@ public class PlayerIKTarget : MonoBehaviour
     //骨格jsonファイル
     //Json skeleton data読み出し
     private string[] json_file_name = new string[]{
-        "dance1.json",
-        "momo_likey.json",
-        "jyp.json",
-        "jyp2.json",
-        "jyp2New.json",
-        "jyp3.json",
-        "matt_AllIWannaDo.json",
-        "hulaDance.json",
-        "hulaDanceSymmetry.json"
+        "hula.json",
+        "jazz.json",
+        "hip.json",
+        "hipAndPunking.json",
+        "mikoniko.json",
+        "hereiam.json"
     };
 
-    public string jsonFileName = "";
+    public string jsonFileName = "output.json";
     
     //身長
     public int heightOfPerson = 180;
@@ -61,8 +58,8 @@ public class PlayerIKTarget : MonoBehaviour
     public int FRAME_NUM = 0; //FRAME数
     public int current_frame_id = 0; //現在のフレーム番号
     private int init_frame_id = 0;
-    public float init_time_update_interval=0.01f;
-    public float time_update_interval=0.01f; //フレームアップデートタイミング
+    public float init_time_update_interval=0.5f;
+    public float time_update_interval=0.025f; //フレームアップデートタイミング
     private float timeElapsed = 0.0f; //前フレーム描画からの経過時間
     public Dictionary<string, object> json_data = new Dictionary<string, object>(); //
     private Dictionary<string,Vector3> skeleton_coord = new Dictionary<string, Vector3>(); //
@@ -70,14 +67,15 @@ public class PlayerIKTarget : MonoBehaviour
 
     private Dictionary<string,Vector3> calibrated_skeleton_coord = new Dictionary<string, Vector3>();
     private bool is_athlete_motion_play=false;
-
-    private Vector3 offset;
+    private bool is_waiting = false;  // 待機状態かどうかのフラグ
+    private float wait_time_elapsed = 0.0f;  // 待機中の経過時間
+    // private Vector3 offset;
     public bool Is_athlete_motion_play
     {
         get { return is_athlete_motion_play; }
         set { is_athlete_motion_play = value; }
     }
-    private SymmetryJsonProcessor processor = new SymmetryJsonProcessor();
+    private CreateSymmetryJSON processor = new CreateSymmetryJSON();
     private int isSample = 1;
         
     /// <summary>
@@ -192,9 +190,9 @@ public class PlayerIKTarget : MonoBehaviour
 
         //身長をスケールに反映させる
         //this.armature.transform.localScale = new Vector3(scaleFactor, scaleFactor, scaleFactor);
-        offset = this.target_left_foot.transform.position - originalLeftFootTargetPosition;
-        offset.x = 0;
-        offset.z = 0;
+        // offset = this.target_left_foot.transform.position - originalLeftFootTargetPosition;
+        // offset.x = 0;
+        // offset.z = 0;
         //Debug.Log("offset: " + offset);
         
         //
@@ -256,14 +254,16 @@ public class PlayerIKTarget : MonoBehaviour
         }
 
         // datapathを作成
-        // string parentDatapath = Application.streamingAssetsPath + "/";
         string parentDatapath = Application.persistentDataPath + "/";
         string datapath = "";
 
+        //サンプルの場合はストリーミングアセットから選択されたものを使用
         if (isSample == 1) {
+            int selectedSample = PlayerPrefs.GetInt("SelectedSample", 0);
             parentDatapath = Application.streamingAssetsPath + "/";
-            jsonFileName = "sample.json";
+            jsonFileName = json_file_name[selectedSample];
         }
+
         //通常
         if (!isSymmetry) {
             datapath = parentDatapath + jsonFileName;
@@ -310,9 +310,13 @@ public class PlayerIKTarget : MonoBehaviour
             return ;
         }
 
-        if(current_frame_id+1==FRAME_NUM){
+        if(current_frame_id + 1 == FRAME_NUM){
             current_frame_id = init_frame_id;
             is_athlete_motion_play = false;
+
+            // フレームが最終まで達したので待機を開始
+            is_waiting = true;  
+            return;  // フレームリセットしたら処理を終える
         }
         //current frame id update
         current_frame_id = Math.Max(init_frame_id,(current_frame_id+1)%FRAME_NUM);
@@ -565,7 +569,17 @@ public class PlayerIKTarget : MonoBehaviour
 
         this.timeElapsed += Time.deltaTime;
 
-        if(this.timeElapsed>=this.time_update_interval){
+        // 最終フレームに達したときに待機時間が設定されているかチェック
+        if (is_waiting) {
+            wait_time_elapsed += Time.deltaTime;
+            if (wait_time_elapsed >= init_time_update_interval) {
+                is_waiting = false;  // 待機終了
+                wait_time_elapsed = 0.0f;  // 経過時間リセット
+            }
+            return;  // 待機中はこれ以上の処理を行わない
+        }
+
+        if(this.timeElapsed >= this.time_update_interval){
             Update_skeleton_coord();
             this.timeElapsed = 0.0f;
         }

@@ -28,10 +28,10 @@ public class SceneSwitcher : MonoBehaviour
     {
         int isSample = PlayerPrefs.GetInt("IsSample", 1);
         if (isSample == 1) {
-            SwitchToScene("Title");
+            SwitchToScene("SampleSetting");
         }else{
             IsReturningFromNumberSetting = true;
-            SwitchToScene("Estimation");
+            SwitchToScene("VideoSetting");
         }
     }
     //Suspensionlightがある場合
@@ -56,5 +56,5 @@ public class SceneSwitcher : MonoBehaviour
             SwitchToScene("LightSetting");
         }
     }
-    
+
 }

@@ -222,8 +222,8 @@ MonoBehaviour:
   isSymmetry: 0
   FRAME_NUM: 0
   current_frame_id: 0
-  init_time_update_interval: 0.01
-  time_update_interval: 0.01
+  init_time_update_interval: 0.5
+  time_update_interval: 0.025
 --- !u!114 &682938309305313384
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -339,7 +339,7 @@ MonoBehaviour:
   Root: {fileID: 682938309305313386}
   Solution: []
   SelectedSegment: {fileID: 682938310098294789}
-  Scroll: {x: 0, y: 3892}
+  Scroll: {x: 0, y: 3619.999}
 --- !u!114 &682938309305313385
 MonoBehaviour:
   m_ObjectHideFlags: 0
