@@ -26,6 +26,7 @@
 		<type fullname="ObjectDataSaver" preserve="nothing"/>
 		<type fullname="ObjectDragAndColorChange" preserve="nothing"/>
 		<type fullname="PlayerIKTarget" preserve="nothing"/>
+		<type fullname="Readme" preserve="nothing"/>
 		<type fullname="RealtimeIPAddressInputValidation" preserve="nothing"/>
 		<type fullname="RealtimeYotubeInputValidation" preserve="nothing"/>
 		<type fullname="ResetPlayerPrefs" preserve="nothing"/>
