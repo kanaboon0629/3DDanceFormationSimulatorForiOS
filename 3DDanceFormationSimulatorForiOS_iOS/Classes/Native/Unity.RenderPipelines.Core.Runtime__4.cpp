@@ -6290,7 +6290,7 @@ IL_000e_1:
 				Type_t* L_4 = ___0_type;
 				NullCheck(L_3);
 				bool L_5;
-				L_5 = VirtualFuncInvoker1< bool, Type_t* >::Invoke(20 /* System.Boolean System.Type::IsSubclassOf(System.Type) */, L_3, L_4);
+				L_5 = VirtualFuncInvoker1< bool, Type_t* >::Invoke(21 /* System.Boolean System.Type::IsSubclassOf(System.Type) */, L_3, L_4);
 				if (!L_5)
 				{
 					goto IL_0026_1;

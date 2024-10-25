@@ -103,6 +103,7 @@
                 "Assets/Scenes/LightSetting.unity",
                 "Assets/Scenes/LightSimulator.unity",
                 "Assets/Scenes/NumberSetting.unity",
+                "Assets/Scenes/SampleSetting.unity",
                 "Assets/Scenes/Simulator.unity",
                 "Assets/Scenes/Title.unity",
                 "Assets/Scenes/VideoSetting.unity"
@@ -126,6 +127,7 @@
                 "Assets/Scenes/LightSetting.unity",
                 "Assets/Scenes/LightSimulator.unity",
                 "Assets/Scenes/NumberSetting.unity",
+                "Assets/Scenes/SampleSetting.unity",
                 "Assets/Scenes/Simulator.unity",
                 "Assets/Scenes/Title.unity",
                 "Assets/Scenes/VideoSetting.unity"
@@ -163,6 +165,7 @@
                 "Assets/Scenes/LightSetting.unity",
                 "Assets/Scenes/LightSimulator.unity",
                 "Assets/Scenes/NumberSetting.unity",
+                "Assets/Scenes/SampleSetting.unity",
                 "Assets/Scenes/Simulator.unity",
                 "Assets/Scenes/Title.unity",
                 "Assets/Scenes/VideoSetting.unity"
@@ -228,6 +231,7 @@
                 "Assets/Scenes/LightSetting.unity",
                 "Assets/Scenes/LightSimulator.unity",
                 "Assets/Scenes/NumberSetting.unity",
+                "Assets/Scenes/SampleSetting.unity",
                 "Assets/Scenes/Simulator.unity",
                 "Assets/Scenes/Title.unity",
                 "Assets/Scenes/VideoSetting.unity"
@@ -251,6 +255,7 @@
                 "Assets/Scenes/LightSetting.unity",
                 "Assets/Scenes/LightSimulator.unity",
                 "Assets/Scenes/NumberSetting.unity",
+                "Assets/Scenes/SampleSetting.unity",
                 "Assets/Scenes/Simulator.unity",
                 "Assets/Scenes/Title.unity",
                 "Assets/Scenes/VideoSetting.unity"
@@ -336,6 +341,13 @@
         {
             "managedAssemblyName": "Assembly-CSharp.dll",
             "nativeClass": "",
+            "fullManagedTypeName": "SamplePicker",
+            "moduleName": "",
+            "usedInScenes": []
+        },
+        {
+            "managedAssemblyName": "Assembly-CSharp.dll",
+            "nativeClass": "",
             "fullManagedTypeName": "SampleSaveBool",
             "moduleName": "",
             "usedInScenes": []
@@ -379,6 +391,13 @@
             "managedAssemblyName": "Assembly-CSharp.dll",
             "nativeClass": "",
             "fullManagedTypeName": "TabController",
+            "moduleName": "",
+            "usedInScenes": []
+        },
+        {
+            "managedAssemblyName": "Assembly-CSharp.dll",
+            "nativeClass": "",
+            "fullManagedTypeName": "TestJson",
             "moduleName": "",
             "usedInScenes": []
         },
@@ -470,6 +489,7 @@
                 "Assets/Scenes/LightSetting.unity",
                 "Assets/Scenes/LightSimulator.unity",
                 "Assets/Scenes/NumberSetting.unity",
+                "Assets/Scenes/SampleSetting.unity",
                 "Assets/Scenes/Simulator.unity",
                 "Assets/Scenes/Title.unity",
                 "Assets/Scenes/VideoSetting.unity"
@@ -539,6 +559,7 @@
                 "Assets/Scenes/LightSetting.unity",
                 "Assets/Scenes/LightSimulator.unity",
                 "Assets/Scenes/NumberSetting.unity",
+                "Assets/Scenes/SampleSetting.unity",
                 "Assets/Scenes/Simulator.unity",
                 "Assets/Scenes/Title.unity",
                 "Assets/Scenes/VideoSetting.unity"
@@ -555,6 +576,7 @@
                 "Assets/Scenes/LightSetting.unity",
                 "Assets/Scenes/LightSimulator.unity",
                 "Assets/Scenes/NumberSetting.unity",
+                "Assets/Scenes/SampleSetting.unity",
                 "Assets/Scenes/Simulator.unity",
                 "Assets/Scenes/Title.unity",
                 "Assets/Scenes/VideoSetting.unity"
@@ -582,6 +604,7 @@
                 "Assets/Scenes/LightSetting.unity",
                 "Assets/Scenes/LightSimulator.unity",
                 "Assets/Scenes/NumberSetting.unity",
+                "Assets/Scenes/SampleSetting.unity",
                 "Assets/Scenes/Simulator.unity",
                 "Assets/Scenes/Title.unity",
                 "Assets/Scenes/VideoSetting.unity"
@@ -609,6 +632,7 @@
                 "Assets/Scenes/LightSetting.unity",
                 "Assets/Scenes/LightSimulator.unity",
                 "Assets/Scenes/NumberSetting.unity",
+                "Assets/Scenes/SampleSetting.unity",
                 "Assets/Scenes/Simulator.unity",
                 "Assets/Scenes/Title.unity",
                 "Assets/Scenes/VideoSetting.unity"
@@ -625,6 +649,7 @@
                 "Assets/Scenes/LightSetting.unity",
                 "Assets/Scenes/LightSimulator.unity",
                 "Assets/Scenes/NumberSetting.unity",
+                "Assets/Scenes/SampleSetting.unity",
                 "Assets/Scenes/Simulator.unity",
                 "Assets/Scenes/Title.unity",
                 "Assets/Scenes/VideoSetting.unity"
@@ -641,6 +666,7 @@
                 "Assets/Scenes/LightSetting.unity",
                 "Assets/Scenes/LightSimulator.unity",
                 "Assets/Scenes/NumberSetting.unity",
+                "Assets/Scenes/SampleSetting.unity",
                 "Assets/Scenes/Simulator.unity",
                 "Assets/Scenes/Title.unity",
                 "Assets/Scenes/VideoSetting.unity"
@@ -680,6 +706,7 @@
                 "Assets/Scenes/LightSetting.unity",
                 "Assets/Scenes/LightSimulator.unity",
                 "Assets/Scenes/NumberSetting.unity",
+                "Assets/Scenes/SampleSetting.unity",
                 "Assets/Scenes/Simulator.unity",
                 "Assets/Scenes/Title.unity",
                 "Assets/Scenes/VideoSetting.unity"
@@ -696,6 +723,7 @@
                 "Assets/Scenes/LightSetting.unity",
                 "Assets/Scenes/LightSimulator.unity",
                 "Assets/Scenes/NumberSetting.unity",
+                "Assets/Scenes/SampleSetting.unity",
                 "Assets/Scenes/Simulator.unity",
                 "Assets/Scenes/Title.unity",
                 "Assets/Scenes/VideoSetting.unity"
@@ -733,6 +761,7 @@
                 "Assets/Scenes/LightSetting.unity",
                 "Assets/Scenes/LightSimulator.unity",
                 "Assets/Scenes/NumberSetting.unity",
+                "Assets/Scenes/SampleSetting.unity",
                 "Assets/Scenes/Simulator.unity",
                 "Assets/Scenes/Title.unity",
                 "Assets/Scenes/VideoSetting.unity"
@@ -749,6 +778,7 @@
                 "Assets/Scenes/LightSetting.unity",
                 "Assets/Scenes/LightSimulator.unity",
                 "Assets/Scenes/NumberSetting.unity",
+                "Assets/Scenes/SampleSetting.unity",
                 "Assets/Scenes/Simulator.unity",
                 "Assets/Scenes/Title.unity",
                 "Assets/Scenes/VideoSetting.unity"
@@ -793,6 +823,7 @@
                 "Assets/Scenes/LightSetting.unity",
                 "Assets/Scenes/LightSimulator.unity",
                 "Assets/Scenes/NumberSetting.unity",
+                "Assets/Scenes/SampleSetting.unity",
                 "Assets/Scenes/Simulator.unity",
                 "Assets/Scenes/Title.unity",
                 "Assets/Scenes/VideoSetting.unity"
@@ -809,6 +840,7 @@
                 "Assets/Scenes/LightSetting.unity",
                 "Assets/Scenes/LightSimulator.unity",
                 "Assets/Scenes/NumberSetting.unity",
+                "Assets/Scenes/SampleSetting.unity",
                 "Assets/Scenes/Simulator.unity",
                 "Assets/Scenes/Title.unity",
                 "Assets/Scenes/VideoSetting.unity"
@@ -825,6 +857,7 @@
                 "Assets/Scenes/LightSetting.unity",
                 "Assets/Scenes/LightSimulator.unity",
                 "Assets/Scenes/NumberSetting.unity",
+                "Assets/Scenes/SampleSetting.unity",
                 "Assets/Scenes/Simulator.unity",
                 "Assets/Scenes/Title.unity",
                 "Assets/Scenes/VideoSetting.unity"
@@ -889,6 +922,7 @@
                 "Assets/Scenes/LightSetting.unity",
                 "Assets/Scenes/LightSimulator.unity",
                 "Assets/Scenes/NumberSetting.unity",
+                "Assets/Scenes/SampleSetting.unity",
                 "Assets/Scenes/Simulator.unity",
                 "Assets/Scenes/Title.unity",
                 "Assets/Scenes/VideoSetting.unity"
@@ -905,6 +939,7 @@
                 "Assets/Scenes/LightSetting.unity",
                 "Assets/Scenes/LightSimulator.unity",
                 "Assets/Scenes/NumberSetting.unity",
+                "Assets/Scenes/SampleSetting.unity",
                 "Assets/Scenes/Simulator.unity",
                 "Assets/Scenes/Title.unity",
                 "Assets/Scenes/VideoSetting.unity"
@@ -928,6 +963,7 @@
                 "Assets/Scenes/LightSetting.unity",
                 "Assets/Scenes/LightSimulator.unity",
                 "Assets/Scenes/NumberSetting.unity",
+                "Assets/Scenes/SampleSetting.unity",
                 "Assets/Scenes/Simulator.unity",
                 "Assets/Scenes/Title.unity",
                 "Assets/Scenes/VideoSetting.unity"
@@ -1152,6 +1188,7 @@
                 "Assets/Scenes/LightSetting.unity",
                 "Assets/Scenes/LightSimulator.unity",
                 "Assets/Scenes/NumberSetting.unity",
+                "Assets/Scenes/SampleSetting.unity",
                 "Assets/Scenes/Simulator.unity",
                 "Assets/Scenes/Title.unity",
                 "Assets/Scenes/VideoSetting.unity"
@@ -1178,6 +1215,7 @@
                 "Assets/Scenes/LightSetting.unity",
                 "Assets/Scenes/LightSimulator.unity",
                 "Assets/Scenes/NumberSetting.unity",
+                "Assets/Scenes/SampleSetting.unity",
                 "Assets/Scenes/Simulator.unity",
                 "Assets/Scenes/Title.unity",
                 "Assets/Scenes/VideoSetting.unity"
@@ -1215,6 +1253,7 @@
                 "Assets/Scenes/LightSetting.unity",
                 "Assets/Scenes/LightSimulator.unity",
                 "Assets/Scenes/NumberSetting.unity",
+                "Assets/Scenes/SampleSetting.unity",
                 "Assets/Scenes/Simulator.unity",
                 "Assets/Scenes/Title.unity",
                 "Assets/Scenes/VideoSetting.unity"
@@ -1231,6 +1270,7 @@
                 "Assets/Scenes/LightSetting.unity",
                 "Assets/Scenes/LightSimulator.unity",
                 "Assets/Scenes/NumberSetting.unity",
+                "Assets/Scenes/SampleSetting.unity",
                 "Assets/Scenes/Simulator.unity",
                 "Assets/Scenes/Title.unity",
                 "Assets/Scenes/VideoSetting.unity"
@@ -1247,6 +1287,7 @@
                 "Assets/Scenes/LightSetting.unity",
                 "Assets/Scenes/LightSimulator.unity",
                 "Assets/Scenes/NumberSetting.unity",
+                "Assets/Scenes/SampleSetting.unity",
                 "Assets/Scenes/Simulator.unity",
                 "Assets/Scenes/Title.unity",
                 "Assets/Scenes/VideoSetting.unity"
@@ -1263,6 +1304,7 @@
                 "Assets/Scenes/LightSetting.unity",
                 "Assets/Scenes/LightSimulator.unity",
                 "Assets/Scenes/NumberSetting.unity",
+                "Assets/Scenes/SampleSetting.unity",
                 "Assets/Scenes/Simulator.unity",
                 "Assets/Scenes/Title.unity",
                 "Assets/Scenes/VideoSetting.unity"
@@ -1279,6 +1321,7 @@
                 "Assets/Scenes/LightSetting.unity",
                 "Assets/Scenes/LightSimulator.unity",
                 "Assets/Scenes/NumberSetting.unity",
+                "Assets/Scenes/SampleSetting.unity",
                 "Assets/Scenes/Simulator.unity",
                 "Assets/Scenes/Title.unity",
                 "Assets/Scenes/VideoSetting.unity"

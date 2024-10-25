@@ -40,18 +40,15 @@ public class PlayerIKTarget : MonoBehaviour
     //骨格jsonファイル
     //Json skeleton data読み出し
     private string[] json_file_name = new string[]{
-        "dance1.json",
-        "momo_likey.json",
-        "jyp.json",
-        "jyp2.json",
-        "jyp2New.json",
-        "jyp3.json",
-        "matt_AllIWannaDo.json",
-        "hulaDance.json",
-        "hulaDanceSymmetry.json"
+        "hula.json",
+        "jazz.json",
+        "hip.json",
+        "hipAndPunking.json",
+        "mikoniko.json",
+        "hereiam.json"
     };
 
-    public string jsonFileName = "";
+    public string jsonFileName = "output.json";
     
     //身長
     public int heightOfPerson = 180;
@@ -78,7 +75,7 @@ public class PlayerIKTarget : MonoBehaviour
         get { return is_athlete_motion_play; }
         set { is_athlete_motion_play = value; }
     }
-    private SymmetryJsonProcessor processor = new SymmetryJsonProcessor();
+    private CreateSymmetryJSON processor = new CreateSymmetryJSON();
     private int isSample = 1;
         
     /// <summary>
@@ -257,14 +254,16 @@ public class PlayerIKTarget : MonoBehaviour
         }
 
         // datapathを作成
-        // string parentDatapath = Application.streamingAssetsPath + "/";
         string parentDatapath = Application.persistentDataPath + "/";
         string datapath = "";
 
+        //サンプルの場合はストリーミングアセットから選択されたものを使用
         if (isSample == 1) {
+            int selectedSample = PlayerPrefs.GetInt("SelectedSample", 0);
             parentDatapath = Application.streamingAssetsPath + "/";
-            jsonFileName = "sample.json";
+            jsonFileName = json_file_name[selectedSample];
         }
+
         //通常
         if (!isSymmetry) {
             datapath = parentDatapath + jsonFileName;

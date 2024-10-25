@@ -3,6 +3,28 @@ using UnityEngine;
 public class ObjectDataLoader : MonoBehaviour
 {
     public GameObject assetPrefab;  // ロードする際に使用するプレハブ
+    private Vector3[] positions = {
+        new Vector3(0, 0, 0),
+        new Vector3(0, 0, 2),
+        new Vector3(0, 0, -2),
+        new Vector3(0, 0, 4),
+        new Vector3(0, 0, -4),
+        new Vector3(0, 0, 6),
+        new Vector3(0, 0, -6),
+        new Vector3(0, 0, 8),
+        new Vector3(0, 0, -8),
+        new Vector3(0, 0, 10),
+        new Vector3(-1, 0, 0),
+        new Vector3(-1, 0, 2),
+        new Vector3(-1, 0, -2),
+        new Vector3(-1, 0, 4),
+        new Vector3(-1, 0, -4),
+        new Vector3(-1, 0, 6),
+        new Vector3(-1, 0, -6),
+        new Vector3(-1, 0, 8),
+        new Vector3(-1, 0, -8),
+        new Vector3(-1, 0, 10)
+    };
 
     void Start()
     {
@@ -17,11 +39,21 @@ public class ObjectDataLoader : MonoBehaviour
         {
             GameObject newObj = Instantiate(assetPrefab);
 
-            // 位置の復元
-            float posX = PlayerPrefs.GetFloat("ObjectPosX_" + i, 0);
-            float posY = PlayerPrefs.GetFloat("ObjectPosY_" + i, 0);
-            float posZ = PlayerPrefs.GetFloat("ObjectPosZ_" + i, 0);
-            newObj.transform.position = new Vector3(posX, posY, posZ);
+            // 位置の復元、保存されていない場合は positions[i] を使用
+            float posX = PlayerPrefs.GetFloat("ObjectPosX_" + i, float.NaN);
+            float posY = PlayerPrefs.GetFloat("ObjectPosY_" + i, float.NaN);
+            float posZ = PlayerPrefs.GetFloat("ObjectPosZ_" + i, float.NaN);
+
+            if (float.IsNaN(posX) || float.IsNaN(posY) || float.IsNaN(posZ))
+            {
+                // 保存されていない場合、positions[i] を使用
+                newObj.transform.position = positions[i];
+            }
+            else
+            {
+                // 保存されている場合、その値を使用
+                newObj.transform.position = new Vector3(posX, posY, posZ);
+            }
 
             // Rendererコンポーネントを取得
             Renderer renderer = newObj.GetComponent<Renderer>();

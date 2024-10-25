@@ -30,11 +30,13 @@
 		<type fullname="RealtimeYotubeInputValidation" preserve="nothing"/>
 		<type fullname="ResetPlayerPrefs" preserve="nothing"/>
 		<type fullname="RunPythonScript" preserve="nothing"/>
+		<type fullname="SamplePicker" preserve="nothing"/>
 		<type fullname="SampleSaveBool" preserve="nothing"/>
 		<type fullname="SceneSwitcher" preserve="nothing"/>
 		<type fullname="ScreenOrientationManager" preserve="nothing"/>
 		<type fullname="StarterAssets.ThirdPersonController" preserve="nothing"/>
 		<type fullname="TabController" preserve="nothing"/>
+		<type fullname="TestJson" preserve="nothing"/>
 		<type fullname="ToggleUIController" preserve="nothing"/>
 		<type fullname="UIVirtualJoystick" preserve="nothing"/>
 		<type fullname="VideoGalleryManager" preserve="nothing"/>

@@ -33,7 +33,7 @@ public class FormationManager : MonoBehaviour
         //最初にこの画面を遷移した場合のみ初期位置を設定
         if (!PlayerPrefs.HasKey("ObjectPosX_" + 0))
         {
-            int numberOfPeople = PlayerPrefs.GetInt("SelectedNumber", 1); // デフォルトは1
+            int numberOfPeople = PlayerPrefs.GetInt("ObjectCount", 1); // デフォルトは1
             ArrangeAssets(numberOfPeople);
         }
     }
