@@ -26682,8 +26682,14 @@ struct NumberPicker_t08EDC171C5E436145D57757FF677C648CADFC8EF  : public MonoBeha
 {
 	// UnityEngine.UI.Dropdown NumberPicker::numberDropdown
 	Dropdown_t54C0BDC1441E058BE37E796F68886671C270EF89* ___numberDropdown_4;
+	// UnityEngine.UI.Slider NumberPicker::redSlider
+	Slider_t87EA570E3D6556CABF57456C2F3873FFD86E652F* ___redSlider_5;
+	// UnityEngine.UI.Slider NumberPicker::greenSlider
+	Slider_t87EA570E3D6556CABF57456C2F3873FFD86E652F* ___greenSlider_6;
+	// UnityEngine.UI.Slider NumberPicker::blueSlider
+	Slider_t87EA570E3D6556CABF57456C2F3873FFD86E652F* ___blueSlider_7;
 	// UnityEngine.UI.Button NumberPicker::confirmButton
-	Button_t6786514A57F7AFDEE5431112FEA0CAB24F5AE098* ___confirmButton_5;
+	Button_t6786514A57F7AFDEE5431112FEA0CAB24F5AE098* ___confirmButton_8;
 };
 
 // ObjectDataLoader

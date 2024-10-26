@@ -26,21 +26,34 @@ public class ArmatureDataLoader : MonoBehaviour
             // すべての子オブジェクトのRendererコンポーネントを取得
             Renderer[] renderers = newObj.GetComponentsInChildren<Renderer>();
 
-            // 色の復元
+            // 反転かどうかの復元
             float colorR = PlayerPrefs.GetFloat("ObjectColorR_" + i, 1);
             float colorG = PlayerPrefs.GetFloat("ObjectColorG_" + i, 1);
             float colorB = PlayerPrefs.GetFloat("ObjectColorB_" + i, 1);
             Color restoredColor = new Color(colorR, colorG, colorB);
 
-            // すべてのRendererコンポーネントに対して色を適用
+            // Color.redのケースを特別扱い
+            if (restoredColor == Color.red)
+            {
+                // Color.redの場合はタグを付与して色は変更しない
+                newObj.tag = "isSymmetry"; // 任意のタグを設定
+            }
+
+            // コスチューム色の復元
+            float costumesColorR = PlayerPrefs.GetFloat("Costumes_Red", 1f);
+            float costumesColorG = PlayerPrefs.GetFloat("Costumes_Green", 1f);
+            float costumesColorB = PlayerPrefs.GetFloat("Costumes_Blue", 1f);
+            Color costumesColor = new Color(costumesColorR, costumesColorG, costumesColorB);
+            
+            // 他の色の場合は通常通り色を適用
             foreach (Renderer renderer in renderers)
             {
                 // 複数のマテリアルが存在する場合も考慮
                 foreach (Material mat in renderer.materials)
                 {
-                    mat.color = restoredColor;
+                    mat.color = costumesColor;
                 }
-            }
+            }            
         }
     }
 }

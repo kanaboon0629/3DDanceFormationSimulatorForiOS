@@ -20363,8 +20363,14 @@ struct NumberPicker_t08EDC171C5E436145D57757FF677C648CADFC8EF  : public MonoBeha
 {
 	// UnityEngine.UI.Dropdown NumberPicker::numberDropdown
 	Dropdown_t54C0BDC1441E058BE37E796F68886671C270EF89* ___numberDropdown_4;
+	// UnityEngine.UI.Slider NumberPicker::redSlider
+	Slider_t87EA570E3D6556CABF57456C2F3873FFD86E652F* ___redSlider_5;
+	// UnityEngine.UI.Slider NumberPicker::greenSlider
+	Slider_t87EA570E3D6556CABF57456C2F3873FFD86E652F* ___greenSlider_6;
+	// UnityEngine.UI.Slider NumberPicker::blueSlider
+	Slider_t87EA570E3D6556CABF57456C2F3873FFD86E652F* ___blueSlider_7;
 	// UnityEngine.UI.Button NumberPicker::confirmButton
-	Button_t6786514A57F7AFDEE5431112FEA0CAB24F5AE098* ___confirmButton_5;
+	Button_t6786514A57F7AFDEE5431112FEA0CAB24F5AE098* ___confirmButton_8;
 };
 
 // ObjectDataLoader
@@ -32885,9 +32891,9 @@ IL2CPP_EXTERN_C const int32_t g_FieldOffsetTable7090[16] =
 IL2CPP_EXTERN_C const int32_t g_FieldOffsetTable7091[11] = 
 {
 	static_cast<int32_t>(offsetof(LightControlWithJoystick_tF06BF4E0CCA3CDC8DF045154EE564399CAFA613E, ___moveSpeed_4)),static_cast<int32_t>(offsetof(LightControlWithJoystick_tF06BF4E0CCA3CDC8DF045154EE564399CAFA613E, ___rotationSpeed_5)),static_cast<int32_t>(offsetof(LightControlWithJoystick_tF06BF4E0CCA3CDC8DF045154EE564399CAFA613E, ___joystick_6)),static_cast<int32_t>(offsetof(LightControlWithJoystick_tF06BF4E0CCA3CDC8DF045154EE564399CAFA613E, ___slider_7)),static_cast<int32_t>(offsetof(LightControlWithJoystick_tF06BF4E0CCA3CDC8DF045154EE564399CAFA613E, ___susPanel_8)),static_cast<int32_t>(offsetof(LightControlWithJoystick_tF06BF4E0CCA3CDC8DF045154EE564399CAFA613E, ___pinPanel_9)),static_cast<int32_t>(offsetof(LightControlWithJoystick_tF06BF4E0CCA3CDC8DF045154EE564399CAFA613E, ___suspensionLightParent_10)),static_cast<int32_t>(offsetof(LightControlWithJoystick_tF06BF4E0CCA3CDC8DF045154EE564399CAFA613E, ___pinspotLightParent_11)),static_cast<int32_t>(offsetof(LightControlWithJoystick_tF06BF4E0CCA3CDC8DF045154EE564399CAFA613E, ___suspensionLightSource_12)),static_cast<int32_t>(offsetof(LightControlWithJoystick_tF06BF4E0CCA3CDC8DF045154EE564399CAFA613E, ___pinspotLightSource_13)),static_cast<int32_t>(offsetof(LightControlWithJoystick_tF06BF4E0CCA3CDC8DF045154EE564399CAFA613E, ___lightButtonsController_14)),};
-IL2CPP_EXTERN_C const int32_t g_FieldOffsetTable7092[2] = 
+IL2CPP_EXTERN_C const int32_t g_FieldOffsetTable7092[5] = 
 {
-	static_cast<int32_t>(offsetof(NumberPicker_t08EDC171C5E436145D57757FF677C648CADFC8EF, ___numberDropdown_4)),static_cast<int32_t>(offsetof(NumberPicker_t08EDC171C5E436145D57757FF677C648CADFC8EF, ___confirmButton_5)),};
+	static_cast<int32_t>(offsetof(NumberPicker_t08EDC171C5E436145D57757FF677C648CADFC8EF, ___numberDropdown_4)),static_cast<int32_t>(offsetof(NumberPicker_t08EDC171C5E436145D57757FF677C648CADFC8EF, ___redSlider_5)),static_cast<int32_t>(offsetof(NumberPicker_t08EDC171C5E436145D57757FF677C648CADFC8EF, ___greenSlider_6)),static_cast<int32_t>(offsetof(NumberPicker_t08EDC171C5E436145D57757FF677C648CADFC8EF, ___blueSlider_7)),static_cast<int32_t>(offsetof(NumberPicker_t08EDC171C5E436145D57757FF677C648CADFC8EF, ___confirmButton_8)),};
 IL2CPP_EXTERN_C const int32_t g_FieldOffsetTable7094[2] = 
 {
 	static_cast<int32_t>(offsetof(SamplePicker_tB5D515A8FA3157906C51BB9AE2A3B8C24486FB88, ___numberDropdown_4)),static_cast<int32_t>(offsetof(SamplePicker_tB5D515A8FA3157906C51BB9AE2A3B8C24486FB88, ___confirmButton_5)),};
