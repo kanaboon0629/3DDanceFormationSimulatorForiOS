@@ -123,14 +123,6 @@ public class PlayerIKTarget : MonoBehaviour
 
         isSample = PlayerPrefs.GetInt("IsSample", 1);
 
-        Renderer renderer = GetComponentInChildren<Renderer>();
-
-        // 赤色かどうかを判定 (RGBで赤色は (1, 0, 0) とする)
-        if (renderer != null && renderer.material.color == Color.red)
-        {
-            isSymmetry = true;
-        }
-
         this.animator = GetComponent<Animator>();
         // this.init_hips_y = animator.GetBoneTransform(HumanBodyBones.Hips).transform.position.y;
         // this.animator.transform.position = new Vector3(0,0.5f,0);
@@ -142,7 +134,11 @@ public class PlayerIKTarget : MonoBehaviour
 
         //人型アセットの取得
         this.armature = this.gameObject;
-        
+        //タグがついていたら反転
+        if (armature.tag == "isSymmetry")
+        {
+            isSymmetry = true;
+        }
         //
         //3D Model Avatarを操作する際のIKのターゲットとなる関節オブジェクトの取得
         //
