@@ -8,6 +8,8 @@ public class RealtimeYotubeInputValidation : MonoBehaviour
     public InputField startField;
     public InputField endField;
     public Text message;
+    public Color successColor = Color.blue; // 成功時の文字色（青）
+    public Color errorColor = Color.red;    // エラー時の文字色（赤）
 
     void Start()
     {
@@ -51,14 +53,16 @@ public class RealtimeYotubeInputValidation : MonoBehaviour
         }
 
         // すべてのバリデーションが通過したら成功メッセージを表示
-        message.text = "Validation succeeded!";
+        message.text = "Valid URL";
+        message.color = successColor; // 成功メッセージを青色に
     }
 
     private bool ValidateUrl()
     {
         if (!IsValidUrl(urlField.text))
         {
-            message.text = "Invalid URL.";
+            message.text = "Invalid URL";
+            message.color = errorColor; // エラーメッセージを赤色に
             return false;
         }
 
@@ -71,6 +75,7 @@ public class RealtimeYotubeInputValidation : MonoBehaviour
         if (!IsNaturalNumber(startField.text) || !IsNaturalNumber(endField.text))
         {
             message.text = "Start and End must be natural numbers.";
+            message.color = errorColor; // エラーメッセージを赤色に
             return false;
         }
 
@@ -80,12 +85,14 @@ public class RealtimeYotubeInputValidation : MonoBehaviour
         if (end <= start)
         {
             message.text = "End must be greater than Start.";
+            message.color = errorColor; // エラーメッセージを赤色に
             return false;
         }
 
-        if (end - start > 30)
+        if (end - start > 20)
         {
-            message.text = "The difference between End and Start must be 30 seconds or less.";
+            message.text = "The difference between End and Start must be 20 seconds or less.";
+            message.color = errorColor; // エラーメッセージを赤色に
             return false;
         }
 
