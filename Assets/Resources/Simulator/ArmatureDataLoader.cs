@@ -40,10 +40,10 @@ public class ArmatureDataLoader : MonoBehaviour
             }
 
             // コスチューム色の復元
-            float costumesColorR = PlayerPrefs.GetFloat("Costumes_Red", 1f);
-            float costumesColorG = PlayerPrefs.GetFloat("Costumes_Green", 1f);
-            float costumesColorB = PlayerPrefs.GetFloat("Costumes_Blue", 1f);
-            Color costumesColor = new Color(costumesColorR, costumesColorG, costumesColorB);
+            float bodyColorR = PlayerPrefs.GetFloat("Body_Red", 1f);
+            float bodyColorG = PlayerPrefs.GetFloat("Body_Green", 1f);
+            float bodyColorB = PlayerPrefs.GetFloat("Body_Blue", 1f);
+            Color bodyColor = new Color(bodyColorR, bodyColorG, bodyColorB);
             
             // 他の色の場合は通常通り色を適用
             foreach (Renderer renderer in renderers)
@@ -51,7 +51,7 @@ public class ArmatureDataLoader : MonoBehaviour
                 // 複数のマテリアルが存在する場合も考慮
                 foreach (Material mat in renderer.materials)
                 {
-                    mat.color = costumesColor;
+                    mat.color = bodyColor;
                 }
             }            
         }
