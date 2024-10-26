@@ -166,8 +166,6 @@ struct TweenRunner_1_tF277B20625C8B1939DC85508C4679C690757395E;
 struct TweenRunner_1_t5BB0582F926E75E2FE795492679A6CF55A4B4BC4;
 // UnityEngine.UI.CoroutineTween.TweenRunner`1<UnityEngine.UI.CoroutineTween.FloatTween>
 struct TweenRunner_1_t830EC096236A3CEC7189DFA6E0B2E74C5C97780B;
-// UnityEngine.Events.UnityAction`1<System.Int32>
-struct UnityAction_1_tA5B7125BEF9EB3092B91D1E2AA64249C44903A60;
 // UnityEngine.Events.UnityAction`1<System.Object>
 struct UnityAction_1_t9C30BCD020745BF400CBACF22C6F34ADBA2DDA6A;
 // UnityEngine.Events.UnityAction`1<System.Single>
@@ -186,8 +184,6 @@ struct UnityAction_3_t7A7A6102F3358E3083226D4228E8083EFD40EFE6;
 struct UnityAction_3_tA4BA03B0D2CAB7D20E7006E36EF6B1D662432039;
 // UnityEngine.Events.UnityEvent`1<System.Boolean>
 struct UnityEvent_1_tEEB36A367DCB5867E93AAF6BECAF3558CA71BECB;
-// UnityEngine.Events.UnityEvent`1<System.Int32>
-struct UnityEvent_1_t7CC0661D6B113117B4CC68761D93AC8DF5DBD66A;
 // UnityEngine.Events.UnityEvent`1<System.Object>
 struct UnityEvent_1_t3CE03B42D5873C0C0E0692BEE72E1E6D5399F205;
 // UnityEngine.Events.UnityEvent`1<System.Single>
@@ -636,6 +632,8 @@ struct UriParser_t920B0868286118827C08B08A15A9456AF6C19D81;
 struct VertexHelper_tB905FCB02AE67CBEE5F265FE37A5938FC5D136FE;
 // VideoGalleryManager
 struct VideoGalleryManager_t973965DF4E1E72BF84339B93B79B3AAB50D2152F;
+// UnityEngine.Video.VideoPlayer
+struct VideoPlayer_t48EA4A8117B822BC59590150DED9AD46C62F65D3;
 // System.Void
 struct Void_t4861ACF8F4594C3437BB48B6E56783494B843915;
 // UnityEngine.WaitForEndOfFrame
@@ -744,6 +742,16 @@ struct Event_tE8BCFAF6D3E261F47341C3DE8E539FF5C42E17C3;
 struct Event_t39EC29014C2EF54751D4079DD636172E90DCE53E;
 // System.Uri/UriInfo
 struct UriInfo_t5F91F77A93545DDDA6BB24A609BAF5E232CC1A09;
+// VideoGalleryManager/<>c__DisplayClass6_0
+struct U3CU3Ec__DisplayClass6_0_tBAC8BE1A0EF6A090442DCE40B6F015A469D46BB6;
+// UnityEngine.Video.VideoPlayer/ErrorEventHandler
+struct ErrorEventHandler_t6DD292ED79129AF67D909EDA603DA9DC5C762462;
+// UnityEngine.Video.VideoPlayer/EventHandler
+struct EventHandler_tE1FA51515FC895E3A02E317912FBDCDCF390A411;
+// UnityEngine.Video.VideoPlayer/FrameReadyEventHandler
+struct FrameReadyEventHandler_tDEDADF060B051C2953122274EBF3896AF48735E8;
+// UnityEngine.Video.VideoPlayer/TimeEventHandler
+struct TimeEventHandler_t8F77A92148F1A0F37AE8DE9CA7E25D90D001DC1E;
 
 IL2CPP_EXTERN_C RuntimeClass* Action_1_t7F8A08D55E64F30F0E9A4213699C99903459421A_il2cpp_TypeInfo_var;
 IL2CPP_EXTERN_C RuntimeClass* AnimationCurve_tCBFFAAD05CEBB35EF8D8631BD99914BE1A6BB354_il2cpp_TypeInfo_var;
@@ -753,6 +761,7 @@ IL2CPP_EXTERN_C RuntimeClass* CharacterSelectionEvent_t5D7AF67F47A37175CF8615AD6
 IL2CPP_EXTERN_C RuntimeClass* DateTime_t66193957C73913903DDAD89FEDC46139BCA5802D_il2cpp_TypeInfo_var;
 IL2CPP_EXTERN_C RuntimeClass* Debug_t8394C7EEAECA3689C2C9B9DE9C7166D73596276F_il2cpp_TypeInfo_var;
 IL2CPP_EXTERN_C RuntimeClass* Dictionary_2_tA348003A3C1CEFB3096E9D2A0BC7F1AC8EC4F710_il2cpp_TypeInfo_var;
+IL2CPP_EXTERN_C RuntimeClass* EventHandler_tE1FA51515FC895E3A02E317912FBDCDCF390A411_il2cpp_TypeInfo_var;
 IL2CPP_EXTERN_C RuntimeClass* EventSystem_t61C51380B105BE9D2C39C4F15B7E655659957707_il2cpp_TypeInfo_var;
 IL2CPP_EXTERN_C RuntimeClass* Font_tC95270EA3198038970422D78B74A7F2E218A96B6_il2cpp_TypeInfo_var;
 IL2CPP_EXTERN_C RuntimeClass* GameObject_t76FEDD663AB33C991A9C9A23129337651094216F_il2cpp_TypeInfo_var;
@@ -792,9 +801,9 @@ IL2CPP_EXTERN_C RuntimeClass* U3CStartU3Ed__10_t06713955D554742C727996BE112A81AD
 IL2CPP_EXTERN_C RuntimeClass* U3CStartU3Ed__10_tB81FF4C98E539AF1EEA095D6A6C11409A26E7819_il2cpp_TypeInfo_var;
 IL2CPP_EXTERN_C RuntimeClass* U3CStartU3Ed__4_t34C4F7117E4A5E63F9D03A9DD3C2493CEB376E75_il2cpp_TypeInfo_var;
 IL2CPP_EXTERN_C RuntimeClass* U3CStartU3Ed__4_t7AF0F1ABA8D3AE9575A02603D2DC2137FA816557_il2cpp_TypeInfo_var;
+IL2CPP_EXTERN_C RuntimeClass* U3CU3Ec__DisplayClass6_0_tBAC8BE1A0EF6A090442DCE40B6F015A469D46BB6_il2cpp_TypeInfo_var;
 IL2CPP_EXTERN_C RuntimeClass* U3CWarpTextU3Ed__7_t81F532662DA2606D7C0F4196B3804AB983C30508_il2cpp_TypeInfo_var;
 IL2CPP_EXTERN_C RuntimeClass* UnityAction_1_t690494F0E492A2098660E28B8EB7D71B2C69BE1B_il2cpp_TypeInfo_var;
-IL2CPP_EXTERN_C RuntimeClass* UnityAction_1_tA5B7125BEF9EB3092B91D1E2AA64249C44903A60_il2cpp_TypeInfo_var;
 IL2CPP_EXTERN_C RuntimeClass* UnityAction_1_tAEFA3C1C529F0E1AD7C7C7AFC88822D359E7AC90_il2cpp_TypeInfo_var;
 IL2CPP_EXTERN_C RuntimeClass* UnityAction_2_t2654BCB968A8286196F6268276089A674B0A9007_il2cpp_TypeInfo_var;
 IL2CPP_EXTERN_C RuntimeClass* UnityAction_3_t7A7A6102F3358E3083226D4228E8083EFD40EFE6_il2cpp_TypeInfo_var;
@@ -811,6 +820,7 @@ IL2CPP_EXTERN_C String_t* _stringLiteral000A577FA6F1044FCB37680E918D59D0DA3E7DDA
 IL2CPP_EXTERN_C String_t* _stringLiteral00B28FF06B788B9B67C6B259800F404F9F3761FD;
 IL2CPP_EXTERN_C String_t* _stringLiteral0133981053AC767ED98F641B459173B5499F4EB0;
 IL2CPP_EXTERN_C String_t* _stringLiteral031D4B471361DB110C98A0D1135113C84A7F93DE;
+IL2CPP_EXTERN_C String_t* _stringLiteral034D70796F07749E55EE8723EDF994CCBD80DE3F;
 IL2CPP_EXTERN_C String_t* _stringLiteral042E81C2165064627022D513DE063F1AE9F8EF49;
 IL2CPP_EXTERN_C String_t* _stringLiteral0458562336F91AC3F0C3FE71A886E75CE5C8F84A;
 IL2CPP_EXTERN_C String_t* _stringLiteral0570B799853B77BFC04E0AB8BD83CD1E5089060A;
@@ -860,7 +870,6 @@ IL2CPP_EXTERN_C String_t* _stringLiteral55F097B2603C69F9353B2AE824F1FE43E6B46F87
 IL2CPP_EXTERN_C String_t* _stringLiteral598081DBD06E8B1A338629AF7933F9131C6D33AB;
 IL2CPP_EXTERN_C String_t* _stringLiteral5A3D6FC5AC03F283E51A1E494164E2F6D006FCE2;
 IL2CPP_EXTERN_C String_t* _stringLiteral5CFAE7C58C00787BA4518EF0175BC1C1EECD034F;
-IL2CPP_EXTERN_C String_t* _stringLiteral5EA38B3185DC473C0948351111A2F456162B9094;
 IL2CPP_EXTERN_C String_t* _stringLiteral663CAB1564EF8E1A8AE8280E9FF0312C36CDCAE1;
 IL2CPP_EXTERN_C String_t* _stringLiteral69CE07E5C7ADCC833DA3E659BC9009F6C3C1346A;
 IL2CPP_EXTERN_C String_t* _stringLiteral6B7B896F94BFAB8D70980542FFB2CA18C4B521D2;
@@ -869,6 +878,7 @@ IL2CPP_EXTERN_C String_t* _stringLiteral6C28E8EC3D7398078E69E7EB1290BF618608E00E
 IL2CPP_EXTERN_C String_t* _stringLiteral6C3B90D0C27E620F9CB6F4530546C591AB0C5E12;
 IL2CPP_EXTERN_C String_t* _stringLiteral71B680ABF9213B3E8FB888056C235C79CFE83314;
 IL2CPP_EXTERN_C String_t* _stringLiteral71BD498E5FC7E3B8709294B88AB8FAB2CFF77CAE;
+IL2CPP_EXTERN_C String_t* _stringLiteral73A18026152377667C34DC981A3B5B4D9BEC97C0;
 IL2CPP_EXTERN_C String_t* _stringLiteral743C2E343390521FCB1AB5EBF0251662E7B2D1B8;
 IL2CPP_EXTERN_C String_t* _stringLiteral75A94EE44309525CF46FB9C022ED6E9EFAC8B506;
 IL2CPP_EXTERN_C String_t* _stringLiteral7935890168313B4E68E3D5FF12DE86BD5351F729;
@@ -878,6 +888,7 @@ IL2CPP_EXTERN_C String_t* _stringLiteral7F17C932AA4A62938FBFDF0FF455A1E44F6131AD
 IL2CPP_EXTERN_C String_t* _stringLiteral7F85A2723BB62FEF95DD6F8C5F0FF606EA62246A;
 IL2CPP_EXTERN_C String_t* _stringLiteral7F8C014BD4810CC276D0F9F81A1E759C7B098B1E;
 IL2CPP_EXTERN_C String_t* _stringLiteral813459A428E3CFB575B99EAD750B86D918A7E963;
+IL2CPP_EXTERN_C String_t* _stringLiteral85713AB22555EF79DDC5583E44271AED35A30867;
 IL2CPP_EXTERN_C String_t* _stringLiteral876C4B39B6E4D0187090400768899C71D99DE90D;
 IL2CPP_EXTERN_C String_t* _stringLiteral88BEE283254D7094E258B3A88730F4CC4F1E4AC7;
 IL2CPP_EXTERN_C String_t* _stringLiteral88D3AF1882A99EF42ED88963253B1967EFDCD6AE;
@@ -885,7 +896,6 @@ IL2CPP_EXTERN_C String_t* _stringLiteral8ACAA4E0B28437F5FD1A41CE6591A16813F05377
 IL2CPP_EXTERN_C String_t* _stringLiteral8FE18AD5241C694D5F2C46F1E0F3500C83D92434;
 IL2CPP_EXTERN_C String_t* _stringLiteral94EEB725DA6D7217F327002061B027AAC2CB44EE;
 IL2CPP_EXTERN_C String_t* _stringLiteral960E5E7F211EFF3243DF14EDD1901DC9EF314D62;
-IL2CPP_EXTERN_C String_t* _stringLiteral98CF5B96F9D458220F80603937B8B3B8C7DD3408;
 IL2CPP_EXTERN_C String_t* _stringLiteral9A7E77DB84E1908153085B0037B2757EFD9E6B67;
 IL2CPP_EXTERN_C String_t* _stringLiteral9C311850C974AD222115D59D4F9F42F19002BA4B;
 IL2CPP_EXTERN_C String_t* _stringLiteral9D1CEF81EB7C070E0C51B96E11B76B7268790E56;
@@ -900,9 +910,8 @@ IL2CPP_EXTERN_C String_t* _stringLiteralA87D266F5AAE1AF5998468D25833A8C6AD50D4FD
 IL2CPP_EXTERN_C String_t* _stringLiteralAB3448E21FA53C63C06270903A13B17D02935BE0;
 IL2CPP_EXTERN_C String_t* _stringLiteralABE371960DBFF5D849D2ADA9A6BFFCD64D487D1B;
 IL2CPP_EXTERN_C String_t* _stringLiteralAE26F453A2A912B736CE3AC32150587D0EA6FE30;
-IL2CPP_EXTERN_C String_t* _stringLiteralAE27036400F854701F8B03285DDEAC15F6721C32;
 IL2CPP_EXTERN_C String_t* _stringLiteralB1F8F7F26A17D931E95A0322F46D4037677C793A;
-IL2CPP_EXTERN_C String_t* _stringLiteralB5DECC8E1A8147A335D4B3BF6E1061CDAC9397DA;
+IL2CPP_EXTERN_C String_t* _stringLiteralB545C7676525BC79FA789DFF8A1C1591E0E48148;
 IL2CPP_EXTERN_C String_t* _stringLiteralB7064A7387F6077CB4754EDA8EDF60233DD5EAD8;
 IL2CPP_EXTERN_C String_t* _stringLiteralB90AEB71EEF73D732FF86A926D89C87006CD9ADF;
 IL2CPP_EXTERN_C String_t* _stringLiteralBA1039E8CDAE53E44AC3E6185B0871F3D031A476;
@@ -930,16 +939,19 @@ IL2CPP_EXTERN_C String_t* _stringLiteralDA016D7F4EBBB73F61F1E88CDD8E44FBF5AA4C67
 IL2CPP_EXTERN_C String_t* _stringLiteralDA39A3EE5E6B4B0D3255BFEF95601890AFD80709;
 IL2CPP_EXTERN_C String_t* _stringLiteralDC0B0764D8DEEBD6D63A9B44F64525F60CB83121;
 IL2CPP_EXTERN_C String_t* _stringLiteralDD79055F0D4740F5886B364879E59BE0C873F6AD;
+IL2CPP_EXTERN_C String_t* _stringLiteralDE043F085656F24E93B77B358E302ACF18D7774D;
 IL2CPP_EXTERN_C String_t* _stringLiteralDECFB8F380101725B06EAE2D3F983211A277171C;
 IL2CPP_EXTERN_C String_t* _stringLiteralDED89636BCE4B64566A44A1FE0465B5B599ACAB6;
 IL2CPP_EXTERN_C String_t* _stringLiteralE1EE2E0E574EC28CC607CE9651485E5250D2A413;
 IL2CPP_EXTERN_C String_t* _stringLiteralE2138FA8D137D1C6C81747FE1638815DDE9177B0;
 IL2CPP_EXTERN_C String_t* _stringLiteralE2211ABCC6510BBB4BEF4BBEEED559A0A44980EE;
+IL2CPP_EXTERN_C String_t* _stringLiteralE329898AB4F53C94E3D947FA579453B05112EA40;
 IL2CPP_EXTERN_C String_t* _stringLiteralEE3657997C5E6EC82CDE374326A95906F03A3315;
 IL2CPP_EXTERN_C String_t* _stringLiteralEF516EC7240CA160FD729299C926B5EDB246658A;
 IL2CPP_EXTERN_C String_t* _stringLiteralF1B6AAF37DDF842141E903D071B58A3BDF13A5C6;
 IL2CPP_EXTERN_C String_t* _stringLiteralF3063325FD751AEC72966430C6537525730A5E9C;
 IL2CPP_EXTERN_C String_t* _stringLiteralF359E6DDFFFF3D8B034D057E57DBD8ABA4ED7FFC;
+IL2CPP_EXTERN_C String_t* _stringLiteralF6F9DFA907E83637178AF5CC5DA43963F10CFDB5;
 IL2CPP_EXTERN_C String_t* _stringLiteralFA7D06C89D3555A06278F7C99FE8869A753E6151;
 IL2CPP_EXTERN_C String_t* _stringLiteralFC6687DC37346CD2569888E29764F727FAF530E0;
 IL2CPP_EXTERN_C String_t* _stringLiteralFF988BE1271FBA06A4FB243CE21817E36A0AE666;
@@ -959,6 +971,7 @@ IL2CPP_EXTERN_C const RuntimeMethod* GameObject_AddComponent_TisTextMeshProUGUI_
 IL2CPP_EXTERN_C const RuntimeMethod* GameObject_AddComponent_TisTextMeshPro_t4560AB28A3EAF503895A781A9C625273D833270E_mD3BE0A75BBE971456A1D7C8C6F6688A094A81C9C_RuntimeMethod_var;
 IL2CPP_EXTERN_C const RuntimeMethod* GameObject_AddComponent_TisTextMesh_t7E1981C7B03E50D5CA5A3AD5B0D9BB0AB6EE91F8_mFAD74D91BCACF9C3FAE6960EB58D5C346DDBD9C2_RuntimeMethod_var;
 IL2CPP_EXTERN_C const RuntimeMethod* GameObject_AddComponent_TisText_tD60B2346DAA6666BF0D822FF607F0B220C2B9E62_mFECE312B08FC5FD0A081E51ACA01FAEFD6B841A9_RuntimeMethod_var;
+IL2CPP_EXTERN_C const RuntimeMethod* GameObject_AddComponent_TisVideoPlayer_t48EA4A8117B822BC59590150DED9AD46C62F65D3_m5E711BC1432102F3C65C301B965F9B5FDF4A8F1D_RuntimeMethod_var;
 IL2CPP_EXTERN_C const RuntimeMethod* GameObject_GetComponentInParent_TisCanvas_t2DB4CEFDFF732884866C83F11ABF75F5AE8FFB26_m0A41CB7A7F9A10FCC98D1C7B5799D57C2724D991_RuntimeMethod_var;
 IL2CPP_EXTERN_C const RuntimeMethod* GameObject_GetComponent_TisButton_t6786514A57F7AFDEE5431112FEA0CAB24F5AE098_mB997CBF78A37938DC1624352E12D0205078CB290_RuntimeMethod_var;
 IL2CPP_EXTERN_C const RuntimeMethod* GameObject_GetComponent_TisImage_tBC1D03F63BF71132E9A5E472B8742F172A011E7E_mA59EA7D5F9133B2593F4AB70B099928BA955EE7D_RuntimeMethod_var;
@@ -975,15 +988,14 @@ IL2CPP_EXTERN_C const RuntimeMethod* List_1__ctor_mCA8DD57EAC70C2B5923DBB9D5A77C
 IL2CPP_EXTERN_C const RuntimeMethod* List_1_get_Count_mE2EBEDC861C1EC398EDBE6CF2C9FB604AA71523E_RuntimeMethod_var;
 IL2CPP_EXTERN_C const RuntimeMethod* List_1_get_Item_m6248FAA3EA9E9148D0E784C78FA4B1F5FFDD6366_RuntimeMethod_var;
 IL2CPP_EXTERN_C const RuntimeMethod* NumberPicker_OnConfirmButtonClicked_m297A14CEFE21171B37137C61152CFF9C635A8CEC_RuntimeMethod_var;
-IL2CPP_EXTERN_C const RuntimeMethod* NumberPicker_U3CStartU3Eb__3_0_m4F0FA4BDDC465379111CBFE405EF3D16E859D116_RuntimeMethod_var;
 IL2CPP_EXTERN_C const RuntimeMethod* Object_FindObjectOfType_TisLightButtonsController_t1D5EF718856EA81E1517EBBF0FAAA91D2BE11062_m372E09F5523EDD0B0B953FE562EE402130755158_RuntimeMethod_var;
 IL2CPP_EXTERN_C const RuntimeMethod* Object_FindObjectOfType_TisLightControlWithJoystick_tF06BF4E0CCA3CDC8DF045154EE564399CAFA613E_m5B4A265048FFA745DE1E797AD4AEFE31EE36A4F0_RuntimeMethod_var;
 IL2CPP_EXTERN_C const RuntimeMethod* Object_Instantiate_TisGameObject_t76FEDD663AB33C991A9C9A23129337651094216F_m10D87C6E0708CA912BBB02555BF7D0FBC5D7A2B3_RuntimeMethod_var;
 IL2CPP_EXTERN_C const RuntimeMethod* Object_Instantiate_TisRectTransform_t6C5DA5E41A89E0F488B001E45E58963480E543A5_m2EBBFED3BA1B67B30F8503C5BD918B4C1745903E_RuntimeMethod_var;
-IL2CPP_EXTERN_C const RuntimeMethod* RealtimeIPAddressInputValidation_U3CStartU3Eb__2_0_m6A2E200C58ED8E1DCD9D60F906D2119B8792B791_RuntimeMethod_var;
-IL2CPP_EXTERN_C const RuntimeMethod* RealtimeYotubeInputValidation_U3CStartU3Eb__4_0_m67D4F09114CF4333A6A843FD5CEE376B6A4247F8_RuntimeMethod_var;
-IL2CPP_EXTERN_C const RuntimeMethod* RealtimeYotubeInputValidation_U3CStartU3Eb__4_1_m4A4BD1454D2A287CD6EE441783C2032DEC756E8D_RuntimeMethod_var;
-IL2CPP_EXTERN_C const RuntimeMethod* RealtimeYotubeInputValidation_U3CStartU3Eb__4_2_mFF698643946B53A59477629554C7181BA3FE446C_RuntimeMethod_var;
+IL2CPP_EXTERN_C const RuntimeMethod* RealtimeIPAddressInputValidation_U3CStartU3Eb__4_0_m9667BF8A370034C001CD326A36AB2FA8B7B63435_RuntimeMethod_var;
+IL2CPP_EXTERN_C const RuntimeMethod* RealtimeYotubeInputValidation_U3CStartU3Eb__6_0_mF62B3DA9C71CEC65E1CAB155C14F87081038543C_RuntimeMethod_var;
+IL2CPP_EXTERN_C const RuntimeMethod* RealtimeYotubeInputValidation_U3CStartU3Eb__6_1_m802753A1CB43A3FB3CA614FDE6DA47325F96FE7F_RuntimeMethod_var;
+IL2CPP_EXTERN_C const RuntimeMethod* RealtimeYotubeInputValidation_U3CStartU3Eb__6_2_m5DB12E9B4D69AA81955B8D4AEF64133036B0D23E_RuntimeMethod_var;
 IL2CPP_EXTERN_C const RuntimeMethod* Resources_Load_TisFont_tC95270EA3198038970422D78B74A7F2E218A96B6_m2B532BE5E14BE59B8F59F82BF8193EEEE249DC6D_RuntimeMethod_var;
 IL2CPP_EXTERN_C const RuntimeMethod* Resources_Load_TisMaterial_t18053F08F347D0DCA5E1140EC7EC4533DD8A14E3_mC909CC888641BC8E1E29C8AB1C790C637C9B390E_RuntimeMethod_var;
 IL2CPP_EXTERN_C const RuntimeMethod* Resources_Load_TisTMP_FontAsset_t923BF2F78D7C5AC36376E168A1193B7CB4855160_m5F15FBF7AC2FCDC8C169ED260201B75AB8CB50F3_RuntimeMethod_var;
@@ -1004,10 +1016,10 @@ IL2CPP_EXTERN_C const RuntimeMethod* U3CStartU3Ed__10_System_Collections_IEnumer
 IL2CPP_EXTERN_C const RuntimeMethod* U3CStartU3Ed__10_System_Collections_IEnumerator_Reset_mC9F90586F057E3728D9F93BB0E12197C9B994EEA_RuntimeMethod_var;
 IL2CPP_EXTERN_C const RuntimeMethod* U3CStartU3Ed__4_System_Collections_IEnumerator_Reset_m3EF23BF40634D4262D8A2AE3DB14140FEFB4BF52_RuntimeMethod_var;
 IL2CPP_EXTERN_C const RuntimeMethod* U3CStartU3Ed__4_System_Collections_IEnumerator_Reset_m9B7AEE80C1E70D2D2FF5811A54AFD6189CD7F5A9_RuntimeMethod_var;
+IL2CPP_EXTERN_C const RuntimeMethod* U3CU3Ec__DisplayClass6_0_U3CCheckVideoLengthU3Eb__0_m50160E368B4885A1A3609EB3308EB43A14FC104C_RuntimeMethod_var;
 IL2CPP_EXTERN_C const RuntimeMethod* U3CWarpTextU3Ed__7_System_Collections_IEnumerator_Reset_mB6C5974E8F57160AE544E1D2FD44621EEF3ACAB5_RuntimeMethod_var;
 IL2CPP_EXTERN_C const RuntimeMethod* UIEventController_U3CStartU3Eb__8_0_m842B895FEF268FB4BA31560A311C6B882D6416F8_RuntimeMethod_var;
 IL2CPP_EXTERN_C const RuntimeMethod* UnityEvent_1_AddListener_m44E396BC4484BD75427FDD8CBE0B533CCAD8C1EC_RuntimeMethod_var;
-IL2CPP_EXTERN_C const RuntimeMethod* UnityEvent_1_AddListener_m846E66E06483E90ED947176C8DB2BE23495A93AE_RuntimeMethod_var;
 IL2CPP_EXTERN_C const RuntimeMethod* UnityEvent_1_AddListener_mEC384A8CFC5D4D41B62B08248A738CF61B82172F_RuntimeMethod_var;
 IL2CPP_EXTERN_C const RuntimeMethod* UnityEvent_1_Invoke_m4810FCA7EC353CAA7770E91777A04496C5663653_RuntimeMethod_var;
 IL2CPP_EXTERN_C const RuntimeMethod* UnityEvent_1_Invoke_m756C9B879DDBE079CDE2D06DC231CE42C01C4AD0_RuntimeMethod_var;
@@ -1026,7 +1038,7 @@ IL2CPP_EXTERN_C const RuntimeMethod* UnityEvent_3_RemoveListener_m9741C57D75E2CE
 IL2CPP_EXTERN_C const RuntimeMethod* UnityEvent_3_RemoveListener_mA451198DCB5DD86D0B87D256F26293566D209026_RuntimeMethod_var;
 IL2CPP_EXTERN_C const RuntimeMethod* UnityEvent_3__ctor_m945E5A788027E4B7491C93E2ACBD523B5A8E1829_RuntimeMethod_var;
 IL2CPP_EXTERN_C const RuntimeMethod* UnityEvent_3__ctor_mFE0002F38DAAC29805C09ACB9F397DE80F6CB7BC_RuntimeMethod_var;
-IL2CPP_EXTERN_C const RuntimeMethod* VideoGalleryManager_U3COpenGalleryForVideoU3Eb__2_0_mF4ED9FB6D846661C30F0887DF829247A8017EDC5_RuntimeMethod_var;
+IL2CPP_EXTERN_C const RuntimeMethod* VideoGalleryManager_U3COpenGalleryForVideoU3Eb__5_0_mC04A2C6F287E8C73A68401E1179D95548DEE2DCF_RuntimeMethod_var;
 IL2CPP_EXTERN_C const RuntimeType* Font_tC95270EA3198038970422D78B74A7F2E218A96B6_0_0_0_var;
 IL2CPP_EXTERN_C const RuntimeType* TextMeshProUGUI_t101091AF4B578BB534C92E9D1EEAF0611636D957_0_0_0_var;
 struct Color32_t73C5004937BF5BB8AD55323D51AAA40A898EF48B;
@@ -1420,6 +1432,15 @@ struct U3CRevealWordsU3Ed__8_t912CFD430C602C79AE6BC1BC6C4AEBF101B4D7C8  : public
 	int32_t ___U3CvisibleCountU3E5__5_6;
 };
 
+// VideoGalleryManager/<>c__DisplayClass6_0
+struct U3CU3Ec__DisplayClass6_0_tBAC8BE1A0EF6A090442DCE40B6F015A469D46BB6  : public RuntimeObject
+{
+	// VideoGalleryManager VideoGalleryManager/<>c__DisplayClass6_0::<>4__this
+	VideoGalleryManager_t973965DF4E1E72BF84339B93B79B3AAB50D2152F* ___U3CU3E4__this_0;
+	// System.String VideoGalleryManager/<>c__DisplayClass6_0::path
+	String_t* ___path_1;
+};
+
 // UnityEngine.InputSystem.Utilities.InlinedArray`1<System.Action`1<UnityEngine.InputSystem.PlayerInput>>
 struct InlinedArray_1_t8ACE9AAD82807AA2C2CD8030EB6420B3228CEF00 
 {
@@ -1529,13 +1550,6 @@ struct TMP_TextProcessingStack_1_tC8FAEB17246D3B171EFD11165A5761AE39B40D0C
 
 // UnityEngine.Events.UnityEvent`1<System.Boolean>
 struct UnityEvent_1_tEEB36A367DCB5867E93AAF6BECAF3558CA71BECB  : public UnityEventBase_t4968A4C72559F35C0923E4BD9C042C3A842E1DB8
-{
-	// System.Object[] UnityEngine.Events.UnityEvent`1::m_InvokeArray
-	ObjectU5BU5D_t8061030B0A12A55D5AD8652A20C922FE99450918* ___m_InvokeArray_3;
-};
-
-// UnityEngine.Events.UnityEvent`1<System.Int32>
-struct UnityEvent_1_t7CC0661D6B113117B4CC68761D93AC8DF5DBD66A  : public UnityEventBase_t4968A4C72559F35C0923E4BD9C042C3A842E1DB8
 {
 	// System.Object[] UnityEngine.Events.UnityEvent`1::m_InvokeArray
 	ObjectU5BU5D_t8061030B0A12A55D5AD8652A20C922FE99450918* ___m_InvokeArray_3;
@@ -2993,11 +3007,6 @@ struct ButtonClickedEvent_t8EA72E90B3BD1392FB3B3EF167D5121C23569E4C  : public Un
 {
 };
 
-// UnityEngine.UI.Dropdown/DropdownEvent
-struct DropdownEvent_t8A008B010A742724CFC93576D6976E474BB13059  : public UnityEvent_1_t7CC0661D6B113117B4CC68761D93AC8DF5DBD66A
-{
-};
-
 // EnvMapAnimator/<Start>d__4
 struct U3CStartU3Ed__4_t7AF0F1ABA8D3AE9575A02603D2DC2137FA816557  : public RuntimeObject
 {
@@ -3511,11 +3520,6 @@ struct Action_1_t7F8A08D55E64F30F0E9A4213699C99903459421A  : public MulticastDel
 {
 };
 
-// UnityEngine.Events.UnityAction`1<System.Int32>
-struct UnityAction_1_tA5B7125BEF9EB3092B91D1E2AA64249C44903A60  : public MulticastDelegate_t
-{
-};
-
 // UnityEngine.Events.UnityAction`1<System.Single>
 struct UnityAction_1_tAEFA3C1C529F0E1AD7C7C7AFC88822D359E7AC90  : public MulticastDelegate_t
 {
@@ -3890,6 +3894,11 @@ struct MediaPickCallback_tC207F6F3EEE18F64B03E23D5C9FA8C79517A5EB6  : public Mul
 {
 };
 
+// UnityEngine.Video.VideoPlayer/EventHandler
+struct EventHandler_tE1FA51515FC895E3A02E317912FBDCDCF390A411  : public MulticastDelegate_t
+{
+};
+
 // TMPro.TMP_TextProcessingStack`1<TMPro.WordWrapState>
 struct TMP_TextProcessingStack_1_t2DDA00FFC64AF6E3AFD475AB2086D16C34787E0F 
 {
@@ -4043,6 +4052,27 @@ struct TMP_FontAsset_t923BF2F78D7C5AC36376E168A1193B7CB4855160  : public TMP_Ass
 // TMPro.TMP_PhoneNumberValidator
 struct TMP_PhoneNumberValidator_t0746D23F4BE9695B737D9997BCD6A3B3F916B48C  : public TMP_InputValidator_t3429AF61284AE19180C3FB81C0C7D2F90165EA98
 {
+};
+
+// UnityEngine.Video.VideoPlayer
+struct VideoPlayer_t48EA4A8117B822BC59590150DED9AD46C62F65D3  : public Behaviour_t01970CFBBA658497AE30F311C447DB0440BAB7FA
+{
+	// UnityEngine.Video.VideoPlayer/EventHandler UnityEngine.Video.VideoPlayer::prepareCompleted
+	EventHandler_tE1FA51515FC895E3A02E317912FBDCDCF390A411* ___prepareCompleted_4;
+	// UnityEngine.Video.VideoPlayer/EventHandler UnityEngine.Video.VideoPlayer::loopPointReached
+	EventHandler_tE1FA51515FC895E3A02E317912FBDCDCF390A411* ___loopPointReached_5;
+	// UnityEngine.Video.VideoPlayer/EventHandler UnityEngine.Video.VideoPlayer::started
+	EventHandler_tE1FA51515FC895E3A02E317912FBDCDCF390A411* ___started_6;
+	// UnityEngine.Video.VideoPlayer/EventHandler UnityEngine.Video.VideoPlayer::frameDropped
+	EventHandler_tE1FA51515FC895E3A02E317912FBDCDCF390A411* ___frameDropped_7;
+	// UnityEngine.Video.VideoPlayer/ErrorEventHandler UnityEngine.Video.VideoPlayer::errorReceived
+	ErrorEventHandler_t6DD292ED79129AF67D909EDA603DA9DC5C762462* ___errorReceived_8;
+	// UnityEngine.Video.VideoPlayer/EventHandler UnityEngine.Video.VideoPlayer::seekCompleted
+	EventHandler_tE1FA51515FC895E3A02E317912FBDCDCF390A411* ___seekCompleted_9;
+	// UnityEngine.Video.VideoPlayer/TimeEventHandler UnityEngine.Video.VideoPlayer::clockResyncOccurred
+	TimeEventHandler_t8F77A92148F1A0F37AE8DE9CA7E25D90D001DC1E* ___clockResyncOccurred_10;
+	// UnityEngine.Video.VideoPlayer/FrameReadyEventHandler UnityEngine.Video.VideoPlayer::frameReady
+	FrameReadyEventHandler_tDEDADF060B051C2953122274EBF3896AF48735E8* ___frameReady_11;
 };
 
 // ArmatureDataLoader
@@ -4288,6 +4318,10 @@ struct InputFieldHandler_t05F9302C60EBEEF4920F5CAEFDF08CAAC511D185  : public Mon
 	VideoGalleryManager_t973965DF4E1E72BF84339B93B79B3AAB50D2152F* ___videoGalleryManager_11;
 	// TabController InputFieldHandler::tabController
 	TabController_t275AE4E7AB8A112DF84288521A5FA0750243BA47* ___tabController_12;
+	// UnityEngine.Color InputFieldHandler::successColor
+	Color_tD001788D726C3A7F1379BEED0260B9591F440C1F ___successColor_13;
+	// UnityEngine.Color InputFieldHandler::errorColor
+	Color_tD001788D726C3A7F1379BEED0260B9591F440C1F ___errorColor_14;
 };
 
 // Joystick
@@ -4379,10 +4413,8 @@ struct NumberPicker_t08EDC171C5E436145D57757FF677C648CADFC8EF  : public MonoBeha
 {
 	// UnityEngine.UI.Dropdown NumberPicker::numberDropdown
 	Dropdown_t54C0BDC1441E058BE37E796F68886671C270EF89* ___numberDropdown_4;
-	// UnityEngine.UI.Text NumberPicker::selectedValueText
-	Text_tD60B2346DAA6666BF0D822FF607F0B220C2B9E62* ___selectedValueText_5;
 	// UnityEngine.UI.Button NumberPicker::confirmButton
-	Button_t6786514A57F7AFDEE5431112FEA0CAB24F5AE098* ___confirmButton_6;
+	Button_t6786514A57F7AFDEE5431112FEA0CAB24F5AE098* ___confirmButton_5;
 };
 
 // ObjectDataSaver
@@ -4574,6 +4606,10 @@ struct RealtimeIPAddressInputValidation_t98A5D34D6AF58C06C056E7735D8C48A57161DD6
 	InputField_tABEA115F23FBD374EBE80D4FAC1D15BD6E37A140* ___ipInputField_4;
 	// UnityEngine.UI.Text RealtimeIPAddressInputValidation::message
 	Text_tD60B2346DAA6666BF0D822FF607F0B220C2B9E62* ___message_5;
+	// UnityEngine.Color RealtimeIPAddressInputValidation::successColor
+	Color_tD001788D726C3A7F1379BEED0260B9591F440C1F ___successColor_6;
+	// UnityEngine.Color RealtimeIPAddressInputValidation::errorColor
+	Color_tD001788D726C3A7F1379BEED0260B9591F440C1F ___errorColor_7;
 };
 
 // RealtimeYotubeInputValidation
@@ -4587,6 +4623,10 @@ struct RealtimeYotubeInputValidation_tFE3285267FF1F95BB514567E6F801572BCF01376  
 	InputField_tABEA115F23FBD374EBE80D4FAC1D15BD6E37A140* ___endField_6;
 	// UnityEngine.UI.Text RealtimeYotubeInputValidation::message
 	Text_tD60B2346DAA6666BF0D822FF607F0B220C2B9E62* ___message_7;
+	// UnityEngine.Color RealtimeYotubeInputValidation::successColor
+	Color_tD001788D726C3A7F1379BEED0260B9591F440C1F ___successColor_8;
+	// UnityEngine.Color RealtimeYotubeInputValidation::errorColor
+	Color_tD001788D726C3A7F1379BEED0260B9591F440C1F ___errorColor_9;
 };
 
 // ResetPlayerPrefs
@@ -4961,6 +5001,12 @@ struct VideoGalleryManager_t973965DF4E1E72BF84339B93B79B3AAB50D2152F  : public M
 {
 	// UnityEngine.UI.Text VideoGalleryManager::resultText
 	Text_tD60B2346DAA6666BF0D822FF607F0B220C2B9E62* ___resultText_4;
+	// UnityEngine.Color VideoGalleryManager::successColor
+	Color_tD001788D726C3A7F1379BEED0260B9591F440C1F ___successColor_5;
+	// UnityEngine.Color VideoGalleryManager::errorColor
+	Color_tD001788D726C3A7F1379BEED0260B9591F440C1F ___errorColor_6;
+	// UnityEngine.Video.VideoPlayer VideoGalleryManager::videoPlayer
+	VideoPlayer_t48EA4A8117B822BC59590150DED9AD46C62F65D3* ___videoPlayer_7;
 };
 
 // UnityEngine.EventSystems.EventSystem
@@ -6450,13 +6496,13 @@ struct Uri_t1500A52B5F71A04F5D05C0852D0F2A0941842A0E_StaticFields
 
 // TMPro.Examples.TextConsoleSimulator/<RevealWords>d__8
 
-// UnityEngine.Events.UnityEvent`1<System.Boolean>
+// VideoGalleryManager/<>c__DisplayClass6_0
+
+// VideoGalleryManager/<>c__DisplayClass6_0
 
 // UnityEngine.Events.UnityEvent`1<System.Boolean>
 
-// UnityEngine.Events.UnityEvent`1<System.Int32>
-
-// UnityEngine.Events.UnityEvent`1<System.Int32>
+// UnityEngine.Events.UnityEvent`1<System.Boolean>
 
 // UnityEngine.Events.UnityEvent`1<System.Single>
 
@@ -6760,10 +6806,6 @@ struct StreamReader_t81027449065C1B0C339DB46241D8001A6F61130B_StaticFields
 
 // UnityEngine.UI.Button/ButtonClickedEvent
 
-// UnityEngine.UI.Dropdown/DropdownEvent
-
-// UnityEngine.UI.Dropdown/DropdownEvent
-
 // EnvMapAnimator/<Start>d__4
 
 // EnvMapAnimator/<Start>d__4
@@ -6898,10 +6940,6 @@ struct Type_t_StaticFields
 
 // System.Action`1<UnityEngine.Object>
 
-// UnityEngine.Events.UnityAction`1<System.Int32>
-
-// UnityEngine.Events.UnityAction`1<System.Int32>
-
 // UnityEngine.Events.UnityAction`1<System.Single>
 
 // UnityEngine.Events.UnityAction`1<System.Single>
@@ -6969,6 +7007,10 @@ struct Type_t_StaticFields
 // NativeGallery/MediaPickCallback
 
 // NativeGallery/MediaPickCallback
+
+// UnityEngine.Video.VideoPlayer/EventHandler
+
+// UnityEngine.Video.VideoPlayer/EventHandler
 
 // UnityEngine.Camera
 struct Camera_tA92CC927D7439999BC82DBEDC0AA45B470F9E184_StaticFields
@@ -7059,6 +7101,10 @@ struct TMP_FontAsset_t923BF2F78D7C5AC36376E168A1193B7CB4855160_StaticFields
 // TMPro.TMP_PhoneNumberValidator
 
 // TMPro.TMP_PhoneNumberValidator
+
+// UnityEngine.Video.VideoPlayer
+
+// UnityEngine.Video.VideoPlayer
 
 // ArmatureDataLoader
 
@@ -8218,10 +8264,6 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void UnityAction_1__ctor_mF770070D0A4FE93F6E0
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void UnityEvent_1_AddListener_m44E396BC4484BD75427FDD8CBE0B533CCAD8C1EC_gshared (UnityEvent_1_tDD811EB8F49CEE97BA6DF59344DFE6C6F42553D4* __this, UnityAction_1_tAEFA3C1C529F0E1AD7C7C7AFC88822D359E7AC90* ___0_call, const RuntimeMethod* method) ;
 // T[] UnityEngine.GameObject::GetComponentsInChildren<System.Object>()
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR ObjectU5BU5D_t8061030B0A12A55D5AD8652A20C922FE99450918* GameObject_GetComponentsInChildren_TisRuntimeObject_m6F69570C0224EE6620FD43C4DDB0F0AB152A1B20_gshared (GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* __this, const RuntimeMethod* method) ;
-// System.Void UnityEngine.Events.UnityAction`1<System.Int32>::.ctor(System.Object,System.IntPtr)
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void UnityAction_1__ctor_m48C26C8BF8CF832FAFF2818DC9246BACBC3CCF2B_gshared (UnityAction_1_tA5B7125BEF9EB3092B91D1E2AA64249C44903A60* __this, RuntimeObject* ___0_object, intptr_t ___1_method, const RuntimeMethod* method) ;
-// System.Void UnityEngine.Events.UnityEvent`1<System.Int32>::AddListener(UnityEngine.Events.UnityAction`1<T0>)
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void UnityEvent_1_AddListener_m846E66E06483E90ED947176C8DB2BE23495A93AE_gshared (UnityEvent_1_t7CC0661D6B113117B4CC68761D93AC8DF5DBD66A* __this, UnityAction_1_tA5B7125BEF9EB3092B91D1E2AA64249C44903A60* ___0_call, const RuntimeMethod* method) ;
 // T UnityEngine.Object::Instantiate<System.Object>(T)
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* Object_Instantiate_TisRuntimeObject_m90A1E6C4C2B445D2E848DB75C772D1B95AAC046A_gshared (RuntimeObject* ___0_original, const RuntimeMethod* method) ;
 // System.Void System.Collections.Generic.List`1<UnityEngine.EventSystems.RaycastResult>::.ctor()
@@ -8232,6 +8274,8 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR int32_t List_1_get_Count_mE2EBEDC
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void UnityAction_1__ctor_m0C2FC6B483B474AE9596A43EBA7FF6E85503A92A_gshared (UnityAction_1_t9C30BCD020745BF400CBACF22C6F34ADBA2DDA6A* __this, RuntimeObject* ___0_object, intptr_t ___1_method, const RuntimeMethod* method) ;
 // System.Void UnityEngine.Events.UnityEvent`1<System.Object>::AddListener(UnityEngine.Events.UnityAction`1<T0>)
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void UnityEvent_1_AddListener_m055233246714700E4BDAA62635BC0AA49E8165CC_gshared (UnityEvent_1_t3CE03B42D5873C0C0E0692BEE72E1E6D5399F205* __this, UnityAction_1_t9C30BCD020745BF400CBACF22C6F34ADBA2DDA6A* ___0_call, const RuntimeMethod* method) ;
+// T UnityEngine.GameObject::AddComponent<System.Object>()
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* GameObject_AddComponent_TisRuntimeObject_m69B93700FACCF372F5753371C6E8FB780800B824_gshared (GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* __this, const RuntimeMethod* method) ;
 // System.Void UnityEngine.Events.UnityEvent`1<System.Boolean>::Invoke(T0)
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void UnityEvent_1_Invoke_m4810FCA7EC353CAA7770E91777A04496C5663653_gshared (UnityEvent_1_tEEB36A367DCB5867E93AAF6BECAF3558CA71BECB* __this, bool ___0_arg0, const RuntimeMethod* method) ;
 // System.Void UnityEngine.Events.UnityEvent`1<System.Boolean>::.ctor()
@@ -8264,8 +8308,6 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void UnityEvent_2__ctor_mC75313448B2ABE238198
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void UnityEvent_3__ctor_m941EF00E4EF658BB1461C8BD9E6527F9E495DCFE_gshared (UnityEvent_3_tD7E14BDD38F12B63EFECBD1604C666F9AF100EAA* __this, const RuntimeMethod* method) ;
 // System.Void UnityEngine.Events.UnityEvent`3<System.Object,System.Object,System.Int32>::.ctor()
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void UnityEvent_3__ctor_mB689E1A15DDACB9ED22ACAB2BCA3D97B893FFA5B_gshared (UnityEvent_3_tCE934710A8225E2574DC47F0C89DD63B7324C18F* __this, const RuntimeMethod* method) ;
-// T UnityEngine.GameObject::AddComponent<System.Object>()
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* GameObject_AddComponent_TisRuntimeObject_m69B93700FACCF372F5753371C6E8FB780800B824_gshared (GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* __this, const RuntimeMethod* method) ;
 // T UnityEngine.Resources::Load<System.Object>(System.String)
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* Resources_Load_TisRuntimeObject_mD1AF6299B14F87ED1D1A6199A51480919F7C79D7_gshared (String_t* ___0_path, const RuntimeMethod* method) ;
 // System.Void System.Action`1<System.Object>::.ctor(System.Object,System.IntPtr)
@@ -8393,20 +8435,6 @@ inline LightU5BU5D_tDA7C763E668D91E53318509D94BC0CF10B8AB990* GameObject_GetComp
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void LightControlWithJoystick_SwitchLightSource_m5A03DB8D974E7812DD2184108C61F65AA3C14B21 (LightControlWithJoystick_tF06BF4E0CCA3CDC8DF045154EE564399CAFA613E* __this, int32_t ___0_index, GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* ___1_lightParent, Light_t1E68479B7782AF2050FAA02A5DC612FD034F18F3** ___2_lightSource, const RuntimeMethod* method) ;
 // System.Void UnityEngine.UI.Dropdown::set_value(System.Int32)
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Dropdown_set_value_m0764A5E2023E34705ADD422689BF6C0074449FEE (Dropdown_t54C0BDC1441E058BE37E796F68886671C270EF89* __this, int32_t ___0_value, const RuntimeMethod* method) ;
-// System.Void NumberPicker::UpdateSelectedValueText()
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void NumberPicker_UpdateSelectedValueText_m95785B1EC62C1A8DD54100880529CEFA943EADE5 (NumberPicker_t08EDC171C5E436145D57757FF677C648CADFC8EF* __this, const RuntimeMethod* method) ;
-// UnityEngine.UI.Dropdown/DropdownEvent UnityEngine.UI.Dropdown::get_onValueChanged()
-IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR DropdownEvent_t8A008B010A742724CFC93576D6976E474BB13059* Dropdown_get_onValueChanged_mAC49CE9A83E258FEC024662127057567275CAC12_inline (Dropdown_t54C0BDC1441E058BE37E796F68886671C270EF89* __this, const RuntimeMethod* method) ;
-// System.Void UnityEngine.Events.UnityAction`1<System.Int32>::.ctor(System.Object,System.IntPtr)
-inline void UnityAction_1__ctor_m48C26C8BF8CF832FAFF2818DC9246BACBC3CCF2B (UnityAction_1_tA5B7125BEF9EB3092B91D1E2AA64249C44903A60* __this, RuntimeObject* ___0_object, intptr_t ___1_method, const RuntimeMethod* method)
-{
-	((  void (*) (UnityAction_1_tA5B7125BEF9EB3092B91D1E2AA64249C44903A60*, RuntimeObject*, intptr_t, const RuntimeMethod*))UnityAction_1__ctor_m48C26C8BF8CF832FAFF2818DC9246BACBC3CCF2B_gshared)(__this, ___0_object, ___1_method, method);
-}
-// System.Void UnityEngine.Events.UnityEvent`1<System.Int32>::AddListener(UnityEngine.Events.UnityAction`1<T0>)
-inline void UnityEvent_1_AddListener_m846E66E06483E90ED947176C8DB2BE23495A93AE (UnityEvent_1_t7CC0661D6B113117B4CC68761D93AC8DF5DBD66A* __this, UnityAction_1_tA5B7125BEF9EB3092B91D1E2AA64249C44903A60* ___0_call, const RuntimeMethod* method)
-{
-	((  void (*) (UnityEvent_1_t7CC0661D6B113117B4CC68761D93AC8DF5DBD66A*, UnityAction_1_tA5B7125BEF9EB3092B91D1E2AA64249C44903A60*, const RuntimeMethod*))UnityEvent_1_AddListener_m846E66E06483E90ED947176C8DB2BE23495A93AE_gshared)(__this, ___0_call, method);
-}
 // UnityEngine.UI.Button/ButtonClickedEvent UnityEngine.UI.Button::get_onClick()
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR ButtonClickedEvent_t8EA72E90B3BD1392FB3B3EF167D5121C23569E4C* Button_get_onClick_m701712A7F7F000CC80D517C4510697E15722C35C_inline (Button_t6786514A57F7AFDEE5431112FEA0CAB24F5AE098* __this, const RuntimeMethod* method) ;
 // System.Void UnityEngine.Events.UnityAction::.ctor(System.Object,System.IntPtr)
@@ -8575,6 +8603,10 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* Uri_get_Scheme_m29106D5109538220B22
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool String_op_Equality_m030E1B219352228970A076136E455C4E568C02C1 (String_t* ___0_a, String_t* ___1_b, const RuntimeMethod* method) ;
 // System.Boolean System.Int32::TryParse(System.String,System.Int32&)
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool Int32_TryParse_mC928DE2FEC1C35ED5298BDDCA9868076E94B8A21 (String_t* ___0_s, int32_t* ___1_result, const RuntimeMethod* method) ;
+// UnityEngine.Color UnityEngine.Color::get_blue()
+IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR Color_tD001788D726C3A7F1379BEED0260B9591F440C1F Color_get_blue_mF04A26CE61D6DA3C0D8B1C4720901B1028C7AB87_inline (const RuntimeMethod* method) ;
+// UnityEngine.Color UnityEngine.Color::get_red()
+IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR Color_tD001788D726C3A7F1379BEED0260B9591F440C1F Color_get_red_mA2E53E7173FDC97E68E335049AB0FAAEE43A844D_inline (const RuntimeMethod* method) ;
 // System.Boolean UnityEngine.PlayerPrefs::HasKey(System.String)
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool PlayerPrefs_HasKey_mCA5C64BBA6BF8B230BC3BC92B4761DD3B11D4668 (String_t* ___0_key, const RuntimeMethod* method) ;
 // System.String UnityEngine.PlayerPrefs::GetString(System.String)
@@ -8614,12 +8646,39 @@ inline Image_tBC1D03F63BF71132E9A5E472B8742F172A011E7E* GameObject_GetComponent_
 {
 	return ((  Image_tBC1D03F63BF71132E9A5E472B8742F172A011E7E* (*) (GameObject_t76FEDD663AB33C991A9C9A23129337651094216F*, const RuntimeMethod*))GameObject_GetComponent_TisRuntimeObject_m6EAED4AA356F0F48288F67899E5958792395563B_gshared)(__this, method);
 }
+// UnityEngine.GameObject UnityEngine.Component::get_gameObject()
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* Component_get_gameObject_m57AEFBB14DB39EC476F740BA000E170355DE691B (Component_t39FBE53E5EFCF4409111FB22C15FF73717632EC3* __this, const RuntimeMethod* method) ;
+// T UnityEngine.GameObject::AddComponent<UnityEngine.Video.VideoPlayer>()
+inline VideoPlayer_t48EA4A8117B822BC59590150DED9AD46C62F65D3* GameObject_AddComponent_TisVideoPlayer_t48EA4A8117B822BC59590150DED9AD46C62F65D3_m5E711BC1432102F3C65C301B965F9B5FDF4A8F1D (GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* __this, const RuntimeMethod* method)
+{
+	return ((  VideoPlayer_t48EA4A8117B822BC59590150DED9AD46C62F65D3* (*) (GameObject_t76FEDD663AB33C991A9C9A23129337651094216F*, const RuntimeMethod*))GameObject_AddComponent_TisRuntimeObject_m69B93700FACCF372F5753371C6E8FB780800B824_gshared)(__this, method);
+}
+// System.Void UnityEngine.Video.VideoPlayer::set_playOnAwake(System.Boolean)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void VideoPlayer_set_playOnAwake_m658E574E0109125AD1754D61FE81DD7BB02411A0 (VideoPlayer_t48EA4A8117B822BC59590150DED9AD46C62F65D3* __this, bool ___0_value, const RuntimeMethod* method) ;
 // System.Void NativeGallery/MediaPickCallback::.ctor(System.Object,System.IntPtr)
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void MediaPickCallback__ctor_m6772B2B8FB0ED8FC367118012A390E247874EA4D (MediaPickCallback_tC207F6F3EEE18F64B03E23D5C9FA8C79517A5EB6* __this, RuntimeObject* ___0_object, intptr_t ___1_method, const RuntimeMethod* method) ;
 // NativeGallery/Permission NativeGallery::GetVideoFromGallery(NativeGallery/MediaPickCallback,System.String,System.String)
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t NativeGallery_GetVideoFromGallery_mCB867EFB787DDF037FA7CE37116297E4D6BE6C93 (MediaPickCallback_tC207F6F3EEE18F64B03E23D5C9FA8C79517A5EB6* ___0_callback, String_t* ___1_title, String_t* ___2_mime, const RuntimeMethod* method) ;
+// System.Void VideoGalleryManager/<>c__DisplayClass6_0::.ctor()
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CU3Ec__DisplayClass6_0__ctor_m71BF6D1E21E80F28A2ABA2CD88F854FA36E255A5 (U3CU3Ec__DisplayClass6_0_tBAC8BE1A0EF6A090442DCE40B6F015A469D46BB6* __this, const RuntimeMethod* method) ;
+// System.Void UnityEngine.Video.VideoPlayer::set_url(System.String)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void VideoPlayer_set_url_m02AC2BB229F9441257D62F9ACFD96D09F51B4F14 (VideoPlayer_t48EA4A8117B822BC59590150DED9AD46C62F65D3* __this, String_t* ___0_value, const RuntimeMethod* method) ;
+// System.Void UnityEngine.Video.VideoPlayer::Prepare()
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void VideoPlayer_Prepare_mC0EF4CC2E5A6B7C04F9F810DD9406A6146BEE6EA (VideoPlayer_t48EA4A8117B822BC59590150DED9AD46C62F65D3* __this, const RuntimeMethod* method) ;
+// System.Void UnityEngine.Video.VideoPlayer/EventHandler::.ctor(System.Object,System.IntPtr)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void EventHandler__ctor_mFCF62E0BB29DD3D2B2F1306BD8657E374CF60903 (EventHandler_tE1FA51515FC895E3A02E317912FBDCDCF390A411* __this, RuntimeObject* ___0_object, intptr_t ___1_method, const RuntimeMethod* method) ;
+// System.Void UnityEngine.Video.VideoPlayer::add_prepareCompleted(UnityEngine.Video.VideoPlayer/EventHandler)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void VideoPlayer_add_prepareCompleted_m4DB8843A3E3E3CFF7E361E70EA51983AF457183B (VideoPlayer_t48EA4A8117B822BC59590150DED9AD46C62F65D3* __this, EventHandler_tE1FA51515FC895E3A02E317912FBDCDCF390A411* ___0_value, const RuntimeMethod* method) ;
 // System.String UnityEngine.PlayerPrefs::GetString(System.String,System.String)
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* PlayerPrefs_GetString_mE80FED64ACC3134149C8202FDDDE774C29CB0AF2 (String_t* ___0_key, String_t* ___1_defaultValue, const RuntimeMethod* method) ;
+// System.Void VideoGalleryManager::CheckVideoLength(System.String)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void VideoGalleryManager_CheckVideoLength_m49D9B9F4FB6C436855D732730E669B173C340DAA (VideoGalleryManager_t973965DF4E1E72BF84339B93B79B3AAB50D2152F* __this, String_t* ___0_path, const RuntimeMethod* method) ;
+// System.Void System.Object::.ctor()
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Object__ctor_mE837C6B9FA8C6D5D109F4B2EC885D79919AC0EA2 (RuntimeObject* __this, const RuntimeMethod* method) ;
+// System.Double UnityEngine.Video.VideoPlayer::get_length()
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR double VideoPlayer_get_length_mA0D8C06DB63C48CF5100068387CF0AFC2A0F093E (VideoPlayer_t48EA4A8117B822BC59590150DED9AD46C62F65D3* __this, const RuntimeMethod* method) ;
+// System.Void UnityEngine.PlayerPrefs::DeleteKey(System.String)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayerPrefs_DeleteKey_mF3A7857B52DCEF4139843CD28716788624C2AD30 (String_t* ___0_key, const RuntimeMethod* method) ;
 // System.Void MobileDisableAutoSwitchControls::DisableAutoSwitchControls()
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void MobileDisableAutoSwitchControls_DisableAutoSwitchControls_m156A87BFC0F55EC1BD438F032CB959A464A39AE4 (MobileDisableAutoSwitchControls_t0A648011382F1B8F00CD89B26AB30777CCBB9FDA* __this, const RuntimeMethod* method) ;
 // System.Void UnityEngine.InputSystem.PlayerInput::set_neverAutoSwitchControlSchemes(System.Boolean)
@@ -8678,8 +8737,6 @@ inline void UnityEvent_1__ctor_m75F2CB288BDA04F9CA6542CCC40CC2CFE442FB0D (UnityE
 }
 // System.Void UIVirtualTouchZone::SetupHandle()
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void UIVirtualTouchZone_SetupHandle_m01D23F4128356836F9A12EAE5445227B24E8A894 (UIVirtualTouchZone_t1A876DDEA85164FB2BA974D0146FF2D9FE36AB0A* __this, const RuntimeMethod* method) ;
-// UnityEngine.GameObject UnityEngine.Component::get_gameObject()
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* Component_get_gameObject_m57AEFBB14DB39EC476F740BA000E170355DE691B (Component_t39FBE53E5EFCF4409111FB22C15FF73717632EC3* __this, const RuntimeMethod* method) ;
 // System.Void UIVirtualTouchZone::SetObjectActiveState(UnityEngine.GameObject,System.Boolean)
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void UIVirtualTouchZone_SetObjectActiveState_mA0ED9693131A0BC3AFACABC0D7C0370743C439F5 (UIVirtualTouchZone_t1A876DDEA85164FB2BA974D0146FF2D9FE36AB0A* __this, GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* ___0_targetObject, bool ___1_newState, const RuntimeMethod* method) ;
 // System.Void UIVirtualTouchZone::UpdateHandleRectPosition(UnityEngine.Vector2)
@@ -8712,8 +8769,6 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Rigidbody_AddForce_mBDBC288D0E266BC1B62E3649B4FCE46E7EA9CCBC (Rigidbody_t268697F5A994213ED97393309870968BC1C7393C* __this, Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 ___0_force, int32_t ___1_mode, const RuntimeMethod* method) ;
 // System.Void UnityEngine.ScriptableObject::.ctor()
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ScriptableObject__ctor_mD037FDB0B487295EA47F79A4DB1BF1846C9087FF (ScriptableObject_tB3BFDB921A1B1795B38A5417D3B97A89A140436A* __this, const RuntimeMethod* method) ;
-// System.Void System.Object::.ctor()
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Object__ctor_mE837C6B9FA8C6D5D109F4B2EC885D79919AC0EA2 (RuntimeObject* __this, const RuntimeMethod* method) ;
 // System.String UnityEngine.Application::get_persistentDataPath()
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* Application_get_persistentDataPath_mC58BD3E1A20732E0A536491DBCAE6505B1624399 (const RuntimeMethod* method) ;
 // System.String System.IO.Path::Combine(System.String,System.String)
@@ -10655,10 +10710,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void NumberPicker_Start_m0A9603D713EC0DA01BC7
 	if (!s_Il2CppMethodInitialized)
 	{
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&NumberPicker_OnConfirmButtonClicked_m297A14CEFE21171B37137C61152CFF9C635A8CEC_RuntimeMethod_var);
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&NumberPicker_U3CStartU3Eb__3_0_m4F0FA4BDDC465379111CBFE405EF3D16E859D116_RuntimeMethod_var);
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&UnityAction_1_tA5B7125BEF9EB3092B91D1E2AA64249C44903A60_il2cpp_TypeInfo_var);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&UnityAction_t11A1F3B953B365C072A5DCC32677EE1796A962A7_il2cpp_TypeInfo_var);
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&UnityEvent_1_AddListener_m846E66E06483E90ED947176C8DB2BE23495A93AE_RuntimeMethod_var);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&_stringLiteral10DC6D7DF2FB520712CC872B0A3D5735C48D37E6);
 		s_Il2CppMethodInitialized = true;
 	}
@@ -10668,68 +10720,25 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void NumberPicker_Start_m0A9603D713EC0DA01BC7
 		Dropdown_t54C0BDC1441E058BE37E796F68886671C270EF89* L_0 = __this->___numberDropdown_4;
 		NullCheck(L_0);
 		Dropdown_set_value_m0764A5E2023E34705ADD422689BF6C0074449FEE(L_0, 0, NULL);
-		// UpdateSelectedValueText();
-		NumberPicker_UpdateSelectedValueText_m95785B1EC62C1A8DD54100880529CEFA943EADE5(__this, NULL);
-		// numberDropdown.onValueChanged.AddListener(delegate { UpdateSelectedValueText(); });
-		Dropdown_t54C0BDC1441E058BE37E796F68886671C270EF89* L_1 = __this->___numberDropdown_4;
-		NullCheck(L_1);
-		DropdownEvent_t8A008B010A742724CFC93576D6976E474BB13059* L_2;
-		L_2 = Dropdown_get_onValueChanged_mAC49CE9A83E258FEC024662127057567275CAC12_inline(L_1, NULL);
-		UnityAction_1_tA5B7125BEF9EB3092B91D1E2AA64249C44903A60* L_3 = (UnityAction_1_tA5B7125BEF9EB3092B91D1E2AA64249C44903A60*)il2cpp_codegen_object_new(UnityAction_1_tA5B7125BEF9EB3092B91D1E2AA64249C44903A60_il2cpp_TypeInfo_var);
-		NullCheck(L_3);
-		UnityAction_1__ctor_m48C26C8BF8CF832FAFF2818DC9246BACBC3CCF2B(L_3, __this, (intptr_t)((void*)NumberPicker_U3CStartU3Eb__3_0_m4F0FA4BDDC465379111CBFE405EF3D16E859D116_RuntimeMethod_var), NULL);
-		NullCheck(L_2);
-		UnityEvent_1_AddListener_m846E66E06483E90ED947176C8DB2BE23495A93AE(L_2, L_3, UnityEvent_1_AddListener_m846E66E06483E90ED947176C8DB2BE23495A93AE_RuntimeMethod_var);
 		// confirmButton.onClick.AddListener(OnConfirmButtonClicked);
-		Button_t6786514A57F7AFDEE5431112FEA0CAB24F5AE098* L_4 = __this->___confirmButton_6;
-		NullCheck(L_4);
-		ButtonClickedEvent_t8EA72E90B3BD1392FB3B3EF167D5121C23569E4C* L_5;
-		L_5 = Button_get_onClick_m701712A7F7F000CC80D517C4510697E15722C35C_inline(L_4, NULL);
-		UnityAction_t11A1F3B953B365C072A5DCC32677EE1796A962A7* L_6 = (UnityAction_t11A1F3B953B365C072A5DCC32677EE1796A962A7*)il2cpp_codegen_object_new(UnityAction_t11A1F3B953B365C072A5DCC32677EE1796A962A7_il2cpp_TypeInfo_var);
-		NullCheck(L_6);
-		UnityAction__ctor_mC53E20D6B66E0D5688CD81B88DBB34F5A58B7131(L_6, __this, (intptr_t)((void*)NumberPicker_OnConfirmButtonClicked_m297A14CEFE21171B37137C61152CFF9C635A8CEC_RuntimeMethod_var), NULL);
-		NullCheck(L_5);
-		UnityEvent_AddListener_m8AA4287C16628486B41DA41CA5E7A856A706D302(L_5, L_6, NULL);
-		// int savedValue = PlayerPrefs.GetInt("ObjectCount", 1); // ??????1
-		int32_t L_7;
-		L_7 = PlayerPrefs_GetInt_m8AD1FA8BA54CC6CE2B2AEEE36B6D75587BB1692D(_stringLiteral10DC6D7DF2FB520712CC872B0A3D5735C48D37E6, 1, NULL);
-		V_0 = L_7;
-		// numberDropdown.value = savedValue - 1; // ?????????????????? -1
-		Dropdown_t54C0BDC1441E058BE37E796F68886671C270EF89* L_8 = __this->___numberDropdown_4;
-		int32_t L_9 = V_0;
-		NullCheck(L_8);
-		Dropdown_set_value_m0764A5E2023E34705ADD422689BF6C0074449FEE(L_8, ((int32_t)il2cpp_codegen_subtract(L_9, 1)), NULL);
-		// UpdateSelectedValueText();
-		NumberPicker_UpdateSelectedValueText_m95785B1EC62C1A8DD54100880529CEFA943EADE5(__this, NULL);
-		// }
-		return;
-	}
-}
-// System.Void NumberPicker::UpdateSelectedValueText()
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void NumberPicker_UpdateSelectedValueText_m95785B1EC62C1A8DD54100880529CEFA943EADE5 (NumberPicker_t08EDC171C5E436145D57757FF677C648CADFC8EF* __this, const RuntimeMethod* method) 
-{
-	static bool s_Il2CppMethodInitialized;
-	if (!s_Il2CppMethodInitialized)
-	{
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&_stringLiteralAE27036400F854701F8B03285DDEAC15F6721C32);
-		s_Il2CppMethodInitialized = true;
-	}
-	int32_t V_0 = 0;
-	{
-		// int selectedValue = numberDropdown.value + 1; // +1 ???????????1??
-		Dropdown_t54C0BDC1441E058BE37E796F68886671C270EF89* L_0 = __this->___numberDropdown_4;
-		NullCheck(L_0);
-		int32_t L_1;
-		L_1 = Dropdown_get_value_m386913162D5E273B762657FE5156DC567602BC3C_inline(L_0, NULL);
-		V_0 = ((int32_t)il2cpp_codegen_add(L_1, 1));
-		// selectedValueText.text = "??: " + selectedValue.ToString();
-		Text_tD60B2346DAA6666BF0D822FF607F0B220C2B9E62* L_2 = __this->___selectedValueText_5;
-		String_t* L_3;
-		L_3 = Int32_ToString_m030E01C24E294D6762FB0B6F37CB541581F55CA5((&V_0), NULL);
-		String_t* L_4;
-		L_4 = String_Concat_m9E3155FB84015C823606188F53B47CB44C444991(_stringLiteralAE27036400F854701F8B03285DDEAC15F6721C32, L_3, NULL);
+		Button_t6786514A57F7AFDEE5431112FEA0CAB24F5AE098* L_1 = __this->___confirmButton_5;
+		NullCheck(L_1);
+		ButtonClickedEvent_t8EA72E90B3BD1392FB3B3EF167D5121C23569E4C* L_2;
+		L_2 = Button_get_onClick_m701712A7F7F000CC80D517C4510697E15722C35C_inline(L_1, NULL);
+		UnityAction_t11A1F3B953B365C072A5DCC32677EE1796A962A7* L_3 = (UnityAction_t11A1F3B953B365C072A5DCC32677EE1796A962A7*)il2cpp_codegen_object_new(UnityAction_t11A1F3B953B365C072A5DCC32677EE1796A962A7_il2cpp_TypeInfo_var);
+		NullCheck(L_3);
+		UnityAction__ctor_mC53E20D6B66E0D5688CD81B88DBB34F5A58B7131(L_3, __this, (intptr_t)((void*)NumberPicker_OnConfirmButtonClicked_m297A14CEFE21171B37137C61152CFF9C635A8CEC_RuntimeMethod_var), NULL);
 		NullCheck(L_2);
-		VirtualActionInvoker1< String_t* >::Invoke(75 /* System.Void UnityEngine.UI.Text::set_text(System.String) */, L_2, L_4);
+		UnityEvent_AddListener_m8AA4287C16628486B41DA41CA5E7A856A706D302(L_2, L_3, NULL);
+		// int savedValue = PlayerPrefs.GetInt("ObjectCount", 1); // ??????1
+		int32_t L_4;
+		L_4 = PlayerPrefs_GetInt_m8AD1FA8BA54CC6CE2B2AEEE36B6D75587BB1692D(_stringLiteral10DC6D7DF2FB520712CC872B0A3D5735C48D37E6, 1, NULL);
+		V_0 = L_4;
+		// numberDropdown.value = savedValue - 1; // ?????????????????? -1
+		Dropdown_t54C0BDC1441E058BE37E796F68886671C270EF89* L_5 = __this->___numberDropdown_4;
+		int32_t L_6 = V_0;
+		NullCheck(L_5);
+		Dropdown_set_value_m0764A5E2023E34705ADD422689BF6C0074449FEE(L_5, ((int32_t)il2cpp_codegen_subtract(L_6, 1)), NULL);
 		// }
 		return;
 	}
@@ -10774,16 +10783,6 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void NumberPicker__ctor_m7F379B5C8122076F083F
 {
 	{
 		MonoBehaviour__ctor_m592DB0105CA0BC97AA1C5F4AD27B12D68A3B7C1E(__this, NULL);
-		return;
-	}
-}
-// System.Void NumberPicker::<Start>b__3_0(System.Int32)
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void NumberPicker_U3CStartU3Eb__3_0_m4F0FA4BDDC465379111CBFE405EF3D16E859D116 (NumberPicker_t08EDC171C5E436145D57757FF677C648CADFC8EF* __this, int32_t ___0_U3Cp0U3E, const RuntimeMethod* method) 
-{
-	{
-		// numberDropdown.onValueChanged.AddListener(delegate { UpdateSelectedValueText(); });
-		NumberPicker_UpdateSelectedValueText_m95785B1EC62C1A8DD54100880529CEFA943EADE5(__this, NULL);
-		// numberDropdown.onValueChanged.AddListener(delegate { UpdateSelectedValueText(); });
 		return;
 	}
 }
@@ -11455,8 +11454,8 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void CameraControlWithJoystick_Update_m67C30D
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void CameraControlWithJoystick__ctor_mF1182D9D41F31918B66CB0AD6947AC65CAD609FA (CameraControlWithJoystick_t99A48DD3B21FB5018C3A537865DCB3FCB77197E3* __this, const RuntimeMethod* method) 
 {
 	{
-		// private float rotationSpeed = 0.3f;
-		__this->___rotationSpeed_5 = (0.300000012f);
+		// private float rotationSpeed = 0.5f;
+		__this->___rotationSpeed_5 = (0.5f);
 		MonoBehaviour__ctor_m592DB0105CA0BC97AA1C5F4AD27B12D68A3B7C1E(__this, NULL);
 		return;
 	}
@@ -12258,7 +12257,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void InputFieldHandler_DisplayErrorMessage_m1
 		L_1 = Object_op_Inequality_mD0BE578448EAA61948F25C32F8DD55AB1F778602(L_0, (Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C*)NULL, NULL);
 		if (!L_1)
 		{
-			goto IL_0010;
+			goto IL_001c;
 		}
 	}
 	{
@@ -12267,9 +12266,14 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void InputFieldHandler_DisplayErrorMessage_m1
 		String_t* L_3 = ___0_message;
 		NullCheck(L_2);
 		VirtualActionInvoker1< String_t* >::Invoke(75 /* System.Void UnityEngine.UI.Text::set_text(System.String) */, L_2, L_3);
+		// errorMessage.color = errorColor; // ????????????
+		Text_tD60B2346DAA6666BF0D822FF607F0B220C2B9E62* L_4 = ___1_errorMessage;
+		Color_tD001788D726C3A7F1379BEED0260B9591F440C1F L_5 = __this->___errorColor_14;
+		NullCheck(L_4);
+		VirtualActionInvoker1< Color_tD001788D726C3A7F1379BEED0260B9591F440C1F >::Invoke(23 /* System.Void UnityEngine.UI.Graphic::set_color(UnityEngine.Color) */, L_4, L_5);
 	}
 
-IL_0010:
+IL_001c:
 	{
 		// }
 		return;
@@ -12286,7 +12290,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* InputFieldHandler_ValidateInputs_mB
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&_stringLiteral1762D165CE19A713FAA520A6478C34E93205C693);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&_stringLiteral1826711E009D646FFD97D6213E0793236121E525);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&_stringLiteral460BD3D1231F68F6913EF3CC2025B5819E12BBCD);
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&_stringLiteral5EA38B3185DC473C0948351111A2F456162B9094);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&_stringLiteral85713AB22555EF79DDC5583E44271AED35A30867);
 		s_Il2CppMethodInitialized = true;
 	}
 	int32_t V_0 = 0;
@@ -12355,17 +12359,17 @@ IL_0031:
 
 IL_003b:
 	{
-		// if (endValue - startValue > 30)
+		// if (endValue - startValue > 20)
 		int32_t L_8 = V_1;
 		int32_t L_9 = V_0;
-		if ((((int32_t)((int32_t)il2cpp_codegen_subtract(L_8, L_9))) <= ((int32_t)((int32_t)30))))
+		if ((((int32_t)((int32_t)il2cpp_codegen_subtract(L_8, L_9))) <= ((int32_t)((int32_t)20))))
 		{
 			goto IL_0048;
 		}
 	}
 	{
-		// return "The difference between End and Start must be 30 seconds or less.";
-		return _stringLiteral5EA38B3185DC473C0948351111A2F456162B9094;
+		// return "The difference between End and Start must be 20 seconds or less.";
+		return _stringLiteral85713AB22555EF79DDC5583E44271AED35A30867;
 	}
 
 IL_0048:
@@ -12514,6 +12518,14 @@ IL_0012:
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void InputFieldHandler__ctor_m754B7097A5604AE98431FB959D6F3D80BF80AE56 (InputFieldHandler_t05F9302C60EBEEF4920F5CAEFDF08CAAC511D185* __this, const RuntimeMethod* method) 
 {
 	{
+		// public Color successColor = Color.blue; // ??????????
+		Color_tD001788D726C3A7F1379BEED0260B9591F440C1F L_0;
+		L_0 = Color_get_blue_mF04A26CE61D6DA3C0D8B1C4720901B1028C7AB87_inline(NULL);
+		__this->___successColor_13 = L_0;
+		// public Color errorColor = Color.red;    // ???????????
+		Color_tD001788D726C3A7F1379BEED0260B9591F440C1F L_1;
+		L_1 = Color_get_red_mA2E53E7173FDC97E68E335049AB0FAAEE43A844D_inline(NULL);
+		__this->___errorColor_14 = L_1;
 		MonoBehaviour__ctor_m592DB0105CA0BC97AA1C5F4AD27B12D68A3B7C1E(__this, NULL);
 		return;
 	}
@@ -12533,7 +12545,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void RealtimeIPAddressInputValidation_Start_m
 	if (!s_Il2CppMethodInitialized)
 	{
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Debug_t8394C7EEAECA3689C2C9B9DE9C7166D73596276F_il2cpp_TypeInfo_var);
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&RealtimeIPAddressInputValidation_U3CStartU3Eb__2_0_m6A2E200C58ED8E1DCD9D60F906D2119B8792B791_RuntimeMethod_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&RealtimeIPAddressInputValidation_U3CStartU3Eb__4_0_m9667BF8A370034C001CD326A36AB2FA8B7B63435_RuntimeMethod_var);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&UnityAction_1_t690494F0E492A2098660E28B8EB7D71B2C69BE1B_il2cpp_TypeInfo_var);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&UnityEvent_1_AddListener_mEC384A8CFC5D4D41B62B08248A738CF61B82172F_RuntimeMethod_var);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&_stringLiteral2A71A1C085C4B0B2E274BA0F65C8205298E16193);
@@ -12578,7 +12590,7 @@ IL_0033:
 		L_7 = InputField_get_onValueChanged_mA9ABE178FE3EB05AEF3DC20C11349427C59916AE_inline(L_6, NULL);
 		UnityAction_1_t690494F0E492A2098660E28B8EB7D71B2C69BE1B* L_8 = (UnityAction_1_t690494F0E492A2098660E28B8EB7D71B2C69BE1B*)il2cpp_codegen_object_new(UnityAction_1_t690494F0E492A2098660E28B8EB7D71B2C69BE1B_il2cpp_TypeInfo_var);
 		NullCheck(L_8);
-		UnityAction_1__ctor_mE6251CCFD943EB114960F556A546E2777B18AC71(L_8, __this, (intptr_t)((void*)RealtimeIPAddressInputValidation_U3CStartU3Eb__2_0_m6A2E200C58ED8E1DCD9D60F906D2119B8792B791_RuntimeMethod_var), NULL);
+		UnityAction_1__ctor_mE6251CCFD943EB114960F556A546E2777B18AC71(L_8, __this, (intptr_t)((void*)RealtimeIPAddressInputValidation_U3CStartU3Eb__4_0_m9667BF8A370034C001CD326A36AB2FA8B7B63435_RuntimeMethod_var), NULL);
 		NullCheck(L_7);
 		UnityEvent_1_AddListener_mEC384A8CFC5D4D41B62B08248A738CF61B82172F(L_7, L_8, UnityEvent_1_AddListener_mEC384A8CFC5D4D41B62B08248A738CF61B82172F_RuntimeMethod_var);
 		// message.text = "";
@@ -12596,9 +12608,9 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void RealtimeIPAddressInputValidation_Validat
 	if (!s_Il2CppMethodInitialized)
 	{
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&IPAddress_t2F4486449B0D73FF2D3B36A9FE5E9C3F63116484_il2cpp_TypeInfo_var);
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&_stringLiteral98CF5B96F9D458220F80603937B8B3B8C7DD3408);
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&_stringLiteralDA016D7F4EBBB73F61F1E88CDD8E44FBF5AA4C67);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&_stringLiteral034D70796F07749E55EE8723EDF994CCBD80DE3F);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&_stringLiteralDA39A3EE5E6B4B0D3255BFEF95601890AFD80709);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&_stringLiteralE329898AB4F53C94E3D947FA579453B05112EA40);
 		s_Il2CppMethodInitialized = true;
 	}
 	String_t* V_0 = NULL;
@@ -12637,23 +12649,33 @@ IL_0025:
 		L_6 = IPAddress_TryParse_m082F2D09B53BD7A957418E2E7BE4C37AD8EE1AF0(L_5, (&V_1), NULL);
 		if (L_6)
 		{
-			goto IL_0040;
+			goto IL_0051;
 		}
 	}
 	{
-		// message.text = "Invalid IP Address format.";
+		// message.text = "Invalid IP Address";
 		Text_tD60B2346DAA6666BF0D822FF607F0B220C2B9E62* L_7 = __this->___message_5;
 		NullCheck(L_7);
-		VirtualActionInvoker1< String_t* >::Invoke(75 /* System.Void UnityEngine.UI.Text::set_text(System.String) */, L_7, _stringLiteralDA016D7F4EBBB73F61F1E88CDD8E44FBF5AA4C67);
+		VirtualActionInvoker1< String_t* >::Invoke(75 /* System.Void UnityEngine.UI.Text::set_text(System.String) */, L_7, _stringLiteral034D70796F07749E55EE8723EDF994CCBD80DE3F);
+		// message.color = errorColor; // ????????????
+		Text_tD60B2346DAA6666BF0D822FF607F0B220C2B9E62* L_8 = __this->___message_5;
+		Color_tD001788D726C3A7F1379BEED0260B9591F440C1F L_9 = __this->___errorColor_7;
+		NullCheck(L_8);
+		VirtualActionInvoker1< Color_tD001788D726C3A7F1379BEED0260B9591F440C1F >::Invoke(23 /* System.Void UnityEngine.UI.Graphic::set_color(UnityEngine.Color) */, L_8, L_9);
 		return;
 	}
 
-IL_0040:
+IL_0051:
 	{
-		// message.text = "Validation succeeded!"; // ????????????????
-		Text_tD60B2346DAA6666BF0D822FF607F0B220C2B9E62* L_8 = __this->___message_5;
-		NullCheck(L_8);
-		VirtualActionInvoker1< String_t* >::Invoke(75 /* System.Void UnityEngine.UI.Text::set_text(System.String) */, L_8, _stringLiteral98CF5B96F9D458220F80603937B8B3B8C7DD3408);
+		// message.text = "Valid IP Address";
+		Text_tD60B2346DAA6666BF0D822FF607F0B220C2B9E62* L_10 = __this->___message_5;
+		NullCheck(L_10);
+		VirtualActionInvoker1< String_t* >::Invoke(75 /* System.Void UnityEngine.UI.Text::set_text(System.String) */, L_10, _stringLiteralE329898AB4F53C94E3D947FA579453B05112EA40);
+		// message.color = successColor; // ???????????
+		Text_tD60B2346DAA6666BF0D822FF607F0B220C2B9E62* L_11 = __this->___message_5;
+		Color_tD001788D726C3A7F1379BEED0260B9591F440C1F L_12 = __this->___successColor_6;
+		NullCheck(L_11);
+		VirtualActionInvoker1< Color_tD001788D726C3A7F1379BEED0260B9591F440C1F >::Invoke(23 /* System.Void UnityEngine.UI.Graphic::set_color(UnityEngine.Color) */, L_11, L_12);
 		// }
 		return;
 	}
@@ -12662,12 +12684,20 @@ IL_0040:
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void RealtimeIPAddressInputValidation__ctor_m2F35E43E6E880668D92B5F2A3D8732E4279D0DC7 (RealtimeIPAddressInputValidation_t98A5D34D6AF58C06C056E7735D8C48A57161DD63* __this, const RuntimeMethod* method) 
 {
 	{
+		// public Color successColor = Color.blue; // ??????????
+		Color_tD001788D726C3A7F1379BEED0260B9591F440C1F L_0;
+		L_0 = Color_get_blue_mF04A26CE61D6DA3C0D8B1C4720901B1028C7AB87_inline(NULL);
+		__this->___successColor_6 = L_0;
+		// public Color errorColor = Color.red;    // ???????????
+		Color_tD001788D726C3A7F1379BEED0260B9591F440C1F L_1;
+		L_1 = Color_get_red_mA2E53E7173FDC97E68E335049AB0FAAEE43A844D_inline(NULL);
+		__this->___errorColor_7 = L_1;
 		MonoBehaviour__ctor_m592DB0105CA0BC97AA1C5F4AD27B12D68A3B7C1E(__this, NULL);
 		return;
 	}
 }
-// System.Void RealtimeIPAddressInputValidation::<Start>b__2_0(System.String)
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void RealtimeIPAddressInputValidation_U3CStartU3Eb__2_0_m6A2E200C58ED8E1DCD9D60F906D2119B8792B791 (RealtimeIPAddressInputValidation_t98A5D34D6AF58C06C056E7735D8C48A57161DD63* __this, String_t* ___0_U3Cp0U3E, const RuntimeMethod* method) 
+// System.Void RealtimeIPAddressInputValidation::<Start>b__4_0(System.String)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void RealtimeIPAddressInputValidation_U3CStartU3Eb__4_0_m9667BF8A370034C001CD326A36AB2FA8B7B63435 (RealtimeIPAddressInputValidation_t98A5D34D6AF58C06C056E7735D8C48A57161DD63* __this, String_t* ___0_U3Cp0U3E, const RuntimeMethod* method) 
 {
 	{
 		// ipInputField.onValueChanged.AddListener(delegate { ValidateIPAddress(); });
@@ -12691,9 +12721,9 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void RealtimeYotubeInputValidation_Start_m601
 	if (!s_Il2CppMethodInitialized)
 	{
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Debug_t8394C7EEAECA3689C2C9B9DE9C7166D73596276F_il2cpp_TypeInfo_var);
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&RealtimeYotubeInputValidation_U3CStartU3Eb__4_0_m67D4F09114CF4333A6A843FD5CEE376B6A4247F8_RuntimeMethod_var);
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&RealtimeYotubeInputValidation_U3CStartU3Eb__4_1_m4A4BD1454D2A287CD6EE441783C2032DEC756E8D_RuntimeMethod_var);
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&RealtimeYotubeInputValidation_U3CStartU3Eb__4_2_mFF698643946B53A59477629554C7181BA3FE446C_RuntimeMethod_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&RealtimeYotubeInputValidation_U3CStartU3Eb__6_0_mF62B3DA9C71CEC65E1CAB155C14F87081038543C_RuntimeMethod_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&RealtimeYotubeInputValidation_U3CStartU3Eb__6_1_m802753A1CB43A3FB3CA614FDE6DA47325F96FE7F_RuntimeMethod_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&RealtimeYotubeInputValidation_U3CStartU3Eb__6_2_m5DB12E9B4D69AA81955B8D4AEF64133036B0D23E_RuntimeMethod_var);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&UnityAction_1_t690494F0E492A2098660E28B8EB7D71B2C69BE1B_il2cpp_TypeInfo_var);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&UnityEvent_1_AddListener_mEC384A8CFC5D4D41B62B08248A738CF61B82172F_RuntimeMethod_var);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&_stringLiteral0458562336F91AC3F0C3FE71A886E75CE5C8F84A);
@@ -12797,7 +12827,7 @@ IL_00b1:
 		L_19 = InputField_get_onValueChanged_mA9ABE178FE3EB05AEF3DC20C11349427C59916AE_inline(L_18, NULL);
 		UnityAction_1_t690494F0E492A2098660E28B8EB7D71B2C69BE1B* L_20 = (UnityAction_1_t690494F0E492A2098660E28B8EB7D71B2C69BE1B*)il2cpp_codegen_object_new(UnityAction_1_t690494F0E492A2098660E28B8EB7D71B2C69BE1B_il2cpp_TypeInfo_var);
 		NullCheck(L_20);
-		UnityAction_1__ctor_mE6251CCFD943EB114960F556A546E2777B18AC71(L_20, __this, (intptr_t)((void*)RealtimeYotubeInputValidation_U3CStartU3Eb__4_0_m67D4F09114CF4333A6A843FD5CEE376B6A4247F8_RuntimeMethod_var), NULL);
+		UnityAction_1__ctor_mE6251CCFD943EB114960F556A546E2777B18AC71(L_20, __this, (intptr_t)((void*)RealtimeYotubeInputValidation_U3CStartU3Eb__6_0_mF62B3DA9C71CEC65E1CAB155C14F87081038543C_RuntimeMethod_var), NULL);
 		NullCheck(L_19);
 		UnityEvent_1_AddListener_mEC384A8CFC5D4D41B62B08248A738CF61B82172F(L_19, L_20, UnityEvent_1_AddListener_mEC384A8CFC5D4D41B62B08248A738CF61B82172F_RuntimeMethod_var);
 		// startField.onValueChanged.AddListener(delegate { ValidateAllFields(); });
@@ -12807,7 +12837,7 @@ IL_00b1:
 		L_22 = InputField_get_onValueChanged_mA9ABE178FE3EB05AEF3DC20C11349427C59916AE_inline(L_21, NULL);
 		UnityAction_1_t690494F0E492A2098660E28B8EB7D71B2C69BE1B* L_23 = (UnityAction_1_t690494F0E492A2098660E28B8EB7D71B2C69BE1B*)il2cpp_codegen_object_new(UnityAction_1_t690494F0E492A2098660E28B8EB7D71B2C69BE1B_il2cpp_TypeInfo_var);
 		NullCheck(L_23);
-		UnityAction_1__ctor_mE6251CCFD943EB114960F556A546E2777B18AC71(L_23, __this, (intptr_t)((void*)RealtimeYotubeInputValidation_U3CStartU3Eb__4_1_m4A4BD1454D2A287CD6EE441783C2032DEC756E8D_RuntimeMethod_var), NULL);
+		UnityAction_1__ctor_mE6251CCFD943EB114960F556A546E2777B18AC71(L_23, __this, (intptr_t)((void*)RealtimeYotubeInputValidation_U3CStartU3Eb__6_1_m802753A1CB43A3FB3CA614FDE6DA47325F96FE7F_RuntimeMethod_var), NULL);
 		NullCheck(L_22);
 		UnityEvent_1_AddListener_mEC384A8CFC5D4D41B62B08248A738CF61B82172F(L_22, L_23, UnityEvent_1_AddListener_mEC384A8CFC5D4D41B62B08248A738CF61B82172F_RuntimeMethod_var);
 		// endField.onValueChanged.AddListener(delegate { ValidateAllFields(); });
@@ -12817,7 +12847,7 @@ IL_00b1:
 		L_25 = InputField_get_onValueChanged_mA9ABE178FE3EB05AEF3DC20C11349427C59916AE_inline(L_24, NULL);
 		UnityAction_1_t690494F0E492A2098660E28B8EB7D71B2C69BE1B* L_26 = (UnityAction_1_t690494F0E492A2098660E28B8EB7D71B2C69BE1B*)il2cpp_codegen_object_new(UnityAction_1_t690494F0E492A2098660E28B8EB7D71B2C69BE1B_il2cpp_TypeInfo_var);
 		NullCheck(L_26);
-		UnityAction_1__ctor_mE6251CCFD943EB114960F556A546E2777B18AC71(L_26, __this, (intptr_t)((void*)RealtimeYotubeInputValidation_U3CStartU3Eb__4_2_mFF698643946B53A59477629554C7181BA3FE446C_RuntimeMethod_var), NULL);
+		UnityAction_1__ctor_mE6251CCFD943EB114960F556A546E2777B18AC71(L_26, __this, (intptr_t)((void*)RealtimeYotubeInputValidation_U3CStartU3Eb__6_2_m5DB12E9B4D69AA81955B8D4AEF64133036B0D23E_RuntimeMethod_var), NULL);
 		NullCheck(L_25);
 		UnityEvent_1_AddListener_mEC384A8CFC5D4D41B62B08248A738CF61B82172F(L_25, L_26, UnityEvent_1_AddListener_mEC384A8CFC5D4D41B62B08248A738CF61B82172F_RuntimeMethod_var);
 		// message.text = ""; // ??????????
@@ -12834,7 +12864,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void RealtimeYotubeInputValidation_ValidateAl
 	static bool s_Il2CppMethodInitialized;
 	if (!s_Il2CppMethodInitialized)
 	{
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&_stringLiteral98CF5B96F9D458220F80603937B8B3B8C7DD3408);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&_stringLiteralDE043F085656F24E93B77B358E302ACF18D7774D);
 		s_Il2CppMethodInitialized = true;
 	}
 	{
@@ -12868,10 +12898,15 @@ IL_0009:
 
 IL_0012:
 	{
-		// message.text = "Validation succeeded!";
+		// message.text = "Valid URL";
 		Text_tD60B2346DAA6666BF0D822FF607F0B220C2B9E62* L_2 = __this->___message_7;
 		NullCheck(L_2);
-		VirtualActionInvoker1< String_t* >::Invoke(75 /* System.Void UnityEngine.UI.Text::set_text(System.String) */, L_2, _stringLiteral98CF5B96F9D458220F80603937B8B3B8C7DD3408);
+		VirtualActionInvoker1< String_t* >::Invoke(75 /* System.Void UnityEngine.UI.Text::set_text(System.String) */, L_2, _stringLiteralDE043F085656F24E93B77B358E302ACF18D7774D);
+		// message.color = successColor; // ???????????
+		Text_tD60B2346DAA6666BF0D822FF607F0B220C2B9E62* L_3 = __this->___message_7;
+		Color_tD001788D726C3A7F1379BEED0260B9591F440C1F L_4 = __this->___successColor_8;
+		NullCheck(L_3);
+		VirtualActionInvoker1< Color_tD001788D726C3A7F1379BEED0260B9591F440C1F >::Invoke(23 /* System.Void UnityEngine.UI.Graphic::set_color(UnityEngine.Color) */, L_3, L_4);
 		// }
 		return;
 	}
@@ -12882,7 +12917,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool RealtimeYotubeInputValidation_ValidateUr
 	static bool s_Il2CppMethodInitialized;
 	if (!s_Il2CppMethodInitialized)
 	{
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&_stringLiteral1762D165CE19A713FAA520A6478C34E93205C693);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&_stringLiteralB545C7676525BC79FA789DFF8A1C1591E0E48148);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&_stringLiteralDA39A3EE5E6B4B0D3255BFEF95601890AFD80709);
 		s_Il2CppMethodInitialized = true;
 	}
@@ -12896,24 +12931,29 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool RealtimeYotubeInputValidation_ValidateUr
 		L_2 = RealtimeYotubeInputValidation_IsValidUrl_m9D267A12CF4CF7CEE04AEDB5975889A3D309A5F6(__this, L_1, NULL);
 		if (L_2)
 		{
-			goto IL_0025;
+			goto IL_0036;
 		}
 	}
 	{
-		// message.text = "Invalid URL.";
+		// message.text = "Invalid URL";
 		Text_tD60B2346DAA6666BF0D822FF607F0B220C2B9E62* L_3 = __this->___message_7;
 		NullCheck(L_3);
-		VirtualActionInvoker1< String_t* >::Invoke(75 /* System.Void UnityEngine.UI.Text::set_text(System.String) */, L_3, _stringLiteral1762D165CE19A713FAA520A6478C34E93205C693);
+		VirtualActionInvoker1< String_t* >::Invoke(75 /* System.Void UnityEngine.UI.Text::set_text(System.String) */, L_3, _stringLiteralB545C7676525BC79FA789DFF8A1C1591E0E48148);
+		// message.color = errorColor; // ????????????
+		Text_tD60B2346DAA6666BF0D822FF607F0B220C2B9E62* L_4 = __this->___message_7;
+		Color_tD001788D726C3A7F1379BEED0260B9591F440C1F L_5 = __this->___errorColor_9;
+		NullCheck(L_4);
+		VirtualActionInvoker1< Color_tD001788D726C3A7F1379BEED0260B9591F440C1F >::Invoke(23 /* System.Void UnityEngine.UI.Graphic::set_color(UnityEngine.Color) */, L_4, L_5);
 		// return false;
 		return (bool)0;
 	}
 
-IL_0025:
+IL_0036:
 	{
 		// message.text = "";
-		Text_tD60B2346DAA6666BF0D822FF607F0B220C2B9E62* L_4 = __this->___message_7;
-		NullCheck(L_4);
-		VirtualActionInvoker1< String_t* >::Invoke(75 /* System.Void UnityEngine.UI.Text::set_text(System.String) */, L_4, _stringLiteralDA39A3EE5E6B4B0D3255BFEF95601890AFD80709);
+		Text_tD60B2346DAA6666BF0D822FF607F0B220C2B9E62* L_6 = __this->___message_7;
+		NullCheck(L_6);
+		VirtualActionInvoker1< String_t* >::Invoke(75 /* System.Void UnityEngine.UI.Text::set_text(System.String) */, L_6, _stringLiteralDA39A3EE5E6B4B0D3255BFEF95601890AFD80709);
 		// return true;
 		return (bool)1;
 	}
@@ -12926,7 +12966,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool RealtimeYotubeInputValidation_ValidateSt
 	{
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&_stringLiteral031D4B471361DB110C98A0D1135113C84A7F93DE);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&_stringLiteral1B12EB18422D52BC2A268F0976C5E738A3F6B493);
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&_stringLiteral5EA38B3185DC473C0948351111A2F456162B9094);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&_stringLiteral85713AB22555EF79DDC5583E44271AED35A30867);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&_stringLiteralDA39A3EE5E6B4B0D3255BFEF95601890AFD80709);
 		s_Il2CppMethodInitialized = true;
 	}
@@ -12954,7 +12994,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool RealtimeYotubeInputValidation_ValidateSt
 		L_5 = RealtimeYotubeInputValidation_IsNaturalNumber_m793EC4FDC09984592690094FE82DDAE6BC7E35EF(__this, L_4, NULL);
 		if (L_5)
 		{
-			goto IL_0038;
+			goto IL_0049;
 		}
 	}
 
@@ -12964,70 +13004,85 @@ IL_0026:
 		Text_tD60B2346DAA6666BF0D822FF607F0B220C2B9E62* L_6 = __this->___message_7;
 		NullCheck(L_6);
 		VirtualActionInvoker1< String_t* >::Invoke(75 /* System.Void UnityEngine.UI.Text::set_text(System.String) */, L_6, _stringLiteral1B12EB18422D52BC2A268F0976C5E738A3F6B493);
+		// message.color = errorColor; // ????????????
+		Text_tD60B2346DAA6666BF0D822FF607F0B220C2B9E62* L_7 = __this->___message_7;
+		Color_tD001788D726C3A7F1379BEED0260B9591F440C1F L_8 = __this->___errorColor_9;
+		NullCheck(L_7);
+		VirtualActionInvoker1< Color_tD001788D726C3A7F1379BEED0260B9591F440C1F >::Invoke(23 /* System.Void UnityEngine.UI.Graphic::set_color(UnityEngine.Color) */, L_7, L_8);
 		// return false;
 		return (bool)0;
 	}
 
-IL_0038:
+IL_0049:
 	{
 		// int start = int.Parse(startField.text);
-		InputField_tABEA115F23FBD374EBE80D4FAC1D15BD6E37A140* L_7 = __this->___startField_5;
-		NullCheck(L_7);
-		String_t* L_8;
-		L_8 = InputField_get_text_m6E0796350FF559505E4DF17311803962699D6704_inline(L_7, NULL);
-		int32_t L_9;
-		L_9 = Int32_Parse_m273CA1A9C7717C99641291A95C543711C0202AF0(L_8, NULL);
-		V_0 = L_9;
+		InputField_tABEA115F23FBD374EBE80D4FAC1D15BD6E37A140* L_9 = __this->___startField_5;
+		NullCheck(L_9);
+		String_t* L_10;
+		L_10 = InputField_get_text_m6E0796350FF559505E4DF17311803962699D6704_inline(L_9, NULL);
+		int32_t L_11;
+		L_11 = Int32_Parse_m273CA1A9C7717C99641291A95C543711C0202AF0(L_10, NULL);
+		V_0 = L_11;
 		// int end = int.Parse(endField.text);
-		InputField_tABEA115F23FBD374EBE80D4FAC1D15BD6E37A140* L_10 = __this->___endField_6;
-		NullCheck(L_10);
-		String_t* L_11;
-		L_11 = InputField_get_text_m6E0796350FF559505E4DF17311803962699D6704_inline(L_10, NULL);
-		int32_t L_12;
-		L_12 = Int32_Parse_m273CA1A9C7717C99641291A95C543711C0202AF0(L_11, NULL);
-		V_1 = L_12;
+		InputField_tABEA115F23FBD374EBE80D4FAC1D15BD6E37A140* L_12 = __this->___endField_6;
+		NullCheck(L_12);
+		String_t* L_13;
+		L_13 = InputField_get_text_m6E0796350FF559505E4DF17311803962699D6704_inline(L_12, NULL);
+		int32_t L_14;
+		L_14 = Int32_Parse_m273CA1A9C7717C99641291A95C543711C0202AF0(L_13, NULL);
+		V_1 = L_14;
 		// if (end <= start)
-		int32_t L_13 = V_1;
-		int32_t L_14 = V_0;
-		if ((((int32_t)L_13) > ((int32_t)L_14)))
+		int32_t L_15 = V_1;
+		int32_t L_16 = V_0;
+		if ((((int32_t)L_15) > ((int32_t)L_16)))
 		{
-			goto IL_0070;
+			goto IL_0092;
 		}
 	}
 	{
 		// message.text = "End must be greater than Start.";
-		Text_tD60B2346DAA6666BF0D822FF607F0B220C2B9E62* L_15 = __this->___message_7;
-		NullCheck(L_15);
-		VirtualActionInvoker1< String_t* >::Invoke(75 /* System.Void UnityEngine.UI.Text::set_text(System.String) */, L_15, _stringLiteral031D4B471361DB110C98A0D1135113C84A7F93DE);
+		Text_tD60B2346DAA6666BF0D822FF607F0B220C2B9E62* L_17 = __this->___message_7;
+		NullCheck(L_17);
+		VirtualActionInvoker1< String_t* >::Invoke(75 /* System.Void UnityEngine.UI.Text::set_text(System.String) */, L_17, _stringLiteral031D4B471361DB110C98A0D1135113C84A7F93DE);
+		// message.color = errorColor; // ????????????
+		Text_tD60B2346DAA6666BF0D822FF607F0B220C2B9E62* L_18 = __this->___message_7;
+		Color_tD001788D726C3A7F1379BEED0260B9591F440C1F L_19 = __this->___errorColor_9;
+		NullCheck(L_18);
+		VirtualActionInvoker1< Color_tD001788D726C3A7F1379BEED0260B9591F440C1F >::Invoke(23 /* System.Void UnityEngine.UI.Graphic::set_color(UnityEngine.Color) */, L_18, L_19);
 		// return false;
 		return (bool)0;
 	}
 
-IL_0070:
+IL_0092:
 	{
-		// if (end - start > 30)
-		int32_t L_16 = V_1;
-		int32_t L_17 = V_0;
-		if ((((int32_t)((int32_t)il2cpp_codegen_subtract(L_16, L_17))) <= ((int32_t)((int32_t)30))))
+		// if (end - start > 20)
+		int32_t L_20 = V_1;
+		int32_t L_21 = V_0;
+		if ((((int32_t)((int32_t)il2cpp_codegen_subtract(L_20, L_21))) <= ((int32_t)((int32_t)20))))
 		{
-			goto IL_0089;
+			goto IL_00bc;
 		}
 	}
 	{
-		// message.text = "The difference between End and Start must be 30 seconds or less.";
-		Text_tD60B2346DAA6666BF0D822FF607F0B220C2B9E62* L_18 = __this->___message_7;
-		NullCheck(L_18);
-		VirtualActionInvoker1< String_t* >::Invoke(75 /* System.Void UnityEngine.UI.Text::set_text(System.String) */, L_18, _stringLiteral5EA38B3185DC473C0948351111A2F456162B9094);
+		// message.text = "The difference between End and Start must be 20 seconds or less.";
+		Text_tD60B2346DAA6666BF0D822FF607F0B220C2B9E62* L_22 = __this->___message_7;
+		NullCheck(L_22);
+		VirtualActionInvoker1< String_t* >::Invoke(75 /* System.Void UnityEngine.UI.Text::set_text(System.String) */, L_22, _stringLiteral85713AB22555EF79DDC5583E44271AED35A30867);
+		// message.color = errorColor; // ????????????
+		Text_tD60B2346DAA6666BF0D822FF607F0B220C2B9E62* L_23 = __this->___message_7;
+		Color_tD001788D726C3A7F1379BEED0260B9591F440C1F L_24 = __this->___errorColor_9;
+		NullCheck(L_23);
+		VirtualActionInvoker1< Color_tD001788D726C3A7F1379BEED0260B9591F440C1F >::Invoke(23 /* System.Void UnityEngine.UI.Graphic::set_color(UnityEngine.Color) */, L_23, L_24);
 		// return false;
 		return (bool)0;
 	}
 
-IL_0089:
+IL_00bc:
 	{
 		// message.text = "";
-		Text_tD60B2346DAA6666BF0D822FF607F0B220C2B9E62* L_19 = __this->___message_7;
-		NullCheck(L_19);
-		VirtualActionInvoker1< String_t* >::Invoke(75 /* System.Void UnityEngine.UI.Text::set_text(System.String) */, L_19, _stringLiteralDA39A3EE5E6B4B0D3255BFEF95601890AFD80709);
+		Text_tD60B2346DAA6666BF0D822FF607F0B220C2B9E62* L_25 = __this->___message_7;
+		NullCheck(L_25);
+		VirtualActionInvoker1< String_t* >::Invoke(75 /* System.Void UnityEngine.UI.Text::set_text(System.String) */, L_25, _stringLiteralDA39A3EE5E6B4B0D3255BFEF95601890AFD80709);
 		// return true;
 		return (bool)1;
 	}
@@ -13118,12 +13173,20 @@ IL_0012:
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void RealtimeYotubeInputValidation__ctor_m5B1EDB61508826EDE118C0D586ED0E6760108DAC (RealtimeYotubeInputValidation_tFE3285267FF1F95BB514567E6F801572BCF01376* __this, const RuntimeMethod* method) 
 {
 	{
+		// public Color successColor = Color.blue; // ??????????
+		Color_tD001788D726C3A7F1379BEED0260B9591F440C1F L_0;
+		L_0 = Color_get_blue_mF04A26CE61D6DA3C0D8B1C4720901B1028C7AB87_inline(NULL);
+		__this->___successColor_8 = L_0;
+		// public Color errorColor = Color.red;    // ???????????
+		Color_tD001788D726C3A7F1379BEED0260B9591F440C1F L_1;
+		L_1 = Color_get_red_mA2E53E7173FDC97E68E335049AB0FAAEE43A844D_inline(NULL);
+		__this->___errorColor_9 = L_1;
 		MonoBehaviour__ctor_m592DB0105CA0BC97AA1C5F4AD27B12D68A3B7C1E(__this, NULL);
 		return;
 	}
 }
-// System.Void RealtimeYotubeInputValidation::<Start>b__4_0(System.String)
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void RealtimeYotubeInputValidation_U3CStartU3Eb__4_0_m67D4F09114CF4333A6A843FD5CEE376B6A4247F8 (RealtimeYotubeInputValidation_tFE3285267FF1F95BB514567E6F801572BCF01376* __this, String_t* ___0_U3Cp0U3E, const RuntimeMethod* method) 
+// System.Void RealtimeYotubeInputValidation::<Start>b__6_0(System.String)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void RealtimeYotubeInputValidation_U3CStartU3Eb__6_0_mF62B3DA9C71CEC65E1CAB155C14F87081038543C (RealtimeYotubeInputValidation_tFE3285267FF1F95BB514567E6F801572BCF01376* __this, String_t* ___0_U3Cp0U3E, const RuntimeMethod* method) 
 {
 	{
 		// urlField.onValueChanged.AddListener(delegate { ValidateAllFields(); });
@@ -13132,8 +13195,8 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void RealtimeYotubeInputValidation_U3CStartU3
 		return;
 	}
 }
-// System.Void RealtimeYotubeInputValidation::<Start>b__4_1(System.String)
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void RealtimeYotubeInputValidation_U3CStartU3Eb__4_1_m4A4BD1454D2A287CD6EE441783C2032DEC756E8D (RealtimeYotubeInputValidation_tFE3285267FF1F95BB514567E6F801572BCF01376* __this, String_t* ___0_U3Cp0U3E, const RuntimeMethod* method) 
+// System.Void RealtimeYotubeInputValidation::<Start>b__6_1(System.String)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void RealtimeYotubeInputValidation_U3CStartU3Eb__6_1_m802753A1CB43A3FB3CA614FDE6DA47325F96FE7F (RealtimeYotubeInputValidation_tFE3285267FF1F95BB514567E6F801572BCF01376* __this, String_t* ___0_U3Cp0U3E, const RuntimeMethod* method) 
 {
 	{
 		// startField.onValueChanged.AddListener(delegate { ValidateAllFields(); });
@@ -13142,8 +13205,8 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void RealtimeYotubeInputValidation_U3CStartU3
 		return;
 	}
 }
-// System.Void RealtimeYotubeInputValidation::<Start>b__4_2(System.String)
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void RealtimeYotubeInputValidation_U3CStartU3Eb__4_2_mFF698643946B53A59477629554C7181BA3FE446C (RealtimeYotubeInputValidation_tFE3285267FF1F95BB514567E6F801572BCF01376* __this, String_t* ___0_U3Cp0U3E, const RuntimeMethod* method) 
+// System.Void RealtimeYotubeInputValidation::<Start>b__6_2(System.String)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void RealtimeYotubeInputValidation_U3CStartU3Eb__6_2_m5DB12E9B4D69AA81955B8D4AEF64133036B0D23E (RealtimeYotubeInputValidation_tFE3285267FF1F95BB514567E6F801572BCF01376* __this, String_t* ___0_U3Cp0U3E, const RuntimeMethod* method) 
 {
 	{
 		// endField.onValueChanged.AddListener(delegate { ValidateAllFields(); });
@@ -13403,7 +13466,41 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void TabController__ctor_m22D32FAA895EB9C325C
 // System.Void VideoGalleryManager::Start()
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void VideoGalleryManager_Start_mC187DEEE36B23C9D34C3DC35A72FEA34D8D10A61 (VideoGalleryManager_t973965DF4E1E72BF84339B93B79B3AAB50D2152F* __this, const RuntimeMethod* method) 
 {
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
 	{
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&GameObject_AddComponent_TisVideoPlayer_t48EA4A8117B822BC59590150DED9AD46C62F65D3_m5E711BC1432102F3C65C301B965F9B5FDF4A8F1D_RuntimeMethod_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
+		s_Il2CppMethodInitialized = true;
+	}
+	{
+		// if (videoPlayer == null)
+		VideoPlayer_t48EA4A8117B822BC59590150DED9AD46C62F65D3* L_0 = __this->___videoPlayer_7;
+		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
+		bool L_1;
+		L_1 = Object_op_Equality_mB6120F782D83091EF56A198FCEBCF066DB4A9605(L_0, (Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C*)NULL, NULL);
+		if (!L_1)
+		{
+			goto IL_001f;
+		}
+	}
+	{
+		// videoPlayer = gameObject.AddComponent<VideoPlayer>();
+		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_2;
+		L_2 = Component_get_gameObject_m57AEFBB14DB39EC476F740BA000E170355DE691B(__this, NULL);
+		NullCheck(L_2);
+		VideoPlayer_t48EA4A8117B822BC59590150DED9AD46C62F65D3* L_3;
+		L_3 = GameObject_AddComponent_TisVideoPlayer_t48EA4A8117B822BC59590150DED9AD46C62F65D3_m5E711BC1432102F3C65C301B965F9B5FDF4A8F1D(L_2, GameObject_AddComponent_TisVideoPlayer_t48EA4A8117B822BC59590150DED9AD46C62F65D3_m5E711BC1432102F3C65C301B965F9B5FDF4A8F1D_RuntimeMethod_var);
+		__this->___videoPlayer_7 = L_3;
+		Il2CppCodeGenWriteBarrier((void**)(&__this->___videoPlayer_7), (void*)L_3);
+	}
+
+IL_001f:
+	{
+		// videoPlayer.playOnAwake = false;
+		VideoPlayer_t48EA4A8117B822BC59590150DED9AD46C62F65D3* L_4 = __this->___videoPlayer_7;
+		NullCheck(L_4);
+		VideoPlayer_set_playOnAwake_m658E574E0109125AD1754D61FE81DD7BB02411A0(L_4, (bool)0, NULL);
 		// }
 		return;
 	}
@@ -13415,7 +13512,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void VideoGalleryManager_OpenGalleryForVideo_
 	if (!s_Il2CppMethodInitialized)
 	{
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&MediaPickCallback_tC207F6F3EEE18F64B03E23D5C9FA8C79517A5EB6_il2cpp_TypeInfo_var);
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&VideoGalleryManager_U3COpenGalleryForVideoU3Eb__2_0_mF4ED9FB6D846661C30F0887DF829247A8017EDC5_RuntimeMethod_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&VideoGalleryManager_U3COpenGalleryForVideoU3Eb__5_0_mC04A2C6F287E8C73A68401E1179D95548DEE2DCF_RuntimeMethod_var);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&_stringLiteral12A5EDBB275DBAE4E3C69E5A33508523CAAEEA26);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&_stringLiteral88D3AF1882A99EF42ED88963253B1967EFDCD6AE);
 		s_Il2CppMethodInitialized = true;
@@ -13425,21 +13522,86 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void VideoGalleryManager_OpenGalleryForVideo_
 		// {
 		//     if (path != null)
 		//     {
-		//         PlayerPrefs.SetString("selectedVideoPath", path);
-		//         resultText.text = "Video is Selected";
-		// 
-		//         // PlayVideo(path);
+		//         // ?????????????????
+		//         CheckVideoLength(path);
 		//     }
 		//     else
 		//     {
 		//         resultText.text = "Video selection canceled";
+		//         resultText.color = errorColor; // ????????????
 		//     }
 		// }, "Select a video", "video/*");
 		MediaPickCallback_tC207F6F3EEE18F64B03E23D5C9FA8C79517A5EB6* L_0 = (MediaPickCallback_tC207F6F3EEE18F64B03E23D5C9FA8C79517A5EB6*)il2cpp_codegen_object_new(MediaPickCallback_tC207F6F3EEE18F64B03E23D5C9FA8C79517A5EB6_il2cpp_TypeInfo_var);
 		NullCheck(L_0);
-		MediaPickCallback__ctor_m6772B2B8FB0ED8FC367118012A390E247874EA4D(L_0, __this, (intptr_t)((void*)VideoGalleryManager_U3COpenGalleryForVideoU3Eb__2_0_mF4ED9FB6D846661C30F0887DF829247A8017EDC5_RuntimeMethod_var), NULL);
+		MediaPickCallback__ctor_m6772B2B8FB0ED8FC367118012A390E247874EA4D(L_0, __this, (intptr_t)((void*)VideoGalleryManager_U3COpenGalleryForVideoU3Eb__5_0_mC04A2C6F287E8C73A68401E1179D95548DEE2DCF_RuntimeMethod_var), NULL);
 		int32_t L_1;
 		L_1 = NativeGallery_GetVideoFromGallery_mCB867EFB787DDF037FA7CE37116297E4D6BE6C93(L_0, _stringLiteral12A5EDBB275DBAE4E3C69E5A33508523CAAEEA26, _stringLiteral88D3AF1882A99EF42ED88963253B1967EFDCD6AE, NULL);
+		// }
+		return;
+	}
+}
+// System.Void VideoGalleryManager::CheckVideoLength(System.String)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void VideoGalleryManager_CheckVideoLength_m49D9B9F4FB6C436855D732730E669B173C340DAA (VideoGalleryManager_t973965DF4E1E72BF84339B93B79B3AAB50D2152F* __this, String_t* ___0_path, const RuntimeMethod* method) 
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&EventHandler_tE1FA51515FC895E3A02E317912FBDCDCF390A411_il2cpp_TypeInfo_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&U3CU3Ec__DisplayClass6_0_U3CCheckVideoLengthU3Eb__0_m50160E368B4885A1A3609EB3308EB43A14FC104C_RuntimeMethod_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&U3CU3Ec__DisplayClass6_0_tBAC8BE1A0EF6A090442DCE40B6F015A469D46BB6_il2cpp_TypeInfo_var);
+		s_Il2CppMethodInitialized = true;
+	}
+	U3CU3Ec__DisplayClass6_0_tBAC8BE1A0EF6A090442DCE40B6F015A469D46BB6* V_0 = NULL;
+	{
+		U3CU3Ec__DisplayClass6_0_tBAC8BE1A0EF6A090442DCE40B6F015A469D46BB6* L_0 = (U3CU3Ec__DisplayClass6_0_tBAC8BE1A0EF6A090442DCE40B6F015A469D46BB6*)il2cpp_codegen_object_new(U3CU3Ec__DisplayClass6_0_tBAC8BE1A0EF6A090442DCE40B6F015A469D46BB6_il2cpp_TypeInfo_var);
+		NullCheck(L_0);
+		U3CU3Ec__DisplayClass6_0__ctor_m71BF6D1E21E80F28A2ABA2CD88F854FA36E255A5(L_0, NULL);
+		V_0 = L_0;
+		U3CU3Ec__DisplayClass6_0_tBAC8BE1A0EF6A090442DCE40B6F015A469D46BB6* L_1 = V_0;
+		NullCheck(L_1);
+		L_1->___U3CU3E4__this_0 = __this;
+		Il2CppCodeGenWriteBarrier((void**)(&L_1->___U3CU3E4__this_0), (void*)__this);
+		U3CU3Ec__DisplayClass6_0_tBAC8BE1A0EF6A090442DCE40B6F015A469D46BB6* L_2 = V_0;
+		String_t* L_3 = ___0_path;
+		NullCheck(L_2);
+		L_2->___path_1 = L_3;
+		Il2CppCodeGenWriteBarrier((void**)(&L_2->___path_1), (void*)L_3);
+		// videoPlayer.url = path;
+		VideoPlayer_t48EA4A8117B822BC59590150DED9AD46C62F65D3* L_4 = __this->___videoPlayer_7;
+		U3CU3Ec__DisplayClass6_0_tBAC8BE1A0EF6A090442DCE40B6F015A469D46BB6* L_5 = V_0;
+		NullCheck(L_5);
+		String_t* L_6 = L_5->___path_1;
+		NullCheck(L_4);
+		VideoPlayer_set_url_m02AC2BB229F9441257D62F9ACFD96D09F51B4F14(L_4, L_6, NULL);
+		// videoPlayer.Prepare();
+		VideoPlayer_t48EA4A8117B822BC59590150DED9AD46C62F65D3* L_7 = __this->___videoPlayer_7;
+		NullCheck(L_7);
+		VideoPlayer_Prepare_mC0EF4CC2E5A6B7C04F9F810DD9406A6146BEE6EA(L_7, NULL);
+		// videoPlayer.prepareCompleted += (source) =>
+		// {
+		//     double videoLength = videoPlayer.length;  // ????????
+		// 
+		//     //20??????????????????
+		//     if (videoLength > 20.0)
+		//     {
+		//         resultText.text = "The video used must be less than 20 seconds long";
+		//         resultText.color = errorColor; // ????????????
+		//         PlayerPrefs.DeleteKey("selectedVideoPath");  // ??????????
+		//     }
+		//     else
+		//     {
+		//         PlayerPrefs.SetString("selectedVideoPath", path);
+		//         resultText.text = "Video selected correctly";
+		//         resultText.color = successColor; // ???????????
+		//     }
+		// };
+		VideoPlayer_t48EA4A8117B822BC59590150DED9AD46C62F65D3* L_8 = __this->___videoPlayer_7;
+		U3CU3Ec__DisplayClass6_0_tBAC8BE1A0EF6A090442DCE40B6F015A469D46BB6* L_9 = V_0;
+		EventHandler_tE1FA51515FC895E3A02E317912FBDCDCF390A411* L_10 = (EventHandler_tE1FA51515FC895E3A02E317912FBDCDCF390A411*)il2cpp_codegen_object_new(EventHandler_tE1FA51515FC895E3A02E317912FBDCDCF390A411_il2cpp_TypeInfo_var);
+		NullCheck(L_10);
+		EventHandler__ctor_mFCF62E0BB29DD3D2B2F1306BD8657E374CF60903(L_10, L_9, (intptr_t)((void*)U3CU3Ec__DisplayClass6_0_U3CCheckVideoLengthU3Eb__0_m50160E368B4885A1A3609EB3308EB43A14FC104C_RuntimeMethod_var), NULL);
+		NullCheck(L_8);
+		VideoPlayer_add_prepareCompleted_m4DB8843A3E3E3CFF7E361E70EA51983AF457183B(L_8, L_10, NULL);
 		// }
 		return;
 	}
@@ -13467,19 +13629,25 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool VideoGalleryManager_IsVideoSelected_m5CF
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void VideoGalleryManager__ctor_m272D1468AC81998E995B5B0C39121F79666B805E (VideoGalleryManager_t973965DF4E1E72BF84339B93B79B3AAB50D2152F* __this, const RuntimeMethod* method) 
 {
 	{
+		// public Color successColor = Color.blue; // ??????????
+		Color_tD001788D726C3A7F1379BEED0260B9591F440C1F L_0;
+		L_0 = Color_get_blue_mF04A26CE61D6DA3C0D8B1C4720901B1028C7AB87_inline(NULL);
+		__this->___successColor_5 = L_0;
+		// public Color errorColor = Color.red;    // ???????????
+		Color_tD001788D726C3A7F1379BEED0260B9591F440C1F L_1;
+		L_1 = Color_get_red_mA2E53E7173FDC97E68E335049AB0FAAEE43A844D_inline(NULL);
+		__this->___errorColor_6 = L_1;
 		MonoBehaviour__ctor_m592DB0105CA0BC97AA1C5F4AD27B12D68A3B7C1E(__this, NULL);
 		return;
 	}
 }
-// System.Void VideoGalleryManager::<OpenGalleryForVideo>b__2_0(System.String)
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void VideoGalleryManager_U3COpenGalleryForVideoU3Eb__2_0_mF4ED9FB6D846661C30F0887DF829247A8017EDC5 (VideoGalleryManager_t973965DF4E1E72BF84339B93B79B3AAB50D2152F* __this, String_t* ___0_path, const RuntimeMethod* method) 
+// System.Void VideoGalleryManager::<OpenGalleryForVideo>b__5_0(System.String)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void VideoGalleryManager_U3COpenGalleryForVideoU3Eb__5_0_mC04A2C6F287E8C73A68401E1179D95548DEE2DCF (VideoGalleryManager_t973965DF4E1E72BF84339B93B79B3AAB50D2152F* __this, String_t* ___0_path, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
 	if (!s_Il2CppMethodInitialized)
 	{
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&_stringLiteral2D2E104274CAA8EC9AD633CBBD41E3B7C4C43A30);
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&_stringLiteralB5DECC8E1A8147A335D4B3BF6E1061CDAC9397DA);
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&_stringLiteralE2211ABCC6510BBB4BEF4BBEEED559A0A44980EE);
 		s_Il2CppMethodInitialized = true;
 	}
 	{
@@ -13487,27 +13655,114 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void VideoGalleryManager_U3COpenGalleryForVid
 		String_t* L_0 = ___0_path;
 		if (!L_0)
 		{
-			goto IL_001f;
+			goto IL_000b;
 		}
 	}
 	{
-		// PlayerPrefs.SetString("selectedVideoPath", path);
+		// CheckVideoLength(path);
 		String_t* L_1 = ___0_path;
-		PlayerPrefs_SetString_mF4F457C81BB75F0213547C6287BA36E15E1F0256(_stringLiteralE2211ABCC6510BBB4BEF4BBEEED559A0A44980EE, L_1, NULL);
-		// resultText.text = "Video is Selected";
-		Text_tD60B2346DAA6666BF0D822FF607F0B220C2B9E62* L_2 = __this->___resultText_4;
-		NullCheck(L_2);
-		VirtualActionInvoker1< String_t* >::Invoke(75 /* System.Void UnityEngine.UI.Text::set_text(System.String) */, L_2, _stringLiteralB5DECC8E1A8147A335D4B3BF6E1061CDAC9397DA);
+		VideoGalleryManager_CheckVideoLength_m49D9B9F4FB6C436855D732730E669B173C340DAA(__this, L_1, NULL);
 		return;
 	}
 
-IL_001f:
+IL_000b:
 	{
 		// resultText.text = "Video selection canceled";
+		Text_tD60B2346DAA6666BF0D822FF607F0B220C2B9E62* L_2 = __this->___resultText_4;
+		NullCheck(L_2);
+		VirtualActionInvoker1< String_t* >::Invoke(75 /* System.Void UnityEngine.UI.Text::set_text(System.String) */, L_2, _stringLiteral2D2E104274CAA8EC9AD633CBBD41E3B7C4C43A30);
+		// resultText.color = errorColor; // ????????????
 		Text_tD60B2346DAA6666BF0D822FF607F0B220C2B9E62* L_3 = __this->___resultText_4;
+		Color_tD001788D726C3A7F1379BEED0260B9591F440C1F L_4 = __this->___errorColor_6;
 		NullCheck(L_3);
-		VirtualActionInvoker1< String_t* >::Invoke(75 /* System.Void UnityEngine.UI.Text::set_text(System.String) */, L_3, _stringLiteral2D2E104274CAA8EC9AD633CBBD41E3B7C4C43A30);
+		VirtualActionInvoker1< Color_tD001788D726C3A7F1379BEED0260B9591F440C1F >::Invoke(23 /* System.Void UnityEngine.UI.Graphic::set_color(UnityEngine.Color) */, L_3, L_4);
 		// }, "Select a video", "video/*");
+		return;
+	}
+}
+#ifdef __clang__
+#pragma clang diagnostic pop
+#endif
+#ifdef __clang__
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Winvalid-offsetof"
+#pragma clang diagnostic ignored "-Wunused-variable"
+#endif
+// System.Void VideoGalleryManager/<>c__DisplayClass6_0::.ctor()
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CU3Ec__DisplayClass6_0__ctor_m71BF6D1E21E80F28A2ABA2CD88F854FA36E255A5 (U3CU3Ec__DisplayClass6_0_tBAC8BE1A0EF6A090442DCE40B6F015A469D46BB6* __this, const RuntimeMethod* method) 
+{
+	{
+		Object__ctor_mE837C6B9FA8C6D5D109F4B2EC885D79919AC0EA2(__this, NULL);
+		return;
+	}
+}
+// System.Void VideoGalleryManager/<>c__DisplayClass6_0::<CheckVideoLength>b__0(UnityEngine.Video.VideoPlayer)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CU3Ec__DisplayClass6_0_U3CCheckVideoLengthU3Eb__0_m50160E368B4885A1A3609EB3308EB43A14FC104C (U3CU3Ec__DisplayClass6_0_tBAC8BE1A0EF6A090442DCE40B6F015A469D46BB6* __this, VideoPlayer_t48EA4A8117B822BC59590150DED9AD46C62F65D3* ___0_source, const RuntimeMethod* method) 
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&_stringLiteral73A18026152377667C34DC981A3B5B4D9BEC97C0);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&_stringLiteralE2211ABCC6510BBB4BEF4BBEEED559A0A44980EE);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&_stringLiteralF6F9DFA907E83637178AF5CC5DA43963F10CFDB5);
+		s_Il2CppMethodInitialized = true;
+	}
+	{
+		// double videoLength = videoPlayer.length;  // ????????
+		VideoGalleryManager_t973965DF4E1E72BF84339B93B79B3AAB50D2152F* L_0 = __this->___U3CU3E4__this_0;
+		NullCheck(L_0);
+		VideoPlayer_t48EA4A8117B822BC59590150DED9AD46C62F65D3* L_1 = L_0->___videoPlayer_7;
+		NullCheck(L_1);
+		double L_2;
+		L_2 = VideoPlayer_get_length_mA0D8C06DB63C48CF5100068387CF0AFC2A0F093E(L_1, NULL);
+		// if (videoLength > 20.0)
+		if ((!(((double)L_2) > ((double)(20.0)))))
+		{
+			goto IL_0056;
+		}
+	}
+	{
+		// resultText.text = "The video used must be less than 20 seconds long";
+		VideoGalleryManager_t973965DF4E1E72BF84339B93B79B3AAB50D2152F* L_3 = __this->___U3CU3E4__this_0;
+		NullCheck(L_3);
+		Text_tD60B2346DAA6666BF0D822FF607F0B220C2B9E62* L_4 = L_3->___resultText_4;
+		NullCheck(L_4);
+		VirtualActionInvoker1< String_t* >::Invoke(75 /* System.Void UnityEngine.UI.Text::set_text(System.String) */, L_4, _stringLiteral73A18026152377667C34DC981A3B5B4D9BEC97C0);
+		// resultText.color = errorColor; // ????????????
+		VideoGalleryManager_t973965DF4E1E72BF84339B93B79B3AAB50D2152F* L_5 = __this->___U3CU3E4__this_0;
+		NullCheck(L_5);
+		Text_tD60B2346DAA6666BF0D822FF607F0B220C2B9E62* L_6 = L_5->___resultText_4;
+		VideoGalleryManager_t973965DF4E1E72BF84339B93B79B3AAB50D2152F* L_7 = __this->___U3CU3E4__this_0;
+		NullCheck(L_7);
+		Color_tD001788D726C3A7F1379BEED0260B9591F440C1F L_8 = L_7->___errorColor_6;
+		NullCheck(L_6);
+		VirtualActionInvoker1< Color_tD001788D726C3A7F1379BEED0260B9591F440C1F >::Invoke(23 /* System.Void UnityEngine.UI.Graphic::set_color(UnityEngine.Color) */, L_6, L_8);
+		// PlayerPrefs.DeleteKey("selectedVideoPath");  // ??????????
+		PlayerPrefs_DeleteKey_mF3A7857B52DCEF4139843CD28716788624C2AD30(_stringLiteralE2211ABCC6510BBB4BEF4BBEEED559A0A44980EE, NULL);
+		return;
+	}
+
+IL_0056:
+	{
+		// PlayerPrefs.SetString("selectedVideoPath", path);
+		String_t* L_9 = __this->___path_1;
+		PlayerPrefs_SetString_mF4F457C81BB75F0213547C6287BA36E15E1F0256(_stringLiteralE2211ABCC6510BBB4BEF4BBEEED559A0A44980EE, L_9, NULL);
+		// resultText.text = "Video selected correctly";
+		VideoGalleryManager_t973965DF4E1E72BF84339B93B79B3AAB50D2152F* L_10 = __this->___U3CU3E4__this_0;
+		NullCheck(L_10);
+		Text_tD60B2346DAA6666BF0D822FF607F0B220C2B9E62* L_11 = L_10->___resultText_4;
+		NullCheck(L_11);
+		VirtualActionInvoker1< String_t* >::Invoke(75 /* System.Void UnityEngine.UI.Text::set_text(System.String) */, L_11, _stringLiteralF6F9DFA907E83637178AF5CC5DA43963F10CFDB5);
+		// resultText.color = successColor; // ???????????
+		VideoGalleryManager_t973965DF4E1E72BF84339B93B79B3AAB50D2152F* L_12 = __this->___U3CU3E4__this_0;
+		NullCheck(L_12);
+		Text_tD60B2346DAA6666BF0D822FF607F0B220C2B9E62* L_13 = L_12->___resultText_4;
+		VideoGalleryManager_t973965DF4E1E72BF84339B93B79B3AAB50D2152F* L_14 = __this->___U3CU3E4__this_0;
+		NullCheck(L_14);
+		Color_tD001788D726C3A7F1379BEED0260B9591F440C1F L_15 = L_14->___successColor_5;
+		NullCheck(L_13);
+		VirtualActionInvoker1< Color_tD001788D726C3A7F1379BEED0260B9591F440C1F >::Invoke(23 /* System.Void UnityEngine.UI.Graphic::set_color(UnityEngine.Color) */, L_13, L_15);
+		// };
 		return;
 	}
 }
@@ -27429,14 +27684,6 @@ IL_0021:
 		return L_10;
 	}
 }
-IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR DropdownEvent_t8A008B010A742724CFC93576D6976E474BB13059* Dropdown_get_onValueChanged_mAC49CE9A83E258FEC024662127057567275CAC12_inline (Dropdown_t54C0BDC1441E058BE37E796F68886671C270EF89* __this, const RuntimeMethod* method) 
-{
-	{
-		// public DropdownEvent onValueChanged { get { return m_OnValueChanged; } set { m_OnValueChanged = value; } }
-		DropdownEvent_t8A008B010A742724CFC93576D6976E474BB13059* L_0 = __this->___m_OnValueChanged_27;
-		return L_0;
-	}
-}
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR ButtonClickedEvent_t8EA72E90B3BD1392FB3B3EF167D5121C23569E4C* Button_get_onClick_m701712A7F7F000CC80D517C4510697E15722C35C_inline (Button_t6786514A57F7AFDEE5431112FEA0CAB24F5AE098* __this, const RuntimeMethod* method) 
 {
 	{
@@ -27818,6 +28065,42 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR String_t* InputField_get_text_m6E
 		// return m_Text;
 		String_t* L_0 = __this->___m_Text_40;
 		return L_0;
+	}
+}
+IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR Color_tD001788D726C3A7F1379BEED0260B9591F440C1F Color_get_blue_mF04A26CE61D6DA3C0D8B1C4720901B1028C7AB87_inline (const RuntimeMethod* method) 
+{
+	Color_tD001788D726C3A7F1379BEED0260B9591F440C1F V_0;
+	memset((&V_0), 0, sizeof(V_0));
+	{
+		Color_tD001788D726C3A7F1379BEED0260B9591F440C1F L_0;
+		memset((&L_0), 0, sizeof(L_0));
+		Color__ctor_m3786F0D6E510D9CFA544523A955870BD2A514C8C_inline((&L_0), (0.0f), (0.0f), (1.0f), (1.0f), /*hidden argument*/NULL);
+		V_0 = L_0;
+		goto IL_001d;
+	}
+
+IL_001d:
+	{
+		Color_tD001788D726C3A7F1379BEED0260B9591F440C1F L_1 = V_0;
+		return L_1;
+	}
+}
+IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR Color_tD001788D726C3A7F1379BEED0260B9591F440C1F Color_get_red_mA2E53E7173FDC97E68E335049AB0FAAEE43A844D_inline (const RuntimeMethod* method) 
+{
+	Color_tD001788D726C3A7F1379BEED0260B9591F440C1F V_0;
+	memset((&V_0), 0, sizeof(V_0));
+	{
+		Color_tD001788D726C3A7F1379BEED0260B9591F440C1F L_0;
+		memset((&L_0), 0, sizeof(L_0));
+		Color__ctor_m3786F0D6E510D9CFA544523A955870BD2A514C8C_inline((&L_0), (1.0f), (0.0f), (0.0f), (1.0f), /*hidden argument*/NULL);
+		V_0 = L_0;
+		goto IL_001d;
+	}
+
+IL_001d:
+	{
+		Color_tD001788D726C3A7F1379BEED0260B9591F440C1F L_1 = V_0;
+		return L_1;
 	}
 }
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR OnChangeEvent_tE4829F88300B0E0E0D1B78B453AF25FC1AA55E2F* InputField_get_onValueChanged_mA9ABE178FE3EB05AEF3DC20C11349427C59916AE_inline (InputField_tABEA115F23FBD374EBE80D4FAC1D15BD6E37A140* __this, const RuntimeMethod* method) 
