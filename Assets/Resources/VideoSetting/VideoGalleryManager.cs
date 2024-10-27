@@ -4,24 +4,22 @@ using UnityEngine.Video;
 
 public class VideoGalleryManager : MonoBehaviour
 {
-    // public RawImage rawImage;  // Videoを表示するRawImage
-    // public VideoPlayer videoPlayer;  // VideoPlayerコンポーネント
-    public Text resultText;  // 結果を表示するText（オプション）
-    // private RenderTexture renderTexture;
+    public Text resultText;  // 結果を表示するText
+    public Color successColor = Color.blue; // 成功時の文字色（青）
+    public Color errorColor = Color.red;    // エラー時の文字色（赤）
+    public VideoPlayer videoPlayer;  // 動画の長さを取得するために使用するVideoPlayer
 
     private void Start()
     {
-        // // RenderTextureを作成し、VideoPlayerに設定する
-        // renderTexture = new RenderTexture(1920, 1080, 0); // 解像度は適宜設定してください
-        // if (videoPlayer != null)
-        // {
-        //     videoPlayer.targetTexture = renderTexture;
-        //     if (rawImage != null)
-        //     {
-        //         rawImage.texture = renderTexture;
-        //         rawImage.gameObject.SetActive(false); // 初期状態では非表示
-        //     }
-        // }
+        // VideoPlayerのターゲットテクスチャは今回は使用しません
+        // 動画の長さを確認するために使うだけです
+        if (videoPlayer == null)
+        {
+            videoPlayer = gameObject.AddComponent<VideoPlayer>();
+        }
+        
+        // 動画の自動再生を無効にする
+        videoPlayer.playOnAwake = false;
     }
 
     public void OpenGalleryForVideo()
@@ -30,50 +28,42 @@ public class VideoGalleryManager : MonoBehaviour
         {
             if (path != null)
             {
-                PlayerPrefs.SetString("selectedVideoPath", path);
-                resultText.text = "Video is Selected";
-                
-                // PlayVideo(path);
+                // 動画の長さをチェックする処理を開始
+                CheckVideoLength(path);
             }
             else
             {
                 resultText.text = "Video selection canceled";
+                resultText.color = errorColor; // エラーメッセージを赤色に
             }
         }, "Select a video", "video/*");
     }
 
-    // private void PlayVideo(string path)
-    // {
-    //     if (videoPlayer != null)
-    //     {
-    //         videoPlayer.url = path;
-    //         videoPlayer.Prepare();  // Prepareメソッドで動画の準備を開始
+    private void CheckVideoLength(string path)
+    {
+        // VideoPlayerを使って動画の長さをチェック
+        videoPlayer.url = path;
+        videoPlayer.Prepare();
 
-    //         videoPlayer.prepareCompleted += (source) =>
-    //         {
-    //             // 動画の準備が完了したら再生開始
-    //             videoPlayer.Play();
-    //             // RawImageを表示する
-    //             if (rawImage != null)
-    //             {
-    //                 rawImage.gameObject.SetActive(true);
-    //             }
-    //         };
-    //     }
-    //     else
-    //     {
-    //         Debug.LogError("VideoPlayer component not assigned.");
-    //     }
-    // }
+        videoPlayer.prepareCompleted += (source) =>
+        {
+            double videoLength = videoPlayer.length;  // 動画の長さ（秒）
 
-    // private void OnDestroy()
-    // {
-    //     // Clean up
-    //     if (renderTexture != null)
-    //     {
-    //         renderTexture.Release();
-    //     }
-    // }
+            //20秒以上の動画は使用できないようにする
+            if (videoLength > 20.0)
+            {
+                resultText.text = "The video used must be less than 20 seconds long";
+                resultText.color = errorColor; // エラーメッセージを赤色に
+                PlayerPrefs.DeleteKey("selectedVideoPath");  // 動画パスを保存しない
+            }
+            else
+            {
+                PlayerPrefs.SetString("selectedVideoPath", path);
+                resultText.text = "Video selected correctly";
+                resultText.color = successColor; // 成功メッセージを青色に
+            }
+        };
+    }
 
     public bool IsVideoSelected()
     {

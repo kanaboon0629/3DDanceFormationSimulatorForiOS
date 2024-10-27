@@ -11,7 +11,6 @@
 		<type fullname="CameraControlOnSwipe" preserve="nothing"/>
 		<type fullname="CameraControlWithJoystick" preserve="nothing"/>
 		<type fullname="ColorPicker" preserve="nothing"/>
-		<type fullname="FormationManager" preserve="nothing"/>
 		<type fullname="InputFieldHandler" preserve="nothing"/>
 		<type fullname="Joystick" preserve="nothing"/>
 		<type fullname="LightButtonsController" preserve="nothing"/>
@@ -77,7 +76,6 @@
 		<type fullname="UnityEngine.Rendering.UI.UIFoldout" preserve="nothing"/>
 	</assembly>
 	<assembly fullname="Unity.TextMeshPro">
-		<type fullname="TMPro.TextMeshProUGUI" preserve="nothing"/>
 		<type fullname="TMPro.TMP_ColorGradient" preserve="nothing"/>
 		<type fullname="TMPro.TMP_FontAsset" preserve="nothing"/>
 		<type fullname="TMPro.TMP_Settings" preserve="nothing"/>

@@ -7,6 +7,8 @@ public class RealtimeIPAddressInputValidation : MonoBehaviour
 {
     public InputField ipInputField; // IPアドレスを入力するフィールド
     public Text message; // エラーメッセージまたは成功メッセージ表示用のテキスト
+    public Color successColor = Color.blue; // 成功時の文字色（青）
+    public Color errorColor = Color.red;    // エラー時の文字色（赤）
 
     void Start()
     {
@@ -17,6 +19,7 @@ public class RealtimeIPAddressInputValidation : MonoBehaviour
             ipInputField.text = savedIpAddress;
             Debug.Log("Loaded saved IP address: " + savedIpAddress);
         }
+        
         // IPアドレスフィールドにイベントリスナーを追加
         ipInputField.onValueChanged.AddListener(delegate { ValidateIPAddress(); });
 
@@ -38,11 +41,13 @@ public class RealtimeIPAddressInputValidation : MonoBehaviour
         // IPアドレスが有効かどうかを確認
         if (!IPAddress.TryParse(ipAddress, out _))
         {
-            message.text = "Invalid IP Address format.";
+            message.text = "Invalid IP Address";
+            message.color = errorColor; // エラーメッセージを赤色に
         }
         else
         {
-            message.text = "Validation succeeded!"; // 正しい場合は成功メッセージを表示
+            message.text = "Valid IP Address";
+            message.color = successColor; // 成功メッセージを青色に
         }
     }
 }

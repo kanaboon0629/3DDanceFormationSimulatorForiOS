@@ -1590,6 +1590,10 @@ void RegisterAllStrippedInternalCalls()
 		void Register_UnityEngine_GameObject_get_layer();
 		Register_UnityEngine_GameObject_get_layer();
 
+		//System.String UnityEngine.GameObject::get_tag()
+		void Register_UnityEngine_GameObject_get_tag();
+		Register_UnityEngine_GameObject_get_tag();
+
 		//System.Void UnityEngine.GameObject::GetComponentFastPath(System.Type,System.IntPtr)
 		void Register_UnityEngine_GameObject_GetComponentFastPath();
 		Register_UnityEngine_GameObject_GetComponentFastPath();
@@ -1613,6 +1617,10 @@ void RegisterAllStrippedInternalCalls()
 		//System.Void UnityEngine.GameObject::set_layer(System.Int32)
 		void Register_UnityEngine_GameObject_set_layer();
 		Register_UnityEngine_GameObject_set_layer();
+
+		//System.Void UnityEngine.GameObject::set_tag(System.String)
+		void Register_UnityEngine_GameObject_set_tag();
+		Register_UnityEngine_GameObject_set_tag();
 
 		//UnityEngine.Component UnityEngine.GameObject::GetComponent(System.Type)
 		void Register_UnityEngine_GameObject_GetComponent();
@@ -3133,6 +3141,10 @@ void RegisterAllStrippedInternalCalls()
 		//System.Void UnityEngine.PlayerPrefs::DeleteAll()
 		void Register_UnityEngine_PlayerPrefs_DeleteAll();
 		Register_UnityEngine_PlayerPrefs_DeleteAll();
+
+		//System.Void UnityEngine.PlayerPrefs::DeleteKey(System.String)
+		void Register_UnityEngine_PlayerPrefs_DeleteKey();
+		Register_UnityEngine_PlayerPrefs_DeleteKey();
 
 		//System.Void UnityEngine.PlayerPrefs::Save()
 		void Register_UnityEngine_PlayerPrefs_Save();
@@ -4986,9 +4998,21 @@ void RegisterAllStrippedInternalCalls()
 
 	//Start Registrations for type : UnityEngine.Video.VideoPlayer
 
+		//System.Double UnityEngine.Video.VideoPlayer::get_length()
+		void Register_UnityEngine_Video_VideoPlayer_get_length();
+		Register_UnityEngine_Video_VideoPlayer_get_length();
+
 		//System.Void UnityEngine.Video.VideoPlayer::Play()
 		void Register_UnityEngine_Video_VideoPlayer_Play();
 		Register_UnityEngine_Video_VideoPlayer_Play();
+
+		//System.Void UnityEngine.Video.VideoPlayer::Prepare()
+		void Register_UnityEngine_Video_VideoPlayer_Prepare();
+		Register_UnityEngine_Video_VideoPlayer_Prepare();
+
+		//System.Void UnityEngine.Video.VideoPlayer::set_playOnAwake(System.Boolean)
+		void Register_UnityEngine_Video_VideoPlayer_set_playOnAwake();
+		Register_UnityEngine_Video_VideoPlayer_set_playOnAwake();
 
 		//System.Void UnityEngine.Video.VideoPlayer::set_url(System.String)
 		void Register_UnityEngine_Video_VideoPlayer_set_url();

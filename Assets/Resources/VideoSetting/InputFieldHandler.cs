@@ -15,6 +15,8 @@ public class InputFieldHandler : MonoBehaviour
     public Text errorMessageFromIPAddress; // IPアドレスのエラーメッセージ用
     public VideoGalleryManager videoGalleryManager; // VideoGalleryManagerの参照
     public TabController tabController; // TabControllerの参照
+    public Color successColor = Color.blue; // 成功時の文字色（青）
+    public Color errorColor = Color.red;    // エラー時の文字色（赤）
 
     public void OnSubmit(string nextSceneName)
     {
@@ -80,6 +82,7 @@ public class InputFieldHandler : MonoBehaviour
         if (errorMessage != null)
         {
             errorMessage.text = message;
+            errorMessage.color = errorColor; // エラーメッセージを赤色に
         }
     }
 
@@ -105,9 +108,9 @@ public class InputFieldHandler : MonoBehaviour
             return "End must be greater than Start.";
         }
 
-        if (endValue - startValue > 30)
+        if (endValue - startValue > 20)
         {
-            return "The difference between End and Start must be 30 seconds or less.";
+            return "The difference between End and Start must be 20 seconds or less.";
         }
 
         return string.Empty; // No errors

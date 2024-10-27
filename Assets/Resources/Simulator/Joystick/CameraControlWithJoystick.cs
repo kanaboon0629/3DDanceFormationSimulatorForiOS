@@ -3,7 +3,7 @@ using UnityEngine;
 public class CameraControlWithJoystick : MonoBehaviour
 {
     public Joystick joystick;
-    private float rotationSpeed = 0.3f;
+    private float rotationSpeed = 0.5f;
 
     void Update()
     {
