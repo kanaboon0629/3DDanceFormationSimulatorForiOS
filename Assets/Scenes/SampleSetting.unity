@@ -1449,7 +1449,7 @@ MonoBehaviour:
   m_HandleRect: {fileID: 431905677260248992}
   m_Direction: 2
   m_Value: 0
-  m_Size: 1
+  m_Size: 0.8
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:
@@ -1875,7 +1875,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 5, y: 93}
-  m_SizeDelta: {x: 400, y: 60}
+  m_SizeDelta: {x: 430, y: 60}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &7187728609149321244
 MonoBehaviour:
@@ -2076,9 +2076,9 @@ MonoBehaviour:
       m_Image: {fileID: 0}
     - m_Text: Hip(Youtube)
       m_Image: {fileID: 0}
-    - m_Text: HipAndPunking(JYP Basis)
+    - m_Text: HipAndPunking(Video)
       m_Image: {fileID: 0}
-    - m_Text: Girls(Mikoniko)
+    - m_Text: Mikoniko(Video)
       m_Image: {fileID: 0}
     - m_Text: Here I am(Youtube)
       m_Image: {fileID: 0}
