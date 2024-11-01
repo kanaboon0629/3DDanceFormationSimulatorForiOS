@@ -4,6 +4,16 @@
 			<method name="SaveLightDataFromButton"/>
 			<method name="SaveLightDataFromButton"/>
 		</type>
+		<type fullname="CameraControlOnSwipe">
+			<method name="SaveCameraSettings"/>
+			<method name="SaveCameraSettings"/>
+			<method name="SaveCameraSettings"/>
+		</type>
+		<type fullname="CameraControlWithJoystick">
+			<method name="SaveCameraSettings"/>
+			<method name="SaveCameraSettings"/>
+			<method name="SaveCameraSettings"/>
+		</type>
 		<type fullname="InputFieldHandler">
 			<method name="OnSubmit"/>
 		</type>
