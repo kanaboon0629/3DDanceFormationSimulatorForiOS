@@ -6,14 +6,19 @@ using System.Collections.Generic;
 public class CameraControlOnSwipe : MonoBehaviour
 {
     public Camera mainCamera; // メインカメラをアサイン
-    public float moveSpeed = 0.1f;
-    public float scrollSensitivity = 0.5f; // スクロールの感度を調整
+    public float moveSpeed = 0.05f;
+    public float scrollSensitivity = 0.15f; // スクロールの感度を調整
     public float zoomSpeed = 0.1f; // ズームのスピード
     public float minFov = 15f; // 最小FOV（ズームインの制限）
     public float maxFov = 90f; // 最大FOV（ズームアウトの制限）
 
     private Vector3 lastTouchPosition; // 前回のタッチ位置
     private bool isDragging = false;
+
+    void Start()
+    {
+        LoadCameraSettings();
+    }
 
     void Update()
     {
@@ -56,6 +61,29 @@ public class CameraControlOnSwipe : MonoBehaviour
             // カメラのFOVを調整してズームイン/アウト
             float newFov = mainCamera.fieldOfView + deltaMagnitudeDiff * zoomSpeed;
             mainCamera.fieldOfView = Mathf.Clamp(newFov, minFov, maxFov);
+        }
+    }
+
+    // カメラ設定を保存
+    public void SaveCameraSettings()
+    {
+        PlayerPrefs.SetFloat("CameraFOV", mainCamera.fieldOfView);
+        PlayerPrefs.SetFloat("CameraPosX", transform.position.x);
+        PlayerPrefs.SetFloat("CameraPosY", transform.position.y);
+        PlayerPrefs.SetFloat("CameraPosZ", transform.position.z);
+        PlayerPrefs.Save();
+    }
+
+    // カメラ設定を読み込む
+    private void LoadCameraSettings()
+    {
+        if (PlayerPrefs.HasKey("CameraFOV"))
+        {
+            mainCamera.fieldOfView = PlayerPrefs.GetFloat("CameraFOV");
+            float posX = PlayerPrefs.GetFloat("CameraPosX");
+            float posY = PlayerPrefs.GetFloat("CameraPosY");
+            float posZ = PlayerPrefs.GetFloat("CameraPosZ");
+            transform.position = new Vector3(posX, posY, posZ);
         }
     }
 
